@@ -1,0 +1,6 @@
+.venv/
+db_31_0_excel/
+.DS_Store
+__pycache__/
+.pytest_cache/
+*.download

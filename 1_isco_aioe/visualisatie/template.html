@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIOE · Beroepenkaart</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#182d3a;background:#f3f6f7}*{box-sizing:border-box}body{max-width:1250px;margin:auto;padding:36px 24px}h1{font-size:clamp(28px,4vw,44px);margin:8px 0}p{line-height:1.6;max-width:900px}.eyebrow{color:#286864;font-weight:700;letter-spacing:.12em;font-size:12px}.controls{display:flex;gap:16px;flex-wrap:wrap;background:white;padding:20px;border-radius:12px;margin:24px 0 16px}label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600}input,select{font:inherit;padding:10px;border:1px solid #b7c8cf;border-radius:6px;background:white;max-width:100%}input{min-width:240px}.info{color:#526773;font-size:14px}.chart{background:white;border:1px solid #dbe4e8;border-radius:10px;overflow:hidden}.axis,.row{display:grid;grid-template-columns:minmax(240px,44%) 1fr 85px;gap:16px;align-items:center;padding:11px 18px}.axis{background:#e8eff1;font-size:12px;font-weight:700}.row{border-top:1px solid #e8eff1;min-height:55px}.name{font-size:14px;line-height:1.4;overflow-wrap:anywhere}.code{color:#6b7e88;font-size:12px;margin-right:10px;font-variant-numeric:tabular-nums}.track{height:20px;position:relative;background:linear-gradient(90deg,#f5f8f9,#edf2f4);border-radius:3px}.zero{position:absolute;top:-5px;bottom:-5px;width:1px;background:#788c97}.bar{position:absolute;height:20px;border-radius:3px}.value{text-align:right;font-variant-numeric:tabular-nums;font-size:14px}.ticks{display:flex;justify-content:space-between;gap:4px;font-variant-numeric:tabular-nums}.empty{padding:30px}.legend{display:flex;gap:22px;flex-wrap:wrap;font-size:13px;margin:16px 0}.dot{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px}footer{font-size:13px;color:#526773;margin-top:24px}@media(max-width:600px){body{padding:20px 12px}.axis,.row{grid-template-columns:minmax(140px,50%) 1fr 64px;gap:8px;padding:12px 10px}.name{font-size:12px}.code{display:block}.value{font-size:12px}.controls{padding:14px}label{width:100%}input{min-width:0}}
+</style>
+<header><div class="eyebrow">AI DEMOGRAFIE / ISCO-08</div><h1>AI-blootstelling per beroep</h1>
+<p>Verken de AIOE-score van Nederlandse beroepsgroepen. Elke rij koppelt een beroep aan zijn score. Een hogere score betekent meer blootstelling aan AI. De scores zijn <strong>geen percentages of kansen op baanverlies</strong>.</p></header>
+<div class="controls">
+<label>Zoek beroep of ISCO-code<input id="search" type="search" placeholder="Bijv. verpleegkundige, accountant, 2512"></label>
+<label>Score<select id="metric"><option value="AIOE_score">Algemene AI (AIOE)</option><option value="AIOE_LM_score">Taalmodellen (LM)</option><option value="AIOE_IG_score">Beeldgeneratie (IG)</option></select></label>
+<label>Beroepshoofdgroep<select id="group"><option value="">Alle beroepsgroepen</option></select></label>
+<label>Volgorde<select id="sort"><option value="desc">Hoogste score eerst</option><option value="asc">Laagste score eerst</option><option value="code">ISCO-code</option><option value="name">Beroepsnaam A–Z</option></select></label>
+</div>
+<p id="summary" class="info" aria-live="polite"></p>
+<div class="legend"><span><i class="dot" style="background:#207d87"></i>Score vanaf nul</span><span><i class="dot" style="background:#b27639"></i>Score onder nul</span><span>De verticale lijn markeert nul; een negatieve score betekent geen afwezigheid van blootstelling.</span></div>
+<div class="chart" role="table" aria-label="AI-blootstelling per beroepsgroep"><div class="axis" role="row"><span role="columnheader">Beroep / ISCO-08</span><div id="ticks" class="ticks" style="position:relative;height:16px" role="columnheader"></div><span role="columnheader" style="text-align:right">Score</span></div><div id="rows" role="rowgroup"></div></div>
+<footer>Bron: lokale ISCO08_AIOE.csv, gekoppeld via de officiële ISCO–SOC-crosswalk. Per ISCO-groep: ongewogen gemiddelde van beschikbare unieke SOC-scores. Ontbrekende scores worden niet als nul weergegeven. Alle beroepen tellen als één rij; balken geven geen aantallen werkenden weer. De schaal blijft per scoretype gelijk bij zoeken en filteren. De drie scoretypen hebben hun eigen schaal.</footer>
+<script>
+const data=__DATA__;
+const groups={'0':'Strijdkrachten','1':'Leidinggevende beroepen','2':'Intellectuele, wetenschappelijke en artistieke beroepen','3':'Technici en vakspecialisten','4':'Administratief personeel','5':'Dienstverlenend personeel en verkopers','6':'Landbouwers, bosbouwers en vissers','7':'Ambachtslieden','8':'Bedieners van machines en installaties, assembleurs','9':'Elementaire beroepen'};
+const el=id=>document.getElementById(id), fmt=n=>n.toLocaleString('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2});
+for(const [code,name] of Object.entries(groups)){const o=document.createElement('option');o.value=code;o.textContent=code+' · '+name;el('group').append(o)}
+function render(){
+ const metric=el('metric').value,q=el('search').value.trim().toLocaleLowerCase('nl'),group=el('group').value,order=el('sort').value;
+ const scores=data.map(d=>d[metric]).filter(v=>v!==null),min=Math.min(0,...scores),max=Math.max(0,...scores),span=max-min||1,zero=-min/span*100;
+ const filtered=data.filter(d=>(!group||d.ISCO_08_code.startsWith(group))&&(!q||(d.ISCO_08_code+' '+d.ISCO_08_beroep_NL).toLocaleLowerCase('nl').includes(q)));
+ filtered.sort((a,b)=>{if(order==='code')return a.ISCO_08_code.localeCompare(b.ISCO_08_code);if(order==='name')return a.ISCO_08_beroep_NL.localeCompare(b.ISCO_08_beroep_NL,'nl');if(a[metric]===null)return b[metric]===null?0:1;if(b[metric]===null)return -1;return (order==='desc'?-1:1)*(a[metric]-b[metric])||a.ISCO_08_code.localeCompare(b.ISCO_08_code)});
+ const missing=filtered.filter(d=>d[metric]===null).length;
+ el('summary').textContent=`${filtered.length} van ${data.length} beroepen · ${filtered.length-missing} met score · ${missing} zonder score`;
+ el('ticks').replaceChildren(...[min,0,max].map(v=>{const s=document.createElement('span');s.textContent=fmt(v);s.style.position='absolute';s.style.left=(v-min)/span*100+'%';s.style.transform=v===min?'none':v===max?'translateX(-100%)':'translateX(-50%)';return s}));
+ const fragment=document.createDocumentFragment();
+ for(const d of filtered){const row=document.createElement('div');row.className='row';row.setAttribute('role','row');const name=document.createElement('div');name.className='name';name.setAttribute('role','cell');const code=document.createElement('span');code.className='code';code.textContent=d.ISCO_08_code;name.append(code,document.createTextNode(d.ISCO_08_beroep_NL));const track=document.createElement('div');track.className='track';track.setAttribute('role','cell');track.setAttribute('aria-label',d[metric]===null?'Geen score':'Score '+fmt(d[metric]));const line=document.createElement('span');line.className='zero';line.style.left=zero+'%';track.append(line);if(d[metric]!==null){const bar=document.createElement('span');bar.className='bar';bar.style.left=(Math.min(0,d[metric])-min)/span*100+'%';bar.style.width=Math.abs(d[metric])/span*100+'%';bar.style.background=d[metric]>=0?'#207d87':'#b27639';track.append(bar)}const val=document.createElement('span');val.className='value';val.setAttribute('role','cell');val.textContent=d[metric]===null?'Ontbreekt':fmt(d[metric]);row.append(name,track,val);fragment.append(row)}
+ if(!filtered.length){const p=document.createElement('p');p.className='empty';p.textContent='Geen beroepen gevonden. Pas je zoekopdracht of filter aan.';fragment.append(p)}el('rows').replaceChildren(fragment);
+}
+for(const id of ['search','metric','group','sort'])el(id).addEventListener('input',render);render();
+</script>
+</html>
