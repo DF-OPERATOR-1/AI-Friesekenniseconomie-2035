@@ -1,6 +1,53 @@
 .venv/
-db_31_0_excel/
 .DS_Store
 __pycache__/
 .pytest_cache/
 *.download
+.env
+
+website/node_modules/
+website/dist/
+data/processed/*.normalized.json
+data/processed/uwv_brc_plus.json
+
+# Alle oorspronkelijke bronnen blijven lokaal, inclusief bronleeswijzers.
+data/raw/
+
+# Gegenereerde onderzoeksuitvoer: openbare CSV-selecties staan onder docs/data.
+data/processed/onderwijs/*.xlsx
+data/processed/ai_exposure/*.xlsx
+data/processed/ai_exposure/*.html
+data/processed/ai_complementarity/*.xlsx
+data/processed/ai_complementarity/legacy_variant/
+competentnl_csv/raw
+
+# Lokale editor-, test- en logbestanden.
+.vscode/
+.idea/
+*.log
+coverage/
+# Automatisch opgebouwd uit data/processed; docs/ blijft de Pages-publicatie.
+website/public/data/
+data/processed/import_report.json
+
+# Lokale onderzoeksdossiers: inclusief alle controle-/validatiescripts,
+# rapporten, papers, conversies en pagina-afbeeldingen.
+/research/diagnostics/
+/research/literature/
+/research/COMPLEMENTARITY_DISCREPANCY_ANALYSIS.md
+/research/METHODOLOGY_VALIDATION.md
+
+# Lokale accountgegevens en omgevingsinstellingen.
+.aws/
+.env.*
+!.env.example
+
+# Geen onderdeel van de website of de reproduceerbare publicatiebuild.
+data/mappings/candidates/
+data/processed/ai_complementarity/SOC2010*.csv
+data/schemas/profile.example.json
+
+# Lokale projectdocumentatie; niet nodig voor GitHub Pages.
+docs/research_plan/
+docs/data_dictionary/
+docs/methodology/

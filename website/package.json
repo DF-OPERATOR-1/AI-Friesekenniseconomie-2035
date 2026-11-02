@@ -1,0 +1,32 @@
+{
+  "name": "ai-index-fryslan",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc --noEmit",
+    "build": "cd .. && python3 -m research.pipeline.imports.build_atlas && cd website && tsc --noEmit && vite build && python3 scripts/check_pages.py",
+    "preview": "vite preview",
+    "data": "cd .. && python3 -m research.pipeline.imports.build_atlas",
+    "test": "node --test tests/*.test.mjs",
+    "format": "prettier --write src tests scripts vite.config.ts tsconfig.json index.html package.json",
+    "format:check": "prettier --check src tests vite.config.ts tsconfig.json index.html package.json",
+    "predev": "npm run data",
+    "data:refresh": "cd .. && python3 -m research.pipeline.imports.build_atlas --refresh-sources"
+  },
+  "dependencies": {
+    "@fontsource/poppins": "^5.2.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "recharts": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.5.0",
+    "prettier": "^3.9.10",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "file": "Vacaturemarkt - Data Fryslan.xlsx",
+  "name": "UWV openstaande vacatures · BRC Plus",
+  "description": "Aangeleverde kwartaalreeks 2023-Q1 t/m 2026-Q2; niet gekoppeld aan ISCO-profielen",
+  "organization": "UWV (aangeleverde werkmap)",
+  "version": "22145cc6148e830613a2e23552033a2763cf077656f1c24896c03ec5dc0a7b22",
+  "publication_year": null,
+  "geography": "Friesland",
+  "classification": "BRC Plus (namen; geen codes)",
+  "license": null,
+  "download": null,
+  "limitations": "OnAfgeronde bronwaarden behouden; definitie en berekeningsmethode nog valideren. Geen gevalideerde BRC Plus–ISCO-koppeling.",
+  "rights_status": "Herpublicatierechten nog niet vastgesteld",
+  "citation": "UWV. (z.d.). Vacaturemarkt - Data Fryslan [Aangeleverde Excelwerkmap; niet openbaar]. Verslagperiode 2023-Q1 tot en met 2026-Q2.",
+  "publication_years": []
+}

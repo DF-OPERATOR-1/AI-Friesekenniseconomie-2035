@@ -1,0 +1,437 @@
+﻿ISCO_08_code;ISCO_08_beroep_NL;AIOE_score;AIOE_LM_score;AIOE_IG_score
+0110;Officieren;;;
+0210;Onderofficieren;;;
+0310;Andere rangen;;;
+1111;Leden van wetgevende lichamen;;;
+1112;Ambtenaren in beleidvoerende functies;0,9799637666666667;0,9625212333333334;0,9819112999999998
+1113;Traditionele dorpshoofden;1,334246;1,308912;1,309602
+1114;Beleidvoerende medewerkers van belangenorganisaties;0,9444178333333334;0,9901757999999999;0,7718548666666667
+1120;Directeuren van grote ondernemingen;0,95456165;0,9932633500000001;0,7707429499999999
+1211;Leidinggevende functies op financieel gebied;1,446232;1,294551;1,330661
+1212;Leidinggevende functies op het gebied van personeelszaken;1,301025;1,3876013333333332;0,9098077333333334
+1213;Leidinggevende functies op het gebied van beleid en planning;0,9646872;0,9099647;0,9635357
+1219;Leidinggevende functies op het gebied van zakelijke diensten en op administratief gebied, niet elders geclassificeerd;0,93615125;0,9427740833333332;0,79524115
+1221;Leidinggevende functies op het gebied van verkoop en marketing;1,290656;1,2487975;1,310178
+1222;Leidinggevende functies op het gebied van reclame en public relations;1,294038;1,300086;1,3673715
+1223;Leidinggevende functies op het gebied van speur- en ontwikkelingswerk;1,08245825;0,944377;1,319527
+1311;Leidinggevende functies op het gebied van de landbouw- en bosbouwproductie;-0,1443684;-0,1584996;0,0162789
+1312;Leidinggevende functies op het gebied van de aquacultuur- en visserijproductie;-0,1443684;-0,1584996;0,0162789
+1321;Leidinggevende functies in de industrie;0,5086878;0,3542972;0,6547023
+1322;Leidinggevende functies in de mijnbouw;0,9646872;0,9099647;0,9635357
+1323;Leidinggevende functies in de bouwnijverheid;1,029139;0,6361951;1,857085
+1324;Leidinggevende functies op het gebied van toelevering, distributie en op aanverwante gebieden;0,8907923;0,9045479;0,7731217
+1330;Leidinggevende functies op het gebied van informatie- en communicatietechnologie;1,059853;0,9450699;1,275466
+1341;Leidinggevende functies op het gebied van kinderverzorging;0,838007;0,9671877;0,4257523
+1342;Leidinggevende functies op het gebied van gezondheidsdiensten;1,260259;1,314992;0,8518099
+1343;Leidinggevende functies op het gebied van ouderenzorg;0,91756815;0,99630335;0,5418469
+1344;Leidinggevende functies op het gebied van maatschappelijk werk;1,156153;1,225244;0,7898791
+1345;Leidinggevende functies op het gebied van onderwijs;0,9546955;1,1240875333333333;0,5250513
+1346;Filiaalhouders op het gebied van financiële en verzekeringsdiensten;1,01055465;0,9860828500000001;0,78127245
+1349;Leidinggevende functies op het gebied van professionele diensten, niet elders geclassificeerd;0,9646872;0,9099647;0,9635357
+1411;Hotelmanagers;0,4021726;0,4639851;0,205306
+1412;Restaurantmanagers;-0,1213112;0,0614931;-0,710209
+1420;Leidinggevende functies in de detail- en groothandel;0,5748773;0,6776147;0,2318839
+1431;Leidinggevende functies op het gebied van sport en recreatie en bij culturele centra;0,89730395;0,81461195;0,8473697499999999
+1439;Leidinggevende functies op het gebied van diensten, niet elders geclassificeerd;0,9646872;0,9099647;0,9635357
+2111;Natuurkundigen en astronomen;1,3597365;1,0656889999999999;1,9596085
+2112;Meteorologen;1,373917;1,259493;1,361813
+2113;Chemici;0,76694105;0,55622835;1,19890945
+2114;Geologen en geofysici;0,6774276;0,5610846;0,9774443500000001
+2120;Wiskundigen, actuarissen en statistici;1,4396134;1,224247;1,5396192
+2131;Biologen, botanici, zoölogen e.d.;0,9014893333333333;0,7869147333333334;1,1180611333333335
+2132;Adviseurs op het gebied van landbouw, bosbouw en visserij;0,4360305666666666;0,3989807;0,6666238666666667
+2133;Milieudeskundigen;0,54157215;0,4723568;0,736308
+2141;Industrieel ingenieurs en productie-ingenieurs;1,13787;0,9050576;1,485018
+2142;Weg- en waterbouwkundig ingenieurs;1,282867;0,9267973;1,97666
+2143;Milieu-ingenieurs;1,343561;1,043951;1,889765
+2144;Werktuigbouwkundig ingenieurs;0,957906975;0,7069604;1,486924
+2145;Chemisch ingenieurs;1,341336;0,9060193;2,256071
+2146;Mijnbouwingenieurs, metallurgen e.d.;1,166191;0,9077106;1,68288
+2149;Ingenieurs, niet elders geclassificeerd;1,02203408;0,7865142;1,5146312
+2151;Elektrotechnisch ingenieurs;1,126725;0,901124;1,509961
+2152;Elektronica-ingenieurs;0,9036349;0,7168902500000001;1,3327095
+2153;Telecommunicatie-ingenieurs;0,6654578;0,4569179;1,105018
+2161;Architecten van gebouwen;1,047142;0,6103589;2,38871
+2162;Landschapsarchitecten;1,034388;0,8363757;1,780483
+2163;Product- en kledingontwerpers;0,7235964500000001;0,53381005;1,63727
+2164;Stedenbouwkundigen en verkeersplanologen;1,227516;1,07547;1,641768
+2165;Cartografen en landmeetkundigen;0,48152925;0,17551545;1,20484975
+2166;Grafisch ontwerpers en multimedia-ontwerpers;0,71078045;0,47958654999999994;1,880944
+2211;Huisartsen ;0,9782120750000001;0,970315275;0,73760035
+2212;Medisch specialisten ;0,49084063999999994;0,48306706000000005;0,33858176
+2221;Verpleegkundigen met hogere opleiding;0,22026199999999999;0,23615386666666668;-0,029310166666666655
+2222;Verloskundigen;0,1966265;0,3052241;-0,1239847
+2230;Specialisten op het gebied van de traditionele en de alternatieve geneeskunde;0,7109566;0,6788277;0,652581
+2240;Paramedici;0,1059147;0,0402409;0,0540946
+2250;Dierenartsen;-0,0749958;-0,0842553;-0,1380501
+2261;Tandartsen;-0,10369352500000001;-0,2179692;0,1555976
+2262;Apothekers;0,6058705;0,5705959;0,4775843
+2263;Milieu- en bedrijfsartsen en specialisten op het gebied van de milieu  en arbeidshygiëne;0,76329755;0,7831479;0,6546064
+2264;Fysiotherapeuten ;-0,19569115;0,1239025;-0,8445052
+2265;Diëtisten en voedingsdeskundigen;1,342809;1,363892;1,18357
+2266;Audiologen en logopedisten;0,88958665;1,0194416;0,11665805000000001
+2267;Optometristen en orthoptisten;0,5040194;0,2003319;1,061376
+2269;Specialisten op het gebied van de gezondheidszorg, niet elders geclassificeerd;0,5015898;0,5714092833333333;0,2563923166666667
+2310;Professoren en andere onderwijsgevenden in het hoger onderwijs;1,2398400742857143;1,5244266285714285;0,4438270285714286
+2320;Onderwijsgevenden in het beroepsonderwijs;0,35186270000000003;0,48647100000000004;-0,011320266666666662
+2330;Onderwijsgevenden in het secundair onderwijs;1,191325;1,248528;0,9338028
+2341;Onderwijsgevenden in het basisonderwijs;1,0866970500000002;1,1504765;0,7908076500000001
+2342;Onderwijsgevenden in het voorschoolse onderwijs;0,19752095;0,48767865;-0,380661
+2351;Specialisten op het gebied van onderwijsmethoden;1,301855;1,32382;1,276163
+2352;Onderwijsgevenden speciaal onderwijs;0,5404701199999999;0,7380106200000001;0,00041489999999999583
+2353;Andere taalleraren;1,0668776666666666;1,2503343333333332;0,43106599999999995
+2354;Andere muziekleraren;0,526352;0,824783;-0,0407148
+2355;Andere kunstleraren;0,9258409999999999;1,1554605;0,24519739999999998
+2356;Opleiders informatietechnologie;1,198409;1,322911;0,9480624
+2359;Onderwijsgevenden, niet elders geclassificeerd;1,1496293499999999;1,3412614999999999;0,4799453
+2411;Accountants;1,4262179999999998;1,219239;1,3126676666666668
+2412;Financieel en beleggingsadviseurs;1,390682;1,3342835000000002;0,9893793000000001
+2413;Financieel analisten;1,4173156666666664;1,2409846666666666;1,26455
+2421;Bedrijfs- en organisatieanalisten;1,3648600000000002;1,3144550000000002;1,26747735
+2422;Specialisten op het gebied van beleidsadministratie;1,047687;0,92503;1,221236
+2423;Specialisten op het gebied van personeelszaken en loopbaanontwikkeling;1,277449425;1,3867765;0,7912425
+2424;Specialisten op het gebied van personeelsopleidingen;1,198409;1,322911;0,9480624
+2431;Specialisten op het gebied van reclame en marketing;1,2073422;1,263195;1,282979
+2432;Specialisten op het gebied van public relations;1,284927;1,517637;0,6906517
+2433;Technisch verkopers en artsenbezoekers (m.u.v. ICT);1,1036967500000001;1,1058556;0,9722618
+2434;Verkopers informatie- en communicatietechnologie;1,1176031666666668;1,0792047333333334;1,0932072
+2511;Systeemanalisten;1,1762095000000001;1,0070255000000001;1,5722955
+2512;Softwareontwikkelaars;1,2421155;1,0236863;1,5869195
+2513;Web- en multimediaontwikkelaars;1,089463;0,7887872;1,76461
+2514;Applicatieprogrammeurs;1,271506;1,024722;1,673063
+2519;Software- en applicatieontwikkelaars en –analisten, niet elders geclassificeerd;1,232705;1,043586;1,596393
+2521;Ontwerpers en beheerders van databanken;1,284863;0,9959827;1,729621
+2522;Systeembeheerders;0,7895315;0,4749538;1,475651
+2523;Netwerkspecialisten;0,5803306;0,4954185;0,8933583
+2529;Databank- en netwerkspecialisten, niet elders geclassificeerd;1,2414255;1,0441475;1,602745
+2611;Advocaten;1,328783;1,454044;1,035825
+2612;Rechters;1,435604;1,5967055;0,69502285
+2619;Juristen, niet elders geclassificeerd;1,431593;1,647241;0,7957938
+2621;Archivarissen en  conservatoren;0,7066129999999999;0,6743767;1,0796982
+2622;Bibliothecarissen e.d.;0,7439546;0,62494925;1,0941975
+2631;Economen;1,403764;1,330122;1,298786
+2632;Sociologen, antropologen e.d.;1,1813298333333333;1,2831554666666667;0,9571765666666666
+2633;Filosofen, historici en politicologen;1,281944;1,4206836666666665;0,9328359666666667
+2634;Psychologen;1,4162299999999999;1,4609853333333334;1,1269397666666665
+2635;Maatschappelijk werkers en counselors;0,9499703374999999;1,1561690625;0,3021217875
+2636;Theologen en bedienaars van de eredienst;1,2467405;1,4125695;0,67194385
+2641;Auteurs e.d.;1,1000498;1,225771;1,2144413333333333
+2642;Journalisten;1,1574499999999999;1,3306855;0,90550705
+2643;Vertalers, tolken en andere taalkundigen;1,2196835;1,2183915;0,9199582000000001
+2651;Beeldend kunstenaars;-0,7492891;-0,80791385;0,3403038
+2652;Musici, zangers en componisten;0,43947915000000004;0,66108965;-0,5320208999999999
+2653;Dansers en choreografen;-2,1227635;-1,33957505;-2,960859
+2654;Regisseurs en producenten voor film en theater e.d.;0,9823426;0,7479188666666667;1,8085093333333333
+2655;Acteurs;0,1590935;0,5784018;-0,4134647
+2656;Omroepers voor radio, televisie en andere media;0,8926460666666666;1,0421574;0,3321863
+2659;Scheppende en uitvoerende kunstenaars, niet elders geclassificeerd;;;
+3111;Technici op chemisch en natuurkundig gebied;0,19872533333333334;0,018534166666666668;0,6056533333333333
+3112;Technici op het gebied van weg- en waterbouw;0,15467016;-0,09149125999999999;0,83185826
+3113;Technici op het gebied van de elektrotechniek;0,023737249999999988;-0,24522649999999996;0,6689525
+3114;Technici op het gebied van de elektronicatechniek;0,3515252;0,0780005;0,9983063
+3115;Technici op het gebied van de werktuigbouwkunde;0,04044515;-0,18015802499999997;0,49825615
+3116;Technici op het gebied van de chemische techniek;0,1941278;-0,0792918;0,6988024
+3117;Mijntechnici en technici op metallurgisch gebied;0,13869684999999998;-0,052914199999999995;0,54118855
+3118;Technisch tekenaars;0,52637895;0,22819375000000003;1,590282225
+3119;Technici op het gebied van natuurkunde en ingenieurswetenschappen, niet elders geclassificeerd;0,13633781;-0,07606989;0,6671668000000001
+3121;Toezichthoudend personeel in de mijnbouw;-0,3054048;-0,3598737;-0,0124179
+3122;Toezichthoudend personeel in de industrie;-0,0845282;-0,0370227;-0,2315802
+3123;Toezichthoudend personeel in de bouwnijverheid;-0,3054048;-0,3598737;-0,0124179
+3131;Bedieningspersoneel elektriciteitscentrales;0,20973637500000003;0,04681505;0,4454197
+3132;Bedieningspersoneel verbrandingsovens en waterzuiveringsinstallaties;-0,5105174;-0,594644875;-0,3270363
+3133;Bedieningspersoneel chemische installaties;-0,3831282;-0,560149;-0,3017132
+3134;Bedieningspersoneel aardolie- en aardgasraffinaderijen;-0,550384025;-0,767279725;-0,141220925
+3135;Procesbeheerders metaalproductie;-1,167465;-1,303524;-0,7556936
+3139;Technici op het gebied van procesbeheer, niet elders geclassificeerd;-0,0241824;-0,341184;0,5465338
+3141;Technici op het gebied van de biowetenschappen (m.u.v. medisch);0,15909035;-0,005047900000000008;0,51010145
+3142;Landbouwtechnici;0,095719;-0,0492323;0,4328247
+3143;Bosbouwtechnici;-0,6672396;-0,7611464;-0,1099637
+3151;Scheepswerktuigkundigen;-0,1899353;-0,24970845;-0,0631671
+3152;Dekofficieren en loodsen;-0,14078115;-0,36262285;0,51379675
+3153;Piloten e.d.;-0,08072376666666668;-0,4450242666666666;0,7844100666666667
+3154;Luchtverkeersleiders;0,64971125;0,3577162;1,1243781
+3155;Elektrotechnicus luchtvaartveiligheid;0,3515252;0,0780005;0,9983063
+3211;Technici voor medische apparatuur;-0,20522642000000002;-0,23091225999999998;-0,1787528
+3212;Laboratoriumtechnici (geneeskunde en pathologie) ;0,07723760000000002;-0,1625687;0,51655885
+3213;Farmaceutisch technici en apothekersassistenten;0,0070256;-0,0233856;-0,1433054
+3214;Prothese- en tandtechnici;0,034459775;-0,10038605;0,31948924999999995
+3221;Verpleegkundigen met middelbare opleiding;-0,5137373;-0,2979922;-1,110947
+3222;Assistent-verloskundigen;0,2295568;0,2785947;-0,1345279
+3230;Vakspecialisten op het gebied van de traditionele en de alternatieve geneeskunde;0,2295568;0,2785947;-0,1345279
+3240;Veterinair technici en dierenartsassistenten;-0,56795015;-0,435956;-0,9863800500000001
+3251;Tandartsassistenten en mondhygiënisten;-0,47169194999999997;-0,3491606;-0,79234105
+3252;Technici op het gebied van medische dossiers en gezondheidsvoorlichting;0,5738765;0,5524089;0,5293298
+3253;Vakspecialisten basisgezondheidszorg;0,0371229;0,1347507;-0,1673761
+3254;Opticiens;0,1013966;0,0285751;0,2673772
+3255;Technici en assistenten op het gebied van de fysiotherapie;-0,41004330000000005;-0,08344643333333333;-1,0158993333333335
+3256;Medisch assistenten;0,11426285;0,15927544999999999;-0,15600960000000003
+3257;Milieu-inspecteurs, inspecteurs arbeidshygiëne e.d.;0,13325945;0,017762600000000003;0,380928975
+3258;Ambulancepersoneel;-0,6863446;-0,6994473;-0,5534687
+3259;Vakspecialisten op het gebied van de gezondheidszorg, niet elders geclassificeerd;-0,14181405;-0,09140102000000001;-0,34879934
+3311;Effecten- en valutahandelaren en -makelaars;1,2862464999999998;1,2592695;1,02130835
+3312;Medewerkers kredieten en leningen;1,38556;1,4163895;0,6310561
+3313;Vakspecialisten boekhouding;1,039749;0,8181121;0,7600526
+3314;Vakspecialisten op statistisch en wiskundig gebied e.d.;1,1168657666666666;0,8723713333333333;1,1291616333333334
+3315;Taxateurs en schadebeoordelaars;0,9262799333333334;0,7720723666666668;1,0560741333333332
+3321;Verzekeringsagenten;1,328035;1,3158526666666666;1,0587826333333332
+3322;Vertegenwoordigers;1,0831339;1,12312755;0,765024925
+3323;Inkopers;1,0322374;1,0078978;0,7823584
+3324;Commissionairs;1,3259693333333333;1,257692;1,0934082333333333
+3331;Inklaringsagenten en expediteurs;0,32954685000000006;0,2585108;0,33647295000000005
+3332;Organisatoren van conferenties en evenementen;0,3740207;0,5130678;0,1992509
+3333;Arbeidsbemiddelaars en uitzendbureaumedewerkers;0,46232375;0,57653545;-0,01655175000000003
+3334;Onroerendgoedmakelaars en beheerders van onroerend goed;1,136554125;1,13062895;0,9813788999999999
+3339;Zakelijke dienstverleners, niet elders geclassificeerd;1,2082368571428572;1,1740725714285714;1,0118791999999999
+3341;Kantoorchefs;1,038688;1,134282;0,6262324
+3342;Juridische secretaressen;1,014541;1,149438;0,4807182
+3343;Administratief secretaressen en uitvoerende secretaressen;0,9574445;1,0046488999999998;0,1969846
+3344;Medische secretaressen;1,140286;1,2469905;0,22821315
+3351;Douane-inspecteurs en grensbewakers;-0,05410719999999999;-0,08819243333333336;0,02004976666666669
+3352;Ambtenaren: belastingen en accijnzen;1,36682;1,253237;1,042565
+3353;Ambtenaren: sociale dienst;0,96220325;0,99423685;0,56921645
+3354;Ambtenaren: vergunningen;0,9321937499999999;0,95401035;0,5464999
+3355;Inspecteurs van politie en rechercheurs;0,016719899999999996;-0,02253505;0,13220274999999998
+3359;Vakspecialisten bij de overheid, niet elders geclassificeerd;0,1704867;-0,0081121;0,5068775
+3411;Vakspecialisten op juridisch gebied e.d.;0,8335613000000001;0,8510624666666667;0,4971229166666667
+3412;Vakspecialisten op het gebied van maatschappelijk werk;0,4652255;0,5573961;0,0715957
+3413;Lagere functies op religieus gebied;;;
+3421;Atleten en andere sportbeoefenaren;-1,814336;-1,290383;-2,461248
+3422;Trainers, oefenmeesters en sportfunctionarissen;0,20355236666666668;0,3327120666666667;0,06412796666666666
+3423;Fitnessinstructeurs en leiders van recreatieprogramma's;-0,3716062;0,025025999999999993;-1,0466929
+3431;Fotografen;-0,1680973;-0,3821391;0,9287885
+3432;Interieurontwerpers en decorateurs;0,0227782333333333;-0,02439233333333332;0,7689548999999999
+3433;Technici in galerieën, musea en bibliotheken;-0,3275913666666667;-0,2828559;-0,13485613333333335
+3434;Chef-koks;-0,26259625;-0,1610876;-0,48414025
+3435;Andere vakspecialisten op artistiek en cultureel gebied;-0,4533608;-0,2958649;-0,3313408
+3511;Technici voor de werking van informatie- en communicatietechnologie;0,7040519;0,4078978;1,143675
+3512;Technici voor informatie- en communicatietechnologie: gebruikersondersteuning;0,299343;0,3261741;0,2546799
+3513;Netwerk- en systeemtechnici;0,7860606;0,6566319;1,019627
+3514;Webtechnici;0,9394972500000001;0,6318705;1,6201305000000001
+3521;Radio- en televisietechnici en audiovisueel technici;0,2122243;0,08386813999999998;0,33804476
+3522;Telecommunicatietechnici;0,3515252;0,0780005;0,9983063
+4110;Administratieve medewerkers, algemeen;1,2383682999999999;1,2503844499999999;0,6737306000000001
+4120;Secretariaatsmedewerkers, algemeen;1,099056;1,254248;0,2640257
+4131;Typisten en bedieningspersoneel tekstverwerkers;0,6219606;0,5072381;0,5258988
+4132;Gegevensinvoerders;0,3108081;0,1723307;0,2936253
+4211;Kasbedienden e.d.;-0,022963700000000004;0,07377275;-0,6763631
+4212;Bookmakers, croupiers e.d.;0,3839394;0,3867073;-0,11731732000000002
+4213;Lommerdhouders en geldschieters;;;
+4214;Incasseerders e.d.;1,257279;1,3374335;0,7412231499999999
+4221;Reisconsulenten en reisbureaumedewerkers;0,8923683333333333;0,9866296999999999;0,36043493333333326
+4222;Callcentermedewerkers: inkomende berichten;0,98471895;1,054414;0,4363937
+4223;Telefonisten;1,0014882;1,3280539999999998;-0,67990775
+4224;Hotelreceptionisten;0,73107235;0,8906881499999999;0,09481855
+4225;Informatieverstrekkers;1,081472;1,1085574999999999;0,58277785
+4226;Receptionisten, algemeen;1,013186;1,032934;0,4573164
+4227;Interviewers voor enquêtes en marktonderzoek;1,297031;1,44861;0,2056872
+4229;Klantenvoorlichters, niet elders geclassificeerd;1,226286;1,416653;0,3133318
+4311;Boekhoudkundige medewerkers;1,1866020000000002;0,97690855;0,8948712999999999
+4312;Administratief personeel statistiek, financiën en verzekeringen;1,2729534;1,2608558;0,6487398600000001
+4313;Loonadministrateurs;1,257632;1,155485;0,782409
+4321;Administratief magazijnpersoneel;-0,5738983333333333;-0,5378784666666667;-0,6287366666666666
+4322;Administratief productiepersoneel;0,6999103;0,6614221;0,6193143
+4323;Administratief transportpersoneel;1,234523;1,128045;1,069298
+4411;Bibliotheekmedewerkers;0,12092844999999999;0,2278745;-0,26547145
+4412;Postboden en postsorteerders;-0,9091991800000001;-0,77826898;-1,1848677200000002
+4413;Codeurs, correctoren e.d.;1,288375;1,436193;0,6419724
+4414;Openbare schrijvers e.d.;-0,07173494999999999;0,21093679999999998;-0,7755496
+4415;Archiverings- en kopieermedewerkers;-0,11658304999999997;-0,16852865;-0,007915799999999973
+4416;Medewerkers personeelsafdeling;1,353098;1,480714;0,7759914
+4419;Administratief personeel, niet elders geclassificeerd;0,9943220500000001;0,9726465;0,6180022000000001
+5111;Reisbegeleiders en stewards;-0,3302395666666667;-0,13833530000000002;-0,8797969333333334
+5112;Conducteurs;-0,11430019999999999;-0,02504675;-0,3875779
+5113;Reisleiders en gidsen;0,4652621333333333;0,6387358666666666;-0,040096633333333354
+5120;Koks;-0,6031166;-0,53485648;-0,6582665600000001
+5131;Kelners;-0,83756045;-0,45718665;-1,719551
+5132;Barpersoneel;-0,6159883;-0,4109996;-1,072689
+5141;Kappers;-0,3272021;-0,1769851;-0,5011096666666667
+5142;Schoonheidsspecialisten e.d.;-0,3077427;-0,18367991666666664;-0,3627295666666666
+5151;Toezichthouders huishoudelijk en reinigingspersoneel in kantoren, hotels e.d.;-0,5854128;-0,3668852;-0,9832754
+5152;Huishoud(st)ers in privéhuishoudens;-0,5854128;-0,3668852;-0,9832754
+5153;Conciërges;-1,436201;-1,093042;-1,751452
+5161;Astrologen, waarzeggers e.d.;;;
+5162;Gezelschapspersonen en persoonlijke bedienden;-0,07173494999999999;0,21093679999999998;-0,7755496
+5163;Uitvaartmedewerkers en balsemers;-0,48868739999999994;-0,3097587333333333;-0,7201948666666667
+5164;Dierenverzorgers;-0,5372728999999999;-0,30484452500000003;-1,03516855
+5165;Rijinstructeurs;0,526352;0,824783;-0,0407148
+5169;Verleners van persoonlijke diensten, niet elders geclassificeerd;0,151064075;0,404418575;-0,51956985
+5211;Verkopers in kramen en op markten;1,107101;1,511458;0,0474758
+5212;Straathandelaars met voedsel;0,19004019999999994;0,53321245;-0,6392281000000001
+5221;Winkeliers;0,5748773;0,6776147;0,2318839
+5222;Toezichthoudend personeel in winkels;0,0191826;0,2011382;-0,5034398
+5223;Verkoopmedewerkers;-0,015591999999999995;0,17187665;-0,5792619
+5230;Kassabedienden en kaartverkopers;-0,14909065;-0,10566635;-0,6140945
+5241;Mannequins en modellen;-1,122021;-0,5034364;-1,800854
+5242;Demonstrateurs;0,1235652;0,334189;-0,3426091
+5243;Colporteurs;1,107101;1,511458;0,0474758
+5244;Televerkopers;1,118129;1,925633;-1,428249
+5245;Pompbedienden;-0,5374322500000001;-0,5201828000000001;-0,4903519
+5246;Verkopers in fastfoodrestaurants en snackbars;-0,9809000666666666;-0,6874121333333334;-1,6582937333333334
+5249;Verkopers, niet elders geclassificeerd;0,0784367;0,1427099;-0,4233016
+5311;Kinderverzorgers;0,023414049999999992;0,23021075;-0,38423115
+5312;Onderwijsassistenten;0,4516636;0,7475703;-0,3547263
+5321;Ziekenverzorgers;-0,7002931;-0,39474425;-1,3786165
+5322;Thuishulpwerkers;-0,26280396666666667;0,005686533333333317;-0,8452927999999998
+5329;Verzorgend personeel in de gezondheidszorg, niet elders geclassificeerd;-0,607479575;-0,40136675;-1,062826675
+5411;Brandweerlieden;-0,9566265;-0,961765;-0,63096525
+5412;Politiepersoneel;-0,5603311999999999;-0,5270462;-0,48432113333333326
+5413;Gevangenbewaarders;-0,72298215;-0,5152609;-1,11799975
+5414;Beveiligingspersoneel;-0,05643486666666666;-0,17100753333333332;0,060676833333333326
+5419;Veiligheidswerkers, niet elders geclassificeerd;-0,24786822857142857;-0,21132367142857142;-0,3767859714285714
+6111;Akkerbouwers en groentetelers;-0,81217015;-0,89878225;-0,55765745
+6112;Fruittelers;-0,81217015;-0,89878225;-0,55765745
+6113;Tuinders en kwekers;-1,1423593666666667;-1,1021068666666667;-1,0089745666666667
+6114;Telers van diverse gewassen;-0,81217015;-0,89878225;-0,55765745
+6121;Melkveehouders en andere rundveehouders;-0,76173815;-0,74935315;-0,66653825
+6122;Pluimveehouders;-0,76173815;-0,74935315;-0,66653825
+6123;Bijenhouders en zijderupstelers;-0,76173815;-0,74935315;-0,66653825
+6129;Veetelers, niet elders geclassificeerd;-0,76173815;-0,74935315;-0,66653825
+6130;Producenten met een gemengd bedrijf;-0,8895441000000001;-0,9128917666666667;-0,7292599666666666
+6210;Bosbouwers e.d.;-0,96386576;-1,08143326;-0,50868532
+6221;Viskwekers;-0,76173815;-0,74935315;-0,66653825
+6222;Vissers, binnen- en kustwateren;-0,99621665;-1,0345327500000001;-0,69829525
+6223;Vissers, volle zee;-0,99621665;-1,0345327500000001;-0,69829525
+6224;Jagers en vallenzetters;-0,89199065;-0,96583625;-0,4464263
+6310;Landbouwers, voor zelfvoorziening;-1,601349;-1,43235;-1,590792
+6320;Veetelers, voor zelfvoorziening;-1,108432;-1,088977;-0,8984643
+6330;Producenten met een gemengd bedrijf, voor zelfvoorziening;-1,3548905;-1,2606635000000002;-1,24462815
+6340;Vissers, jagers, vallenzetters en verzamelaars, voor zelfvoorziening;-1,409023;-1,4427735;-0,8841100500000001
+7111;Allround bouwvakkers, kleine bouwaannemers;1,029139;0,6361951;1,857085
+7112;Metselaars e.d.;-1,4959015;-1,407848;-1,3305255
+7113;Steenhouwers, steensplijters en steensnijders;-1,3487447;-1,2162685500000001;-1,24315465
+7114;Betonwerkers, betonafwerkers e.d.;-1,5120674666666665;-1,4373293666666667;-1,2996090999999999
+7115;Timmerlieden;-1,323631;-1,245253;-1,13992
+7119;Bouwarbeiders ruwbouw, niet elders geclassificeerd;-1,1643864000000002;-1,15346186;-0,8293360199999998
+7121;Dakdekkers;-1,752941;-1,553439;-1,779166
+7122;Vloerleggers en tegelzetters;-1,45993825;-1,3085247500000001;-1,377799975
+7123;Stukadoors;-1,648111;-1,4728653333333332;-1,5341926666666665
+7124;Isoleerders;-1,4436935000000002;-1,294783;-1,4127455
+7125;Glaszetters;-1,388901;-1,267038;-1,279049
+7126;Loodgieters;-1,1734149999999999;-1,150302;-0,9039195499999999
+7127;Installateurs van toestellen voor klimaatregeling en koeltechniek ;-0,4348143;-0,5051686;-0,2459497
+7131;Schilders e.d.;-1,6577600000000001;-1,473231;-1,55437
+7132;Verf- en lakspuiters;-1,284442;-1,423395;-0,5459039
+7133;Schoonmakers bouwwerken;;;
+7211;Metaalgieters en kernmakers;-1,443244;-1,374936;-1,479204
+7212;Lassers en snijders;-1,1000035000000001;-1,1728265;-0,7367962
+7213;Plaatwerkers;-0,9982131;-1,1007505;-0,5268791
+7214;Constructiewerkers;-1,609123;-1,5199239999999998;-1,4681743
+7215;Kraanmonteurs en kabellassers;-1,221519;-1,277513;-0,5586912
+7221;Smeden, voorslagers en smeedperswerkers;-0,8046677;-0,880991;-0,6361212
+7222;Gereedschapsmakers e.d.;-0,583198;-0,7685567833333332;-0,03582913333333334
+7223;Instellers en bedieningspersoneel gereedschapswerktuigen;-0,9214907181818183;-1,0296976181818183;-0,6720538727272728
+7224;Metaalpolijsters, gereedschapslijpers e.d.;-1,0137239;-1,1583755;-0,6417529
+7231;Automonteurs;-0,93879196;-0,94952243;-0,7529937099999999
+7232;Vliegtuigmonteurs;-0,33781829999999996;-0,46436489999999997;-0,0468179
+7233;Monteurs industriële en landbouwmachines;-1,0474146222222223;-1,0894835111111112;-0,7718849444444444
+7234;Rijwielmonteurs e.d.;-0,47156184999999995;-0,4684433;-0,38855205
+7311;Vervaardigers en reparateurs van precisie-instrumenten;-0,113789525;-0,40752869999999997;0,6440526
+7312;Vervaardigers en stemmers van muziekinstrumenten;-0,275572;-0,3492936;-0,30035085
+7313;Juweliers en bewerkers van edele metalen;-0,1560197;-0,6366536;1,03542
+7314;Pottenbakkers e.d.;-1,0564682;-1,0793001;-0,44688585000000003
+7315;Glasblazers, snijders, slijpers en polijsters;-1,0926386333333333;-1,1355025333333335;-0,7807239333333333
+7316;Letterschilders, decoratieschilders, graveurs en etsers;-0,80504065;-0,86282255;-0,3756677
+7317;Ambachtslieden werkend met hout, vlechtwerk e.d.;-0,9295284;-0,9173622;-0,2340453
+7318;Ambachtslieden werkend met textiel, leder e.d.;-0,990912;-1,006982;-0,9580657
+7319;Ambachtslieden, niet elders geclassificeerd;-0,9295284;-0,9173622;-0,2340453
+7321;Prepresstechnici;0,3772858;-0,03325935;1,6974375
+7322;Drukkers ;-0,7093881;-0,84434;-0,2242107
+7323;Afwerkers van drukwerk en boekbinders;-0,9062089;-0,9139293;-0,7243609
+7411;Bouwelektriciens e.d.;-0,86192985;-0,97670555;-0,22829424999999998
+7412;Installateurs van elektrische apparatuur;-0,7606392;-0,8431806384615386;-0,3608548076923077
+7413;Installateurs en reparateurs van elektriciteitsleidingen ;-0,5509574500000001;-0,616631;-0,28976085
+7421;Installateurs en onderhoudsmonteurs op het gebied van de elektronica;-0,4538065857142857;-0,5694976571428572;-0,029695185714285716
+7422;Installateurs en onderhoudsmonteurs op het gebied van de informatie- en communicatietechnologie;-0,6197831857142857;-0,7064006142857143;-0,19490084285714285
+7511;Slagers, vishandelaren e.d.;-1,16753735;-1,083876525;-1,332587175
+7512;Bakkers en banketbakkers;-0,3852989;-0,4742939;-0,0537325
+7513;Zuivelbereiders;-0,65851275;-0,73759105;-0,6163643
+7514;Bereiders van groente- en fruitconserven;-0,5559894;-0,6185341;-0,7325209
+7515;Proevers en klasseerders van voedingsmiddelen en dranken;-0,6002406499999999;-0,52024605;-0,84097475
+7516;Tabaksbereiders en vervaardigers van tabaksproducten;-1,1988423333333333;-1,137167;-1,2106694
+7521;Houtbehandelaars;-1,1348263;-1,0661425;-1,3372730000000002
+7522;Meubelmakers e.d.;-1,0777499750000001;-1,143812375;-0,6813846
+7523;Instellers en bedieningspersoneel houtbewerkingsmachines;-1,130357;-1,203906;-0,9519568
+7531;Kleermakers, bontwerkers en hoedenmakers;-0,4305268;-0,6065376;0,1317748
+7532;Patroonmakers en snijders voor kleding e.d.;-0,6846808333333333;-0,7983296333333333;-0,27636553333333336
+7533;Naaisters, borduursters e.d.;-0,9874909333333334;-1,1635663333333335;-0,43701933333333337
+7534;Stoffeerders e.d.;-1,313735;-1,405178;-0,5489876
+7535;Pelsbereiders en leerlooiers;-1,370968;-1,03238;-2,188827
+7536;Schoenmakers e.d.;-0,990912;-1,006982;-0,9580657
+7541;Duikers;-1,102728;-1,08214;-0,7830058
+7542;Schietmeesters en schiethouwers;-0,773027;-0,9547396;-0,1694389
+7543;Klasseerders en testers (m.u.v. voedingsmiddelen en dranken);-0,0293395;-0,1556781;0,1120355
+7544;Ontsmetters en bestrijders van onkruid en ongedierte;-0,7217393333333333;-0,7144937666666666;-0,5273773
+7549;Ambachtslieden, niet elders geclassificeerd;-0,43426055;-0,5686405;0,25984395
+8111;Mijnwerkers en arbeiders in steengroeven;-1,2652588714285713;-1,3712824571428572;-0,8473640571428572
+8112;Bedieningspersoneel van installaties voor de verwerking van mineralen en gesteente;-1,0926805000000002;-1,129999;-0,97943035
+8113;Boorders van bronnen e.d.;-1,0787772833333333;-1,1563737333333333;-0,8089717333333333
+8114;Bedieningspersoneel van machines voor de vervaardiging van cement, stenen en andere minerale producten.;-0,903165175;-1,0215896249999998;-0,608536375
+8121;Bedieningspersoneel van metaalbewerkings- en metaalverwerkingsinstallaties;-1,1185306000000002;-1,2257564;-0,7954789800000001
+8122;Bedieningspersoneel van installaties voor het bekleden of voor andere oppervlaktebehandelingen van metalen;-1,0544012;-1,0770395;-0,8745782666666667
+8131;Bedieningspersoneel van machines en installaties voor de chemische industrie;-0,8776143666666667;-0,9892078333333334;-0,47597010000000006
+8132;Bedieningspersoneel van machines voor de vervaardiging van fotografische producten;-0,3615806;-0,4977627;0,0623692
+8141;Bedieningspersoneel van machines voor de vervaardiging van producten van rubber;-1,16763692;-1,1649116;-1,11341018
+8142;Bedieningspersoneel van machines voor de vervaardiging van producten van kunststof;-1,0172957166666665;-1,083310975;-0,8196473583333334
+8143;Bedieningspersoneel van machines voor de vervaardiging van producten van papier;-1,09273125;-1,1014583500000001;-1,06362765
+8151;Bedieningspersoneel van machines voor het bereiden van spinvezels, het spinnen en het opwinden;-1,392929;-1,416544;-1,282726
+8152;Bedieningspersoneel van weefgetouwen en breimachines;-1,241662;-1,155505;-1,501937
+8153;Bedieningspersoneel van naaimachines;-0,9639661;-1,272624;-0,178801
+8154;Bedieningspersoneel van machines voor het bleken, het verven en het reinigen van weefsels;-0,8609312;-0,9229649;-0,8292715
+8155;Bedieningspersoneel van machines voor het bereiden van bont en leer;;;
+8156;Bedieningspersoneel van machines voor de vervaardiging van schoeisel e.d.;-1,029855;-1,052404;-0,8825489
+8157;Bedieningspersoneel van wasmachines;-1,054399;-0,8894878;-1,346116
+8159;Bedieningspersoneel van machines voor de vervaardiging van producten van textiel, bont en leer, niet elders geclassificeerd;;;
+8160;Bedieningspersoneel van machines voor de vervaardiging van voedingsmiddelen e.d.;-0,7393212;-0,8008344600000001;-0,69976304
+8171;Bedieningspersoneel van machines voor de vervaardiging van papierpulp en papier;-1,00796475;-1,02082935;-0,97733715
+8172;Bedieningspersoneel van installaties voor de houtbewerking;-1,165031;-1,265049;-0,8215746
+8181;Bedieningspersoneel van installaties voor de vervaardiging van glas en aardewerk;-0,9844376833333334;-1,03773745;-0,8364671333333334
+8182;Bedieningspersoneel van stoommachines en stoomketels;-0,5032496;-0,579769;-0,3852146
+8183;Bedieningspersoneel van verpakkings-, bottel- en etiketteringsmachines;-0,978608;-1,010728;-0,903661
+8189;Bedieningspersoneel van stationaire machines en installaties, niet elders geclassificeerd;-0,9161469;-0,968800325;-0,68004455
+8211;Assembleurs van mechanische werktuigen;-0,91230795;-0,9858492;-0,54618575
+8212;Assembleurs van elektrische en elektronische apparatuur;-0,56928044;-0,73658428;-0,11214675999999998
+8219;Assembleurs, niet elders geclassificeerd;-0,8305441;-0,8316012;-0,7084011
+8311;Treinmachinisten;-0,6536364;-0,8920470666666667;-0,09083445000000001
+8312;Remmers, sein  en wisselwachters;-0,5124318666666666;-0,6057933999999999;-0,18482416666666668
+8321;Bestuurders van motorrijwielen;-0,40624404999999997;-0,4273148;-0,2613447
+8322;Chauffeurs van auto's, taxi's en bestelwagens;-0,6330631600000001;-0,7274151;-0,25756873999999996
+8331;Buschauffeurs en trambestuurders;-0,343019;-0,655852125;0,360164125
+8332;Vrachtwagenchauffeurs;-0,50121625;-0,6663118;0,033929600000000004
+8341;Bedieningspersoneel van mobiele land- en bosbouwmachines;-1,074429;-1,297593;-0,42473645
+8342;Bedieningspersoneel van grondverzetmachines e.d.;-1,0894519599999999;-1,3103128;-0,4406998
+8343;Kraandrijvers en bedieningspersoneel van takels e.d.;-0,6038050800000001;-0,68775144;-0,38050394
+8344;Heftruckbestuurders;-0,62603275;-0,7538153;-0,17154380000000002
+8350;Dekpersoneel op schepen e.d.;-1,0185598;-1,2228750000000002;-0,28377240000000004
+9111;Huishoudelijke hulpen en schoonmakers in huishoudens;-1,480657;-1,030813;-2,102381
+9112;Schoonmakers in hotels, kantoren e.d.;-1,515585;-1,2197313333333335;-1,75716
+9121;Personeel voor het wassen en strijken met de hand;-1,950063;-1,853906;-1,892426
+9122;Autowassers;-1,629897;-1,535339;-1,417647
+9123;Glazenwassers;-1,436201;-1,093042;-1,751452
+9129;Andere schoonmakers;-1,210591;-1,260409;-0,9217188
+9211;Ongeschoolde arbeiders in de akkerbouw;-1,601349;-1,43235;-1,590792
+9212;Ongeschoolde arbeiders in de veeteelt;-1,108432;-1,088977;-0,8984643
+9213;Ongeschoolde arbeiders op gemengde bedrijven;-1,3548905;-1,2606635000000002;-1,24462815
+9214;Ongeschoolde arbeiders in de tuinbouw;-1,712821;-1,544402;-1,6463485
+9215;Ongeschoolde arbeiders in de bosbouw;-1,064205;-0,9999521;-0,9001154
+9216;Ongeschoolde arbeiders in de visserij en de visteelt;-1,3108405;-1,3002235;-1,01722165
+9311;Ongeschoolde arbeiders in de mijnbouw en in steengroeven;-1,543154;-1,572339;-1,176056
+9312;Ongeschoolde arbeiders in de weg- en waterbouw;-1,339075;-1,3891985;-0,99369955
+9313;Ongeschoolde arbeiders in de burgerlijke en utiliteitsbouw;-1,7313417142857144;-1,5547075714285714;-1,6370842857142858
+9321;Inpakkers;-1,51362;-1,193372;-2,100734
+9329;Ongeschoolde arbeiders in de industrie, niet elders geclassificeerd;-1,3622159999999999;-1,30750425;-1,3143071
+9331;Bestuurders van (bak)fietsen en handkarren;-0,9591126;-0,92241;-0,8782806
+9332;Bestuurders van door dieren getrokken voertuigen en machines;;;
+9333;Laders en lossers;-0,922525;-0,8785740499999999;-0,87373565
+9334;Schappenvullers;-0,7892948;-0,5232333;-1,325202
+9411;Bereiders van fastfood;-0,6532827;-0,47902939999999994;-1,1192541
+9412;Keukenhulpen;-1,630702;-1,3092949;-2,066140666666667
+9510;Op straat uitgeoefende dienstverlenende beroepen;;;
+9520;Straatverkopers (m.u.v. voedsel);1,107101;1,511458;0,0474758
+9611;Vuilnisophalers en ophalers van afval voor recycling;-0,5683742500000001;-0,5974913000000001;-0,27466525
+9612;Vuilnissorteerders;-1,283373;-1,262763;-0,9049217
+9613;Straatvegers e.d.;;;
+9621;Boden, kruiers en bestellers;-1,1155637999999999;-0,9182048;-1,4191828
+9622;Losse arbeiders;-0,9836807;-1,0610969;-0,6176859666666666
+9623;Meteropnemers en geldophalers verkoopautomaten;-0,8478883500000001;-0,93925375;-0,44803185
+9624;Waterdragers en brandhoutverzamelaars;-1,709183;-1,49843;-1,791936
+9629;Elementaire beroepen, niet elders geclassificeerd;-0,46523953999999995;-0,34964416;-0,73813134

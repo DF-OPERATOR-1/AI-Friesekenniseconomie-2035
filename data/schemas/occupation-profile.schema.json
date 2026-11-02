@@ -1,0 +1,370 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OccupationProfile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "isco_code",
+    "title",
+    "source_references",
+    "data_status",
+    "description",
+    "tasks",
+    "skills",
+    "ai_exposure",
+    "ai_complementarity",
+    "vacancies",
+    "education_inflow",
+    "retirement_outflow",
+    "outlook_2035"
+  ],
+  "properties": {
+    "isco_code": {
+      "type": "string",
+      "pattern": "^[0-9]{4}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_references": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "data_status": {
+      "enum": [
+        "observed",
+        "calculated",
+        "estimated",
+        "scenario",
+        "unavailable",
+        "not_responsible"
+      ]
+    },
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/indicator"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "tasks": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/indicator"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "skills": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/indicator"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ai_exposure": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/indicator"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "ai_complementarity": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/indicator"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "vacancies": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/indicator"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "year",
+                  "quarter",
+                  "value",
+                  "geography",
+                  "source"
+                ],
+                "properties": {
+                  "year": {
+                    "type": "integer",
+                    "minimum": 1900,
+                    "maximum": 2100
+                  },
+                  "quarter": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 4
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "geography": {
+                    "type": "string"
+                  },
+                  "source": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "education_inflow": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/indicator"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "retirement_outflow": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/indicator"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "outlook_2035": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/indicator"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "knowledge_areas": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/indicator"
+        },
+        {
+          "properties": {
+            "value": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "member_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "occupation_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "brc2014": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "title"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^[0-9]{4}$"
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "map_exposure": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "$defs": {
+    "indicator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "status",
+        "source",
+        "year",
+        "geography",
+        "classification",
+        "methodology"
+      ],
+      "properties": {
+        "value": {},
+        "status": {
+          "enum": [
+            "observed",
+            "calculated",
+            "estimated",
+            "scenario",
+            "unavailable",
+            "not_responsible"
+          ]
+        },
+        "source": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "year": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1900,
+          "maximum": 2100
+        },
+        "geography": {
+          "type": "string"
+        },
+        "classification": {
+          "type": "string"
+        },
+        "methodology": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "unavailable",
+                  "not_responsible"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "note": "De gebruiker heeft downloadlinks voor de bestaande AI- en DUO-CSV’s expliciet toegestaan. UWV blijft uitgesloten. Licenties worden niet verondersteld.",
+  "files": {
+    "ISCO08_AIOE.csv": {
+      "approved": true,
+      "license": null,
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+    },
+    "ISCO08_C_AIOE.csv": {
+      "approved": true,
+      "license": null,
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+    },
+    "ISCO08_Complementary.csv": {
+      "approved": true,
+      "license": null,
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+    },
+    "afgestudeerden_hbo_friesland.csv": {
+      "approved": true,
+      "license": null,
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+    },
+    "afgestudeerden_mbo_friesland.csv": {
+      "approved": true,
+      "license": null,
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+    },
+    "afgestudeerden_wo_friesland.csv": {
+      "approved": true,
+      "license": null,
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+    },
+    "studenten_hbo_friesland.csv": {
+      "approved": true,
+      "license": null,
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+    },
+    "studenten_mbo_friesland.csv": {
+      "approved": true,
+      "license": null,
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+    },
+    "studenten_wo_friesland.csv": {
+      "approved": true,
+      "license": null,
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+    }
+  },
+  "derived_data": {
+    "atlas/profiles.json": {
+      "approved": true,
+      "evidence": "Bestaande opdracht: beroepsscores en CompetentNL-beroepsinhoud op de website tonen."
+    },
+    "atlas/catalogue.json": {
+      "approved": true,
+      "evidence": "Bestaande bronnenpagina; uitsluitend catalogusmetadata, geen UWV-waarnemingen."
+    },
+    "atlas/occupations/{isco}.json": {
+      "approved": true,
+      "license": "CC BY 4.0",
+      "evidence": "Gebruiker heeft CompetentNL-definities, taken en vaardigheden voor de beroepspagina aangeleverd en bronvermelding CC BY 4.0 opgegeven."
+    },
+    "research/occupations.json": {
+      "approved": true,
+      "evidence": "Afgeleide beroepsscores uit de reeds toegestane AI-CSV’s; geen nieuwe berekeningen."
+    }
+  }
+}
