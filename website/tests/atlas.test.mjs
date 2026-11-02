@@ -33,8 +33,14 @@ for (const name of ['search', 'Atlas', 'TopicIcon', 'perceptualSelection']) {
   await fs.writeFile(new URL(`${name}.mjs`, cache), output);
 }
 const { searchProfiles, profileCode } = await import(new URL('search.mjs', cache));
-const { Home, Occupations, Profile, Future, SpecificOccupationDetails, SkillCategory } =
-  await import(new URL('Atlas.mjs', cache));
+const {
+  Home,
+  Occupations,
+  Profile,
+  Future,
+  SpecificOccupationDetails,
+  OccupationCategory,
+} = await import(new URL('Atlas.mjs', cache));
 const profiles = JSON.parse(
   await fs.readFile(new URL('../public/data/atlas/profiles.json', import.meta.url)),
 );
@@ -222,7 +228,8 @@ test('beroepsdetails groeperen bronwaarden, tonen taakdefinities en vermelden Co
   });
   for (const level of ['Essentieel', 'Optioneel', 'Belangrijk', 'Enigszins belangrijk'])
     assert.ok(html.includes(level));
-  assert.match(html, /<summary>Kerntaak<\/summary>/);
+  assert.match(html, /<span>Kerntaak<\/span>/);
+  assert.match(html, /task-blocks/);
   assert.match(html, /Uitleg kerntaak/);
   assert.match(html, /Uitleg extra taak/);
   const profile = render(Profile, { code: profiles[0].isco_code, profiles });
@@ -239,7 +246,7 @@ test('vaardighedencategorie toont zes items in bronvolgorde en een toegankelijke
     description: '',
     code: '',
   }));
-  const html = render(SkillCategory, { entries, label: 'Essentieel' });
+  const html = render(OccupationCategory, { entries, label: 'Essentieel' });
   assert.equal((html.match(/<li/g) || []).length, 6);
   for (let i = 0; i < 6; i++) assert.ok(html.includes(`Vaardigheid ${i}`));
   assert.ok(!html.includes('Vaardigheid 6'));
@@ -247,7 +254,7 @@ test('vaardighedencategorie toont zes items in bronvolgorde en een toegankelijke
   assert.match(html, /aria-controls="[^"]+"/);
   assert.match(html, /Toon alle vaardigheden/);
   assert.ok(html.indexOf('Vaardigheid 0') < html.indexOf('Vaardigheid 5'));
-  const short = render(SkillCategory, {
+  const short = render(OccupationCategory, {
     entries: entries.slice(0, 3),
     label: 'Essentieel',
   });
@@ -284,4 +291,24 @@ test('voorbeelden van werkzaamheden krijgen een eigen kop zonder brontekst te ve
   assert.match(html, /<p>Geeft leiding.<\/p>/);
   assert.match(html, /<h3>Voorbeelden van werkzaamheden<\/h3>/);
   assert.match(html, /<p>Bewaakt de groei, onderhoudt contacten.<\/p>/);
+});
+
+test('taken zijn uitklapbare blokken zonder dubbele lijstmarkeringen', () => {
+  const entries = Array.from({ length: 8 }, (_, i) => ({
+    uri: `task-${i}`,
+    name: `Taak ${i}`,
+    description: `Uitleg ${i}`,
+    importance: 'essentieel',
+    code: '',
+  }));
+  const html = render(OccupationCategory, {
+    entries,
+    label: 'Essentieel',
+    kind: 'tasks',
+  });
+  assert.doesNotMatch(html, /<ul|<li/);
+  assert.equal((html.match(/<details/g) || []).length, 6);
+  assert.match(html, /Toon alle taken/);
+  assert.match(html, /aria-expanded="false"/);
+  assert.match(html, /Uitleg 0/);
 });

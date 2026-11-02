@@ -59,15 +59,15 @@ export function FooterBrand() {
         className="footer-brand-dark"
         src={footerDark}
         alt=""
-        width="160"
-        height="160"
+        width="180"
+        height="62"
       />
       <img
         className="footer-brand-light"
         src={footerLight}
         alt=""
-        width="160"
-        height="160"
+        width="180"
+        height="62"
       />
     </span>
   );

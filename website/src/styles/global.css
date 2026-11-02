@@ -1253,8 +1253,9 @@ footer {
 }
 .footer-brand-image {
   display: block;
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: auto;
+  aspect-ratio: 1080 / 372;
 }
 .footer-brand-image img {
   display: block;
@@ -1272,15 +1273,14 @@ footer {
   display: block;
 }
 footer:has(.footer-brand-image) {
-  padding-block: 0;
+  padding-block: 18px;
 }
 .footer-inner > .footer-brand-link {
   color: var(--text);
 }
 @media (max-width: 760px) {
   .footer-brand-image {
-    width: 130px;
-    height: 130px;
+    width: 150px;
   }
 }
 .research-controls.exposure-controls {
@@ -3121,7 +3121,7 @@ fieldset.chart-card {
   margin-bottom: 16px;
 }
 .profile-section-intro {
-  max-width: 76ch;
+  max-width: none;
   color: var(--muted);
   line-height: 1.7;
 }
@@ -3450,4 +3450,62 @@ fieldset.chart-card {
   .methodology-question {
     padding: 18px;
   }
+}
+
+/* Taken: dezelfde kolomvolgorde als vaardigheden, met één uitklapbediening per blok. */
+.task-blocks {
+  font-size: 0.83rem;
+  line-height: 1.7;
+  column-width: 240px;
+  column-gap: 32px;
+}
+.task-block {
+  break-inside: avoid;
+  margin: 0 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  overflow: hidden;
+}
+.task-block > summary {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px;
+  list-style: none;
+  color: var(--text);
+}
+.task-block > summary::-webkit-details-marker {
+  display: none;
+}
+.task-block > summary > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.task-block > summary > svg {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+}
+.task-block[open] {
+  background: var(--surface-alt);
+}
+.task-block[open] > summary .task-expand-line {
+  display: none;
+}
+.occupation-item-group .task-block > p {
+  padding: 0 14px 14px;
+  margin: 0;
+}
+.task-block-static {
+  padding: 14px;
+  overflow-wrap: anywhere;
+}
+.profile-compare a > span {
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
 }

@@ -378,12 +378,14 @@ function CompetentSource() {
     </p>
   );
 }
-export function SkillCategory({
+export function OccupationCategory({
   entries,
   label,
+  kind = 'skills',
 }: {
   entries: OccupationItem[];
   label: string;
+  kind?: 'tasks' | 'skills';
 }) {
   const [expanded, setExpanded] = useState(false);
   const id = useId();
@@ -402,24 +404,60 @@ export function SkillCategory({
             aria-controls={id}
             onClick={() => setExpanded(!expanded)}
           >
-            {expanded ? 'Toon minder' : 'Toon alle vaardigheden'}
+            {expanded
+              ? 'Toon minder'
+              : kind === 'tasks'
+                ? 'Toon alle taken'
+                : 'Toon alle vaardigheden'}
           </button>
         )}
       </div>
-      <ul id={id}>
-        {visible.map((item, index) => (
-          <li key={`${item.uri}-${index}`}>
-            {item.description ? (
-              <details>
-                <summary>{item.name}</summary>
+      {kind === 'tasks' ? (
+        <div id={id} className="task-blocks">
+          {visible.map((item, index) =>
+            item.description ? (
+              <details className="task-block" key={`${item.uri}-${index}`}>
+                <summary>
+                  <span>{item.name}</span>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                  >
+                    <path d="M5 12h14" />
+                    <path className="task-expand-line" d="M12 5v14" />
+                  </svg>
+                </summary>
                 <p>{item.description}</p>
               </details>
             ) : (
-              item.name
-            )}
-          </li>
-        ))}
-      </ul>
+              <div
+                className="task-block task-block-static"
+                key={`${item.uri}-${index}`}
+              >
+                {item.name}
+              </div>
+            ),
+          )}
+        </div>
+      ) : (
+        <ul id={id}>
+          {visible.map((item, index) => (
+            <li key={`${item.uri}-${index}`}>
+              {item.description ? (
+                <details>
+                  <summary>{item.name}</summary>
+                  <p>{item.description}</p>
+                </details>
+              ) : (
+                item.name
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
     </section>
   );
 }
@@ -452,30 +490,13 @@ function GroupedItems({
               : level
                 ? level.charAt(0).toUpperCase() + level.slice(1)
                 : 'Niet ingedeeld';
-          if (kind === 'skills')
-            return <SkillCategory key={level} entries={entries} label={label} />;
           return (
-            <section className="occupation-item-group" key={level}>
-              <h4>
-                {level
-                  ? level.charAt(0).toUpperCase() + level.slice(1)
-                  : 'Niet ingedeeld'}
-              </h4>
-              <ul>
-                {entries.map((item, index) => (
-                  <li key={`${item.uri}-${index}`}>
-                    {item.description ? (
-                      <details>
-                        <summary>{item.name}</summary>
-                        <p>{item.description}</p>
-                      </details>
-                    ) : (
-                      item.name
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </section>
+            <OccupationCategory
+              key={level}
+              entries={entries}
+              label={label}
+              kind={kind}
+            />
           );
         })
       ) : (
@@ -704,7 +725,9 @@ export function Profile({
 
           <p className="profile-compare">
             <span>Wat zeggen deze scores ten opzichte van andere beroepen?</span>
-            <a href="#invloed-ai">Vergelijk bij Invloed van AI</a>
+            <a href="#invloed-ai">
+              Vergelijk bij <span>Invloed van AI</span>
+            </a>
           </p>
         </section>
         <ProfessionalContent key={row.isco_code} row={row} />
