@@ -2,8 +2,7 @@ import logoDark from '../assets/brand/df-logo.svg';
 import logoLight from '../assets/brand/df-logo-light.svg';
 import artworkDark from '../assets/brand/frl-dark.svg';
 import artworkLight from '../assets/brand/frl-light.svg';
-import footerDark from '../assets/brand/bfy-dark.svg';
-import footerLight from '../assets/brand/bfy-light.svg';
+import footerLogo from '../assets/brand/footer-logo-on-dark.svg';
 
 export function BrandLogo() {
   return (
@@ -56,15 +55,8 @@ export function FooterBrand() {
       aria-label="DataFryslân — Boarne fan ynsicht"
     >
       <img
-        className="footer-brand-dark"
-        src={footerDark}
-        alt=""
-        width="180"
-        height="62"
-      />
-      <img
-        className="footer-brand-light"
-        src={footerLight}
+        className="footer-brand-logo"
+        src={footerLogo}
         alt=""
         width="180"
         height="62"

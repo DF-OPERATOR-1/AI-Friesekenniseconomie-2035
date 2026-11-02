@@ -293,7 +293,7 @@ test('voorbeelden van werkzaamheden krijgen een eigen kop zonder brontekst te ve
   assert.match(html, /<p>Bewaakt de groei, onderhoudt contacten.<\/p>/);
 });
 
-test('taken zijn uitklapbare blokken zonder dubbele lijstmarkeringen', () => {
+test('taken staan in één categorieblok met uitklapbare rijen zonder lijstmarkeringen', () => {
   const entries = Array.from({ length: 8 }, (_, i) => ({
     uri: `task-${i}`,
     name: `Taak ${i}`,
@@ -309,6 +309,8 @@ test('taken zijn uitklapbare blokken zonder dubbele lijstmarkeringen', () => {
   assert.doesNotMatch(html, /<ul|<li/);
   assert.equal((html.match(/<details/g) || []).length, 6);
   assert.match(html, /Toon alle taken/);
+  assert.equal((html.match(/task-category-panel/g) || []).length, 1);
+  assert.doesNotMatch(html, /task-column|grid-template-columns/);
   assert.match(html, /aria-expanded="false"/);
   assert.match(html, /Uitleg 0/);
 });

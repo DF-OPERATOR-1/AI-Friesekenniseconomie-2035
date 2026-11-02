@@ -378,6 +378,36 @@ function CompetentSource() {
     </p>
   );
 }
+function TaskBlocks({ entries, id }: { entries: OccupationItem[]; id: string }) {
+  return (
+    <div id={id} className="task-blocks">
+      {entries.map((item, index) =>
+        item.description ? (
+          <details className="task-block" key={`${item.uri}-${index}`}>
+            <summary>
+              <span>{item.name}</span>
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+              >
+                <path d="M5 12h14" />
+                <path className="task-expand-line" d="M12 5v14" />
+              </svg>
+            </summary>
+            <p>{item.description}</p>
+          </details>
+        ) : (
+          <div className="task-block task-block-static" key={`${item.uri}-${index}`}>
+            {item.name}
+          </div>
+        ),
+      )}
+    </div>
+  );
+}
 export function OccupationCategory({
   entries,
   label,
@@ -391,7 +421,9 @@ export function OccupationCategory({
   const id = useId();
   const visible = expanded ? entries : entries.slice(0, 6);
   return (
-    <section className="occupation-item-group">
+    <section
+      className={`occupation-item-group${kind === 'tasks' ? ' task-category-panel' : ''}`}
+    >
       <div className="skill-category-heading">
         <h4>
           {label} <span className="skill-count">({entries.length})</span>
@@ -413,35 +445,7 @@ export function OccupationCategory({
         )}
       </div>
       {kind === 'tasks' ? (
-        <div id={id} className="task-blocks">
-          {visible.map((item, index) =>
-            item.description ? (
-              <details className="task-block" key={`${item.uri}-${index}`}>
-                <summary>
-                  <span>{item.name}</span>
-                  <svg
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                  >
-                    <path d="M5 12h14" />
-                    <path className="task-expand-line" d="M12 5v14" />
-                  </svg>
-                </summary>
-                <p>{item.description}</p>
-              </details>
-            ) : (
-              <div
-                className="task-block task-block-static"
-                key={`${item.uri}-${index}`}
-              >
-                {item.name}
-              </div>
-            ),
-          )}
-        </div>
+        <TaskBlocks entries={visible} id={id} />
       ) : (
         <ul id={id}>
           {visible.map((item, index) => (

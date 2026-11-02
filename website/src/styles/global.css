@@ -1255,24 +1255,21 @@ footer {
   display: block;
   width: 180px;
   height: auto;
-  aspect-ratio: 1080 / 372;
 }
 .footer-brand-image img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
 }
-.footer-brand-image .footer-brand-light {
-  display: none;
-}
-:root[data-theme='dark'] .footer-brand-image .footer-brand-dark {
-  display: none;
-}
-:root[data-theme='dark'] .footer-brand-image .footer-brand-light {
-  display: block;
-}
 footer:has(.footer-brand-image) {
+  --text: #fafdff;
+  --muted: #b1c7cd;
+  --border: #33545f;
+  background: #04232e;
+  color: var(--text);
+  border-top-color: var(--border);
+  color-scheme: dark;
   padding-block: 18px;
 }
 .footer-inner > .footer-brand-link {
@@ -3452,20 +3449,28 @@ fieldset.chart-card {
   }
 }
 
-/* Taken: dezelfde kolomvolgorde als vaardigheden, met één uitklapbediening per blok. */
-.task-blocks {
-  font-size: 0.83rem;
-  line-height: 1.7;
-  column-width: 240px;
-  column-gap: 32px;
-}
-.task-block {
-  break-inside: avoid;
-  margin: 0 0 12px;
+/* Eén vast paneel per takencategorie, met uitklapbare rijen. */
+.task-category-panel {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--surface);
   overflow: hidden;
+}
+.task-category-panel > .skill-category-heading {
+  padding: 16px;
+  margin: 0;
+}
+.task-blocks {
+  border-top: 1px solid var(--border);
+  font-size: 0.83rem;
+  line-height: 1.7;
+}
+.task-block {
+  min-width: 0;
+  margin: 0;
+}
+.task-block + .task-block {
+  border-top: 1px solid var(--border);
 }
 .task-block > summary {
   display: flex;
