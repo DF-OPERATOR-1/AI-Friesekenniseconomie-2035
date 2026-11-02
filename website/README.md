@@ -88,7 +88,7 @@ De vier achtergrondvlakken van de perceptuele kaart behouden in beide thema’s 
 
 Het omhullende element van het FRL-huisstijlbeeld heeft eveneens een transparante achtergrond, zodat het beeld aansluit op de pagina-achtergrond.
 
-De footer gebruikt de aangeleverde BFY-combinatie in plaats van het losse logo, de projectnaam en de tekstslogan. `bfy-dark.svg` verschijnt in lichte modus en `bfy-light.svg` in donkere modus. Alleen de twee witte achtergrondrechthoeken zijn uit beide SVG’s verwijderd; de overige elementen zijn behouden. Het losse DF-logo blijft in de hoofdnavigatie staan.
+De footer gebruikt de aangeleverde BFY-combinatie. `footer-logo-on-light.svg` verschijnt in lichte modus en `footer-logo-on-dark.svg` in donkere modus. De oorspronkelijke afbeeldingsgegevens en kleuren zijn behouden; overbodige filterlagen en fractionele transformaties zijn verwijderd. De SVG’s gebruiken hun eigen beeldverhouding. Het losse DF-logo blijft in de hoofdnavigatie staan.
 
 De tab AI-exposure biedt sortering op score (hoog naar laag of laag naar hoog) en beroepscode. De tabel volgt dezelfde sortering; ontbrekende scores komen bij scoresortering onderaan. De uitleg maakt duidelijk dat hogere waarden meer overlap betekenen en dat negatieve scores geen negatieve blootstelling of percentages voorstellen.
 

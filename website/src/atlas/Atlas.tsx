@@ -1,4 +1,4 @@
-import { useEffect, useId, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import type {
   Indicator,
   OccupationProfile,
@@ -378,6 +378,62 @@ function CompetentSource() {
     </p>
   );
 }
+function TaskBlocks({ entries, id }: { entries: OccupationItem[]; id: string }) {
+  const container = useRef<HTMLDivElement>(null);
+  const [columnCount, setColumnCount] = useState(1);
+  useEffect(() => {
+    if (!container.current) return;
+    const observer = new ResizeObserver(([entry]) => {
+      const available = Math.max(1, Math.floor((entry.contentRect.width + 32) / 272));
+      setColumnCount(Math.min(3, Math.max(1, entries.length), available));
+    });
+    observer.observe(container.current);
+    return () => observer.disconnect();
+  }, [entries.length]);
+  const perColumn = Math.ceil(entries.length / columnCount);
+  return (
+    <div
+      ref={container}
+      id={id}
+      className="task-blocks"
+      style={{ gridTemplateColumns: `repeat(${columnCount}, minmax(0, 1fr))` }}
+    >
+      {Array.from({ length: columnCount }, (_, column) => (
+        <div className="task-column" key={column}>
+          {entries
+            .slice(column * perColumn, (column + 1) * perColumn)
+            .map((item, index) =>
+              item.description ? (
+                <details className="task-block" key={`${item.uri}-${index}`}>
+                  <summary>
+                    <span>{item.name}</span>
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                    >
+                      <path d="M5 12h14" />
+                      <path className="task-expand-line" d="M12 5v14" />
+                    </svg>
+                  </summary>
+                  <p>{item.description}</p>
+                </details>
+              ) : (
+                <div
+                  className="task-block task-block-static"
+                  key={`${item.uri}-${index}`}
+                >
+                  {item.name}
+                </div>
+              ),
+            )}
+        </div>
+      ))}
+    </div>
+  );
+}
 export function OccupationCategory({
   entries,
   label,
@@ -413,35 +469,7 @@ export function OccupationCategory({
         )}
       </div>
       {kind === 'tasks' ? (
-        <div id={id} className="task-blocks">
-          {visible.map((item, index) =>
-            item.description ? (
-              <details className="task-block" key={`${item.uri}-${index}`}>
-                <summary>
-                  <span>{item.name}</span>
-                  <svg
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                  >
-                    <path d="M5 12h14" />
-                    <path className="task-expand-line" d="M12 5v14" />
-                  </svg>
-                </summary>
-                <p>{item.description}</p>
-              </details>
-            ) : (
-              <div
-                className="task-block task-block-static"
-                key={`${item.uri}-${index}`}
-              >
-                {item.name}
-              </div>
-            ),
-          )}
-        </div>
+        <TaskBlocks entries={visible} id={id} />
       ) : (
         <ul id={id}>
           {visible.map((item, index) => (
