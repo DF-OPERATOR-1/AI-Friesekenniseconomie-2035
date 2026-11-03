@@ -170,9 +170,9 @@ export function PerceptualChart() {
       <div className="research-controls">
         <div className="map-variant-control">
           <div className="map-variant-label">
-            <label htmlFor={variantId}>AI-exposurevariant</label>
+            <label htmlFor={variantId}>AI-blootstellingvariant</label>
             <details className="map-variant-info">
-              <summary aria-label="Uitleg over AI-exposurevariant">
+              <summary aria-label="Uitleg over AI-blootstellingvariant">
                 <svg
                   width="18"
                   height="18"

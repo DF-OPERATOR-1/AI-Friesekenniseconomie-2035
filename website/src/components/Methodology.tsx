@@ -117,9 +117,9 @@ export function Methodology() {
         <h2>Invloed van AI</h2>
         <div className="methodology-main-explanation">
           <div>
-            <h3>AI-exposure</h3>
+            <h3>AI-blootstelling</h3>
             <p>
-              AI-exposure laat zien in hoeverre de vaardigheden van een beroep
+              AI-blootstelling laat zien in hoeverre de vaardigheden van een beroep
               aansluiten bij wat AI kan. We gebruiken hiervoor de onderzoeksindicatoren
               van Felten, Raj en Seamans (2021, 2023), met afzonderlijke scores voor
               algemene AI, taalmodellen en beeldgeneratie.
@@ -135,7 +135,7 @@ export function Methodology() {
               voorbereiding.
             </p>
             <p>
-              Een hoge AI-exposure betekent niet automatisch dat banen verdwijnen. De
+              Een hoge AI-blootstelling betekent niet automatisch dat banen verdwijnen. De
               scores beschrijven kenmerken van beroepen, geen voorspellingen over
               baanverlies of productiviteitswinst.
             </p>
@@ -155,11 +155,11 @@ export function Methodology() {
           </div>
         </div>
         <details className="methodology-disclosure" id="methodologie-exposure">
-          <summary>Hoe wordt AI-exposure berekend?</summary>
+          <summary>Hoe wordt AI-blootstelling berekend?</summary>
           <div className="methodology-disclosure-content">
-            <h3>AI en beroepen: wat betekent AI-exposure?</h3>
+            <h3>AI en beroepen: wat betekent AI-blootstelling?</h3>
             <p>
-              AI-exposure laat zien hoeveel overlap er is tussen de vaardigheden die een
+              AI-blootstelling laat zien hoeveel overlap er is tussen de vaardigheden die een
               beroep vraagt en wat AI kan. Een hogere score betekent meer overlap.
             </p>
             <p>
@@ -386,7 +386,7 @@ export function Methodology() {
               nagerekend. Daarbij onderscheiden we overgenomen exposure-scores, zelf
               berekende complementariteit en de eigen koppeling naar ISCO-08.
             </p>
-            <h4>AI-exposure</h4>
+            <h4>AI-blootstelling</h4>
             <p>
               De verwerking van de gepubliceerde scores en de ISCO-koppeling zijn
               reproduceerbaar. Ook de 774 taalmodelscores komen op de gepubliceerde

@@ -22,7 +22,7 @@ class OccupationContentTests(unittest.TestCase):
             write('beroepen_isco.csv', ['uri', 'naam', 'definitie', 'isco_code', 'isco_naam'], [
                 dict(uri='u1', naam='Specifiek beroep', definitie='Eigen definitie', isco_code='0110', isco_naam='Officieren'),
                 dict(uri='u2', naam='Ander beroep', definitie='Andere definitie', isco_code='2512', isco_naam='Softwareontwikkelaars')])
-            for name in ['beroepen_taken.csv', 'beroepen_vaardigheden.csv']:
+            for name in ['beroepen_taken.csv', 'beroepen_vaardigheden.csv', 'beroepen_kennisgebieden.csv']:
                 write(name, ['uri', 'item_naam', 'belang', 'item_definitie'], [dict(uri='u1', item_naam='Uniek onderdeel', belang='essentieel', item_definitie='Uitleg van het onderdeel'), dict(uri='u1', item_naam='Uniek onderdeel', belang='essentieel', item_definitie='Uitleg van het onderdeel'), dict(uri='onbekend', item_naam='Niet koppelen')])
             result = import_content(root)
             member_content = json.loads(gzip.decompress((root / 'data/processed/competentnl_members.json.gz').read_bytes()))
@@ -33,6 +33,9 @@ class OccupationContentTests(unittest.TestCase):
             self.assertEqual(member_content['2512'][0]['tasks'], [])
             self.assertEqual(member_content['2512'][0]['skills'], [])
             self.assertEqual(result['0110']['tasks'], ['Uniek onderdeel'])
+            self.assertEqual(result['0110']['knowledge_areas'], ['Uniek onderdeel'])
+            self.assertEqual(member_content['0110'][0]['knowledge_areas'][0]['description'], 'Uitleg van het onderdeel')
+            self.assertEqual(member_content['2512'][0]['knowledge_areas'], [])
             self.assertEqual(result['2512']['tasks'], [])
             self.assertEqual(result['0110']['description'], 'Specifiek beroep: Eigen definitie')
             for path in folder.glob('*.csv'):

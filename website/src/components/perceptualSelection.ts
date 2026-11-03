@@ -1,22 +1,22 @@
 export const mapExposureVariants = {
   raw: {
     label: 'Algemene AI',
-    axis: 'AI-exposure (algemeen)',
-    table: 'AI-exposure (algemeen)',
+    axis: 'AI-blootstelling (algemeen)',
+    table: 'AI-blootstelling (algemeen)',
     source: 'Felten et al. (2021)',
     note: 'Meet de overlap tussen beroepsvaardigheden en tien AI-toepassingen: strategiespellen, realtimegames, beeldherkenning, vragen over beelden beantwoorden, afbeeldingen genereren, begrijpend lezen, taalmodellering, vertalen, spraakherkenning en instrumentale muziek herkennen.',
   },
   language: {
     label: 'Taalmodellen',
-    axis: 'AI-exposure (taalmodel)',
-    table: 'AI-exposure (taalmodel)',
+    axis: 'AI-blootstelling (taalmodel)',
+    table: 'AI-blootstelling (taalmodel)',
     source: 'Felten et al. (2023)',
     note: 'Meet de overlap tussen beroepsvaardigheden en AI die taal begrijpt en genereert, zoals ChatGPT.',
   },
   image: {
     label: 'Beeldgeneratie',
-    axis: 'AI-exposure (beeldgeneratie)',
-    table: 'AI-exposure (beeldgeneratie)',
+    axis: 'AI-blootstelling (beeldgeneratie)',
+    table: 'AI-blootstelling (beeldgeneratie)',
     source: 'Felten et al. (2023)',
     note: 'Meet de overlap tussen beroepsvaardigheden en AI die afbeeldingen genereert.',
   },

@@ -20,9 +20,11 @@ def import_content(root):
         isco = code(row['isco_code'], 4)
         groups[isco][row['uri']] = row
         by_uri[row['uri']].add(isco)
-    items = {kind: defaultdict(set) for kind in ('tasks', 'skills')}
-    member_items = {kind: defaultdict(dict) for kind in ('tasks', 'skills')}
-    for kind, filename in [('tasks', 'beroepen_taken.csv'), ('skills', 'beroepen_vaardigheden.csv')]:
+    items = {kind: defaultdict(set) for kind in ('tasks', 'skills', 'knowledge_areas')}
+    member_items = {kind: defaultdict(dict) for kind in ('tasks', 'skills', 'knowledge_areas')}
+    for kind, filename in [('tasks', 'beroepen_taken.csv'), ('skills', 'beroepen_vaardigheden.csv'), ('knowledge_areas', 'beroepen_kennisgebieden.csv')]:
+        if not (folder / filename).is_file():
+            continue
         for row in rows(folder / filename):
             if row['item_naam'].strip():
                 item = dict(uri=row.get('item_uri', ''), name=row['item_naam'].strip(),
@@ -36,12 +38,14 @@ def import_content(root):
         'description': '\n\n'.join(f"{r['naam']}: {r['definitie']}" for r in members.values() if r['definitie'].strip()),
         'tasks': sorted(items['tasks'][isco]),
         'skills': sorted(items['skills'][isco]),
+        'knowledge_areas': sorted(items['knowledge_areas'][isco]),
         'member_count': len(members),
         'occupation_names': sorted({r['naam'] for r in members.values()}),
     } for isco, members in groups.items()}
     member_content = {isco: [dict(uri=uri, name=r['naam'], description=r['definitie'],
-        tasks=sorted(member_items['tasks'][uri].values(), key=lambda item: (item['name'], item['uri'])),
-        skills=sorted(member_items['skills'][uri].values(), key=lambda item: (item['name'], item['uri'])))
+        tasks=sorted(member_items['tasks'][uri].values(), key=lambda item: (item['name'].casefold(), item['uri'])),
+        skills=sorted(member_items['skills'][uri].values(), key=lambda item: (item['name'].casefold(), item['uri'])),
+        knowledge_areas=sorted(member_items['knowledge_areas'][uri].values(), key=lambda item: (item['name'].casefold(), item['uri'])))
         for uri, r in sorted(members.items(), key=lambda item: item[1]['naam'])] for isco, members in groups.items()}
     (root / 'data/processed/competentnl_members.json.gz').write_bytes(gzip.compress((json.dumps(member_content, ensure_ascii=False) + '\n').encode('utf-8'), mtime=0))
     output.write_bytes(gzip.compress((json.dumps(result, ensure_ascii=False) + '\n').encode('utf-8'), mtime=0))

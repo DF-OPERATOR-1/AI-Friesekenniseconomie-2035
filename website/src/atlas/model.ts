@@ -34,6 +34,7 @@ export interface SpecificOccupation {
   description: string;
   tasks: OccupationItem[];
   skills: OccupationItem[];
+  knowledge_areas?: OccupationItem[];
 }
 export interface OccupationProfile {
   map_exposure: number | null;

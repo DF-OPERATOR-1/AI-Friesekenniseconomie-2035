@@ -156,7 +156,7 @@ test('beroepsinhoud en ontbrekende scores zijn zichtbaar zonder scores te verzin
   const list = render(Occupations, { profiles });
   assert.match(list, /Vind een beroep/);
   assert.match(list, /occupation-table/);
-  assert.match(list, /AI-exposure/);
+  assert.match(list, /AI-blootstelling/);
   assert.match(list, /Complementariteit/);
   assert.doesNotMatch(list, /Filter op beschikbaarheid|<select/);
   assert.match(list, /occupation-status is-present/);
@@ -170,11 +170,8 @@ test('beroepsinhoud en ontbrekende scores zijn zichtbaar zonder scores te verzin
   const content = render(Profile, { code: withContent.isco_code, profiles });
   assert.match(content, /Welke beroepen vallen onder deze beroepsgroep/);
   assert.match(content, /Beroepen laden/);
-  assert.ok(
-    profiles.every(
-      (p) => p.knowledge_areas.value === null && p.vacancies.value === null,
-    ),
-  );
+  assert.ok(profiles.every((p) => p.vacancies.value === null));
+  assert.ok(profiles.some((p) => p.knowledge_areas.value?.length > 0));
 });
 
 test('specifieke beroepen hebben eigen definities, taken en vaardigheden', async () => {
@@ -191,7 +188,8 @@ test('specifieke beroepen hebben eigen definities, taken en vaardigheden', async
         m.name &&
         typeof m.description === 'string' &&
         Array.isArray(m.tasks) &&
-        Array.isArray(m.skills),
+        Array.isArray(m.skills) &&
+        Array.isArray(m.knowledge_areas),
     ),
   );
   assert.ok(new Set(members.map((m) => JSON.stringify(m.tasks))).size > 1);
@@ -219,6 +217,7 @@ test('beroepsdetails groeperen bronwaarden, tonen taakdefinities en vermelden Co
         item('Kerntaak', 'essentieel', 'Uitleg kerntaak'),
         item('Aanvullende taak', 'optioneel', 'Uitleg extra taak'),
       ],
+      knowledge_areas: [item('Testkennisgebied', 'essentieel', 'Uitleg kennisgebied')],
       skills: [
         item('Kernvaardigheid', 'essentieel'),
         item('Belangrijke vaardigheid', 'belangrijk'),
@@ -232,6 +231,9 @@ test('beroepsdetails groeperen bronwaarden, tonen taakdefinities en vermelden Co
   assert.match(html, /task-blocks/);
   assert.match(html, /Uitleg kerntaak/);
   assert.match(html, /Uitleg extra taak/);
+  assert.match(html, /Kennisgebieden/);
+  assert.match(html, /Testkennisgebied/);
+  assert.match(html, /Uitleg kennisgebied/);
   const profile = render(Profile, { code: profiles[0].isco_code, profiles });
   assert.equal((profile.match(/Bron: CompetentNL/g) || []).length, 1);
   assert.match(profile, /creativecommons.org/);

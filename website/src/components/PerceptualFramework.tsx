@@ -7,11 +7,11 @@ export function PerceptualFramework({ home = false }: { home?: boolean }) {
         eyebrow={
           home
             ? 'DataFryslân | AI Index Fryslân'
-            : 'AI-exposurescore × complementariteitsscore'
+            : 'AI-blootstellingscore × complementariteitsscore'
         }
         title="Hoe verhoudt jouw beroep zich tot AI?"
       >
-        Vergelijk beroepen op AI-exposure en complementariteit: hoeveel overlap is er
+        Vergelijk beroepen op AI-blootstelling en complementariteit: hoeveel overlap is er
         met AI en in hoeverre kan AI het werk ondersteunen?
       </SectionHeading>
       <PerceptualChart />
@@ -25,10 +25,10 @@ export function PerceptualFramework({ home = false }: { home?: boolean }) {
                 <td>
                   <span>Complementariteit ↑</span>
                   <br />
-                  <span>AI-exposure →</span>
+                  <span>AI-blootstelling →</span>
                 </td>
-                <th scope="col">Lage AI-exposure</th>
-                <th scope="col">Hoge AI-exposure</th>
+                <th scope="col">Lage AI-blootstelling</th>
+                <th scope="col">Hoge AI-blootstelling</th>
               </tr>
             </thead>
             <tbody>

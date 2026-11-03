@@ -1,7 +1,7 @@
 [
   {
     "file": "ISCO08_AIOE.csv",
-    "name": "AI-exposure · algemeen, taalmodellen en beeldgeneratie",
+    "name": "AI-blootstelling · algemeen, taalmodellen en beeldgeneratie",
     "description": "",
     "organization": "Felten, Raj en Seamans; ISCO-08-koppeling door DataFryslân",
     "version": "6abb44febf2bca2a554d07794f9456c7978b81dfa65d9c458c635fd5ef049fb3",
@@ -19,7 +19,7 @@
     ],
     "show_rights_status": false,
     "contents": [
-      "Algemene AI-exposure: overlap tussen beroepsvaardigheden en tien AI-toepassingen.",
+      "Algemene AI-blootstelling: overlap tussen beroepsvaardigheden en tien AI-toepassingen.",
       "Taalmodel-exposure: overlap met de mogelijkheden van taalmodellen.",
       "Beeldgeneratie-exposure: overlap met de mogelijkheden van beeldgeneratie."
     ],
@@ -27,7 +27,7 @@
   },
   {
     "file": "ISCO08_C_AIOE.csv",
-    "name": "AI-exposure en complementariteit",
+    "name": "AI-blootstelling en complementariteit",
     "description": "",
     "organization": "DataFryslân; gebaseerd op Felten et al., Pizzinelli et al. en O*NET 24.3",
     "version": "6d78218817066b33994274fd02b035e755a1f29f41d7468dd0b68f8366eb090d",
@@ -45,11 +45,11 @@
     ],
     "show_rights_status": false,
     "contents": [
-      "Algemene AI-exposure (AIOE_raw): gereconstrueerd op de oorspronkelijke, ongestandaardiseerde schaal.",
+      "Algemene AI-blootstelling (AIOE_raw): gereconstrueerd op de oorspronkelijke, ongestandaardiseerde schaal.",
       "Complementariteit (Complementary_score): door DataFryslân berekend volgens de componentmethode van Pizzinelli et al. (2023).",
-      "C-AIOE (C_AIOE_score): AI-exposure gecorrigeerd voor complementariteit; een gecombineerde onderzoeksmaat."
+      "C-AIOE (C_AIOE_score): AI-blootstelling gecorrigeerd voor complementariteit; een gecombineerde onderzoeksmaat."
     ],
-    "website_use": "De perceptuele kaart gebruikt de algemene AI-exposure en complementariteit uit dit bestand. Ook beroepsprofielen gebruiken deze complementariteitsscore. De gecombineerde C-AIOE-score zelf wordt niet getoond in de grafieken of beroepsprofielen."
+    "website_use": "De perceptuele kaart gebruikt de algemene AI-blootstelling en complementariteit uit dit bestand. Ook beroepsprofielen gebruiken deze complementariteitsscore. De gecombineerde C-AIOE-score zelf wordt niet getoond in de grafieken of beroepsprofielen."
   },
   {
     "file": "ISCO08_Complementary.csv",

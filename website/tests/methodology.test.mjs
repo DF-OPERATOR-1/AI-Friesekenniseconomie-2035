@@ -53,7 +53,7 @@ test('methodologie toont vier hoofdsecties en compacte kernkeuzes zonder klikken
     'Samenhang richting 2035',
   ]);
   for (const text of [
-    'AI-exposure laat zien',
+    'AI-blootstelling laat zien',
     'Complementariteit laat zien',
     'Voor 422 van de 436',
     'Firda, Aeres, SVO en ROC Nova College',
@@ -68,7 +68,7 @@ test('methodologie toont vier hoofdsecties en compacte kernkeuzes zonder klikken
 test('technische details, formule en volledige bronvermeldingen blijven ingeklapt beschikbaar', () => {
   const summaries = [...html.matchAll(/<summary>(.*?)<\/summary>/g)].map((m) => m[1]);
   for (const title of [
-    'Hoe wordt AI-exposure berekend?',
+    'Hoe wordt AI-blootstelling berekend?',
     'Hoe wordt complementariteit berekend?',
     'Hoe koppelen we Amerikaanse beroepen aan ISCO-08?',
     'Hoe hebben we de resultaten gecontroleerd?',

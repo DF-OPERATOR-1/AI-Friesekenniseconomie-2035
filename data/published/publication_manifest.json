@@ -59,7 +59,7 @@
     "atlas/occupations/{isco}.json": {
       "approved": true,
       "license": "CC BY 4.0",
-      "evidence": "Gebruiker heeft CompetentNL-definities, taken en vaardigheden voor de beroepspagina aangeleverd en bronvermelding CC BY 4.0 opgegeven."
+      "evidence": "Gebruiker heeft CompetentNL-definities, taken, vaardigheden en kennisgebieden voor de beroepspagina aangeleverd en bronvermelding CC BY 4.0 opgegeven."
     },
     "research/occupations.json": {
       "approved": true,

@@ -83,7 +83,7 @@ function Search({ profiles }: { profiles: OccupationProfile[] }) {
               <th scope="col">Taken</th>
               <th scope="col">Vaardigheden</th>
               <th scope="col">Kennisgebied</th>
-              <th scope="col">AI-exposure</th>
+              <th scope="col">AI-blootstelling</th>
               <th scope="col">Complementariteit</th>
             </tr>
           </thead>
@@ -125,8 +125,11 @@ function Search({ profiles }: { profiles: OccupationProfile[] }) {
         )}
       </div>
       <p className="occupation-directory-note">
-        Ja betekent dat informatie beschikbaar is. Kennisgebieden worden later
-        toegevoegd.
+        <strong>Ja</strong> betekent dat de informatie beschikbaar is. <strong>Nee</strong>{' '}
+        betekent dat de informatie ontbreekt bij het ophalen van de gegevens. Bij{' '}
+        <strong>Invloed van AI</strong> gaat het om twee scores: AI-blootstelling en
+        complementariteit. ‘Nee’ betekent dus niet dat AI geen invloed heeft op het
+        beroep, maar dat er geen score beschikbaar is.
       </p>
     </div>
   );
@@ -232,7 +235,7 @@ export function Home({ profiles }: { profiles: OccupationProfile[] }) {
               Ontdek welke beroepen veel of weinig overlap hebben met kunstmatige
               intelligentie.
             </p>
-            <span className="card-action">Bekijk AI-exposure score</span>
+            <span className="card-action">Bekijk AI-blootstelling score</span>
           </a>
           <a className="discovery-card" href="#invloed-ai">
             <TopicIcon name="ai-complementariteit" />
@@ -415,7 +418,7 @@ export function OccupationCategory({
 }: {
   entries: OccupationItem[];
   label: string;
-  kind?: 'tasks' | 'skills';
+  kind?: 'tasks' | 'skills' | 'knowledge_areas';
 }) {
   const [expanded, setExpanded] = useState(false);
   const id = useId();
@@ -440,7 +443,9 @@ export function OccupationCategory({
               ? 'Toon minder'
               : kind === 'tasks'
                 ? 'Toon alle taken'
-                : 'Toon alle vaardigheden'}
+                : kind === 'knowledge_areas'
+                  ? 'Toon alle kennisgebieden'
+                  : 'Toon alle vaardigheden'}
           </button>
         )}
       </div>
@@ -470,7 +475,7 @@ function GroupedItems({
   kind,
 }: {
   items: OccupationItem[];
-  kind: 'tasks' | 'skills';
+  kind: 'tasks' | 'skills' | 'knowledge_areas';
 }) {
   const levels =
     kind === 'tasks'
@@ -483,7 +488,7 @@ function GroupedItems({
     ),
   ];
   return (
-    <div className={kind === 'skills' ? 'skills-categories' : 'task-categories'}>
+    <div className={kind !== 'tasks' ? 'skills-categories' : 'task-categories'}>
       {items.length ? (
         groups.map((level) => {
           const entries = items.filter((item) => item.importance === level);
@@ -507,7 +512,9 @@ function GroupedItems({
         <p>
           {kind === 'tasks'
             ? 'Voor dit beroep zijn nog geen taken beschikbaar.'
-            : 'Voor dit beroep zijn nog geen vaardigheden beschikbaar.'}
+            : kind === 'knowledge_areas'
+              ? 'Voor dit beroep zijn nog geen kennisgebieden beschikbaar.'
+              : 'Voor dit beroep zijn nog geen vaardigheden beschikbaar.'}
         </p>
       )}
     </div>
@@ -541,6 +548,10 @@ export function SpecificOccupationDetails({ member }: { member: SpecificOccupati
         <div className="profile-narrative">
           <h3>Vaardigheden</h3>
           <GroupedItems kind="skills" items={member.skills} />
+        </div>
+        <div className="profile-narrative">
+          <h3>Kennisgebieden</h3>
+          <GroupedItems kind="knowledge_areas" items={member.knowledge_areas ?? []} />
         </div>
       </div>
     </div>
@@ -611,10 +622,6 @@ function ProfessionalContent({ row }: { row: OccupationProfile }) {
           {member && <SpecificOccupationDetails key={member.uri} member={member} />}
         </>
       )}
-      <div className="profile-narrative">
-        <h3>Kennisgebieden</h3>
-        <p>Kennisgebieden zijn voor dit beroep nog niet beschikbaar.</p>
-      </div>
     </section>
   );
 }
@@ -697,7 +704,7 @@ export function Profile({
           <h2 id="profile-ai-heading">Wat voor invloed heeft AI op dit beroep?</h2>
           <div className="score-grid">
             <ScoreCard
-              title="AI-exposure"
+              title="AI-blootstelling"
               indicator={row.ai_exposure}
               median={exposureDisplayMedian}
               classification={classify(row.map_exposure, exposureMedian)}

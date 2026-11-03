@@ -115,7 +115,7 @@ export function ExposureChart() {
     <div className="chart-card">
       <div className="research-controls exposure-controls">
         <label>
-          AI-exposurevariant
+          AI-blootstellingvariant
           <select
             value={metric}
             onChange={(event) => setMetric(event.target.value as Metric)}
@@ -217,8 +217,8 @@ export function ExposureChart() {
                       className="exposure-direction"
                       style={{ paddingLeft: labelWidth, paddingRight: chartRight }}
                     >
-                      <span>← Lagere AI-exposure</span>
-                      <span>Hogere AI-exposure →</span>
+                      <span>← Lagere AI-blootstelling</span>
+                      <span>Hogere AI-blootstelling →</span>
                     </div>
                     <ResponsiveContainer width="100%" height={44}>
                       <BarChart
@@ -344,7 +344,7 @@ export function ExposureChart() {
           <p className="chart-source">
             Bron:{' '}
             {metric === 'exposure' ? 'Felten et al. (2021)' : 'Felten et al. (2023)'}.{' '}
-            Koppeling AI-exposure score naar ISCO-08: DataFryslân.{' '}
+            Koppeling AI-blootstelling score naar ISCO-08: DataFryslân.{' '}
             <a href="#methodologie">Volledige bronvermeldingen en methode</a>.
           </p>
         </>

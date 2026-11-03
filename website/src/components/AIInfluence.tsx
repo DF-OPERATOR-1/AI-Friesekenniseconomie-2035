@@ -24,16 +24,16 @@ export function AIInfluence({ exposure = false }: { exposure?: boolean }) {
           >
             <div className="container">
               <div className="section-heading exposure-heading">
-                <p className="eyebrow">AI-exposure score</p>
-                <h2 id="exposure-heading">AI-exposure per beroep</h2>
+                <p className="eyebrow">AI-blootstelling score</p>
+                <h2 id="exposure-heading">AI-blootstelling per beroep</h2>
                 <p>
-                  AI-exposure geeft aan in hoeverre de vaardigheden van een beroep
+                  AI-blootstelling geeft aan in hoeverre de vaardigheden van een beroep
                   overlappen met de mogelijkheden van AI: hoe hoger de score, hoe groter
                   de overlap. De scores zijn relatieve indices, geen percentages, en
                   zeggen niet of AI het werk ondersteunt of vervangt.
                 </p>
               </div>
-              <Suspense fallback={<p role="status">AI-exposuregrafiek laden…</p>}>
+              <Suspense fallback={<p role="status">AI-blootstellinggrafiek laden…</p>}>
                 <ExposureChart />
               </Suspense>
             </div>

@@ -98,7 +98,7 @@ export function Navigation({
                   className="nav-ai-options"
                   hidden={!aiOpen}
                 >
-                  <p>Verken invloed van AI met jouw beroep</p>
+                  <p>Ontdek wat AI betekent voor jouw beroep</p>
                   <a
                     href="#invloed-ai"
                     onClick={closeMenus}
@@ -108,8 +108,8 @@ export function Navigation({
                         : undefined
                     }
                   >
-                    <strong>Perceptuele kaart</strong>
-                    <small>Ontdek de positie van je beroep</small>
+                    <strong>Beroepen op de kaart</strong>
+                    <small>Bekijk hoe beroepen zich tot AI verhouden</small>
                   </a>
                   <a
                     href="#invloed-ai/exposure"
@@ -120,8 +120,10 @@ export function Navigation({
                         : undefined
                     }
                   >
-                    <strong>AI-exposure per beroep</strong>
-                    <small>Vergelijk scores en bekijk de tabel</small>
+                    <strong>AI-blootstelling</strong>
+                    <small>
+                      Ontdek en vergelijk de invloed van verschillende AI-toepassingen
+                    </small>
                   </a>
                 </div>
               </div>

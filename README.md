@@ -1,7 +1,7 @@
 # AI Index Fryslân
 
 AI Index Fryslân laat zien hoe beroepen zich verhouden tot AI. De website combineert
-AI-exposure en complementariteit met beroepsomschrijvingen, taken en vaardigheden.
+AI-blootstelling en complementariteit met beroepsomschrijvingen, taken, vaardigheden en kennisgebieden.
 Daarnaast onderzoeken we de regionale arbeidsmarkt en het onderwijs in Fryslân.
 
 Er zijn **436 ISCO-08-beroepsgroepen**, waarvan **422 met AI-scores**. Ontbrekende
@@ -47,7 +47,7 @@ Voor GitHub Pages blijft de bestaande instelling met de gewenste branch en
 | `research/` en `tests/`        | Dataverwerking, onderzoekscode en controles.                   |
 
 **De JSON-bestanden onder `docs/data/` zijn nodig.** De website laadt hieruit de
-beroepsprofielen, taken, vaardigheden, grafieken en broninformatie. De
+beroepsprofielen, taken, vaardigheden, kennisgebieden, grafieken en broninformatie. De
 `.json.gz`-bestanden onder `data/processed/` zijn gecomprimeerde invoer voor de build.
 
 `website/public/data/` is een automatisch gegenereerde werkkopie en staat buiten
@@ -60,7 +60,7 @@ Zie [publicatie en build-input](data/published/README.md) voor de volledige inde
 
 - **AI-scores:** bestaande exposure-scores en zelf berekende complementariteit
   volgens de methode van Pizzinelli et al. De website verandert deze scores niet.
-- **Beroepsinhoud:** CompetentNL-omschrijvingen, taken en vaardigheden per
+- **Beroepsinhoud:** CompetentNL-omschrijvingen, taken, vaardigheden en kennisgebieden per
   geselecteerd beroep. Kennisgebieden volgen later.
 - **Onderwijs:** zes DUO-bestanden over studenten en afgestudeerden in mbo, hbo en
   wo. Deze zijn nog niet gekoppeld aan beroepsgroepen.

@@ -13,13 +13,13 @@ TARGET = ROOT / 'website/public/data/atlas'
 
 AI_DATASET_METADATA = {
     'ISCO08_AIOE.csv': {
-        'name': 'AI-exposure · algemeen, taalmodellen en beeldgeneratie',
+        'name': 'AI-blootstelling · algemeen, taalmodellen en beeldgeneratie',
         'description': '',
         'geography': '',
         'show_rights_status': False,
         'organization': 'Felten, Raj en Seamans; ISCO-08-koppeling door DataFryslân',
         'contents': [
-            'Algemene AI-exposure: overlap tussen beroepsvaardigheden en tien AI-toepassingen.',
+            'Algemene AI-blootstelling: overlap tussen beroepsvaardigheden en tien AI-toepassingen.',
             'Taalmodel-exposure: overlap met de mogelijkheden van taalmodellen.',
             'Beeldgeneratie-exposure: overlap met de mogelijkheden van beeldgeneratie.',
         ],
@@ -27,17 +27,17 @@ AI_DATASET_METADATA = {
         'limitations': '',
     },
     'ISCO08_C_AIOE.csv': {
-        'name': 'AI-exposure en complementariteit',
+        'name': 'AI-blootstelling en complementariteit',
         'description': '',
         'geography': '',
         'show_rights_status': False,
         'organization': 'DataFryslân; gebaseerd op Felten et al., Pizzinelli et al. en O*NET 24.3',
         'contents': [
-            'Algemene AI-exposure (AIOE_raw): gereconstrueerd op de oorspronkelijke, ongestandaardiseerde schaal.',
+            'Algemene AI-blootstelling (AIOE_raw): gereconstrueerd op de oorspronkelijke, ongestandaardiseerde schaal.',
             'Complementariteit (Complementary_score): door DataFryslân berekend volgens de componentmethode van Pizzinelli et al. (2023).',
-            'C-AIOE (C_AIOE_score): AI-exposure gecorrigeerd voor complementariteit; een gecombineerde onderzoeksmaat.',
+            'C-AIOE (C_AIOE_score): AI-blootstelling gecorrigeerd voor complementariteit; een gecombineerde onderzoeksmaat.',
         ],
-        'website_use': 'De perceptuele kaart gebruikt de algemene AI-exposure en complementariteit uit dit bestand. Ook beroepsprofielen gebruiken deze complementariteitsscore. De gecombineerde C-AIOE-score zelf wordt niet getoond in de grafieken of beroepsprofielen.',
+        'website_use': 'De perceptuele kaart gebruikt de algemene AI-blootstelling en complementariteit uit dit bestand. Ook beroepsprofielen gebruiken deze complementariteitsscore. De gecombineerde C-AIOE-score zelf wordt niet getoond in de grafieken of beroepsprofielen.',
         'limitations': '',
     },
     'ISCO08_Complementary.csv': {
@@ -110,20 +110,19 @@ def build(refresh_sources=False):
                        source_references=['ISCO08_AIOE.csv', 'ISCO08_C_AIOE.csv'],
                        data_status='calculated' if row['exposure'] is not None or row['complementarity'] is not None else 'unavailable')
         details = content.get(row['code'], {})
-        for field, filename in [('description', 'beroepen_isco.csv'), ('tasks', 'beroepen_taken.csv'), ('skills', 'beroepen_vaardigheden.csv')]:
+        for field, filename in [('description', 'beroepen_isco.csv'), ('tasks', 'beroepen_taken.csv'), ('skills', 'beroepen_vaardigheden.csv'), ('knowledge_areas', 'beroepen_kennisgebieden.csv')]:
             value = details.get(field)
             profile[field] = indicator(value or None, 'observed' if value else 'unavailable',
                 [f'CompetentNL · {filename}'] if value else [],
                 'Samengevoegde inhoud van gekoppelde specifieke beroepen; niet elk onderdeel geldt voor ieder beroep binnen deze ISCO-groep.' if value else 'Nog geen gekoppelde inhoud beschikbaar.',
                 'Nederland; beroepsinhoud')
-        profile['knowledge_areas'] = indicator(methodology='Kennisgebieden worden later toegevoegd.')
         profile['member_count'] = details.get('member_count', 0)
         profile['map_exposure'] = row.get('raw')
         profile['occupation_names'] = details.get('occupation_names', [])
         profile['brc2014'] = brc.get(row['code'])
         if profile['brc2014']:
             profile['vacancies']['methodology'] = 'ISCO–BRC 2014-schakelschema beschikbaar. De UWV-bron gebruikt BRC Plus-namen; aansluiting op BRC 2014 is nog niet gevalideerd. Vacatureaantallen worden niet verdeeld over ISCO-beroepen.'
-        profile['source_references'] += [f'CompetentNL · {name}' for name in ('beroepen_isco.csv', 'beroepen_taken.csv', 'beroepen_vaardigheden.csv')] if details else []
+        profile['source_references'] += [f'CompetentNL · {name}' for name in ('beroepen_isco.csv', 'beroepen_taken.csv', 'beroepen_vaardigheden.csv', 'beroepen_kennisgebieden.csv')] if details else []
         if profile['brc2014']:
             profile['source_references'].append('CBS · Schakelschema ISCO2008-BRC2014.xls')
         profiles.append(profile)
