@@ -11,8 +11,8 @@ export function PerceptualFramework({ home = false }: { home?: boolean }) {
         }
         title="Hoe verhoudt jouw beroep zich tot AI?"
       >
-        Vergelijk beroepen op AI-blootstelling en complementariteit: hoeveel overlap is er
-        met AI en in hoeverre kan AI het werk ondersteunen?
+        Vergelijk beroepen op AI-blootstelling en complementariteit: hoeveel overlap is
+        er met AI en in hoeverre kan AI het werk ondersteunen?
       </SectionHeading>
       <PerceptualChart />
       <details className="framework-details">

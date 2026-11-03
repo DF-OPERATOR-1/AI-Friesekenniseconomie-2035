@@ -125,11 +125,11 @@ function Search({ profiles }: { profiles: OccupationProfile[] }) {
         )}
       </div>
       <p className="occupation-directory-note">
-        <strong>Ja</strong> betekent dat de informatie beschikbaar is. <strong>Nee</strong>{' '}
-        betekent dat de informatie ontbreekt bij het ophalen van de gegevens. Bij{' '}
-        <strong>Invloed van AI</strong> gaat het om twee scores: AI-blootstelling en
-        complementariteit. ‘Nee’ betekent dus niet dat AI geen invloed heeft op het
-        beroep, maar dat er geen score beschikbaar is.
+        <strong>Ja</strong> betekent dat de informatie beschikbaar is.{' '}
+        <strong>Nee</strong> betekent dat de informatie ontbreekt bij het ophalen van de
+        gegevens. Bij <strong>Invloed van AI</strong> gaat het om twee scores:
+        AI-blootstelling en complementariteit. ‘Nee’ betekent dus niet dat AI geen
+        invloed heeft op het beroep, maar dat er geen score beschikbaar is.
       </p>
     </div>
   );

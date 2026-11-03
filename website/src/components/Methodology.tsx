@@ -135,8 +135,8 @@ export function Methodology() {
               voorbereiding.
             </p>
             <p>
-              Een hoge AI-blootstelling betekent niet automatisch dat banen verdwijnen. De
-              scores beschrijven kenmerken van beroepen, geen voorspellingen over
+              Een hoge AI-blootstelling betekent niet automatisch dat banen verdwijnen.
+              De scores beschrijven kenmerken van beroepen, geen voorspellingen over
               baanverlies of productiviteitswinst.
             </p>
           </div>
@@ -159,8 +159,9 @@ export function Methodology() {
           <div className="methodology-disclosure-content">
             <h3>AI en beroepen: wat betekent AI-blootstelling?</h3>
             <p>
-              AI-blootstelling laat zien hoeveel overlap er is tussen de vaardigheden die een
-              beroep vraagt en wat AI kan. Een hogere score betekent meer overlap.
+              AI-blootstelling laat zien hoeveel overlap er is tussen de vaardigheden
+              die een beroep vraagt en wat AI kan. Een hogere score betekent meer
+              overlap.
             </p>
             <p>
               Daarnaast kijken we welke kenmerken van het werk menselijke inzet

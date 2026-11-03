@@ -4,7 +4,7 @@ Door de gebruiker aangeleverde SVG's, verplaatst vanuit de repositoryroot.
 
 | Onderwerp             | Bestandsstam           |
 | --------------------- | ---------------------- |
-| AI-blootstelling           | `ai`                   |
+| AI-blootstelling      | `ai`                   |
 | AI-complementariteit  | `ai-complementariteit` |
 | Arbeidsmarkt 2035     | `agenda`               |
 | Beroepen              | `skills`               |
