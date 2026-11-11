@@ -4379,19 +4379,9 @@
       "sha256": "108271113c01039fc0669184320c8655f7f18229a581ec366bc1b58aa5b0806d"
     },
     {
-      "path": "data/processed/onderwijs/afgestudeerden_hbo_friesland.csv",
-      "file": "afgestudeerden_hbo_friesland.csv",
-      "sha256": "0e6b4399c9d171167aa9967536377c9f0a4be366d068ac886e8f7032be78404d"
-    },
-    {
-      "path": "data/processed/onderwijs/afgestudeerden_mbo_friesland.csv",
-      "file": "afgestudeerden_mbo_friesland.csv",
-      "sha256": "01322e15478df8d1727e647b7ada37245b472e54b65d5df3dd5b7d5ab46cecc8"
-    },
-    {
-      "path": "data/processed/onderwijs/afgestudeerden_wo_friesland.csv",
-      "file": "afgestudeerden_wo_friesland.csv",
-      "sha256": "2ffed60db34b22f23e2a9be7bd896ba6218203adc2449997a2f515c109908218"
+      "path": "data/processed/onderwijs/studenten_mbo_friesland.csv",
+      "file": "studenten_mbo_friesland.csv",
+      "sha256": "078b726b6cbaf600ea881e1944a76d539525703e6feba3078c86ecc45f63ce3b"
     },
     {
       "path": "data/processed/onderwijs/studenten_hbo_friesland.csv",
@@ -4399,14 +4389,24 @@
       "sha256": "f5e944e4cd90a01bfcdd278f2c62c83704ea6f6e0a1f4dd4deb971a275a3937e"
     },
     {
-      "path": "data/processed/onderwijs/studenten_mbo_friesland.csv",
-      "file": "studenten_mbo_friesland.csv",
-      "sha256": "ddac4032088580d1f00e566bd2d1ed1d1e200f7140d2632563ce085a4970a2c0"
-    },
-    {
       "path": "data/processed/onderwijs/studenten_wo_friesland.csv",
       "file": "studenten_wo_friesland.csv",
       "sha256": "1840dae68dc6613f4fa00122337808a00c1b8dffef0346aa429c9697510f5ec5"
+    },
+    {
+      "path": "data/processed/onderwijs/afgestudeerden_mbo_friesland.csv",
+      "file": "afgestudeerden_mbo_friesland.csv",
+      "sha256": "9583932b0fcf80753d1ee7f737392294ef704a1b35aedbefab31679ba628d8a3"
+    },
+    {
+      "path": "data/processed/onderwijs/afgestudeerden_hbo_friesland.csv",
+      "file": "afgestudeerden_hbo_friesland.csv",
+      "sha256": "0e6b4399c9d171167aa9967536377c9f0a4be366d068ac886e8f7032be78404d"
+    },
+    {
+      "path": "data/processed/onderwijs/afgestudeerden_wo_friesland.csv",
+      "file": "afgestudeerden_wo_friesland.csv",
+      "sha256": "2ffed60db34b22f23e2a9be7bd896ba6218203adc2449997a2f515c109908218"
     }
   ]
 }
