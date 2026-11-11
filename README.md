@@ -17,6 +17,11 @@ npm --prefix website run dev
 ```
 
 Open de URL die Vite toont, met het pad `/AI-Friesekenniseconomie-2035/`.
+Tijdens `dev` worden wijzigingen in de websitecode, teksten, stijlen en openbare
+vormgevingsbestanden automatisch op de achtergrond naar `docs/` gebouwd. Wacht op
+`[docs] Bijgewerkt` voordat je commit en pusht. Snelle wijzigingen worden gebundeld;
+een ongeldige tussenversie overschrijft de laatste geslaagde publicatie niet.
+
 De benodigde websitegegevens worden automatisch opgebouwd. Lokale ruwe
 bronbestanden zijn hiervoor niet nodig.
 
@@ -24,12 +29,13 @@ bronbestanden zijn hiervoor niet nodig.
 
 ```bash
 npm --prefix website run build
-python3 website/scripts/publish_pages.py
 ```
 
-De build controleert de code en de toegestane websitebestanden. De tweede stap
-werkt de publicatiemap `docs/` bij en verwijdert verouderde data en assets.
-Deze commando’s publiceren niets online.
+De build controleert de code en de toegestane websitebestanden en werkt daarna
+automatisch de publicatiemap `docs/` bij. Verouderde data en assets worden
+verwijderd. Dit commando publiceert niets online. Commit en push ook de wijzigingen
+onder `docs/`, zodat de branchpublicatie dezelfde CSS, JavaScript en gegevens gebruikt
+als de actuele lokale build.
 
 Voor GitHub Pages blijft de bestaande instelling met de gewenste branch en
 `/docs` als publicatiemap gelden. Er is ook een handmatig te starten

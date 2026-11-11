@@ -57,3 +57,11 @@ class PublicationTests(unittest.TestCase):
             self.assertFalse((target / 'assets/old.svg').exists())
             self.assertEqual((target / 'methodology.md').read_text(), 'bewaard')
             self.assertTrue((target / 'assets/current.svg').exists())
+            # Nieuwe CSS en JavaScript moeten gelijk aan de actuele build worden gekopieerd.
+            for name in ('index.html', 'assets/index-new.css', 'assets/index-new.js'):
+                (build / name).write_text('actuele inhoud: ' + name)
+            module.sync_build(build, target)
+            for name in ('index.html', 'assets/index-new.css', 'assets/index-new.js'):
+                self.assertEqual((target / name).read_bytes(), (build / name).read_bytes())
+            self.assertEqual(module.sync_build(build, target), 0)
+

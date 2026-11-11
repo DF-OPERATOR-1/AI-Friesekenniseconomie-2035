@@ -48,12 +48,10 @@ De pagina Methodologie beschrijft per onderwerp de uitgevoerde stappen en oorspr
 Vanuit de hoofdmap:
 
 ```bash
-python3 website/scripts/export_research.py
 npm --prefix website run build
-python3 website/scripts/publish_pages.py
 ```
 
-Commit en push de gewijzigde websitebron en `docs/`. De bestaande Pages-instelling op de publicatiebranch en `/docs` kan blijven staan. `base` gebruikt het vaste repositorypad `/AI-Friesekenniseconomie-2035/`. De publicatiestap synchroniseert de build inclusief `.nojekyll` en verwijdert verouderde gegenereerde bestanden uit `docs/assets/` en `docs/data/`. Overige documentatie blijft behouden.
+Commit en push de gewijzigde websitebron en `docs/`. De bestaande Pages-instelling op de publicatiebranch en `/docs` kan blijven staan. `base` gebruikt het vaste repositorypad `/AI-Friesekenniseconomie-2035/`. De build synchroniseert automatisch `website/dist/` naar `docs/`, inclusief `.nojekyll`, en verwijdert verouderde gegenereerde bestanden uit `docs/assets/` en `docs/data/`. Overige documentatie blijft behouden.
 
 ## Architectuur
 
@@ -641,3 +639,10 @@ De rekentool toont de cumulatieve instroom 2025–2035 als trend, via `cumulativ
 De normale databouw gebruikt `data/mappings/crebo_codefamilies_bronselectie.csv` met de vastgelegde bron- en selectiehashes uit `mbo_codefamilies.json`. Daardoor is het lokale oorspronkelijke CREBO-bestand niet nodig op GitHub. De afgeleide codefamilies blijven gelijk aan de eerdere berekening vanuit het volledige register. Voor het expliciet verversen staat de opdracht in `data/mappings/README.md`.
 
 Beide GitHub-workflows installeren `requirements-ci.txt`: alleen NumPy en openpyxl voor de offline bouw en fixturetests. Ze downloaden geen ML-modellen of oorspronkelijke brondata. De twee aanvullende vergelijkingen met de ruwe DUO-studenten- en diplomabron worden overgeslagen als die lokale bronnen ontbreken; de controles op de geselecteerde CSV’s, instellingsarchieven, privacywaarden en codefamilies blijven altijd actief.
+
+
+### Automatische docs-synchronisatie tijdens development
+
+`npm --prefix website run dev` bouwt bij het starten en na wijzigingen in `src/`, `index.html` en openbare vormgevingsbestanden automatisch een productieversie naar `docs/`. De lokale weergave blijft direct reageren. In de terminal verschijnt `[docs] Bijgewerkt` zodra de publicatiekopie klaar is; daarna kunnen broncode en `docs/` samen worden gecommit en gepusht.
+
+De Vite-plug-in `scripts/devDocsSync.ts` bundelt snelle bestandswijzigingen en voert maximaal één build tegelijk uit. `build:pages` gebruikt daarbij expliciet `NODE_ENV=production`; de data zijn al via `predev` opgebouwd. Gegenereerde mappen (`dist/`, `docs/`, `public/data/` en `node_modules/`) starten geen nieuwe builds. Bij fouten blijft de vorige geslaagde kopie staan. Aanpassingen aan invoervelden in de browser zijn tijdelijke testinvoer en worden niet als websitewijziging opgeslagen.
