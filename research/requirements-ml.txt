@@ -1,0 +1,8 @@
+# Optionele, afzonderlijk geteste omgeving voor de lokale ISCO-proef.
+# Laat de bestaande onderzoeksomgeving intact; installeer in een aparte venv.
+sentence-transformers==6.2.0
+torch==2.15.0
+transformers==5.22.2
+numpy==2.5.4
+openpyxl==3.1.5
+xlrd==2.0.2

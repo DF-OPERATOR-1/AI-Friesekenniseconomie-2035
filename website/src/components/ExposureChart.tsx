@@ -345,7 +345,10 @@ export function ExposureChart() {
             Bron:{' '}
             {metric === 'exposure' ? 'Felten et al. (2021)' : 'Felten et al. (2023)'}.{' '}
             Koppeling AI-blootstelling score naar ISCO-08: DataFryslân.{' '}
-            <a href="#methodologie">Volledige bronvermeldingen en methode</a>.
+            <a href="#methodologie/methodologie-ai">
+              Bronnen en methodologische toelichting
+            </a>
+            .
           </p>
         </>
       )}

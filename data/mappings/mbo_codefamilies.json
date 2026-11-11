@@ -1,0 +1,51 @@
+{
+  "note": "Alleen expliciet brongecontroleerde codefamilies mogen samengeteld worden; gelijke namen alleen zijn geen bewijs.",
+  "families": [
+    {
+      "id": "junior-accountmanager",
+      "education_type": "mbo",
+      "name": "Junior accountmanager",
+      "qualification": "b0896",
+      "codes": [
+        {
+          "code": "93802",
+          "status": "Eerdere code",
+          "name": "(Junior) accountmanager",
+          "start": "20080801",
+          "entry_until": "20160801",
+          "end": "20220801"
+        },
+        {
+          "code": "25132",
+          "status": "Oude code",
+          "name": "(Junior) accountmanager",
+          "start": "20150801",
+          "entry_until": "20230801",
+          "end": "20280801"
+        },
+        {
+          "code": "25877",
+          "status": "Vernieuwde code",
+          "name": "Junior accountmanager",
+          "start": "20230801",
+          "entry_until": "0",
+          "end": "0"
+        }
+      ],
+      "sources": [
+        "https://www.kiesmbo.nl/voor-docenten-mentoren-en-decanen/veranderingen-in-opleidingen",
+        "https://www.duo.nl/open_onderwijsdata/images/combinatie-erkende-opleidingscode-en-beroep-2026-2027.csv",
+        "https://duo.nl/open_onderwijsdata/middelbaar-beroepsonderwijs/aantal-studenten/aantal-studenten-mbo-per-instelling.jsp"
+      ],
+      "registry_file": "data/raw/crebo/combinatie-erkende-opleidingscode-en-beroep-2026-2027.csv",
+      "registry_sha256": "5f295e4fe4c7ac3f79431b67e2a983f48eabcfbf6589afbec1fabb06bc238946",
+      "verified_on": "2026-11-09",
+      "registry_snapshot_file": "data/mappings/crebo_codefamilies_bronselectie.csv",
+      "registry_snapshot_sha256": "24127894bd47d0743978e870e1080cd6bb6203ed14114bb7c30fd6250b33e043",
+      "registry_selection_sha256": {
+        "data/processed/onderwijs/studenten_mbo_friesland.csv": "078b726b6cbaf600ea881e1944a76d539525703e6feba3078c86ecc45f63ce3b",
+        "data/processed/onderwijs/afgestudeerden_mbo_friesland.csv": "9583932b0fcf80753d1ee7f737392294ef704a1b35aedbefab31679ba628d8a3"
+      }
+    }
+  ]
+}

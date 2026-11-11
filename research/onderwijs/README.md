@@ -1,5 +1,16 @@
 # DUO: onderwijs in Friesland
 
+De [mbo-CSV-selectie en plaatsnamencontrole](MBO_CSV_SELECTIE.md) beschrijven de
+actuele gefilterde exports: 6.556 studentenrijen en 9.686 afgestudeerdenrijen.
+Houten, Ede en Haarlem blijven administratieve instellingsadressen in de bron;
+de aanbodselectie bewijst geen exacte regionale telling of historisch campusaanbod.
+
+De aanvullende [handmatige mbo-locatiecontrole](MBO_LOCATIECONTROLE.md) bewaart
+het aangeleverde KiesMBO-/Firda-aanbod als CSV en vergelijkt dit met DUO-locaties.
+De oorspronkelijke controle verandert de broncijfers niet. De aanvullende
+[Friese aanbodselectie](MBO_FRIESE_AANBODSELECTIE.md) wordt inmiddels wel toegepast
+op de website: SVO, Nova College en Aeres volgens de bevestigde lijst; Firda behouden.
+
 ## In gewone taal
 
 We maken zes selecties van DUO-studenten en afgestudeerden: mbo, hbo en wo.
@@ -14,6 +25,22 @@ per beroep: daarvoor ontbreekt een gevalideerde koppeling tussen opleiding en be
 De directe downloads en uitleg over de telwijze staan onder **Downloads** en
 **Bronnen en telwijze**.
 
+## ESCO-uitbreiding: analyse en verbeterplan
+
+De [architectuuranalyse en het gefaseerde ESCO-plan](ESCO_ANALYSE_EN_PLAN.md)
+inventariseren de nieuwe lokale ESCO-data, officiële relaties, ontbrekende
+crosswalks en het ontwerp voor bidirectionele competentiematching. De bestaande
+matching is hiervoor nog niet vervangen. De broninventaris is reproduceerbaar
+met `python -m research.pipeline.imports.esco_audit`.
+
+## Opleiding–beroepmethodiek
+
+Het volledige [methodiek- en beoordelingsprotocol](METHODIEK_OPLEIDING_BEROEP.md)
+beschrijft de bronnen, sleutels, voorbewerking, CBS-naamkoppelingen,
+ML-kandidaatselectie, brongebonden assistentbeoordeling, validatie en beperkingen.
+Daarin staan uitgevoerde stappen afzonderlijk van aanbevolen vervolgstappen.
+Een mogelijke beroepsroute is geen gemeten studentenuitstroom.
+
 ## Uitvoeren
 
 Na installatie volgens de hoofd-README:
@@ -21,6 +48,46 @@ Na installatie volgens de hoofd-README:
 ```bash
 python research/onderwijs/onderwijs.py
 ```
+
+## Vastgesteld uitvoerformaat mbo-studenten
+
+Op 6 november 2026 is gekozen voor de oorspronkelijke broncelindeling,
+met behoud van de geografische beperking hieronder. Het bestand
+`data/processed/onderwijs/studenten_mbo_friesland.csv` bevat deze 13 kolommen:
+
+`Instellingscode`, `Instellingsnaam`, `Soort instelling`,
+`Plaatsnaam instelling`, `Leerweg`, `Niveau`, `Erkende opleiding code`,
+`Erkende opleiding naam`, `Sectorkamer naam`, `Hoofdgroep naam`,
+`Geslacht`, `Jaar`, `Aantal`.
+
+De instellingsselectie vóór de aanvullende aanbodfilter bevat 1.574 brede rijen
+voor 575 unieke CREBO-codes. De actuele export is vervolgens beperkt volgens de
+[bevestigde aanbodselectie](MBO_CSV_SELECTIE.md).
+Per instelling × CREBO × leerweg × niveau × jaar worden combinaties waarvan
+beide geslachten nul studenten hebben uit de uitvoer verwijderd. Als één
+geslacht studenten heeft (inclusief `<5`), blijven beide geslachtsrijen
+behouden. Onbekende aantallen worden niet als nul behandeld en blijven
+behouden. Dit selecteert geregistreerde deelname op de peildatum; het is
+geen bewijs van het volledige beschikbare opleidingsaanbod. Gebruik 2025
+als hoofdjaar.
+`Aantal` bewaart de oorspronkelijke tekst: `0` is exact nul, `<5` is
+afgeschermd (1–4), leeg is onbekend en een positief getal is een bekende
+telling. Er worden geen aantallen geïmputeerd of geaggregeerd.
+De CREBO-koppeltabellen in `data/raw/crebo/` veranderen deze tellingen niet
+en bevatten geen CREBO-locatieaantallen.
+
+Alleen mbo-studenten controleren of opnieuw exporteren:
+
+```bash
+python research/onderwijs/onderwijs.py --check
+python research/onderwijs/onderwijs.py --mbo-studenten-only
+```
+
+De gerichte verwerking controleert unieke instelling/CREBO/leerweg/niveau-
+sleutels en vergelijkt alle uitgevoerde aantallen en bronkenmerken met de
+bron vóór het CSV wordt vervangen. De export wordt tijdelijk geschreven,
+teruggelezen en bij gelijkheid atomair vervangen. `--check` schrijft niets.
+De DUO-bronnen en het bestaande bronmanifest blijven ongewijzigd.
 
 ## Afbakening mbo
 
@@ -64,7 +131,7 @@ Alle zes tabellen bevatten dezelfde drie tellingkolommen:
 | `Jaar` | Het oorspronkelijke verslagjaar uit de kolomnaam |
 | `Aantal` | De oorspronkelijke celwaarde, inclusief `0` en `<5` |
 
-Iedere geselecteerde broncel met een aantal wordt één uitvoerrij.
+Iedere behouden broncel met een aantal wordt één uitvoerrij. Bij mbo-studenten vervallen jaargroepen met uitsluitend nul studenten.
 Bij HBO/WO worden de jaarkolommen onder elkaar gezet en wordt de bestaande
 kolom `GESLACHT` als `Geslacht` weergegeven. Bij mbo worden bijvoorbeeld
 `MAN2025` en `DIPVROUW2025` omgezet naar respectievelijk `man, 2025`
@@ -137,4 +204,73 @@ Aanvullende referentiebestanden die in `data/raw/onderwijs/` bewaard blijven:
 - [Mbo-locaties](https://duo.nl/open_onderwijsdata/middelbaar-beroepsonderwijs/aantal-studenten/studenten-mbo-rio.jsp)
 - [Afgeschermde aantallen](https://duo.nl/open_onderwijsdata/statistische-beveiliging.jsp)
 
-Laatst gecontroleerd: 28 oktober 2026.
+Laatst gecontroleerd: 6 november 2026.
+
+## Opleidingstab: bronnen en mbo-uitzondering
+
+De opleidingstab combineert de bovengenoemde DUO-studentenbestanden met
+[SBB CREBO-koppeltabellen](https://www.s-bb.nl/onderwijs/erkende-opleidingscode/)
+voor de mbo-kwalificatienamen. De exacte schooljaarbestanden staan beschreven
+in [de CREBO-broninventaris](../../data/raw/crebo/README.md); de koppelstappen
+staan in [de mappingverantwoording](../../data/mappings/README.md).
+Hbo en wo gebruiken de oorspronkelijke provinciekolom Friesland en krijgen
+geen beroepskoppeling op basis van uitsluitend de opleidingsnaam.
+
+De gebruikte openbare mbo-locatiebestanden bevatten aantallen per locatie,
+maar geen CREBO. De opleidingsbron bevat CREBO-aantallen per instelling,
+maar geen onderwijslocatiecode. Daarom kunnen we **per opleiding en jaar
+geen exact studentenaantal op Friese onderwijslocaties vaststellen**.
+Regionale mbo-totalen ontbreken niet per definitie; de gezamenlijke
+opleiding-locatieverdeling ontbreekt in de gebruikte bronnen.
+De instellingsselectie blijft daarom de expliciete mbo-uitzondering en
+omvat ook locaties buiten Friesland. Studentenaantallen worden niet
+gepresenteerd als aantallen toekomstige beoefenaars van een beroep.
+
+## ESCO-aanvulling voor ontbrekende beroepsinhoud
+
+This publication uses the ESCO classification of the European Commission.
+
+Bron: Europese Commissie, **ESCO v1.2.1, Nederlands (nl)**, lokaal aangeleverde CSV-export.
+De website gebruikt de voorgeschreven toepassingsvermelding:
+“This service uses the ESCO classification of the European Commission.”
+Zie de [officiële ESCO-gebruiksvoorwaarden en bronvermelding](https://esco.ec.europa.eu/en/about-esco/faq?page=1).
+ESCO-hergebruik valt onder Besluit 2011/833/EU; de CompetentNL-vermelding CC BY 4.0
+wordt niet aan ESCO toegekend.
+
+De adapter `research/pipeline/imports/esco.py` vult uitsluitend ISCO-groepen zonder
+CompetentNL-beroepsinhoud aan: 33 extra groepen, samen 429 van de 436 groepen.
+Bestaande CompetentNL-inhoud en AI-scores blijven behouden. De officiële viercijferige
+ESCO–ISCO-relatie wordt gecontroleerd tegen de classificatiehiërarchie.
+De Nederlandse beroepsnamen, beschrijvingen, vaardigheden en kennisgebieden zijn
+broninhoud; essentieel/optioneel volgt de officiële competentierelaties.
+ESCO levert in deze bestanden geen afzonderlijke takenlijst. Die wordt niet afgeleid
+of verzonnen. De resterende zeven groepen (1113, 4414, 6310, 6320, 6330, 6340, 9624)
+hebben in beide bronnen geen gekoppeld beroepsprofiel.
+
+Bewerking: selectie van ontbrekende groepen, ontdubbeling van URI-records die alleen
+in wijzigingsdatum verschillen en groepering van beroepen per officiële ISCO-code.
+Dit zijn geen officiële ISCO-groepsdefinities en geen nieuwe MBO–beroepvoorspellingen.
+De reproduceerbare cache `data/processed/esco_aanvulling.json.gz` bevat bronversie,
+taal, SHA-256-bestandshashes en herkomst per beroep; hiermee werkt de build zonder
+ruwe ESCO-bestanden. Verversen: `npm run data:refresh` vanuit `website/` (vereist ook
+de overige ruwe projectbronnen). De bredere semantische MBO–ESCO-matching blijft een
+apart verbeterplan.
+
+## Nieuwe MBO–ESCO–ISCO-pipeline
+
+De hybride uitbreiding staat in `research/pipeline/imports/mbo_esco.py`.
+Zie [MBO_ESCO_UITVOERING.md](MBO_ESCO_UITVOERING.md) voor bronverwerking,
+veldembeddings, directionele competentiedekking, gewichten, reranking,
+referentiebeoordeling, uitvoerbestanden en reproduceerbare CLI-instructies.
+Bestaande koppelingen en studentenaantallen blijven behouden. Nieuwe voorspellingen
+zijn geen officiële opleidingsrelaties en vereisen menselijke controle.
+
+## Actuele kwaliteitsverbetering
+
+De oorzaakanalyse, het vooraf vastgelegde verbeterplan, de regressiecontroles en
+de volledige vergelijking staan in
+[MBO_ESCO_KWALITEITSANALYSE.md](MBO_ESCO_KWALITEITSANALYSE.md).
+De actuele gecombineerde uitvoer is `data/processed/mbo_beroep_matches.csv` en
+`data/processed/mbo_isco_matches.csv`. De oorspronkelijke modeluitvoer is behouden;
+ESCO- en CompetentNL-identifiers blijven onderscheiden. De ontwikkelcijfers zijn
+geen onafhankelijke nauwkeurigheidsmeting.

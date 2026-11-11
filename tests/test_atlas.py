@@ -76,6 +76,33 @@ class ImportTests(unittest.TestCase):
             self.assertEqual([r['dimensions'] for r in result], original)
             self.assertTrue(all(r['course_code'] for r in result))
 
+    def test_mbo_source_cells_preserved(self):
+        p = Path('data/processed/onderwijs/studenten_mbo_friesland.csv')
+        with p.open(encoding='utf-8-sig') as f:
+            output = list(csv.DictReader(f, delimiter=';'))
+        source = next(Path('data/raw/onderwijs').glob('03.-studenten*.csv'), None)
+        if source is None:
+            self.skipTest('Optionele broncontrole vereist het lokale oorspronkelijke DUO-studentenbestand')
+        with source.open(encoding='cp1252') as f:
+            reader = csv.DictReader(f, delimiter=';')
+            metadata = reader.fieldnames[:10]
+            original = [r for r in reader if r['Instellingscode'] in
+                        {'08PG', '17WH', '25GV', '25PX'}]
+        expected = []
+        for r in original:
+            for y in range(2021, 2026):
+                if r[f'MAN{y}'] == r[f'VROUW{y}'] == '0':
+                    continue
+                for gender in ('MAN', 'VROUW'):
+                    expected.append({**{k: r[k] for k in metadata},
+                                     'Geslacht': gender.lower(), 'Jaar': str(y),
+                                     'Aantal': r[f'{gender}{y}']})
+        from research.onderwijs.mbo_exportselectie import filter_rows
+        self.assertEqual(output, filter_rows(expected))
+        self.assertLess(len(output), 15740)
+        self.assertTrue(any(r['Aantal'] == '<5' for r in output))
+        self.assertTrue(any(r['Aantal'] == '0' for r in output))
+
     def test_existing_ai_scores_shared(self):
         profiles = json.loads(
             Path('website/public/data/atlas/profiles.json').read_text())

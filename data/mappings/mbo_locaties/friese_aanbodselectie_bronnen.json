@@ -1,0 +1,21 @@
+{
+  "sources": {
+    "data/mappings/mbo_locaties/opleidingsaanbod_handmatig.csv": "5ceefb50cf739382f466f08d09b8b8143f9c338ce12784d2c16f6d84e38d83bc",
+    "data/raw/crebo/251126 mbo-opleidingskoppeltabel 2026-27 met wijzigingenblad.xlsx": "ad538563cacc8890c79a16cf9752a97350835bea634d06ac64ee754e64758d82",
+    "data/mappings/mbo_locaties/uitsluitingen.csv": "c87b9279e3f72637f869001a674770803123b707077f54a5bc5625bfc35346e4"
+  },
+  "note": "Alleen hoofdnamen op Friese locaties; geen onderliggende vermeldingen of Dronten. Firda behouden. Huidige aanbodselectie, geen bewijs van historische locatie of regionale telling.",
+  "cohort_sources": {
+    "data/raw/crebo/koppeltabel21-22.xlsx": "3dda70d2ca39b36489fceb5feea4392db5c24f389a81b7ef7a12684ab78f3de5",
+    "data/raw/crebo/20221020-koppeltabel-2022-2023 (met 3 crossovers).xlsx": "004dbcbbc3f9e4a7082f99e254974f865d0c27a0e025021d391aaae42ebb8577",
+    "data/raw/crebo/20230403-koppeltabel-2023-2024.xlsx": "2c99da6b49713af84bd1de2c73c9f00d7302da77565ab1a2c882f1d4e0fc9dcc",
+    "data/raw/crebo/20241016 crebokoppeltabel 2024-2025 met wijzigingenblad definitief.xlsx": "2c17a92b29ae66dc2c9fc15bea576ab69c483247d0b4d5cc16d5d5377d024365",
+    "data/raw/crebo/20250107 mbo-opleidingskoppeltabel 2025-2026 met wijzigingenblad.xlsx": "47d3bcfca67abf2d2597278ef1a4790ddac806d7085c28e6c9178abbe8445543"
+  },
+  "code_year_rows": 2183,
+  "rows": 67,
+  "corrections": {
+    "Maritiem officie alle schepen nautisch, visserij": "Maritiem officier alle schepen nautisch, visserij",
+    "Maritien officier alle schepen nautisch, waterbouw": "Maritiem officier alle schepen nautisch, waterbouw"
+  }
+}

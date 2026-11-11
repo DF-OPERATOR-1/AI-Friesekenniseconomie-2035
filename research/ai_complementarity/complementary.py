@@ -13,7 +13,7 @@ print('Stap 1: O*NET 24.3 (mei 2020) inlezen.')
 context = pd.read_csv(bronmap / 'Work Context.txt', sep='\t')
 jobzones = pd.read_csv(bronmap / 'Job Zones.txt', sep='\t')
 groepen = pd.read_excel(
-    bronmap / 'codelijsten-isco-08.xls',
+    project / 'data/raw/cbs/codelijsten-isco-08-nl.xls',
     sheet_name='ISCO-08 unit group', dtype=str,
 ).rename(columns={
     'code ISCO-08 unitgroup': 'ISCO_08_code',

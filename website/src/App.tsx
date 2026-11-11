@@ -1,16 +1,18 @@
 import { FooterBrand, BrandArtwork } from './components/BrandLogo';
 import { AIInfluence } from './components/AIInfluence';
 import { ResearchDownloads } from './components/ResearchDownloads';
+import { ScenarioExplorer } from './components/ScenarioExplorer';
+import { Education } from './components/Education';
 import { Navigation } from './components/Navigation';
 import { useEffect, useState } from 'react';
-import { Home, Occupations, Profile, Future, useProfiles } from './atlas/Atlas';
-import { profileCode } from './atlas/search';
+import { Home, Occupations, Profile, useProfiles } from './atlas/Atlas';
+import { profileCode, profileOccupation } from './atlas/search';
 import { navigation } from './content/nl';
 import { SectionHeading } from './components/ui';
 import { Methodology } from './components/Methodology';
 import { repositoryUrl } from './content/nl';
-function currentTab() {
-  const hash = window.location.hash.slice(1);
+function currentTab(route: string) {
+  const hash = route.slice(1).split('?')[0];
   if (
     [
       'verkenner',
@@ -21,8 +23,11 @@ function currentTab() {
     ].includes(hash)
   )
     return 'invloed-ai';
-  if (profileCode(window.location.hash)) return 'beroep';
+  if (hash.startsWith('methodologie/')) return 'methodologie';
+  if (hash.startsWith('open-data/')) return 'open-data';
+  if (profileCode(route)) return 'beroep';
   if (hash.startsWith('beroep/')) return 'onbekend';
+  if (hash.startsWith('opleiding/')) return 'opleidingen';
   return navigation.some((item) => item.href === `#${hash}`)
     ? hash
     : hash === 'indicatoren'
@@ -38,21 +43,30 @@ function currentTab() {
 export function App() {
   const { profiles, error, loading } = useProfiles();
   const [route, setRoute] = useState(window.location.hash);
-  const [activeTab, setActiveTab] = useState(currentTab);
+  const activeTab = currentTab(route);
   useEffect(() => {
     const sync = () => {
       if (window.location.hash === '#main') return;
-      setActiveTab(currentTab());
       setRoute(window.location.hash);
-      // Move to the top of the selected view without smooth scrolling.
-      requestAnimationFrame(() => {
-        window.scrollTo({ top: 0, behavior: 'instant' });
-        document.getElementById('main')?.focus({ preventScroll: true });
-      });
     };
     window.addEventListener('hashchange', sync);
     return () => window.removeEventListener('hashchange', sync);
   }, []);
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      const match = /^#(?:methodologie|open-data)\/([a-z0-9-]+)$/.exec(route);
+      const target = match ? document.getElementById(match[1]) : null;
+      document.getElementById('main')?.focus({ preventScroll: true });
+      if (target) {
+        if (target instanceof HTMLDetailsElement) target.open = true;
+        for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+          if (parent instanceof HTMLDetailsElement) parent.open = true;
+        }
+        target.scrollIntoView({ block: 'start', behavior: 'instant' });
+      } else window.scrollTo({ top: 0, behavior: 'instant' });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [route, activeTab]);
   return (
     <>
       <a className="skip-link" href="#main">
@@ -76,9 +90,14 @@ export function App() {
         {activeTab === 'home' && <Home profiles={profiles} />}
         {activeTab === 'beroepen' && <Occupations profiles={profiles} />}
         {activeTab === 'beroep' && !loading && !error && (
-          <Profile code={profileCode(route)!} profiles={profiles} />
+          <Profile
+            code={profileCode(route)!}
+            profiles={profiles}
+            occupationName={profileOccupation(route)}
+          />
         )}
-        {activeTab === 'toekomst' && <Future />}
+        {activeTab === 'opleidingen' && <Education route={route} />}
+        {activeTab === 'toekomst' && <ScenarioExplorer profiles={profiles} />}
         {activeTab === 'onbekend' && (
           <section className="container section">
             <h1>Pagina niet gevonden</h1>

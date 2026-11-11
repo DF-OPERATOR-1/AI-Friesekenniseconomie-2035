@@ -21,6 +21,7 @@ jobs:
           node-version: '22'
           cache: npm
           cache-dependency-path: website/package-lock.json
+      - run: python3 -m pip install -r requirements-ci.txt
       - run: python3 website/scripts/check_repository.py
       - run: python3 -m research.pipeline.imports.build_atlas
       - run: python3 -m unittest discover -s tests -v

@@ -10,7 +10,7 @@ import pandas as pd
 project = Path(__file__).resolve().parents[2]
 bronmap = project / 'data/raw/ai_exposure'
 uitvoermap = project / 'data/processed/ai_exposure'
-CBS = 'codelijsten-isco-08.xls'
+CBS = 'codelijsten-isco-08-nl.xls'
 CROSSWALK = 'ISCO_SOC_Crosswalk.xls'
 TAXONOMIE = 'Taxonomy2010_AppA.xls'
 score = {
@@ -21,7 +21,7 @@ score = {
                       'Image Generation AIOE'),
 }
 print('Stap 1: zes lokale bronbestanden inlezen.')
-groepen = pd.read_excel(bronmap / CBS, sheet_name='ISCO-08 unit group',
+groepen = pd.read_excel(project / 'data/raw/cbs' / CBS, sheet_name='ISCO-08 unit group',
                         dtype=str)
 # Lees kopinformatie en relaties samen; de kolomkoppen staan op rij 7.
 crosswalk = pd.read_excel(bronmap / CROSSWALK,

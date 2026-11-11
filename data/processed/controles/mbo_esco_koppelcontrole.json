@@ -1,0 +1,31 @@
+{
+  "active_skill_relations": 15,
+  "quarantined_relations": [
+    {
+      "cnl_uri": "https://linkeddata.competentnl.nl/id/humancapability/E71773F7A8",
+      "esco_uri": "http://data.europa.eu/esco/skill/1d1fedcb-4995-44ac-90f5-f31a157ce512",
+      "reason": "Bronlabel verschilt van lokaal label; controle nodig"
+    },
+    {
+      "cnl_uri": "https://linkeddata.competentnl.nl/id/humancapability/53E033E58A",
+      "esco_uri": "http://data.europa.eu/esco/skill/adc6dc11-3376-467b-96c5-9b0a21edc869",
+      "reason": "Bronlabel verschilt van lokaal label; controle nodig"
+    },
+    {
+      "cnl_uri": "https://linkeddata.competentnl.nl/id/humancapability/BC98BE9135",
+      "esco_uri": "http://data.europa.eu/esco/skill/6f142deb-03a9-4cd7-94ce-e0f023ae2169",
+      "reason": "ESCO-URI ontbreekt in gebruikte versie"
+    },
+    {
+      "cnl_uri": "https://linkeddata.competentnl.nl/id/humancapability/07DBC86B2C",
+      "esco_uri": "http://data.europa.eu/esco/skill/6f142deb-03a9-4cd7-94ce-e0f023ae2169",
+      "reason": "ESCO-URI ontbreekt in gebruikte versie"
+    }
+  ],
+  "education_skill_esco_relations": 1240,
+  "courses_with_skill_bridge": 407,
+  "occupation_requirement_matches": 0,
+  "relations_are_exact_matches": false,
+  "note": "Bruikbare TNO-broadMatch-relaties gekoppeld aan opleiding via bestaande CompetentNL-identifiers. Deze algemene ESCO-vaardigheden hebben geen rechtstreekse occupationSkillRelations in de gebruikte versie. Geen bredere vaardigheid doorgerold naar specifiekere beroepsvereisten; daarom geen extra beroepsmatches bewezen.",
+  "run_id": "1d17bbcdda6bbd8c307170948864c6cc8316bcebc85a0f22c50aa1f6d876cf7e"
+}

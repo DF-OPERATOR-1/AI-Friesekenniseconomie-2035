@@ -1,3 +1,4 @@
+import { EducationPagination } from '../components/EducationSourceTable';
 import { useEffect, useId, useState } from 'react';
 import type {
   Indicator,
@@ -6,8 +7,14 @@ import type {
   OccupationItem,
 } from './model';
 import { interpretMapPoint } from '../components/perceptualSelection';
-import { searchProfiles } from './search';
+import {
+  searchProfiles,
+  matchingOccupationNames,
+  occupationHref,
+  selectedOccupationUri,
+} from './search';
 import { TopicIcon } from '../components/TopicIcon';
+import { OccupationCourses } from '../components/OccupationCourses';
 export function useProfiles() {
   const [profiles, setProfiles] = useState<OccupationProfile[]>([]);
   const [error, setError] = useState(false);
@@ -48,15 +55,55 @@ function Availability({ value }: { value: unknown }) {
     </span>
   );
 }
+export function OccupationSearchResult({
+  row,
+  query,
+}: {
+  row: OccupationProfile;
+  query: string;
+}) {
+  const matches = matchingOccupationNames(row, query);
+  return (
+    <>
+      <a href={occupationHref(row.isco_code, matches[0])}>
+        {row.title}
+        <span>ISCO {row.isco_code}</span>
+      </a>
+      {matches.length > 0 && (
+        <ul className="occupation-search-matches">
+          {matches.slice(0, 5).map((name) => (
+            <li key={name}>
+              <a href={occupationHref(row.isco_code, name)}>{displayLabel(name)}</a>
+            </li>
+          ))}
+        </ul>
+      )}
+      {matches.length > 5 && (
+        <small className="occupation-search-more">
+          En {matches.length - 5} andere overeenkomende beroepen
+        </small>
+      )}
+    </>
+  );
+}
 function Search({ profiles }: { profiles: OccupationProfile[] }) {
   const [query, setQuery] = useState('');
+  const [page, setPage] = useState(0);
+  const [pageSize, setPageSize] = useState(10);
   const id = useId();
   const found = searchProfiles(profiles, query);
+  const pages = Math.max(1, Math.ceil(found.length / pageSize));
+  const currentPage = Math.min(page, pages - 1);
+  useEffect(() => setPage(0), [query]);
+  const changePage = (value: number) => {
+    setPage(value);
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
   return (
     <div className="occupation-directory">
       <div className="research-controls" role="search">
         <label htmlFor={id}>
-          Zoek op beroep of ISCO-code
+          Zoek op beroep of ISCO-code:
           <input
             id={id}
             type="search"
@@ -88,34 +135,33 @@ function Search({ profiles }: { profiles: OccupationProfile[] }) {
             </tr>
           </thead>
           <tbody>
-            {found.map((row) => (
-              <tr key={row.isco_code}>
-                <th scope="row">
-                  <a href={`#beroep/${row.isco_code}`}>
-                    {row.title}
-                    <span>ISCO {row.isco_code}</span>
-                  </a>
-                </th>
-                <td>
-                  <Availability value={row.description.value} />
-                </td>
-                <td>
-                  <Availability value={row.tasks.value} />
-                </td>
-                <td>
-                  <Availability value={row.skills.value} />
-                </td>
-                <td>
-                  <Availability value={row.knowledge_areas.value} />
-                </td>
-                <td>
-                  <Availability value={row.ai_exposure.value} />
-                </td>
-                <td>
-                  <Availability value={row.ai_complementarity.value} />
-                </td>
-              </tr>
-            ))}
+            {found
+              .slice(currentPage * pageSize, (currentPage + 1) * pageSize)
+              .map((row) => (
+                <tr key={row.isco_code}>
+                  <th scope="row">
+                    <OccupationSearchResult row={row} query={query} />
+                  </th>
+                  <td>
+                    <Availability value={row.description.value} />
+                  </td>
+                  <td>
+                    <Availability value={row.tasks.value} />
+                  </td>
+                  <td>
+                    <Availability value={row.skills.value} />
+                  </td>
+                  <td>
+                    <Availability value={row.knowledge_areas.value} />
+                  </td>
+                  <td>
+                    <Availability value={row.ai_exposure.value} />
+                  </td>
+                  <td>
+                    <Availability value={row.ai_complementarity.value} />
+                  </td>
+                </tr>
+              ))}
           </tbody>
         </table>
         {!found.length && (
@@ -124,6 +170,20 @@ function Search({ profiles }: { profiles: OccupationProfile[] }) {
           </p>
         )}
       </div>
+      {found.length > 0 && (
+        <EducationPagination
+          label="Paginering beroepen"
+          page={currentPage}
+          pages={pages}
+          results={found.length}
+          onChange={changePage}
+          pageSize={pageSize}
+          onPageSizeChange={(value) => {
+            setPageSize(value);
+            changePage(0);
+          }}
+        />
+      )}
       <p className="occupation-directory-note">
         <strong>Ja</strong> betekent dat de informatie beschikbaar is.{' '}
         <strong>Nee</strong> betekent dat de informatie ontbreekt bij het ophalen van de
@@ -149,10 +209,13 @@ export function QuickSearch({ profiles }: { profiles: OccupationProfile[] }) {
         onSubmit={(event) => {
           event.preventDefault();
           if (query.trim() && matches.length)
-            window.location.hash = `beroep/${matches[0].isco_code}`;
+            window.location.hash = occupationHref(
+              matches[0].isco_code,
+              matchingOccupationNames(matches[0], query)[0],
+            );
         }}
       >
-        <label htmlFor={id}>Zoek op beroep of ISCO-code</label>
+        <label htmlFor={id}>Zoek op beroep of ISCO-code:</label>
         <div className="quick-search-field">
           <span aria-hidden="true">⌕</span>
           <input
@@ -178,10 +241,17 @@ export function QuickSearch({ profiles }: { profiles: OccupationProfile[] }) {
           <ul>
             {suggestions.map((p) => (
               <li key={p.isco_code}>
-                <a href={`#beroep/${p.isco_code}`}>
+                <a
+                  href={occupationHref(
+                    p.isco_code,
+                    matchingOccupationNames(p, query)[0],
+                  )}
+                >
                   <span>
-                    {p.title}
-                    <small>ISCO-08 {p.isco_code}</small>
+                    {matchingOccupationNames(p, query)[0] ?? p.title}
+                    <small>
+                      {p.title} · ISCO-08 {p.isco_code}
+                    </small>
                   </span>
                 </a>
               </li>
@@ -263,9 +333,6 @@ export function Home({ profiles }: { profiles: OccupationProfile[] }) {
             <span className="card-action">
               Ontdek skills en vaardigheden bij elk beroep
             </span>
-            <small className="discovery-note">
-              Bekijk beschikbare taken en vaardigheden
-            </small>
           </a>
         </div>
       </section>
@@ -302,9 +369,9 @@ export function Home({ profiles }: { profiles: OccupationProfile[] }) {
 }
 export function Occupations({ profiles }: { profiles: OccupationProfile[] }) {
   return (
-    <section className="container section">
-      <p className="eyebrow">Beroepen lijst ISCO-08</p>
-      <h1>Vind een beroep</h1>
+    <section className="container section occupations-page">
+      <p className="eyebrow">ISCO-08 beroepen lijst</p>
+      <h1 className="overview-page-title">Vind een beroep</h1>
       <Search profiles={profiles} />
     </section>
   );
@@ -368,7 +435,34 @@ function ScoreCard({
     </article>
   );
 }
-function CompetentSource() {
+function displayLabel(value: string) {
+  const text = value.trim();
+  return /^ij/i.test(text)
+    ? 'IJ' + text.slice(2)
+    : text.charAt(0).toLocaleUpperCase('nl-NL') + text.slice(1);
+}
+function CompetentSource({
+  source,
+  version,
+}: {
+  source?: string | null;
+  version?: string | null;
+}) {
+  if (source === 'ESCO')
+    return (
+      <p className="competent-source">
+        <em>
+          <strong>Bron:</strong> Europese Commissie,{' '}
+          <a href="https://esco.ec.europa.eu/en/classification">
+            ESCO v{version ?? '1.2.1'}
+          </a>{' '}
+          (Nederlandstalige classificatie).{' '}
+          <span lang="en">
+            This service uses the ESCO classification of the European Commission.
+          </span>
+        </em>
+      </p>
+    );
   return (
     <p className="competent-source">
       <em>
@@ -388,7 +482,7 @@ function TaskBlocks({ entries, id }: { entries: OccupationItem[]; id: string }) 
         item.description ? (
           <details className="task-block" key={`${item.uri}-${index}`}>
             <summary>
-              <span>{item.name}</span>
+              <span>{displayLabel(item.name)}</span>
               <svg
                 aria-hidden="true"
                 viewBox="0 0 24 24"
@@ -404,7 +498,7 @@ function TaskBlocks({ entries, id }: { entries: OccupationItem[]; id: string }) 
           </details>
         ) : (
           <div className="task-block task-block-static" key={`${item.uri}-${index}`}>
-            {item.name}
+            {displayLabel(item.name)}
           </div>
         ),
       )}
@@ -425,7 +519,7 @@ export function OccupationCategory({
   const visible = expanded ? entries : entries.slice(0, 6);
   return (
     <section
-      className={`occupation-item-group${kind === 'tasks' ? ' task-category-panel' : ''}`}
+      className={`occupation-item-group${kind === 'tasks' ? ' task-category-panel' : ' competency-category-panel'}`}
     >
       <div className="skill-category-heading">
         <h4>
@@ -457,11 +551,16 @@ export function OccupationCategory({
             <li key={`${item.uri}-${index}`}>
               {item.description ? (
                 <details>
-                  <summary>{item.name}</summary>
-                  <p>{item.description}</p>
+                  <summary>
+                    <span>{displayLabel(item.name)}</span>
+                    <span className="competency-expand" aria-hidden="true">
+                      +
+                    </span>
+                  </summary>
+                  <p>{displayLabel(item.description)}</p>
                 </details>
               ) : (
-                item.name
+                displayLabel(item.name)
               )}
             </li>
           ))}
@@ -540,24 +639,62 @@ export function SpecificOccupationDetails({ member }: { member: SpecificOccupati
           </>
         )}
       </div>
+      <CompetentSource source={member.source} version={member.source_version} />
       <div className="professional-information">
         <div className="profile-narrative">
           <h3>Taken</h3>
-          <GroupedItems kind="tasks" items={member.tasks} />
+          {member.source === 'ESCO' ? (
+            <div className="competency-unavailable">
+              <strong>Niet beschikbaar</strong>
+              <p>De ESCO-bron bevat geen afzonderlijke takenlijst voor dit beroep.</p>
+            </div>
+          ) : (
+            <GroupedItems kind="tasks" items={member.tasks} />
+          )}
         </div>
-        <div className="profile-narrative">
-          <h3>Vaardigheden</h3>
+        <div className="profile-narrative competency-section">
+          <h3>
+            Vaardigheden{' '}
+            <span className="competency-total">{member.skills.length}</span>
+          </h3>
+          {member.skills.some((item) => item.description) && (
+            <p className="competency-help">
+              Klik op een vaardigheid voor de toelichting.
+            </p>
+          )}
+          {member.source === 'ESCO' && (
+            <p className="competency-help">
+              Essentieel: nodig voor dit beroep. Optioneel: afhankelijk van de functie
+              of werkomgeving.
+            </p>
+          )}
           <GroupedItems kind="skills" items={member.skills} />
         </div>
-        <div className="profile-narrative">
-          <h3>Kennisgebieden</h3>
+        <div className="profile-narrative competency-section">
+          <h3>
+            Kennisgebieden{' '}
+            <span className="competency-total">
+              {(member.knowledge_areas ?? []).length}
+            </span>
+          </h3>
+          {(member.knowledge_areas ?? []).some((item) => item.description) && (
+            <p className="competency-help">
+              Klik op een kennisgebied voor de toelichting.
+            </p>
+          )}
           <GroupedItems kind="knowledge_areas" items={member.knowledge_areas ?? []} />
         </div>
       </div>
     </div>
   );
 }
-function ProfessionalContent({ row }: { row: OccupationProfile }) {
+function ProfessionalContent({
+  row,
+  occupationName = '',
+}: {
+  row: OccupationProfile;
+  occupationName?: string;
+}) {
   const [entries, setEntries] = useState<SpecificOccupation[]>([]);
   const [selected, setSelected] = useState('');
   const [state, setState] = useState('loading');
@@ -577,7 +714,7 @@ function ProfessionalContent({ row }: { row: OccupationProfile }) {
       })
       .then((data: SpecificOccupation[]) => {
         setEntries(data);
-        setSelected(data[0]?.uri ?? '');
+        setSelected(selectedOccupationUri(data, occupationName));
         setState('ready');
       })
       .catch((e) => {
@@ -585,6 +722,9 @@ function ProfessionalContent({ row }: { row: OccupationProfile }) {
       });
     return () => controller.abort();
   }, [row.isco_code, row.member_count]);
+  useEffect(() => {
+    if (entries.length) setSelected(selectedOccupationUri(entries, occupationName));
+  }, [entries, occupationName]);
   const member = entries.find((item) => item.uri === selected);
   return (
     <section className="profile-section">
@@ -594,7 +734,6 @@ function ProfessionalContent({ row }: { row: OccupationProfile }) {
         Kies hieronder een specifiek beroep voor de bijbehorende omschrijving, taken en
         vaardigheden.
       </p>
-      <CompetentSource />
       {state === 'loading' && <p role="status">Beroepen laden…</p>}
       {state === 'empty' && <p>Er zijn nog geen specifieke beroepen gekoppeld.</p>}
       {state === 'error' && (
@@ -614,7 +753,7 @@ function ProfessionalContent({ row }: { row: OccupationProfile }) {
             >
               {entries.map((item) => (
                 <option key={item.uri} value={item.uri}>
-                  {item.name}
+                  {displayLabel(item.name)}
                 </option>
               ))}
             </select>
@@ -628,9 +767,11 @@ function ProfessionalContent({ row }: { row: OccupationProfile }) {
 export function Profile({
   code,
   profiles,
+  occupationName = '',
 }: {
   code: string;
   profiles: OccupationProfile[];
+  occupationName?: string;
 }) {
   const row = profiles.find((p) => p.isco_code === code);
   if (!row)
@@ -688,12 +829,32 @@ export function Profile({
       <section className="profile-header">
         <div className="container">
           <a className="profile-back" href="#beroepen">
-            Alle beroepen
+            Terug naar alle beroepen
           </a>
           <p className="eyebrow">
             ISCO-08 <span className="isco-tag">{row.isco_code}</span>
           </p>
           <h1>{row.title}</h1>
+          {row.cbs_relevance && (
+            <div className="profile-narrative">
+              <h2 className="profile-data-notice-heading">
+                Beperkte gegevens beschikbaar
+              </h2>
+              <p>
+                Het CBS beschouwt deze beroepsgroep als niet relevant voor de
+                Nederlandse arbeidsmarkt. Daarom zijn er geen gegevens beschikbaar over
+                de beroepsomschrijving, taken, vaardigheden, kennisgebieden en in- en
+                uitstroom op de arbeidsmarkt.
+              </p>
+              <p className="profile-data-notice-source">
+                Bron:{' '}
+                <a href={row.cbs_relevance.source_url}>
+                  CBS, Codelijsten en beroepenindex ISCO 2008
+                </a>
+                , tabblad ‘ISCO-08 voorbeeldberoepen’.
+              </p>
+            </div>
+          )}
         </div>
       </section>
       <div className="container">
@@ -701,6 +862,7 @@ export function Profile({
           className="profile-section profile-ai-section"
           aria-labelledby="profile-ai-heading"
         >
+          <p className="eyebrow">Invloed van AI</p>
           <h2 id="profile-ai-heading">Wat voor invloed heeft AI op dit beroep?</h2>
           <div className="score-grid">
             <ScoreCard
@@ -729,8 +891,7 @@ export function Profile({
           )}
           {!interpretation && (
             <p className="profile-ai-interpretation">
-              Er zijn nog onvoldoende scores beschikbaar om dit beroep op de perceptuele
-              kaart te duiden.
+              Er zijn geen scores beschikbaar om dit beroep te duiden.
             </p>
           )}
 
@@ -741,48 +902,35 @@ export function Profile({
             </a>
           </p>
         </section>
-        <ProfessionalContent key={row.isco_code} row={row} />
-        <section className="profile-section">
-          <h2>Regionale context</h2>
-          <dl className="labour-stats">
-            <div>
-              <dt>Aantal studenten en afgestudeerden</dt>
-              <dd>
-                Nog niet beschikbaar per beroep
-                <details>
-                  <summary>Toelichting</summary>
-                  <p>
-                    DUO-onderwijsgegevens zijn beschikbaar, maar de koppeling tussen
-                    opleidingen en beroepen is nog niet gevalideerd. Er zijn daarom nog
-                    geen aantallen studenten en afgestudeerden aan dit beroep toegekend.
-                  </p>
-                </details>
-              </dd>
-            </div>
-            <div>
-              <dt>Aantal werkenden en leeftijdsopbouw</dt>
-              <dd>
-                Nog niet beschikbaar per beroep
-                <details>
-                  <summary>Toelichting</summary>
-                  <p>
-                    Gegevens over het aantal werkenden en hun leeftijdsopbouw zijn nog
-                    niet aan dit beroep gekoppeld.
-                  </p>
-                </details>
-              </dd>
-            </div>
-          </dl>
-        </section>
+        {!row.cbs_relevance && (
+          <>
+            <OccupationCourses key={`courses:${row.isco_code}`} isco={row.isco_code} />
+            <ProfessionalContent
+              key={row.isco_code}
+              row={row}
+              occupationName={occupationName}
+            />
+            <section className="profile-section">
+              <h2>Regionale context</h2>
+              <dl className="labour-stats">
+                <div>
+                  <dt>Aantal werkenden en leeftijdsopbouw</dt>
+                  <dd>
+                    Nog niet beschikbaar per beroep
+                    <details>
+                      <summary>Toelichting</summary>
+                      <p>
+                        Gegevens over het aantal werkenden en hun leeftijdsopbouw zijn
+                        nog niet aan dit beroep gekoppeld.
+                      </p>
+                    </details>
+                  </dd>
+                </div>
+              </dl>
+            </section>
+          </>
+        )}
       </div>
     </div>
-  );
-}
-export function Future() {
-  return (
-    <section className="container section">
-      <p className="eyebrow">Scenarioberekening</p>
-      <h1>Toekomst 2035</h1>
-    </section>
   );
 }

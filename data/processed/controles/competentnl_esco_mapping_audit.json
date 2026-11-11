@@ -1,0 +1,37 @@
+{
+  "source_url": "https://publications.tno.nl/publication/34645227/Jd08KjsX/competentNL-2025-vaardigheden-bijl1.pdf",
+  "source_file": "data/raw/competentnl/mappings/competentNL-2025-vaardigheden-bijl1.pdf",
+  "source_sha256": "37aaf1da8477e7038007e9116c7d6b0dde3217bf9626144f145dcf550bfb905f",
+  "source_version": "CompetentNL knowledge graph versie 1 – september 2025",
+  "esco_checked_version": "1.2.1",
+  "extracted_relations": 36,
+  "relations_linked_by_numeric_code": 19,
+  "distinct_cnl_skills": 19,
+  "unmatched_codes": [
+    "100001001011",
+    "100001001012",
+    "100001001013",
+    "100001003006",
+    "100001004001",
+    "100002001006",
+    "100002001007",
+    "100003002007",
+    "100003005005",
+    "100004001004",
+    "100005001006",
+    "100005002001",
+    "100005002002",
+    "100005003002",
+    "100005004001",
+    "100005005007",
+    "100006002003"
+  ],
+  "close_matches": 0,
+  "broad_matches": 19,
+  "esco_uris_not_in_export": [
+    "http://data.europa.eu/esco/skill/6f142deb-03a9-4cd7-94ce-e0f023ae2169"
+  ],
+  "note": "Aanvullende bronmapping, geen exactMatch en geen opleidings-beroeprelatie. PDF-kolommen gecontroleerd; codes gekoppeld na verwijderen van punten. Eerst richting, labels en bronversie beoordelen voordat deze als scorebewijs wordt gebruikt.",
+  "audit_only": true,
+  "activation_report": "data/processed/mbo_esco_koppelcontrole.json"
+}

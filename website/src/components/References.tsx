@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
+import { Children, Fragment, isValidElement, type ReactNode } from 'react';
 
-type ReferenceTopic =
+export type ReferenceTopic =
   | 'exposure'
   | 'complementarity'
   | 'classification'
@@ -48,26 +48,27 @@ const references: Record<ReferenceTopic, ReactNode> = {
         Felten, E., Raj, M., &amp; Seamans, R. (2021). Occupational, industry, and
         geographic exposure to artificial intelligence: A novel dataset and its
         potential uses. <em>Strategic Management Journal, 42</em>(12), 2195–2217.{' '}
-        <a href="https://doi.org/10.1002/smj.3286">https://doi.org/10.1002/smj.3286</a>.{' '}
-        <a href="https://github.com/AIOE-Data/AIOE/blob/main/AIOE_DataAppendix.xlsx">
-          Bijbehorend bestand: AIOE Data Appendix (Excel)
-        </a>
-        .
+        <a href="https://doi.org/10.1002/smj.3286">https://doi.org/10.1002/smj.3286</a>
+        <p className="reference-note">
+          <a href="https://github.com/AIOE-Data/AIOE/blob/main/AIOE_DataAppendix.xlsx">
+            Bijbehorend bestand: AIOE Data Appendix (Excel)
+          </a>
+        </p>
       </li>
       <li>
         Felten, E. W., Raj, M., &amp; Seamans, R. (2023a).{' '}
         <em>
           How will language modelers like ChatGPT affect occupations and industries?
         </em>{' '}
-        [Working paper, 18 maart 2023]. SSRN.{' '}
+        [Working paper]. SSRN.{' '}
         <a href="https://doi.org/10.2139/ssrn.4375268">
           https://doi.org/10.2139/ssrn.4375268
         </a>
-        .{' '}
-        <a href="https://github.com/AIOE-Data/AIOE/blob/main/Language%20Modeling%20AIOE%20and%20AIIE.xlsx">
-          Bijbehorend bestand: Language Modeling AIOE and AIIE (Excel)
-        </a>
-        .
+        <p className="reference-note">
+          <a href="https://github.com/AIOE-Data/AIOE/blob/main/Language%20Modeling%20AIOE%20and%20AIIE.xlsx">
+            Bijbehorend bestand: Language Modeling AIOE and AIIE (Excel)
+          </a>
+        </p>
       </li>
       <li>
         Felten, E. W., Raj, M., &amp; Seamans, R. (2023b).{' '}
@@ -76,11 +77,11 @@ const references: Record<ReferenceTopic, ReactNode> = {
         <a href="https://doi.org/10.2139/ssrn.4414065">
           https://doi.org/10.2139/ssrn.4414065
         </a>
-        .{' '}
-        <a href="https://github.com/AIOE-Data/AIOE/blob/main/Image%20Generation%20AIOE%20and%20AIIE.xlsx">
-          Bijbehorend bestand: Image Generation AIOE and AIIE (Excel)
-        </a>
-        .
+        <p className="reference-note">
+          <a href="https://github.com/AIOE-Data/AIOE/blob/main/Image%20Generation%20AIOE%20and%20AIIE.xlsx">
+            Bijbehorend bestand: Image Generation AIOE and AIIE (Excel)
+          </a>
+        </p>
       </li>
     </>
   ),
@@ -190,6 +191,48 @@ const references: Record<ReferenceTopic, ReactNode> = {
         .
       </li>
       <li>
+        KiesMBO. (z.d.). <em>Opleidingsaanbod per schoollocatie</em>. Handmatige
+        inventarisatie door de gebruiker, gestructureerd door DataFryslân en vastgelegd
+        op 9 november 2026. Het geldige schooljaar van de waarneming is niet
+        vastgesteld.
+        <ul>
+          <li>
+            <a href="https://www.kiesmbo.nl/scholen/aeres-mbo/aeres-mbo-buitenpost">
+              Aeres MBO Buitenpost
+            </a>
+          </li>
+          <li>
+            <a href="https://www.kiesmbo.nl/scholen/aeres-mbo/aeres-mbo-heerenveen">
+              Aeres MBO Heerenveen
+            </a>
+          </li>
+          <li>
+            <a href="https://www.kiesmbo.nl/scholen/aeres-mbo/aeres-mbo-leeuwarden">
+              Aeres MBO Leeuwarden
+            </a>
+          </li>
+          <li>
+            <a href="https://www.kiesmbo.nl/scholen/aeres-mbo/aeres-mbo-sneek">
+              Aeres MBO Sneek
+            </a>
+          </li>
+          <li>
+            <a href="https://www.kiesmbo.nl/scholen/roc-nova-college/nova-scheepvaart-harlingen">
+              Nova Scheepvaart Harlingen
+            </a>
+          </li>
+          <li>
+            <a href="https://www.kiesmbo.nl/scholen/svo-vakopleider-food/jansoniusstraat-2a-leeuwarden">
+              SVO Leeuwarden
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Firda. (z.d.). <a href="https://www.firda.nl/locaties">Locaties van Firda</a>.
+        Firda is volledig behouden; de cijfers omvatten ook Emmeloord en Urk.
+      </li>
+      <li>
         Dienst Uitvoering Onderwijs. (z.d.). <em>Statistische beveiliging</em>.{' '}
         <a href="https://duo.nl/open_onderwijsdata/statistische-beveiliging.jsp">
           Toelichting op afgeschermde aantallen
@@ -213,16 +256,82 @@ const references: Record<ReferenceTopic, ReactNode> = {
       <a href="https://doi.org/10.1186/s12651-025-00418-w">
         https://doi.org/10.1186/s12651-025-00418-w
       </a>
-      .
     </li>
   ),
 };
 
+export function scientificSource(
+  file: string,
+): { authors: string[]; topics: ReferenceTopic[]; processing: string } | null {
+  const felten = [
+    'Felten, E., Raj, M., & Seamans, R. (2021).',
+    'Felten, E. W., Raj, M., & Seamans, R. (2023a).',
+    'Felten, E. W., Raj, M., & Seamans, R. (2023b).',
+  ];
+  const pizzinelli = [
+    'Pizzinelli, C., Panton, A., Tavares, M. M., Cazzaniga, M., & Li, L. (2023).',
+  ];
+  if (file === 'ISCO08_AIOE.csv')
+    return {
+      authors: felten,
+      topics: ['exposure'],
+      processing: 'DataFryslân koppelde de oorspronkelijke beroepsscores aan ISCO-08.',
+    };
+  if (file === 'ISCO08_Complementary.csv')
+    return {
+      authors: pizzinelli,
+      topics: ['complementarity'],
+      processing:
+        'DataFryslân berekende de complementariteit volgens Pizzinelli et al. (2023), met O*NET 24.3, en koppelde de uitkomsten aan ISCO-08.',
+    };
+  if (file === 'ISCO08_C_AIOE.csv')
+    return {
+      authors: [...felten, ...pizzinelli],
+      topics: ['exposure', 'complementarity'],
+      processing:
+        'DataFryslân combineerde de oorspronkelijke AI-blootstelling met de zelf berekende complementariteit volgens Pizzinelli et al. (2023), met O*NET 24.3, en koppelde de uitkomsten aan ISCO-08.',
+    };
+  return null;
+}
+function referenceItems(node: ReactNode): ReactNode[] {
+  return Children.toArray(node).flatMap((child) =>
+    isValidElement<{ children?: ReactNode }>(child) && child.type === Fragment
+      ? referenceItems(child.props.children)
+      : [child],
+  );
+}
+function referenceText(node: ReactNode): string {
+  return Children.toArray(node)
+    .map((child) =>
+      isValidElement<{ children?: ReactNode }>(child)
+        ? referenceText(child.props.children)
+        : String(child),
+    )
+    .join('');
+}
+export function ReferenceList({ topics }: { topics: ReferenceTopic[] }) {
+  const items = topics
+    .flatMap((topic) => referenceItems(references[topic]))
+    .sort((a, b) => {
+      // The publisher uses E. in 2021 and SSRN uses E. W. for the same author.
+      // Normalize only the sort key so this author's works remain chronological.
+      const key = (node: ReactNode) =>
+        referenceText(node).replace(/^Felten, E\.,/, 'Felten, E. W.,');
+      return key(a).localeCompare(key(b), 'nl');
+    });
+  return (
+    <ul className="reference-list">
+      {items.map((item, index) => (
+        <Fragment key={index}>{item}</Fragment>
+      ))}
+    </ul>
+  );
+}
 export function References({ topic }: { topic: ReferenceTopic }) {
   return (
     <aside className="methodology-references" aria-labelledby={`references-${topic}`}>
       <h3 id={`references-${topic}`}>Literatuurlijst</h3>
-      <ul className="reference-list">{references[topic]}</ul>
+      <ReferenceList topics={[topic]} />
     </aside>
   );
 }

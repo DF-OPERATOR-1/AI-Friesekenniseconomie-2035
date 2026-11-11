@@ -1,4 +1,6 @@
 import { useEffect, useId, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
+import type { ReactNode } from 'react';
 import { locale } from '../content/nl';
 import {
   pointAppearance,
@@ -24,14 +26,25 @@ export function median(values: number[]) {
   const middle = Math.floor(sorted.length / 2);
   return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2;
 }
-export function PerceptualChart() {
+export function PerceptualChart({
+  compact = false,
+  selectedCode = '',
+  explanationTarget,
+}: {
+  compact?: boolean;
+  selectedCode?: string;
+  explanationTarget?: HTMLElement | null;
+} = {}) {
+  const renderExplanation = (content: ReactNode) =>
+    explanationTarget ? createPortal(content, explanationTarget) : content;
   const variantId = useId();
   const [sourceRows, setRows] = useState<Row[] | null>(null);
   const [variant, setVariant] = useState<MapExposureVariant>('raw');
   const [error, setError] = useState(false);
   const [query, setQuery] = useState('');
   const [group, setGroup] = useState('');
-  const [selected, setSelected] = useState('');
+  const [internalSelected, setSelected] = useState('');
+  const selected = compact ? selectedCode : internalSelected;
   const [hovered, setHovered] = useState<string | null>(null);
   const svg = useRef<SVGSVGElement>(null);
   const [chartWidth, setChartWidth] = useState(1040);
@@ -82,8 +95,16 @@ export function PerceptualChart() {
       </p>
     );
   if (!sourceRows) return <p role="status">Perceptuele kaart laden…</p>;
-  const rows = mapExposureRows(sourceRows, variant);
-  const info = mapExposureVariants[variant];
+  const displayedVariant =
+    compact &&
+    !sourceRows.some(
+      (row) =>
+        row.code === selected && row[variant] !== null && row.complementarity !== null,
+    )
+      ? 'raw'
+      : variant;
+  const rows = mapExposureRows(sourceRows, displayedVariant);
+  const info = mapExposureVariants[displayedVariant];
   const complete = rows.filter(
     (row): row is CompleteRow => row.raw !== null && row.complementarity !== null,
   );
@@ -102,7 +123,9 @@ export function PerceptualChart() {
     tableRows,
   } = selectMapRows(rows, query, group, selected);
   const missingCount = filtered.length - highlighted.length;
-  const active = visible.find((row) => row.code === (hovered ?? selected));
+  const active = visible.find(
+    (row) => row.code === (compact ? selected : (hovered ?? selected)),
+  );
   // Fixed reference population; leave 5% of its range clear on each side.
   const xs = complete.map((row) => row.raw),
     ys = complete.map((row) => row.complementarity);
@@ -152,7 +175,7 @@ export function PerceptualChart() {
     attribution.setAttribute('font-size', '9');
     attribution.setAttribute('textLength', String(chartWidth - 32));
     attribution.setAttribute('lengthAdjust', 'spacingAndGlyphs');
-    attribution.textContent = `Bronnen: ${info.source} en Pizzinelli et al. (2023). De complementariteitsscores zijn door DataFryslân berekend volgens de methode van Pizzinelli et al. (2023), op basis van O*NET 24.3 (2020).`;
+    attribution.textContent = `Bron: ${info.source} en Pizzinelli et al. (2023). De complementariteitsscores zijn door DataFryslân berekend volgens de methode van Pizzinelli et al. (2023), op basis van O*NET 24.3 (2020).`;
     copy.appendChild(attribution);
     const url = URL.createObjectURL(
       new Blob([new XMLSerializer().serializeToString(copy)], {
@@ -166,145 +189,163 @@ export function PerceptualChart() {
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
   return (
-    <div className="chart-card perceptual-card">
+    <div className={`chart-card perceptual-card${compact ? ' compact-ai-map' : ''}`}>
       <div className="research-controls">
         <div className="map-variant-control">
           <div className="map-variant-label">
             <label htmlFor={variantId}>AI-blootstellingvariant</label>
-            <details className="map-variant-info">
-              <summary aria-label="Uitleg over AI-blootstellingvariant">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <circle
-                    cx="10"
-                    cy="10"
-                    r="8"
-                    stroke="currentColor"
-                    strokeWidth="1.4"
-                  />
-                  <circle cx="10" cy="6.3" r="1" fill="currentColor" />
-                  <path
-                    d="M10 9v5"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </summary>
-              <div className="map-variant-info-content">
-                <strong>{info.label}</strong>
-                <p>{info.note}</p>
-                <p>Bron: {info.source}.</p>
-              </div>
-            </details>
+            {!compact && (
+              <details className="map-variant-info">
+                <summary aria-label="Uitleg over AI-blootstellingvariant">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="8"
+                      stroke="currentColor"
+                      strokeWidth="1.4"
+                    />
+                    <circle cx="10" cy="6.3" r="1" fill="currentColor" />
+                    <path
+                      d="M10 9v5"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </summary>
+                <div className="map-variant-info-content">
+                  <strong>{info.label}</strong>
+                  <p>{info.note}</p>
+                  <p className="source-caption">Bron: {info.source}.</p>
+                </div>
+              </details>
+            )}
           </div>
           <select
             id={variantId}
-            value={variant}
+            value={displayedVariant}
             onChange={(event) => {
               setVariant(event.target.value as MapExposureVariant);
               setHovered(null);
             }}
           >
-            {Object.entries(mapExposureVariants).map(([value, item]) => (
-              <option key={value} value={value}>
-                {item.label}
-              </option>
-            ))}
-          </select>
-        </div>
-        <label>
-          Zoek beroep of code
-          <input
-            type="search"
-            placeholder="Bijvoorbeeld verpleegkundige"
-            value={query}
-            onChange={(event) => {
-              setQuery(event.target.value);
-              setHovered(null);
-            }}
-          />
-        </label>
-        <label>
-          Beroepshoofdgroep
-          <select
-            value={group}
-            onChange={(event) => {
-              setGroup(event.target.value);
-              setSelected('');
-              setHovered(null);
-            }}
-          >
-            <option value="">Alle hoofdgroepen</option>
-            {[
-              'Militaire beroepen',
-              'Leidinggevenden',
-              'Wetenschappelijke beroepen',
-              'Technici en vakspecialisten',
-              'Administratief personeel',
-              'Dienstverlening en verkoop',
-              'Landbouw, bosbouw en visserij',
-              'Ambachtslieden',
-              'Bedieners en assemblagemedewerkers',
-              'Elementaire beroepen',
-            ].map((name, index) => (
-              <option key={index} value={index}>
-                {index} | {name}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          Kies een beroep
-          <select
-            value={visible.some((row) => row.code === selected) ? selected : ''}
-            onChange={(event) => {
-              setSelected(event.target.value);
-              setHovered(null);
-            }}
-          >
-            <option value="">Kies een beroep</option>
-            {[
-              ...visible.filter(
-                (row) => matchedCodes.has(row.code) || row.code === selected,
-              ),
-            ]
-              .sort((a, b) => a.occupation.localeCompare(b.occupation, locale))
-              .map((row) => (
-                <option key={row.code} value={row.code}>
-                  {row.code} | {row.occupation}
+            {Object.entries(mapExposureVariants)
+              .filter(
+                ([value]) =>
+                  !compact ||
+                  sourceRows.some(
+                    (row) =>
+                      row.code === selected &&
+                      row[value as MapExposureVariant] !== null &&
+                      row.complementarity !== null,
+                  ),
+              )
+              .map(([value, item]) => (
+                <option key={value} value={value}>
+                  {item.label}
                 </option>
               ))}
           </select>
-        </label>
+        </div>
+        {!compact && (
+          <>
+            <label>
+              Zoek beroep of code
+              <input
+                type="search"
+                placeholder="Bijvoorbeeld verpleegkundige"
+                value={query}
+                onChange={(event) => {
+                  setQuery(event.target.value);
+                  setHovered(null);
+                }}
+              />
+            </label>
+            <label>
+              Beroepshoofdgroep
+              <select
+                value={group}
+                onChange={(event) => {
+                  setGroup(event.target.value);
+                  setSelected('');
+                  setHovered(null);
+                }}
+              >
+                <option value="">Alle hoofdgroepen</option>
+                {[
+                  'Militaire beroepen',
+                  'Leidinggevenden',
+                  'Wetenschappelijke beroepen',
+                  'Technici en vakspecialisten',
+                  'Administratief personeel',
+                  'Dienstverlening en verkoop',
+                  'Landbouw, bosbouw en visserij',
+                  'Ambachtslieden',
+                  'Bedieners en assemblagemedewerkers',
+                  'Elementaire beroepen',
+                ].map((name, index) => (
+                  <option key={index} value={index}>
+                    {index} | {name}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              Kies een beroep
+              <select
+                value={visible.some((row) => row.code === selected) ? selected : ''}
+                onChange={(event) => {
+                  setSelected(event.target.value);
+                  setHovered(null);
+                }}
+              >
+                <option value="">Kies een beroep</option>
+                {[
+                  ...visible.filter(
+                    (row) => matchedCodes.has(row.code) || row.code === selected,
+                  ),
+                ]
+                  .sort((a, b) => a.occupation.localeCompare(b.occupation, locale))
+                  .map((row) => (
+                    <option key={row.code} value={row.code}>
+                      {row.code} | {row.occupation}
+                    </option>
+                  ))}
+              </select>
+            </label>
+          </>
+        )}
       </div>
-      <div className="map-toolbar">
-        <p className="research-summary" role="status">
-          {visible.length} beroepen weergegeven met beide scores.{' '}
-          {searching && (
-            <>
-              {highlighted.length}{' '}
-              {highlighted.length === 1 ? 'zoekresultaat' : 'zoekresultaten'} gemarkeerd
-              op de kaart.{' '}
-            </>
-          )}
-          {missingCount}{' '}
-          {searching
-            ? missingCount === 1
-              ? 'zoekresultaat'
-              : 'zoekresultaten'
-            : missingCount === 1
-              ? 'beroep binnen deze selectie'
-              : 'beroepen binnen deze selectie'}{' '}
-          niet weergegeven omdat een of beide scores ontbreken.
-        </p>
-      </div>
-
+      {!compact && (
+        <div className="map-toolbar">
+          <p className="research-summary" role="status">
+            {visible.length} beroepen weergegeven met beide scores.{' '}
+            {searching && (
+              <>
+                {highlighted.length}{' '}
+                {highlighted.length === 1 ? 'zoekresultaat' : 'zoekresultaten'}{' '}
+                gemarkeerd op de kaart.{' '}
+              </>
+            )}
+            {missingCount}{' '}
+            {searching
+              ? missingCount === 1
+                ? 'zoekresultaat'
+                : 'zoekresultaten'
+              : missingCount === 1
+                ? 'beroep binnen deze selectie'
+                : 'beroepen binnen deze selectie'}{' '}
+            niet weergegeven omdat een of beide scores ontbreken.
+          </p>
+        </div>
+      )}
       <div className="map-layout">
         <div className="perceptual-scroll">
           <svg
@@ -317,6 +358,9 @@ export function PerceptualChart() {
           >
             <title id="map-title">{info.label} × AI-complementariteit</title>
             <desc id="map-description">
+              {compact
+                ? `Het geselecteerde beroep ${active?.occupation ?? selected} is paars gemarkeerd. Alle overige beschikbare beroepen zijn subtiele punten. `
+                : ''}
               Elke stip is een beroepsgroep. Horizontaal: {info.axis}. Verticaal: zelf
               berekende complementariteitsscore. Mediane lijnen verdelen de kaart in
               relatieve posities. Gebruik de beroepsselectie of de gegevenstabel voor
@@ -343,7 +387,9 @@ export function PerceptualChart() {
                   </text>
                 </g>
               )}
-              <g transform={`translate(${left + (searching ? 190 : 0)}, 14)`}>
+              <g
+                transform={`translate(${left + (searching ? 190 : 0)}, ${compact ? 44 : 14})`}
+              >
                 <circle
                   r="8"
                   fill="var(--map-selected)"
@@ -354,17 +400,19 @@ export function PerceptualChart() {
                   Geselecteerd beroep
                 </text>
               </g>
-              <g transform={`translate(${left + (searching ? 390 : 200)}, 14)`}>
-                <circle
-                  r="7"
-                  fill="var(--map-dot)"
-                  stroke="var(--map-hover)"
-                  strokeWidth="3"
-                />
-                <text x="15" y="4">
-                  Aangewezen beroep
-                </text>
-              </g>
+              {!compact && (
+                <g transform={`translate(${left + (searching ? 390 : 200)}, 14)`}>
+                  <circle
+                    r="7"
+                    fill="var(--map-dot)"
+                    stroke="var(--map-hover)"
+                    strokeWidth="3"
+                  />
+                  <text x="15" y="4">
+                    Aangewezen beroep
+                  </text>
+                </g>
+              )}
             </g>
             <g transform={`translate(0, ${legendHeight})`}>
               <rect
@@ -496,12 +544,14 @@ export function PerceptualChart() {
                       found: searching && matchedCodes.has(row.code),
                       selected: row.code === selected,
                       hovered: row.code === hovered,
-                      searching,
+                      searching: compact || searching,
                     })}
-                    onMouseEnter={() => setHovered(row.code)}
+                    onMouseEnter={() => {
+                      if (!compact) setHovered(row.code);
+                    }}
                     onMouseLeave={() => setHovered(null)}
-                    tabIndex={0}
-                    role="button"
+                    tabIndex={compact ? undefined : 0}
+                    role={compact ? undefined : 'button'}
                     aria-label={`${row.occupation}, ${selected === row.code ? 'deselecteer' : 'selecteer'} beroep`}
                     aria-pressed={row.code === selected}
                     onFocus={() => setHovered(row.code)}
@@ -516,6 +566,7 @@ export function PerceptualChart() {
                       }
                     }}
                     onClick={() => {
+                      if (compact) return;
                       setSelected((current) => (current === row.code ? '' : row.code));
                       setHovered(null);
                     }}
@@ -558,16 +609,18 @@ export function PerceptualChart() {
                   </a>
                 </strong>
                 <a href={`#beroep/${active.code}`}>Bekijk beroepsprofiel →</a>
-                <dl className="map-detail-scores">
-                  <div>
-                    <dt>{info.table}</dt>
-                    <dd>{format(active.raw)}</dd>
-                  </div>
-                  <div>
-                    <dt>Complementariteitsscore</dt>
-                    <dd>{format(active.complementarity)}</dd>
-                  </div>
-                </dl>
+                {!compact && (
+                  <dl className="map-detail-scores">
+                    <div>
+                      <dt>{info.table}</dt>
+                      <dd>{format(active.raw)}</dd>
+                    </div>
+                    <div>
+                      <dt>Complementariteitsscore</dt>
+                      <dd>{format(active.complementarity)}</dd>
+                    </div>
+                  </dl>
+                )}
                 {interpretation && (
                   <p className="map-interpretation">
                     <strong>{interpretation.title}:</strong> {interpretation.text}
@@ -589,88 +642,125 @@ export function PerceptualChart() {
               </>
             )}
           </div>
-          <div className="map-figure-actions">
-            <button type="button" className="text-button" onClick={exportSvg}>
-              Download als SVG
-            </button>
-          </div>
+          {!compact && (
+            <div className="map-figure-actions">
+              <button type="button" className="text-button" onClick={exportSvg}>
+                Download als SVG
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
-      <section
-        className="map-visualisation-info"
-        aria-labelledby={`${variantId}-about`}
-      >
-        <h3 id={`${variantId}-about`}>Over deze visualisatie</h3>
-        <p>
-          De stippellijnen geven de mediane scores weer: {info.table}{' '}
-          {format(mx).replace('-', '−')} en complementariteit {format(my)}.
-        </p>
-        <p>
-          <strong>Bronnen:</strong> {info.source} en Pizzinelli et al. (2023). De
-          complementariteitsscores zijn door DataFryslân berekend volgens de methode van
-          Pizzinelli et al. (2023), op basis van O*NET 24.3 (2020).
-        </p>
-        <a href="#methodologie">Volledige bronvermeldingen en methodologie</a>
-      </section>
-      <details className="map-data">
-        <summary>
-          Beroepen binnen de selectie bekijken in een scrollbare tabel (
-          {tableRows.length})
-        </summary>
-        <div
-          className="research-table"
-          tabIndex={0}
-          role="region"
-          aria-label="Scrollbare tabel met alle beroepsgroepen binnen de selectie"
-        >
-          <table>
-            <caption>
-              Beroepsgroepen binnen de huidige zoek-, hoofdgroep- en beroepsselectie
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Code</th>
-                <th scope="col">Beroep</th>
-                <th scope="col">{info.table}</th>
-                <th scope="col">Complementariteitsscore</th>
-              </tr>
-            </thead>
-            <tbody>
-              {!tableRows.length && (
-                <tr>
-                  <td colSpan={4}>
-                    Geen beroepen binnen deze selectie. Pas de zoekopdracht of filters
-                    aan.
-                  </td>
-                </tr>
-              )}
-              {tableRows.map((row) => (
-                <tr
-                  key={row.code}
-                  className={row.code === selected ? 'map-table-selected' : undefined}
-                >
-                  <th scope="row">
-                    {row.code}
-                    {row.code === selected && (
-                      <small className="map-table-selected-label">Geselecteerd</small>
-                    )}
-                  </th>
-                  <td>
-                    <a href={`#beroep/${row.code}`}>{row.occupation}</a>
-                  </td>
-                  <td>{row.raw === null ? 'Ontbreekt' : format(row.raw)}</td>
-                  <td>
-                    {row.complementarity === null
-                      ? 'Ontbreekt'
-                      : format(row.complementarity)}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </details>
+      {compact && (
+        <>
+          {renderExplanation(
+            <section
+              className="scenario-score-explanation"
+              aria-label="Wat betekenen deze scores?"
+            >
+              <h3>Wat betekenen deze scores?</h3>
+              <p>
+                <strong>AI-blootstelling:</strong> {info.note}
+              </p>
+              <p>
+                <strong>Complementariteit:</strong> geeft aan in hoeverre AI menselijke
+                arbeid kan ondersteunen, terwijl de menselijke rol belangrijk blijft.
+              </p>
+              <p className="source-caption scenario-analysis-reference">
+                Kijk verder bij{' '}
+                <a className="scenario-analysis-link" href="#invloed-ai">
+                  Invloed van AI
+                </a>
+              </p>
+            </section>,
+          )}
+        </>
+      )}
+      {!compact && (
+        <>
+          <section
+            className="map-visualisation-info"
+            aria-labelledby={`${variantId}-about`}
+          >
+            <h3 id={`${variantId}-about`}>Over deze visualisatie</h3>
+            <p>
+              De stippellijnen geven de mediane scores weer: {info.table}{' '}
+              {format(mx).replace('-', '−')} en complementariteit {format(my)}.
+            </p>
+            <p className="source-caption">
+              <strong>Bron:</strong> {info.source} en Pizzinelli et al. (2023). De
+              complementariteitsscores zijn door DataFryslân berekend volgens de methode
+              van Pizzinelli et al. (2023), op basis van O*NET 24.3 (2020).
+            </p>
+            <a href="#methodologie/methodologie-ai">
+              Bronnen en methodologische toelichting
+            </a>
+          </section>
+          <details className="map-data">
+            <summary>
+              Beroepen binnen de selectie bekijken in een scrollbare tabel (
+              {tableRows.length})
+            </summary>
+            <div
+              className="research-table"
+              tabIndex={0}
+              role="region"
+              aria-label="Scrollbare tabel met alle beroepsgroepen binnen de selectie"
+            >
+              <table>
+                <caption>
+                  Beroepsgroepen binnen de huidige zoek-, hoofdgroep- en beroepsselectie
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Code</th>
+                    <th scope="col">Beroep</th>
+                    <th scope="col">{info.table}</th>
+                    <th scope="col">Complementariteitsscore</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {!tableRows.length && (
+                    <tr>
+                      <td colSpan={4}>
+                        Geen beroepen binnen deze selectie. Pas de zoekopdracht of
+                        filters aan.
+                      </td>
+                    </tr>
+                  )}
+                  {tableRows.map((row) => (
+                    <tr
+                      key={row.code}
+                      className={
+                        row.code === selected ? 'map-table-selected' : undefined
+                      }
+                    >
+                      <th scope="row">
+                        {row.code}
+                        {row.code === selected && (
+                          <small className="map-table-selected-label">
+                            Geselecteerd
+                          </small>
+                        )}
+                      </th>
+                      <td>
+                        <a href={`#beroep/${row.code}`}>{row.occupation}</a>
+                      </td>
+                      <td>{row.raw === null ? 'Ontbreekt' : format(row.raw)}</td>
+                      <td>
+                        {row.complementarity === null
+                          ? 'Ontbreekt'
+                          : format(row.complementarity)}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </>
+      )}
     </div>
   );
 }

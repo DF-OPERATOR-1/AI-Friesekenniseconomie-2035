@@ -58,12 +58,24 @@
     },
     "atlas/occupations/{isco}.json": {
       "approved": true,
-      "license": "CC BY 4.0",
-      "evidence": "Gebruiker heeft CompetentNL-definities, taken, vaardigheden en kennisgebieden voor de beroepspagina aangeleverd en bronvermelding CC BY 4.0 opgegeven."
+      "license": "Per bron: CompetentNL CC BY 4.0; ESCO hergebruik onder Besluit 2011/833/EU",
+      "evidence": "Gebruiker staat aanvulling van ontbrekende CompetentNL-groepen met ESCO toe. Bron en versie per profiel; ESCO-vermelding en selectie/groepering zichtbaar op de website."
     },
     "research/occupations.json": {
       "approved": true,
       "evidence": "Afgeleide beroepsscores uit de reeds toegestane AI-CSV’s; geen nieuwe berekeningen."
+    },
+    "atlas/opleidingen.json": {
+      "approved": true,
+      "evidence": "Gebruiker vraagt opleidingen en bijbehorende beroepen op de website; exacte CREBO-SBB-kwalificatierelaties, geen studentenaantallen per beroep."
+    },
+    "atlas/mbo_beroep_matches.json": {
+      "approved": true,
+      "evidence": "Gebruiker vraagt bestaande mbo-beroepmatches en proefbeoordelingen bij opleidingen en beroepen te tonen; alleen afgeleide koppelingen met expliciete onderzoeksstatus, geen studentenaantallen per beroep."
+    },
+    "atlas/ho_isco_landelijk.json": {
+      "approved": true,
+      "evidence": "Gebruiker vraagt alle landelijke HO–ISCO-opleidingen bij beroepen te tonen; uitsluitend websiteweergave, geen CSV-download. Opleidingenpagina blijft de Friese DUO-selectie."
     }
   }
 }

@@ -7,8 +7,14 @@ import runpy
 from pathlib import Path
 from .onderwijs import import_education
 from .occupation_content import import_content, import_brc
+from .opleidingen import build_courses
+from .mbo_website_matches import build_mbo_matches
+from .esco import import_esco, supplement_content, VERSION as ESCO_VERSION, SERVICE_ATTRIBUTION
 ROOT = Path(__file__).resolve().parents[3]
 TARGET = ROOT / 'website/public/data/atlas'
+
+
+MBO_SELECTION_NOTE = 'Voor Aeres, SVO en ROC Nova College nemen we alleen opleidingen mee waarvan handmatig is bevestigd dat ze in Fryslân worden aangeboden. Deze opleidingen zijn via SBB gekoppeld aan opleidingscodes per schooljaar. Bij Firda behouden we alle opleidingen, inclusief die in Emmeloord en Urk.\n\nVoor studenten en afgestudeerden gebruiken we dezelfde selectie. De aantallen gelden per opleiding en onderwijsinstelling, niet per afzonderlijke onderwijslocatie. Daardoor kunnen ook studenten van buiten Fryslân zijn meegeteld.\n\nDe vestigingsplaats van een instelling is een administratief gegeven en zegt niet noodzakelijk waar de opleiding wordt gevolgd. Omdat het jaar van de handmatige controle onbekend is, kunnen we niet bevestigen dat alle geselecteerde opleidingen gedurende 2021–2025 in Fryslân werden aangeboden. Afgeschermde aantallen blijven onbekend.'
 
 
 AI_DATASET_METADATA = {
@@ -59,6 +65,13 @@ AI_DATASET_METADATA = {
 def build(refresh_sources=False):
     runpy.run_path(str(ROOT / 'website/scripts/export_research.py'))
     TARGET.mkdir(parents=True, exist_ok=True)
+    courses = build_courses(ROOT, refresh=refresh_sources)
+    from .ho_isco import attach_ho_occupations, load_ho_courses, national_ho_display
+    national = load_ho_courses(ROOT)
+    attach_ho_occupations(ROOT, courses, national)
+    (TARGET / 'ho_isco_landelijk.json').write_text(json.dumps(national_ho_display(courses, national), ensure_ascii=False) + '\n')
+    (TARGET / 'opleidingen.json').write_text(json.dumps(courses, ensure_ascii=False) + '\n')
+    (TARGET / 'mbo_beroep_matches.json').write_text(json.dumps(build_mbo_matches(ROOT, courses), ensure_ascii=False) + '\n')
     source = ROOT / 'website/public/data/research/occupations.json'
     data = json.loads(source.read_text())
     from .common import code
@@ -72,6 +85,9 @@ def build(refresh_sources=False):
     content = import_content(ROOT) if refresh_sources or not content_path.is_file() else json.loads(gzip.decompress(content_path.read_bytes()))
     brc = import_brc(ROOT, prefer_processed=not refresh_sources)
     members = json.loads(gzip.decompress((ROOT / 'data/processed/competentnl_members.json.gz').read_bytes()))
+    needed_esco = {r['code'] for r in data['rows']} - set(content)
+    esco = import_esco(ROOT, needed_esco, refresh=refresh_sources)
+    content, members = supplement_content(content, members, esco)
     (TARGET / 'occupations').mkdir(exist_ok=True)
     for isco, entries in members.items():
         (TARGET / 'occupations' / f'{isco}.json').write_text(json.dumps(entries, ensure_ascii=False) + '\n')
@@ -79,6 +95,8 @@ def build(refresh_sources=False):
     for isco, details in content.items():
         if isco not in score_rows:
             score_rows[isco] = dict(code=isco, occupation=details['title'], exposure=None, complementarity=None)
+    relevance_report = json.loads((ROOT/'data/processed/controles/isco_cbs_relevantie_validatie.json').read_text())
+    cbs_relevance = {r['isco_code']: r for r in relevance_report['groups']}
     profiles = []
 
     def indicator(value=None, status='unavailable', source=None, methodology='', geography='Fryslân; gegevens ontbreken', classification='ISCO-08'):
@@ -110,11 +128,18 @@ def build(refresh_sources=False):
                        source_references=['ISCO08_AIOE.csv', 'ISCO08_C_AIOE.csv'],
                        data_status='calculated' if row['exposure'] is not None or row['complementarity'] is not None else 'unavailable')
         details = content.get(row['code'], {})
+        is_esco = details.get('source') == 'ESCO'
+        profile['content_source'] = 'ESCO' if is_esco else 'CompetentNL' if details else None
+        profile['content_version'] = details.get('source_version')
+        relevance = cbs_relevance.get(row['code'])
+        profile['cbs_relevance'] = dict(note=relevance['cbs_note'], source_url=relevance_report['source_url'], source='CBS · Codelijsten en beroepenindex ISCO 2008', sheet=relevance_report['sheet']) if relevance else None
+        if relevance:
+            profile['source_references'].append('CBS · Codelijsten en beroepenindex ISCO 2008 · ' + relevance_report['source_url'])
         for field, filename in [('description', 'beroepen_isco.csv'), ('tasks', 'beroepen_taken.csv'), ('skills', 'beroepen_vaardigheden.csv'), ('knowledge_areas', 'beroepen_kennisgebieden.csv')]:
             value = details.get(field)
             profile[field] = indicator(value or None, 'observed' if value else 'unavailable',
-                [f'CompetentNL · {filename}'] if value else [],
-                'Samengevoegde inhoud van gekoppelde specifieke beroepen; niet elk onderdeel geldt voor ieder beroep binnen deze ISCO-groep.' if value else 'Nog geen gekoppelde inhoud beschikbaar.',
+                [f'Europese Commissie · ESCO v{ESCO_VERSION} (nl)'] if value and is_esco else [f'CompetentNL · {filename}'] if value else [],
+                'Nederlandse ESCO-beroepen geselecteerd en gegroepeerd via de officiële ISCO-relatie; geen officiële ISCO-groepsdefinitie.' if value and is_esco else 'Samengevoegde inhoud van gekoppelde specifieke beroepen; niet elk onderdeel geldt voor ieder beroep binnen deze ISCO-groep.' if value else 'ESCO bevat geen afzonderlijke takenlijst; zie omschrijving en vaardigheden.' if is_esco and field == 'tasks' else 'Nog geen gekoppelde inhoud beschikbaar.',
                 'Nederland; beroepsinhoud')
         profile['member_count'] = details.get('member_count', 0)
         profile['map_exposure'] = row.get('raw')
@@ -122,7 +147,7 @@ def build(refresh_sources=False):
         profile['brc2014'] = brc.get(row['code'])
         if profile['brc2014']:
             profile['vacancies']['methodology'] = 'ISCO–BRC 2014-schakelschema beschikbaar. De UWV-bron gebruikt BRC Plus-namen; aansluiting op BRC 2014 is nog niet gevalideerd. Vacatureaantallen worden niet verdeeld over ISCO-beroepen.'
-        profile['source_references'] += [f'CompetentNL · {name}' for name in ('beroepen_isco.csv', 'beroepen_taken.csv', 'beroepen_vaardigheden.csv', 'beroepen_kennisgebieden.csv')] if details else []
+        profile['source_references'] += [f'Europese Commissie · ESCO v{ESCO_VERSION} · {name}' for name in ('occupations_nl.csv','skills_nl.csv','occupationSkillRelations_nl.csv')] if is_esco else [f'CompetentNL · {name}' for name in ('beroepen_isco.csv', 'beroepen_taken.csv', 'beroepen_vaardigheden.csv', 'beroepen_kennisgebieden.csv')] if details else []
         if profile['brc2014']:
             profile['source_references'].append('CBS · Schakelschema ISCO2008-BRC2014.xls')
         profiles.append(profile)
@@ -135,9 +160,6 @@ def build(refresh_sources=False):
     imported = []
     for path in sorted((ROOT/'data/processed/onderwijs').glob('*.csv')):
         rows = import_education(path)
-        # Lokale onderzoeksuitvoer; géén openbare studentdimensies dupliceren.
-        output = ROOT/'data/processed'/f'{path.stem}.normalized.json'
-        output.write_text(json.dumps(rows, ensure_ascii=False)+'\n')
         imported.append(dict(file=path.name, rows=len(rows),
                         sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
     for entry in data['sources']:
@@ -149,13 +171,13 @@ def build(refresh_sources=False):
         approved = review.get('approved') is True and bool(
             review.get('evidence')) and published.is_file()
         catalogue.append(dict(file=file, name=file.removesuffix('.csv').replace('_', ' '),
-                              description='Opleidingstellingen; geen beroepsinstroom' if edu else 'Bestaande AI-beroepsscores; geen regionale arbeidsmarktmeting',
+                              description=('Studentenaantallen per opleiding en onderwijsinstelling' if file.startswith('studenten_') else 'Afgestudeerden per opleiding en onderwijsinstelling') if edu else 'Bestaande AI-beroepsscores; geen regionale arbeidsmarktmeting',
                               organization='DUO' if edu else 'DataFryslân; Felten et al. / Pizzinelli et al.',
                               version=entry['sha256'], publication_year=None,
-                              geography='Geselecteerde mbo-instellingen, inclusief locaties buiten Fryslân' if mbo else 'Onderwijsinstellingen in Fryslân' if edu else 'Internationale beroepsscores; geen regionale weging',
+                              geography='Bevestigd Fries opleidingsaanbod; Firda inclusief Emmeloord en Urk. Aantallen per opleiding en onderwijsinstelling.' if mbo else 'Onderwijsinstellingen in Fryslân' if edu else 'Internationale beroepsscores; geen regionale weging',
                               classification='DUO opleidingscode' if edu else 'ISCO-08 via SOC',
                               license=review.get('license'), download=f'data/research/{file}' if approved else None,
-                              limitations='Afgeschermde aantallen blijven onbekend; geen gevalideerde opleiding–ISCO-koppeling. WO-studenten per WO-type; niet zomaar optellen.' if edu else 'Ongewogen koppeling van beroepsgroepen. De complementariteitsscore is door DataFryslân zelf berekend aan de hand van de methode van Pizzinelli et al. (2023). Geen regionale arbeidsmarktmeting.',
+                              limitations=MBO_SELECTION_NOTE if mbo else '' if edu else 'Ongewogen koppeling van beroepsgroepen. De complementariteitsscore is door DataFryslân zelf berekend aan de hand van de methode van Pizzinelli et al. (2023). Geen regionale arbeidsmarktmeting.',
                               rights_status='Goedgekeurd' if approved else 'Herpublicatierechten nog niet vastgesteld'))
     for entry in catalogue:
         if entry['classification'].startswith('DUO'):
@@ -184,6 +206,14 @@ def build(refresh_sources=False):
         uwv_catalogue.write_text(json.dumps(catalogue[-1], ensure_ascii=False, indent=2) + '\n')
     elif uwv_catalogue.is_file():
         catalogue.append(json.loads(uwv_catalogue.read_text()))
+    catalogue.append(dict(file='ESCO_v1.2.1_nl', name='ESCO v1.2.1 — Nederlandse beroepsinhoud',
+        description='Aanvulling van beroepsinhoud voor ISCO-groepen zonder CompetentNL-profiel.',
+        organization='Europese Commissie', version=ESCO_VERSION, publication_year=None,
+        publication_years=[], geography='Europese classificatie; Nederlandstalige labels',
+        classification='ESCO → ISCO-08', license='Hergebruik onder Besluit 2011/833/EU', download=None,
+        rights_status='Bronvermelding en herkenbare bewerking volgens ESCO-gebruiksvoorwaarden',
+        limitations=esco['metadata']['adaptation'] + ' Geen afzonderlijke ESCO-takenlijst; geen studenteninstroom.',
+        citation=SERVICE_ATTRIBUTION + ' ESCO v1.2.1, Nederlands. Selectie en groepering: DataFryslân.'))
     (TARGET/'catalogue.json').write_text(json.dumps(catalogue, ensure_ascii=False, indent=2)+'\n')
     from .publication import prune_public_data
     prune_public_data(ROOT / 'website/public/data', json.loads((ROOT / 'data/published/publication_manifest.json').read_text()))

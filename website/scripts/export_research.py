@@ -31,7 +31,8 @@ for row in read_rows(exposure):
                  **{key: number(other.get(source, '')) for key, source in [('raw', 'AIOE_raw'), ('complementarity', 'Complementary_score'), ('adjusted', 'C_AIOE_score')]}})
 assert len(rows) == len({row['code'] for row in rows})
 files = [exposure, complement, ROOT / 'data/processed/ai_complementarity/ISCO08_Complementary.csv',
-         *sorted((ROOT / 'data/processed/onderwijs').glob('*.csv'))]
+         *[ROOT / 'data/processed/onderwijs' / f'{kind}_{level}_friesland.csv'
+           for kind in ('studenten', 'afgestudeerden') for level in ('mbo', 'hbo', 'wo')]]
 manifest = []
 for path in files:
     shutil.copy2(path, TARGET / path.name)

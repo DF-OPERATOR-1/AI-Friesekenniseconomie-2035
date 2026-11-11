@@ -1,0 +1,543 @@
+﻿Erkende opleidingscode;Erkende opleiding naam;Beroep code;Beroep naam;Niveau;Startdatum erkende opleiding;Uiterste instroomdatum erkende opleiding;Einddatum erkende opleiding
+25008;Montagemedewerker industrieel produceren met hout;b0480;Montagemedewerker houttechniek;2;20150801;20190801;20230801
+25583;Montagemedewerker houttechniek;b0480;Montagemedewerker houttechniek;2;20190801;0;0
+25007;Allround montagemedewerker industrieel produceren met hout;b0857;Allround montagemedewerker houttechniek;3;20150801;20190801;20240801
+25585;Allround montagemedewerker houttechniek;b0857;Allround montagemedewerker houttechniek;3;20190801;0;0
+25584;Machineoperator houttechniek;b0990;Machineoperator houttechniek;2;20190801;0;0
+25586;Allround machineoperator houttechniek;b0991;Allround machineoperator houttechniek;3;20190801;0;0
+25018;Meubelmaker/(scheeps)interieurbouwer;b0475;Meubelmaker/(scheeps)interieurbouwer;2;20150801;20240801;20280801
+25924;Meubelmaker/(scheeps)interieurbouwer;b0475;Meubelmaker/(scheeps)interieurbouwer;2;20240801;0;0
+25020;Werkvoorbereider meubelindustrie/(scheeps)interieurbouw;b0484;Werkvoorbereider meubelindustrie/(scheeps)interieurbouw;4;20150801;20240801;20290801
+25927;Werkvoorbereider meubelindustrie/(scheeps)interieurbouw;b0484;Werkvoorbereider meubelindustrie/(scheeps)interieurbouw;4;20240801;0;0
+25016;Machinaal houtbewerker;b0515;Machineoperator houtverwerkende industrie;2;20150801;20240801;20280801
+25015;Allround machinaal houtbewerker;b0594;Allround machineoperator meubelindustrie/(scheeps)interieurbouw;3;20150801;20240801;20290801
+25925;Allround machineoperator meubelindustrie/(scheeps)interieurbouw;b0594;Allround machineoperator meubelindustrie/(scheeps)interieurbouw;3;20240801;0;0
+25017;Allround meubelmaker/(scheeps)interieurbouwer;b0595;Allround meubelmaker/(scheeps)interieurbouwer;3;20150801;20240801;20290801
+25926;Allround meubelmaker/(scheeps)interieurbouwer;b0595;Allround meubelmaker/(scheeps)interieurbouwer;3;20240801;0;0
+25011;Vakkracht industrieel lakverwerker;b0793;Vakkracht industrieel lakverwerker;3;20150801;0;0
+25010;Industrieel lakverwerker;b0948;Industrieel lakverwerker;2;20150801;0;0
+25030;Schilder;b0126;Schilder;2;20150801;20190801;20230801
+25589;Schilder;b0126;Schilder;2;20190801;0;0
+25029;Gezel schilder;b0949;Gezel schilder;3;20150801;20190801;20240801
+25588;Gezel schilder;b0949;Gezel schilder;3;20190801;0;0
+25024;Servicemedewerker gebouwen;b0198;Servicemedewerker gebouwen;2;20150801;20220801;20260801
+25792;Servicemedewerker gebouwen;b0198;Servicemedewerker gebouwen;2;20220801;0;0
+25023;Allround vakkracht onderhoud- en klussenbedrijf;b0939;Allround vakkracht onderhoud- en klussenbedrijf;3;20150801;20220801;20270801
+25791;Allround vakkracht onderhoud- en klussenbedrijf;b0939;Allround vakkracht onderhoud- en klussenbedrijf;3;20220801;0;0
+23110;Entree;b0000;niet gespecificeerd naar beroep;;20150801;20220801;20250801
+23301;Entree;b0000;niet gespecificeerd naar beroep;;20220801;0;0
+25252;Assistent horeca, voeding of voedingsindustrie;b0754;Assistent horeca, voeding of voedingsindustrie;1;20150801;20220801;20250801
+25742;Assistent horeca, voeding of voedingsindustrie;b0754;Assistent horeca, voeding of voedingsindustrie;1;20220801;0;0
+25257;Assistent verkoop/retail;b0766;Assistent verkoop/retail;1;20150801;20220801;20250801
+25748;Assistent verkoop/retail;b0766;Assistent verkoop/retail;1;20220801;0;0
+25250;Assistent bouwen, wonen en onderhoud;b0769;Assistent bouwen, wonen en onderhoud;1;20150801;20220801;20250801
+25740;Assistent bouwen, wonen en onderhoud;b0769;Assistent bouwen, wonen en onderhoud;1;20220801;0;0
+25251;Assistent dienstverlening en zorg;b0810;Assistent dienstverlening;1;20150801;20220801;20250801
+25741;Assistent dienstverlening;b0810;Assistent dienstverlening;1;20220801;0;0
+25253;Assistent installatie- en constructietechniek;b0822;Assistent metaal-, elektro- en installatietechniek;1;20150801;20220801;20250801
+25744;Assistent metaal-, elektro- en installatietechniek;b0822;Assistent metaal-, elektro- en installatietechniek;1;20220801;0;0
+25255;Assistent mobiliteitsbranche;b0823;Assistent mobiliteitsbranche;1;20150801;20220801;20250801
+25745;Assistent mobiliteitsbranche;b0823;Assistent mobiliteitsbranche;1;20220801;0;0
+25747;Assistent procestechniek;b0826;Assistent procestechniek;1;20220801;0;0
+25254;Assistent logistiek;b0843;Assistent logistiek;1;20150801;20220801;20250801
+25743;Assistent logistiek;b0843;Assistent logistiek;1;20220801;0;0
+25258;Assistent plant of (groene) leefomgeving;b0865;Assistent plant, dier of groene omgeving;1;20150801;20200801;20230801
+25657;Assistent plant, dier of (groene) leefomgeving;b0865;Assistent plant, dier of groene omgeving;1;20200801;20220801;20250801
+25746;Assistent plant, dier of groene omgeving;b0865;Assistent plant, dier of groene omgeving;1;20220801;0;0
+25052;Ontwerpend Meubelmaker;b0958;Creatief Vakman;4;20150801;20170801;20230801
+25548;Creatief Vakman;b0958;Creatief Vakman;4;20170801;0;0
+25046;Chemisch-fysisch analist;b0827;Chemisch fysisch analist;4;20150801;20240801;20300801
+25952;Chemisch fysisch analist;b0827;Chemisch fysisch analist;4;20240801;0;0
+25044;Allround laborant;b0861;Allround laborant;3;20150801;20240801;20290801
+25951;Allround laborant;b0861;Allround laborant;3;20240801;0;0
+25045;Biologisch medisch analist;b0899;Biologisch medisch analist;4;20150801;20240801;20300801
+25953;Biologisch medisch analist;b0899;Biologisch medisch analist;4;20240801;0;0
+25103;Metselaar;b0933;Metselaar;2;20150801;20220801;20260801
+25786;Metselaar;b0933;Metselaar;2;20220801;0;0
+25102;Allround Metselaar;b0934;Allround Metselaar;3;20150801;20220801;20270801
+25785;Allround Metselaar;b0934;Allround Metselaar;3;20220801;0;0
+25827;Tegelzetter;b0936;Tegelzetter;2;20220801;0;0
+25128;Timmerman;b0839;Timmerman;2;20150801;20220801;20260801
+25829;Timmerman;b0839;Timmerman;2;20220801;0;0
+25118;Allround timmerman;b0909;Allround timmerman;3;20150801;20220801;20270801
+25828;Allround timmerman;b0909;Allround timmerman;3;20220801;0;0
+25122;Werkvoorbereider fabricage;b0216;Werkvoorbereider fabricage;4;20150801;20260801;20310801
+25124;Werkvoorbereider installaties;b0217;Werkvoorbereider installaties;4;20150801;20260801;20310801
+92513;Werkvoorbereider installatie;b0217;Werkvoorbereider installaties;4;20060801;20160801;20220801
+25119;Uitvoerder bouw/infra;b0919;Uitvoerder bouw/infra;4;20150801;20260801;20310801
+25091;Allround vakman gww;b0378;Allround vakman gww;3;20150801;20220801;20270801
+25750;Allround vakman gww;b0378;Allround vakman gww;3;20220801;0;0
+25095;Opperman bestratingen;b0379;Opperman bestratingen;2;20150801;20220801;20260801
+25754;Opperman bestratingen;b0379;Opperman bestratingen;2;20220801;0;0
+25096;Straatmaker;b0758;Straatmaker;3;20150801;20220801;20270801
+25755;Straatmaker;b0758;Straatmaker;3;20220801;0;0
+25092;Allround waterbouwer;b0763;Allround waterbouwer;3;20150801;20220801;20270801
+25751;Allround waterbouwer;b0763;Allround waterbouwer;3;20220801;0;0
+25757;Waterbouwer;b0842;Waterbouwer;2;20220801;0;0
+25097;Vakman gww;b0917;Vakman gww;2;20150801;20220801;20260801
+25756;Vakman gww;b0917;Vakman gww;2;20220801;0;0
+25105;Middenkaderfunctionaris Infra;b0386;Middenkaderfunctionaris grond-, weg- en waterbouw;4;20150801;20230801;20290801
+25871;Middenkaderfunctionaris grond-, weg- en waterbouw;b0386;Middenkaderfunctionaris grond-, weg- en waterbouw;4;20230801;0;0
+25104;Middenkaderfunctionaris Bouw;b0918;Middenkaderfunctionaris bouw;4;20150801;20230801;20290801
+25107;Middenkaderfunctionaris Restauratie;b0918;Middenkaderfunctionaris bouw;4;20150801;20230801;20290801
+25870;Middenkaderfunctionaris bouw;b0918;Middenkaderfunctionaris bouw;4;20230801;0;0
+25137;Vestigingsmanager groothandel;b0303;Junior manager groothandel;4;20150801;20230801;20280801
+25878;Junior manager groothandel;b0303;Junior manager groothandel;4;20230801;0;0
+26010;E-commercemanager;b0303;Junior manager groothandel;4;20170801;20200801;20250801
+26026;E-commercemanager;b0303;Junior manager groothandel;4;20200801;20230801;20250801
+27087;E-commercemanager;b0303;Junior manager groothandel;4;20250801;20260101;20270801
+93494;Vestigingsmanager groothandel;b0303;Junior manager groothandel;4;20070801;20160801;20220801
+25136;Intercedent;b0739;Consulent commerciële arbeidsbemiddeling;4;20150801;20230801;20280801
+25875;Consulent commerciële arbeidsbemiddeling;b0739;Consulent commerciële arbeidsbemiddeling;4;20230801;0;0
+25134;Commercieel medewerker;b0812;Commercieel medewerker;3;20150801;20230801;20280801
+25874;Commercieel medewerker;b0812;Commercieel medewerker;3;20230801;0;0
+25132;(Junior) accountmanager;b0896;Junior accountmanager;4;20150801;20230801;20280801
+25877;Junior accountmanager;b0896;Junior accountmanager;4;20230801;0;0
+93802;(Junior) accountmanager;b0896;Junior accountmanager;4;20080801;20160801;20220801
+25876;E-commerce specialist;b1070;E-commerce specialist;4;20230801;0;0
+25151;Managementassistent/directiesecretaresse;b0779;Office & Management Support Specialist;4;20150801;20190101;20250801
+25574;Management assistant;b0779;Office & Management Support Specialist;4;20190101;20220801;20280801
+25728;Office & Management Support Specialist;b0779;Office & Management Support Specialist;4;20220801;0;0
+95391;Directiesecretaresse/Managementassistent;b0779;Office & Management Support Specialist;4;20110801;20160801;20220801
+25148;Medewerker marketing en communicatie;b0951;Marketing & Communication Specialist;4;20150801;20220801;20280801
+25727;Marketing & Communication Specialist;b0951;Marketing & Communication Specialist;4;20220801;0;0
+90531;Assistent communicatiemedewerker;b0951;Marketing & Communication Specialist;4;20050801;20160801;20220801
+25149;Medewerker (financiële) administratie;b1048;Assistant Business Services;2;20150801;20220801;20260801
+25150;Medewerker secretariaat en receptie;b1048;Assistant Business Services;2;20150801;20220801;20260801
+25724;Assistant Business Services;b1048;Assistant Business Services;2;20220801;0;0
+25139;Financieel administratief medewerker;b1049;Allround Assistant Business Services;3;20150801;20220801;20270801
+25152;Secretaresse;b1049;Allround Assistant Business Services;3;20150801;20190101;20240801
+25573;Office assistant;b1049;Allround Assistant Business Services;3;20190101;20220801;20270801
+25723;Allround Assistant Business Services;b1049;Allround Assistant Business Services;3;20220801;0;0
+26019;Business support;b1049;Allround Assistant Business Services;3;20190801;20240801;20250801
+93200;Financieel administratief medewerker;b1049;Allround Assistant Business Services;3;20070801;20160801;20210801
+95380;Secretaresse;b1049;Allround Assistant Business Services;3;20110801;20160801;20210801
+25138;Bedrijfsadministrateur;b1050;Business Administration & Control Specialist;4;20150801;20220801;20280801
+25140;Junior assistent-accountant;b1050;Business Administration & Control Specialist;4;20150801;20220801;20280801
+25725;Business Administration & Control Specialist;b1050;Business Administration & Control Specialist;4;20220801;0;0
+26023;Junior business controller;b1050;Business Administration & Control Specialist;4;20200801;20230801;20250801
+93212;Bedrijfsadministrateur;b1050;Business Administration & Control Specialist;4;20070801;20160801;20220801
+25145;Juridisch-administratief dienstverlener;b1051;Legal, Insurance & HR Services Specialist;4;20150801;20220801;20280801
+25146;Medewerker human resource management (HRM);b1051;Legal, Insurance & HR Services Specialist;4;20150801;20220801;20280801
+25544;Klantmedewerker Bancaire Diensten;b1051;Legal, Insurance & HR Services Specialist;4;20160801;20220801;20280801
+25546;Klantmedewerker Schadeverzekeringen;b1051;Legal, Insurance & HR Services Specialist;4;20160801;20220801;20280801
+25726;Legal, Insurance & HR Services Specialist;b1051;Legal, Insurance & HR Services Specialist;4;20220801;0;0
+25147;Medewerker evenementenorganisatie;b0950;Medewerker evenementenorganisatie;4;20150801;20220801;20280801
+25749;Medewerker evenementenorganisatie;b0950;Medewerker evenementenorganisatie;4;20220801;0;0
+26014;Eventproducer;b0950;Medewerker evenementenorganisatie;4;20180801;20230801;20250801
+90534;Medewerker evenementenorganisatie;b0950;Medewerker evenementenorganisatie;4;20070801;20160801;20220801
+25158;Interieuradviseur;b0106;Interieuradviseur;4;20150801;20220801;20280801
+25771;Interieuradviseur;b0106;Interieuradviseur;4;20220801;0;0
+25155;Verkoopspecialist;b1058;Retailspecialist;3;20150801;20220801;20270801
+25809;Retailspecialist;b1058;Retailspecialist;3;20220801;0;0
+90383;Verkoopspecialist detailhandel;b1058;Retailspecialist;3;20050801;20160801;20210801
+25167;Verkoper;b0881;Retailmedewerker;2;20150801;20220801;20260801
+25808;Retailmedewerker;b0881;Retailmedewerker;2;20220801;0;0
+25165;Vakman-ondernemer;b0956;Vakspecialist ondernemer;4;20150801;20240801;20300801
+25997;Vakspecialist ondernemer;b0956;Vakspecialist ondernemer;4;20240801;0;0
+25162;Manager retail;b0781;Retailmanager;4;20150801;20220801;20280801
+25807;Retailmanager;b0781;Retailmanager;4;20220801;0;0
+93492;Filiaalmanager;b0781;Retailmanager;4;20070801;20160801;20220801
+25166;Ondernemer retail;b0051;Ondernemer handel en/of diensten;4;20150801;20230801;20280801
+25880;Ondernemer handel;b0051;Ondernemer handel en/of diensten;4;20230801;20260801;20310801
+90290;Ondernemer detailhandel;b0051;Ondernemer handel en/of diensten;4;20050801;20160801;20220801
+25160;Leidinggevende team/afdeling/project;b0355;Leidinggevende van een team/afdeling/project;4;20150801;20250801;20310801
+27047;Leidinggevende van een team/afdeling/project;b0355;Leidinggevende van een team/afdeling/project;4;20250801;0;0
+25161;Technisch Leidinggevende;b0960;Leidinggevende van technici;4;20150801;20250801;20310801
+27048;Leidinggevende van technici;b0960;Leidinggevende van technici;4;20250801;0;0
+25159;Basismedewerker mode;b0805;Basismedewerker fashion;2;20150801;20210801;20250801
+25689;Basismedewerker fashion;b0805;Basismedewerker fashion;2;20210801;0;0
+25164;Specialist mode/maatkleding;b0772;Fashion Tailor;4;20150801;20210801;20270801
+25686;Fashion Tailor;b0772;Fashion Tailor;4;20210801;0;0
+95740;Specialist mode/maatkleding;b0772;Fashion Tailor;4;20120801;20160801;20220801
+25163;Allround medewerker mode/maatkleding;b0869;Assistant Fashion Tailor;3;20150801;20210801;20260801
+25684;Assistant Fashion Tailor;b0869;Assistant Fashion Tailor;3;20210801;0;0
+25173;Uitvoerend bakker;b0407;Uitvoerend bakker;2;20150801;20220801;20260801
+25721;Uitvoerend bakker;b0407;Uitvoerend bakker;2;20220801;20260801;20300801
+25720;Leidinggevende bakkerij;b0413;Leidinggevende bakkerij;4;20220801;20260801;20310801
+25174;Zelfstandig werkend bakker;b0847;Zelfstandig werkend bakker;3;20150801;20220801;20270801
+25722;Zelfstandig werkend bakker;b0847;Zelfstandig werkend bakker;3;20220801;20260801;20310801
+25183;Patissier;b0412;Patissier;4;20150801;20220801;20280801
+25797;Patissier;b0412;Patissier;4;20220801;0;0
+25180;Kok;b0098;Kok;2;20150801;20260801;20300801
+25178;Medewerker fastservice;b0405;Medewerker foodservice;2;20150801;20260801;20300801
+26028;Medewerker Food & Hospitality;b0405;Medewerker foodservice;2;20200801;20240801;20250801
+25176;1e Medewerker fastservice;b0406;Allround medewerker foodservice;3;20150801;20260801;20310801
+25179;Gespecialiseerd kok;b0527;Gespecialiseerd kok;4;20150801;20260801;20310801
+25181;Leidinggevende keuken;b0528;Leidinggevende keuken;4;20150801;20260801;20310801
+25182;Zelfstandig werkend kok;b0573;Zelfstandig werkend kok;3;20150801;20260801;20310801
+95420;Zelfstandig werkend kok;b0573;Zelfstandig werkend kok;3;20110801;20160801;20210801
+23244;IT systems and devices;b0000;niet gespecificeerd naar beroep;;20190801;20250801;20300801
+25191;Medewerker beheer ICT;b0522;ICT support technician;3;20150801;20200101;20250801
+25605;Allround medewerker IT systems and devices;b0522;ICT support technician;3;20190801;20250801;20300801
+27015;ICT support technician;b0522;ICT support technician;3;20250801;0;0
+25189;ICT-beheerder;b0996;ICT system engineer;4;20150801;20200101;20260801
+25190;Netwerk- en mediabeheerder;b0996;ICT system engineer;4;20150801;20200101;20260801
+25606;Expert IT systems and devices;b0996;ICT system engineer;4;20190801;20250801;20300801
+27016;ICT system engineer;b0996;ICT system engineer;4;20250801;0;0
+95321;ICT-beheerder;b0996;ICT system engineer;4;20110801;20160801;20220801
+25187;Applicatie- en mediaontwikkelaar;b0995;Software developer;4;20150801;20200101;20260801
+25188;Gamedeveloper;b0995;Software developer;4;20150801;20200101;20260801
+25604;Software developer;b0995;Software developer;4;20190801;20240801;20300801
+25998;Software developer;b0995;Software developer;4;20240801;0;0
+95311;Applicatieontwikkelaar;b0995;Software developer;4;20110801;20160801;20220801
+25192;Medewerker ICT;b0521;Medewerker ICT;2;20150801;20200101;20240801
+25607;Medewerker ICT support;b0521;Medewerker ICT;2;20190801;20240801;20280801
+25999;Medewerker ICT;b0521;Medewerker ICT;2;20240801;0;0
+25202;Medewerker Podium- en evenemententechniek;b0060;Medewerker podium- en evenemententechniek;2;20150801;20220801;20260801
+25799;Medewerker podium- en evenemententechniek;b0060;Medewerker podium- en evenemententechniek;2;20220801;0;0
+25203;Podium- en evenemententechnicus;b0061;Podium- en evenemententechnicus;3;20150801;20220801;20270801
+25800;Podium- en evenemententechnicus;b0061;Podium- en evenemententechnicus;3;20220801;0;0
+25204;Podium- en evenemententechnicus Geluid;b1057;Allround podium- en evenemententechnicus;4;20150801;20220801;20280801
+25205;Podium- en evenemententechnicus Licht;b1057;Allround podium- en evenemententechnicus;4;20150801;20220801;20280801
+25798;Allround podium- en evenemententechnicus;b1057;Allround podium- en evenemententechnicus;4;20220801;0;0
+25193;Allround medewerker AV-productie;b0012;Allround medewerker AV-productie;3;20150801;20220801;20270801
+25716;Allround medewerker AV-productie;b0012;Allround medewerker AV-productie;3;20220801;0;0
+25195;Fotograaf;b0019;Fotograaf;4;20150801;20220801;20280801
+25718;Fotograaf;b0019;Fotograaf;4;20220801;0;0
+90083;Fotograaf;b0019;Fotograaf;4;20050801;20160801;20220801
+25194;AV-specialist;b0032;AV-specialist;4;20150801;20220801;20280801
+25717;AV-specialist;b0032;AV-specialist;4;20220801;0;0
+25198;Medewerker DTP;b0037;Mediamaker;2;20150801;20200101;20240801
+25591;Mediamaker;b0037;Mediamaker;2;20190801;20260801;20300801
+25197;Allround DTP-er;b0040;Allround mediamaker;3;20150801;20200101;20250801
+25592;Allround mediamaker;b0040;Allround mediamaker;3;20190801;20260801;20310801
+25200;Mediaredactiemedewerker;b0710;Mediaredactiemedewerker;4;20150801;20230801;20280801
+25882;Mediaredactiemedewerker;b0710;Mediaredactiemedewerker;4;20230801;0;0
+26103;Content creator;b0710;Mediaredactiemedewerker;4;20200801;20240801;20260801
+25201;Mediavormgever;b0892;Mediavormgever;4;20150801;20200801;20260801
+25633;Mediavormgever;b0892;Mediavormgever;4;20200801;20260801;20320801
+90403;Grafische vormgeving;b0892;Mediavormgever;4;20050801;20160801;20220801
+25214;Medewerker sign;b0458;Medewerker sign;2;20150801;20240801;20280801
+27002;Medewerker sign;b0458;Medewerker sign;2;20240801;0;0
+25213;Allround signmaker;b0459;Allround signmaker;3;20150801;20240801;20290801
+27003;Allround signmaker;b0459;Allround signmaker;3;20240801;0;0
+25215;Signspecialist;b0514;Signspecialist;4;20150801;20200801;20260801
+25634;Signspecialist;b0514;Signspecialist;4;20200801;20240801;20300801
+27004;Signspecialist;b0514;Signspecialist;4;20240801;0;0
+25211;Medewerker productpresentatie;b0134;Medewerker productpresentatie;2;20150801;20220801;20260801
+25810;Medewerker productpresentatie;b0134;Medewerker productpresentatie;2;20220801;0;0
+25212;Ruimtelijk vormgever;b0895;Ruimtelijk vormgever;4;20150801;20220801;20280801
+25811;Ruimtelijk vormgever;b0895;Ruimtelijk vormgever;4;20220801;0;0
+25228;Autospuiter;b0151;Autospuiter;2;20150801;20220801;20260801
+25714;Autospuiter;b0151;Autospuiter;2;20220801;0;0
+25229;Eerste Autospuiter;b0152;Eerste Autospuiter;3;20150801;20220801;20270801
+25715;Eerste Autospuiter;b0152;Eerste Autospuiter;3;20220801;0;0
+25247;Technicus mobiele werktuigen;b1044;Technisch specialist voertuigen en mobiele werktuigen;4;20150801;20210801;20270801
+25249;Technisch Specialist Personenautos;b1044;Technisch specialist voertuigen en mobiele werktuigen;4;20150801;20210801;20270801
+25670;Technisch specialist voertuigen en mobiele werktuigen;b1044;Technisch specialist voertuigen en mobiele werktuigen;4;20210801;20260801;20320801
+93430;Technisch Specialist Personenauto's;b1044;Technisch specialist voertuigen en mobiele werktuigen;4;20070801;20160801;20220801
+25242;Autotechnicus;b1041;Basistechnicus voertuigen en mobiele werktuigen;2;20150801;20210801;20250801
+25243;Bedrijfsautotechnicus;b1041;Basistechnicus voertuigen en mobiele werktuigen;2;20150801;20210801;20250801
+25246;Monteur mobiele werktuigen;b1041;Basistechnicus voertuigen en mobiele werktuigen;2;20150801;20210801;20250801
+25668;Basis technicus voertuigen en mobiele werktuigen;b1041;Basistechnicus voertuigen en mobiele werktuigen;2;20210801;20260801;20300801
+25241;Allround monteur mobiele werktuigen;b1042;Allround technicus voertuigen en mobiele werktuigen;3;20150801;20210801;20260801
+25244;Eerste Autotechnicus;b1042;Allround technicus voertuigen en mobiele werktuigen;3;20150801;20210801;20260801
+25245;Eerste Bedrijfsautotechnicus;b1042;Allround technicus voertuigen en mobiele werktuigen;3;20150801;20210801;20260801
+25669;Allround technicus voertuigen en mobiele werktuigen;b1042;Allround technicus voertuigen en mobiele werktuigen;3;20210801;20260801;20310801
+25239;Verkoopadviseur Mobiliteitsbranche;b1046;Adviseur mobiliteitsbranche;3;20150801;20220801;20270801
+25712;Adviseur mobiliteitsbranche;b1046;Adviseur mobiliteitsbranche;3;20220801;0;0
+25713;Manager mobiliteitsbranche;b1047;Manager mobiliteitsbranche;4;20220801;0;0
+25297;Technicus engineering;b0449;Technicus engineering;4;20150801;20230801;20290801
+25898;Technicus engineering;b0449;Technicus engineering;4;20230801;20230801;20290801
+25919;Technicus engineering;b0449;Technicus engineering;4;20230801;0;0
+26006;Middenkaderfunctionaris smart industry;b0449;Technicus engineering;4;20170801;20220801;20250801
+94421;Technicus;b0449;Technicus engineering;4;20080801;20160801;20220801
+25265;Technicus human technology;b0450;Commercieel technicus engineering;4;20150801;20240801;20290801
+25296;Commercieel technicus engineering;b0450;Commercieel technicus engineering;4;20150801;20230801;20280801
+25920;Commercieel technicus;b0450;Commercieel technicus engineering;4;20230801;0;0
+25333;Monteur elektrotechnische installaties;b0418;Monteur elektrotechnische installaties;2;20150801;20220801;20260801
+25737;Monteur elektrotechnische installaties;b0418;Monteur elektrotechnische installaties;2;20220801;0;0
+94281;Eerste monteur elektrotechnische installaties;b0422;Eerste monteur elektrotechnische industriële installaties en systemen;3;20080801;20160801;20210801
+25332;Eerste monteur elektrotechnische installaties woning en utiliteit;b0719;Eerste monteur elektrotechnische installaties in de gebouwde omgeving;3;20150801;20220801;20270801
+25736;Eerste monteur elektrotechnische installaties in de gebouwde omgeving;b0719;Eerste monteur elektrotechnische installaties in de gebouwde omgeving;3;20220801;0;0
+25263;Technicus elektrotechnische installaties woning en utiliteit;b0959;Technicus elektrotechnische installaties in de gebouwde omgeving;4;20150801;20220801;20270801
+25739;Technicus elektrotechnische installaties in de gebouwde omgeving;b0959;Technicus elektrotechnische installaties in de gebouwde omgeving;4;20220801;0;0
+25307;Eerste monteur service en onderhoud werktuigkundige installaties;b0435;Eerste monteur service en onderhoud werktuigkundige installaties;3;20150801;20220801;20270801
+25821;Eerste monteur service en onderhoud werktuigkundige installaties;b0435;Eerste monteur service en onderhoud werktuigkundige installaties;3;20220801;0;0
+25306;Eerste monteur service en onderhoud werktuigbouw;b0436;Eerste monteur service en onderhoud werktuigbouw;3;20150801;0;0
+94324;Servicemonteur werktuigbouw;b0436;Eerste monteur service en onderhoud werktuigbouw;3;20080801;20160801;20210801
+25309;Technicus service en onderhoud elektrotechniek en instrumentatie;b0437;Technicus service en onderhoud elektrotechniek en instrumentatie;4;20150801;0;0
+94331;Servicetechnicus elektrotechniek;b0437;Technicus service en onderhoud elektrotechniek en instrumentatie;4;20080801;20160801;20220801
+25311;Technicus service en onderhoud werktuigkundige installaties;b0439;Technicus service en onderhoud werktuigkundige installaties;4;20150801;20220801;20280801
+94333;Servicetechnicus installatietechniek;b0439;Technicus service en onderhoud werktuigkundige installaties;4;20080801;20160801;20220801
+25304;Eerste monteur service en onderhoud elektrotechniek en instrumentatie;b0768;Eerste monteur service en onderhoud elektrotechniek en instrumentatie;3;20150801;0;0
+94321;Servicemonteur elektrotechniek;b0768;Eerste monteur service en onderhoud elektrotechniek en instrumentatie;3;20080801;20160801;20210801
+25345;Allround operationeel technicus;b0753;Allround operationeel technicus;4;20150801;0;0
+91680;Allround Operationeel Technicus;b0753;Allround operationeel technicus;4;20050801;20160801;20220801
+25338;Procesoperator B;b0791;Procesoperator B;3;20150801;20220801;20270801
+25762;Procesoperator B;b0791;Procesoperator B;3;20220801;0;0
+25336;Mechanisch operator B;b0821;Mechanisch operator B;3;20150801;20220801;20270801
+25760;Mechanisch operator B;b0821;Mechanisch operator B;3;20220801;0;0
+25335;Mechanisch operator A;b0848;Mechanisch operator A;2;20150801;20220801;20260801
+25759;Mechanisch operator A;b0848;Mechanisch operator A;2;20220801;0;0
+25761;Procesoperator A;b0866;Procesoperator A;2;20220801;0;0
+25303;Operator C;b0944;Operator C;4;20150801;20220801;20280801
+25802;Operator C;b0944;Operator C;4;20220801;0;0
+25350;Monteur werktuigkundige installaties;b0419;Monteur werktuigkundige installaties;2;20150801;0;0
+25349;Eerste Monteur woning;b0423;Eerste monteur woning;3;20150801;20220801;20270801
+25835;Eerste monteur woning;b0423;Eerste monteur woning;3;20220801;0;0
+94282;Eerste monteur werktuigkundige installaties;b0423;Eerste monteur woning;3;20080801;20160801;20210801
+25343;Technicus elektrotechnische systemen;b1062;Technicus mechatronica;4;20150801;20230801;20280801
+25344;Technicus mechatronica systemen;b1062;Technicus mechatronica;4;20150801;20230801;20280801
+25893;Technicus mechatronica;b1062;Technicus mechatronica;4;20230801;0;0
+92410;Technicus;b1062;Technicus mechatronica;4;20060801;20160801;20220801
+94261;Allround machinebouwer;b1062;Technicus mechatronica;4;20080801;20160801;20220801
+25341;Monteur elektrotechnische systemen;b1063;Monteur mechatronica;2;20150801;20230801;20270801
+25342;Monteur mechatronica;b1063;Monteur mechatronica;2;20150801;20230801;20270801
+25891;Monteur mechatronica;b1063;Monteur mechatronica;2;20230801;0;0
+25339;Eerste monteur elektrotechnische systemen;b1064;Eerste monteur mechatronica;3;20150801;20230801;20280801
+25340;Eerste monteur mechatronica;b1064;Eerste monteur mechatronica;3;20150801;20230801;20280801
+25892;Eerste monteur mechatronica;b1064;Eerste monteur mechatronica;3;20230801;0;0
+91091;Machinebouwer;b1064;Eerste monteur mechatronica;3;20050801;20160801;20210801
+25290;Basislasser;b1065;Medewerker productietechniek;2;20150801;20230801;20270801
+25291;Constructiewerker;b1065;Medewerker productietechniek;2;20150801;20230801;20270801
+25293;Plaatwerker;b1065;Medewerker productietechniek;2;20150801;20230801;20270801
+25302;Verspaner;b1065;Medewerker productietechniek;2;20150801;20200801;20240801
+25623;Verspaner;b1065;Medewerker productietechniek;2;20200801;20230801;20270801
+25894;Medewerker productietechniek;b1065;Medewerker productietechniek;2;20230801;0;0
+25286;Allround constructiewerker;b1066;Allround medewerker productietechniek;3;20150801;20230801;20280801
+25287;Allround lasser;b1066;Allround medewerker productietechniek;3;20150801;20230801;20280801
+25289;Allround plaatwerker;b1066;Allround medewerker productietechniek;3;20150801;20230801;20280801
+25298;Allround verspaner;b1066;Allround medewerker productietechniek;3;20150801;20200801;20250801
+25624;Allround precisieverspaner;b1066;Allround medewerker productietechniek;3;20200801;20230801;20280801
+25895;Allround medewerker productietechniek;b1066;Allround medewerker productietechniek;3;20230801;0;0
+25507;Verspaningstechnoloog;b1067;Productietechnicus;4;20160801;20200801;20260801
+25572;Constructie- en plaattechnoloog;b1067;Productietechnicus;4;20190101;20230801;20290801
+25627;Verspaningstechnoloog;b1067;Productietechnicus;4;20200801;20230801;20290801
+25896;Productietechnicus;b1067;Productietechnicus;4;20230801;0;0
+25353;Zelfstandig medewerker leisure en hospitality;b0396;Zelfstandig medewerker leisure;3;20150801;20200801;20250801
+25648;Zelfstandig medewerker leisure & hospitality;b0396;Zelfstandig medewerker leisure;3;20200801;20260801;20310801
+25351;Leidinggevende leisure en hospitality;b0397;Leidinggevende leisure;4;20150801;20200801;20260801
+25646;Leidinggevende leisure & hospitality;b0397;Leidinggevende leisure;4;20200801;20260801;20310801
+25171;Zelfstandig werkend gastheer/-vrouw;b0400;Zelfstandig medewerker hospitality;3;20150801;20260801;20310801
+25169;Gastronoom/sommelier;b0401;Leidinggevende hospitality;4;20150801;20260801;20310801
+25170;Leidinggevende bediening;b0401;Leidinggevende hospitality;4;20150801;20260801;20310801
+25168;Gastheer/-vrouw;b0819;Medewerker hospitality;2;20150801;20260801;20300801
+25354;Zelfstandig medewerker travel en hospitality;b0844;Zelfstandig medewerker tourism;3;20150801;20200801;20250801
+25649;Zelfstandig medewerker travel & hospitality;b0844;Zelfstandig medewerker tourism;3;20200801;20260801;20310801
+25352;Leidinggevende travel en hospitality;b0882;Leidinggevende tourism;4;20150801;20200801;20260801
+25647;Leidinggevende travel & hospitality;b0882;Leidinggevende tourism;4;20200801;20260801;20310801
+25184;Manager/ondernemer horeca;b1092;Ondernemer hospitality;4;20150801;20260801;20320801
+25185;Meewerkend horeca ondernemer;b1092;Ondernemer hospitality;4;20150801;20260801;20310801
+90303;Manager/ondernemer horeca;b1092;Ondernemer hospitality;4;20050801;20160801;20220801
+25371;Logistiek medewerker;b0867;Logistiek medewerker;2;20150801;20220801;20260801
+25774;Logistiek medewerker;b0867;Logistiek medewerker;2;20220801;0;0
+25372;Logistiek teamleider;b0910;Logistiek teamleider;3;20150801;20220801;20270801
+25775;Logistiek teamleider;b0910;Logistiek teamleider;3;20220801;0;0
+90201;Logistiek teamleider;b0910;Logistiek teamleider;3;20050801;20160801;20210801
+25776;Logistiek supervisor;b0911;Logistiek supervisor;4;20220801;0;0
+25379;Manager Transport en Logistiek;b1054;Specialist transport en logistiek;4;20150801;20220801;20280801
+25777;Specialist transport en logistiek;b1054;Specialist transport en logistiek;4;20220801;0;0
+91870;Manager transport en logistiek;b1054;Specialist transport en logistiek;4;20050801;20160801;20220801
+25363;Luchtvaartdienstverlener;b0159;Luchtvaartdienstverlener;4;20150801;20200801;20260801
+25636;Luchtvaartdienstverlener;b0159;Luchtvaartdienstverlener;4;20200801;20250801;20300801
+91850;Luchtvaartdienstverlener;b0159;Luchtvaartdienstverlener;4;20050801;20160801;20220801
+25510;Schipper binnenvaart;b0600;Schipper binnenvaart;3;20160801;20200101;20240801
+25611;Schipper binnenvaart;b0600;Schipper binnenvaart;3;20190801;20240801;20290801
+25971;Schipper binnenvaart;b0600;Schipper binnenvaart;3;20240801;0;0
+95630;Schipper binnenvaart;b0600;Schipper binnenvaart;3;20110801;20160801;20210801
+25509;Matroos binnenvaart;b0912;Matroos binnenvaart;2;20160801;20200101;20230801
+25610;Matroos binnenvaart;b0912;Matroos binnenvaart;2;20190801;20240801;20280801
+25970;Matroos binnenvaart;b0912;Matroos binnenvaart;2;20240801;0;0
+25355;Allround medewerker watersportindustrie;b0287;Allround medewerker maritieme techniek;3;20150801;20190801;20240801
+25597;Allround medewerker maritieme techniek;b0287;Allround medewerker maritieme techniek;3;20190801;0;0
+25596;Medewerker maritieme techniek;b0512;Medewerker maritieme techniek;2;20190801;0;0
+25357;Meewerkend voorman watersportindustrie;b0988;Engineer maritieme techniek;4;20150801;20190801;20250801
+25374;Scheeps- en jachtbouwkundige;b0988;Engineer maritieme techniek;4;20150801;20190801;20250801
+25598;Engineer maritieme techniek;b0988;Engineer maritieme techniek;4;20190801;0;0
+93080;Scheeps- en jachtbouwkundige;b0988;Engineer maritieme techniek;4;20060801;20160801;20220801
+23278;Maritiem officier;b0000;niet gespecificeerd naar beroep;;20210801;0;0
+25522;Stuurman-scheepswerktuigkundige vissersschepen SW5;b0163;Maritiem officier kleine schepen nautisch,visserij;3;20160801;20200801;20250801
+25637;Stuurman-scheepswerktuigkundige vissersschepen SW5;b0163;Maritiem officier kleine schepen nautisch,visserij;3;20200101;20210801;20260801
+25678;Maritiem officier kleine schepen nautisch,visserij;b0163;Maritiem officier kleine schepen nautisch,visserij;3;20210801;0;0
+95738;Stuurman-scheepswerktuigkundige vissersschepen SW5;b0163;Maritiem officier kleine schepen nautisch,visserij;3;20120801;20160801;20210801
+25523;Stuurman alle vissersschepen S4;b0165;Maritiem officier alle schepen nautisch, visserij;4;20160801;20200801;20260801
+25516;Maritiem officier alle schepen;b0168;Maritiem officier alle schepen nautisch, koopvaardij;4;20160801;20210801;20270801
+25517;Stuurman alle schepen;b0168;Maritiem officier alle schepen nautisch, koopvaardij;4;20160801;20210801;20270801
+25680;Maritiem officier alle schepen nautisch, koopvaardij;b0168;Maritiem officier alle schepen nautisch, koopvaardij;4;20210801;0;0
+95728;Maritiem officier alle schepen;b0168;Maritiem officier alle schepen nautisch, koopvaardij;4;20120801;20160801;20220801
+95730;Stuurman alle schepen;b0168;Maritiem officier alle schepen nautisch, koopvaardij;4;20120801;20160801;20220801
+25513;Stuurman-werktuigkundige kleine schepen;b1025;Maritiem officier kleine schepen nautisch, koopvaardij;3;20160801;20210801;20260801
+25514;Stuurman kleine schepen;b1025;Maritiem officier kleine schepen nautisch, koopvaardij;3;20160801;20210801;20260801
+25677;Maritiem officier kleine schepen nautisch, koopvaardij;b1025;Maritiem officier kleine schepen nautisch, koopvaardij;3;20210801;0;0
+25515;Scheepswerktuigkundige kleine schepen;b1026;Maritiem officier kleine schepen technisch;3;20160801;20210801;20260801
+25518;Scheepswerktuigkundige alle schepen;b1030;Maritiem officier alle schepen technisch;4;20160801;20210801;20270801
+25683;Maritiem officier alle schepen technisch;b1030;Maritiem officier alle schepen technisch;4;20210801;0;0
+95729;Scheepswerktuigkundige alle schepen;b1030;Maritiem officier alle schepen technisch;4;20120801;20160801;20220801
+25519;Schipper-machinist beperkt werkgebied;b0261;Schipper-machinist beperkt vaargebied;2;20160801;20250801;20290801
+25525;Stuurman-werktuigkundige zeevisvaart SW6;b0265;Stuurman-werktuigkundige zeevisvaart SW6;2;20160801;20200801;20240801
+25640;Stuurman-werktuigkundige zeevisvaart SW6;b0265;Stuurman-werktuigkundige zeevisvaart SW6;2;20200101;20250801;20290801
+27046;Stuurman-werktuigkundige zeevisvaart SW6;b0265;Stuurman-werktuigkundige zeevisvaart SW6;2;20250801;0;0
+95767;Stuurman werktuigkundige zeevisvaart sw6;b0265;Stuurman-werktuigkundige zeevisvaart SW6;2;20140801;20160801;20210101
+25549;Chauffeur wegvervoer;b0155;Chauffeur wegvervoer;2;20170801;20210801;20250801
+25671;Chauffeur wegvervoer;b0155;Chauffeur wegvervoer;2;20210801;20250801;20290801
+27042;Chauffeur wegvervoer;b0155;Chauffeur wegvervoer;2;20250801;0;0
+27043;Allround chauffeur wegvervoer;b1086;Allround chauffeur wegvervoer;3;20250801;0;0
+25399;Allround Kapper;b0113;Allround kapper;3;20150801;20200801;20250801
+25642;Haarstylist dame;b0113;Allround kapper;3;20200101;20260801;20310801
+25643;Haarstylist heer;b0113;Allround kapper;3;20200801;20260801;20310801
+25401;Salonmanager;b0797;Salonmanager kapper;4;20150801;20200801;20260801
+25644;Salonmanager dame;b0797;Salonmanager kapper;4;20200801;20260801;20310801
+25645;Salonmanager heer;b0797;Salonmanager kapper;4;20200801;20260801;20310801
+25400;Kapper;b0893;Kapper;2;20150801;20200801;20240801
+25641;Kapper;b0893;Kapper;2;20200801;20260801;20300801
+23365;Schoonheidsverzorging;b0000;niet gespecificeerd naar beroep;;20230801;0;0
+25404;Schoonheidsspecialist;b0587;Schoonheidsspecialist;3;20150801;20230801;20280801
+25906;Schoonheidspecialist;b0587;Schoonheidsspecialist;3;20230801;0;0
+25403;Allround Schoonheidsspecialist;b0588;Allround Schoonheidsspecialist;4;20150801;20230801;20280801
+25907;Allround Schoonheidspecialist;b0588;Allround Schoonheidsspecialist;4;20230801;0;0
+25416;Aankomend medewerker grondoptreden;b0523;Aankomend militair grondoptreden;2;20150801;20190801;20230801
+25599;Aankomend medewerker grondoptreden;b0523;Aankomend militair grondoptreden;2;20190801;20260801;20300801
+25418;Aankomend onderofficier grondoptreden;b0525;Aankomend onderofficier grondoptreden;3;20150801;20190801;20240801
+25600;Aankomend onderofficier grondoptreden;b0525;Aankomend onderofficier grondoptreden;3;20190801;20260801;20310801
+25408;Coördinator beveiliging;b0093;Beveiliger 3;3;20150801;20210801;20260801
+25691;Beveiliger 3;b0093;Beveiliger 3;3;20210801;20260801;20310801
+25407;Beveiliger;b0503;Beveiliger 2;2;20150801;20210801;20250801
+25690;Beveiliger 2;b0503;Beveiliger 2;2;20210801;20260801;20300801
+25409;Handhaver toezicht en veiligheid;b0499;Handhaver toezicht en veiligheid Openbare ruimte (domein I);3;20150801;20230801;20280801
+25806;Handhaver toezicht en veiligheid Openbare ruimte (domein I);b0499;Handhaver toezicht en veiligheid Openbare ruimte (domein I);3;20230801;0;0
+23163;Sport en bewegen;b0000;niet gespecificeerd naar beroep;;20150801;20230801;20290801
+23366;Sport en Bewegen;b0000;niet gespecificeerd naar beroep;;20230801;0;0
+25415;Sport- en bewegingsleider;b0549;Sport- en bewegingsleider;3;20150801;20230801;20280801
+25908;Sport- en bewegingsleider;b0549;Sport- en bewegingsleider;3;20230801;0;0
+95280;Sport- en bewegingsleider;b0549;Sport- en bewegingsleider;3;20110801;20160801;20210801
+25412;Coördinator sport- en bewegingsagogie;b0550;Bewegingsagoog;4;20150801;20230801;20290801
+25911;Bewegingsagoog;b0550;Bewegingsagoog;4;20230801;0;0
+25411;Coördinator buurt, onderwijs en sport;b0551;Buurtsportcoach;4;20150801;20230801;20290801
+25909;Buurtsportcoach;b0551;Buurtsportcoach;4;20230801;0;0
+25413;Coördinator sport, bewegen en gezondheid;b0552;Leefstijlcoach;4;20150801;20230801;20290801
+25910;Leefstijlcoach;b0552;Leefstijlcoach;4;20230801;0;0
+25414;Coördinator sportinstructie, training en coaching;b0553;Trainer-coach/Instructeur;4;20150801;20230801;20290801
+25912;Trainer-coach/Instructeur;b0553;Trainer-coach/Instructeur;4;20230801;0;0
+95294;Sport- en bewegingscoördinator/ Trainer/coach;b0553;Trainer-coach/Instructeur;4;20110801;20160801;20220801
+25468;Bedrijfsleider paardensport en -houderij;b0614;Bedrijfsleider paardensport en -houderij;4;20150801;20210801;20270801
+25709;Bedrijfsleider paardensport en -houderij;b0614;Bedrijfsleider paardensport en -houderij;4;20210801;20230801;20280801
+25916;Bedrijfsleider paardensport en -houderij;b0614;Bedrijfsleider paardensport en -houderij;4;20230801;0;0
+25470;Vakbekwaam medewerker paardensport en -houderij;b0831;Vakbekwaam medewerker paardensport en -houderij;3;20150801;20210801;20260801
+25711;Vakbekwaam medewerker paardensport en -houderij;b0831;Vakbekwaam medewerker paardensport en -houderij;3;20210801;20230801;20280801
+25915;Vakbekwaam medewerker paardensport en -houderij;b0831;Vakbekwaam medewerker paardensport en -houderij;3;20230801;0;0
+25448;Medewerker dierverzorging;b0622;Medewerker dierverzorging;2;20150801;20190101;20230801
+25580;Medewerker dierverzorging;b0622;Medewerker dierverzorging;2;20190101;20220801;20260801
+25732;Medewerker dierverzorging;b0622;Medewerker dierverzorging;2;20220801;0;0
+25540;Dierenartsassistent paraveterinair;b0652;Dierenartsassistent paraveterinair;4;20160801;20190101;20250801
+25577;Dierenartsassistent paraveterinair;b0652;Dierenartsassistent paraveterinair;4;20190101;20220801;20280801
+25731;Dierenartsassistent paraveterinair;b0652;Dierenartsassistent paraveterinair;4;20220801;0;0
+25539;Bedrijfsleider dierverzorging;b0783;Bedrijfsleider dierverzorging;4;20160801;0;0
+25576;Bedrijfsleider dierverzorging;b0783;Bedrijfsleider dierverzorging;4;20190101;20220801;20280801
+25730;Bedrijfsleider dierverzorging;b0783;Bedrijfsleider dierverzorging;4;20220801;0;0
+25541;Vakbekwaam medewerker dierverzorging;b0790;Zelfstandig medewerker dierverzorging;3;20160801;20190101;20240801
+25579;Vakbekwaam medewerker dierverzorging;b0790;Zelfstandig medewerker dierverzorging;3;20190101;20220801;20270801
+25734;Zelfstandig medewerker dierverzorging;b0790;Zelfstandig medewerker dierverzorging;3;20220801;0;0
+25459;Milieu-onderzoeker;b0891;Onderzoeker leefomgeving;4;20150801;20190101;20250801
+25581;Onderzoeker leefomgeving;b0891;Onderzoeker leefomgeving;4;20190101;0;0
+97372;Milieufunctionaris;b0891;Onderzoeker leefomgeving;4;20050801;20160801;20220801
+25425;Vakbekwaam medewerker vers;b0876;Vakbekwaam medewerker vers;3;20150801;20210801;20260801
+25703;Vakbekwaam medewerker vers;b0876;Vakbekwaam medewerker vers;3;20210801;0;0
+25428;Medewerker versindustrie;b0325;Medewerker versindustrie;2;20150801;20170801;20210801
+25568;Medewerker versindustrie;b0325;Medewerker versindustrie;2;20170801;0;0
+25443;Medewerker bloem, groen en styling;b0630;Medewerker bloem, groen en styling;2;20150801;20210801;20250801
+25707;Medewerker bloem, groen en styling;b0630;Medewerker bloem, groen en styling;2;20210801;0;0
+25444;Vakbekwaam medewerker bloem, groen en styling;b0838;Vakbekwaam medewerker bloem, groen en styling;3;20150801;20210801;20260801
+25706;Vakbekwaam medewerker bloem, groen en styling;b0838;Vakbekwaam medewerker bloem, groen en styling;3;20210801;0;0
+25445;Vakexpert bloem, groen en styling;b0884;Vakexpert bloem, groen en styling;4;20150801;20210801;20270801
+25705;Vakexpert bloem, groen en styling;b0884;Vakexpert bloem, groen en styling;4;20210801;0;0
+27018;Persoonlijk werkbegeleider zorgboerderij;b0993;Persoonlijk werkbegeleider zorgboerderij;4;20240801;0;0
+27017;Werkbegeleider zorgboerderij;b1011;Werkbegeleider zorgboerderij;3;20240801;0;0
+25430;Medewerker agrohandel en logistiek;b0669;Medewerker agrohandel en logistiek;2;20150801;20240801;20280801
+25982;Medewerker agrohandel en logistiek;b0669;Medewerker agrohandel en logistiek;2;20240801;0;0
+25432;Medewerker veehouderij;b0742;Medewerker veehouderij;2;20150801;20240801;20280801
+25983;Medewerker veehouderij;b0742;Medewerker veehouderij;2;20240801;0;0
+25537;Vakbekwaam medewerker veehouderij;b0757;Vakbekwaam medewerker veehouderij;3;20160801;20240801;20290801
+25986;Vakbekwaam medewerker veehouderij;b0757;Vakbekwaam medewerker veehouderij;3;20240801;0;0
+25536;Vakbekwaam medewerker teelt;b0785;Vakbekwaam medewerker teelt;3;20160801;20240801;20290801
+25984;Vakbekwaam medewerker teelt;b0785;Vakbekwaam medewerker teelt;3;20240801;0;0
+25431;Medewerker teelt;b0801;Medewerker teelt;2;20150801;20240801;20280801
+25981;Medewerker teelt;b0801;Medewerker teelt;2;20240801;0;0
+25535;Vakexpert veehouderij;b0886;Vakexpert veehouderij;4;20160801;20240801;20290801
+25990;Vakexpert veehouderij;b0886;Vakexpert veehouderij;4;20240801;0;0
+25534;Vakexpert teelt en groene technologie;b0902;Vakexpert teelt en groene technologie;4;20160801;20240801;20290801
+25988;Vakexpert teelt en groene technologie;b0902;Vakexpert teelt en groene technologie;4;20240801;0;0
+25454;Opzichter/uitvoerder groene ruimte;b0606;Opzichter/uitvoerder groene ruimte;4;20150801;20200101;20250801
+25617;Opzichter/uitvoerder groene ruimte;b0606;Opzichter/uitvoerder groene ruimte;4;20190801;20260801;20310801
+25455;Vakbekwaam hovenier;b0617;Vakbekwaam medewerker hovenier en groenvoorziening;3;20150801;20200101;20240801
+25618;Vakbekwaam hovenier;b0617;Vakbekwaam medewerker hovenier en groenvoorziening;3;20190801;20260801;20310801
+25453;Medewerker natuur, water en recreatie;b0644;Medewerker natuur, water en natuurrecreatie;2;20150801;20200101;20230801
+25622;Medewerker natuur, water en recreatie;b0644;Medewerker natuur, water en natuurrecreatie;2;20190801;20260801;20300801
+25452;Medewerker hovenier;b0741;Medewerker hovenier en groenvoorziening;2;20150801;20200101;20230801
+25621;Medewerker hovenier;b0741;Medewerker hovenier en groenvoorziening;2;20190801;20260801;20300801
+25556;Vakexpert agrarisch loonwerk;b0654;Vakexpert groen, grond en groene infra;4;20170801;20240801;20290801
+25994;Vakexpert groen, grond en groene infra;b0654;Vakexpert groen, grond en groene infra;4;20240801;0;0
+25451;Medewerker groen en cultuurtechniek;b1080;Medewerker groen, grond en groene infra;2;20150801;20200101;20230801
+25555;Medewerker agrarisch loonwerk;b1080;Medewerker groen, grond en groene infra;2;20170801;20240801;20280801
+25616;Medewerker groen en cultuurtechniek;b1080;Medewerker groen, grond en groene infra;2;20190801;20240801;20280801
+25992;Medewerker groen, grond en groene infra;b1080;Medewerker groen, grond en groene infra;2;20240801;0;0
+25456;Vakbekwaam medewerker groen en cultuurtechniek;b1081;Vakbekwaam medewerker groen, grond en groene infra;3;20150801;20200101;20240801
+25557;Vakbekwaam medewerker agrarisch loonwerk;b1081;Vakbekwaam medewerker groen, grond en groene infra;3;20170801;20240801;20290801
+25619;Vakbekwaam medewerker groen en cultuurtechniek;b1081;Vakbekwaam medewerker groen, grond en groene infra;3;20190801;20240801;20290801
+25993;Vakbekwaam medewerker groen, grond en groene infra;b1081;Vakbekwaam medewerker groen, grond en groene infra;3;20240801;0;0
+25463;Vakexpert voeding en technologie;b0744;Vakexpert voeding, technologie en techniek;4;20150801;20240801;20290801
+25979;Vakexpert voeding, technologie en techniek;b0744;Vakexpert voeding, technologie en techniek;4;20240801;0;0
+25462;Vakexpert voeding en kwaliteit;b0756;Vakexpert voeding, kwaliteit en productontwikkeling;4;20150801;20240801;20290801
+25980;Vakexpert voeding, kwaliteit en productontwikkeling;b0756;Vakexpert voeding, kwaliteit en productontwikkeling;4;20240801;0;0
+25461;Vakbekwaam medewerker voeding en technologie;b0777;Vakbekwaam medewerker voeding, technologie en techniek;3;20150801;20240801;20290801
+25978;Vakbekwaam medewerker voeding, technologie en techniek;b0777;Vakbekwaam medewerker voeding, technologie en techniek;3;20240801;0;0
+25464;Vakexpert voeding en voorlichting;b1082;Voeding- en leefstijladviseur;4;20150801;20240801;20290801
+25848;Voeding- en leefstijladviseur;b1082;Voeding- en leefstijladviseur;4;20230801;0;0
+25995;Voeding- en leefstijladviseur;b1082;Voeding- en leefstijladviseur;4;20240801;0;0
+26024;Voeding- en leefstijladviseur;b1082;Voeding- en leefstijladviseur;4;20200801;20230801;20250801
+25495;Danser;b0005;Danser;4;20150801;20200801;20260801
+25472;Acteur;b0006;Acteur;4;20150801;20200801;20260801
+25651;Acteur;b0006;Acteur;4;20200801;20260801;20310801
+25497;Muzikant;b0008;Muzikant;4;20150801;20200801;20260801
+25654;Muzikant;b0008;Muzikant;4;20200801;20260801;20310801
+25471;Apothekersassistent;b0118;Apothekersassistent;4;20150801;20200801;20260801
+25650;Apothekersassistent;b0118;Apothekersassistent;4;20200801;20260801;20310801
+25473;Doktersassistent;b0119;Doktersassistent;4;20150801;20210801;20270801
+25695;Doktersassistent;b0119;Doktersassistent;4;20210801;20260801;20310801
+25490;Tandartsassistent;b0121;Tandartsassistent;4;20150801;20210801;20270801
+25699;Tandartsassistent;b0121;Tandartsassistent;4;20210801;20260801;20310801
+23181;Maatschappelijke Zorg;b0000;niet gespecificeerd naar beroep;;20150801;20220801;20280801
+23312;Maatschappelijke Zorg;b0000;niet gespecificeerd naar beroep;;20220801;0;0
+25475;Begeleider gehandicaptenzorg;b1055;Begeleider maatschappelijke zorg;3;20150801;20220801;20270801
+25476;Begeleider specifieke doelgroepen;b1055;Begeleider maatschappelijke zorg;3;20150801;20220801;20270801
+25780;Begeleider maatschappelijke zorg;b1055;Begeleider maatschappelijke zorg;3;20220801;0;0
+92650;Medewerker maatschappelijke zorg;b1055;Begeleider maatschappelijke zorg;3;20060801;20160801;20210801
+25477;Persoonlijk begeleider gehandicaptenzorg;b1056;Persoonlijk begeleider maatschappelijke zorg;4;20150801;20220801;20280801
+25478;Persoonlijk begeleider specifieke doelgroepen;b1056;Persoonlijk begeleider maatschappelijke zorg;4;20150801;20220801;20280801
+25479;Thuisbegeleider;b1056;Persoonlijk begeleider maatschappelijke zorg;4;20150801;20220801;20280801
+25779;Persoonlijk begeleider maatschappelijke zorg;b1056;Persoonlijk begeleider maatschappelijke zorg;4;20220801;0;0
+92661;Persoonlijk begeleider gehandicaptenzorg;b1056;Persoonlijk begeleider maatschappelijke zorg;4;20060801;20160801;20220801
+23185;Sociaal werk;b1001;Sociaal werker;;20150801;20200801;20260801
+25488;Sociaal-cultureel werker;b1001;Sociaal werker;4;20150801;20200801;20260801
+25489;Sociaal-maatschappelijk dienstverlener;b1001;Sociaal werker;4;20150801;20200801;20260801
+25615;Sociaal werker;b1001;Sociaal werker;4;20200801;20240801;20290801
+25958;Sociaal werker;b1001;Sociaal werker;4;20240801;0;0
+92670;Sociaal-maatschappelijk dienstverlener;b1001;Sociaal werker;4;20060801;20160801;20220801
+25801;Praktijkopleider;b0062;Praktijkopleider;4;20220801;0;0
+23241;Pedagogisch werk;b0000;niet gespecificeerd naar beroep;;20190801;20210801;20270801
+23285;Pedagogisch werk;b0000;niet gespecificeerd naar beroep;;20210801;0;0
+25486;Pedagogisch medewerker kinderopvang;b0221;Pedagogisch medewerker kinderopvang;3;20150801;20190801;20240801
+25603;Pedagogisch medewerker kinderopvang;b0221;Pedagogisch medewerker kinderopvang;3;20190801;20210801;20260801
+25696;Pedagogisch medewerker kinderopvang;b0221;Pedagogisch medewerker kinderopvang;3;20210801;0;0
+92620;Pedagogisch medewerker 3 kinderopvang;b0221;Pedagogisch medewerker kinderopvang;3;20060801;20160801;20210801
+25485;Onderwijsassistent;b0304;Onderwijsassistent;4;20150801;20210801;20270801
+25698;Onderwijsassistent;b0304;Onderwijsassistent;4;20210801;0;0
+25484;Gespecialiseerd pedagogisch medewerker;b0796;Gespecialiseerd pedagogisch medewerker;4;20150801;20210801;20270801
+25697;Gespecialiseerd pedagogisch medewerker;b0796;Gespecialiseerd pedagogisch medewerker;4;20210801;0;0
+25575;Instructeur mbo;b0985;Instructeur mbo;4;20180801;0;0
+25480;Mbo-Verpleegkundige;b0589;Mbo-Verpleegkundige;4;20150801;20200801;20260801
+25655;Mbo-Verpleegkundige;b0589;Mbo-Verpleegkundige;4;20200801;20260801;20320801
+95520;Mbo-Verpleegkundige;b0589;Mbo-Verpleegkundige;4;20110801;20160801;20220801
+25491;verzorgende-IG;b0590;Verzorgende IG;3;20150801;20200801;20250801
+25656;verzorgende-IG;b0590;Verzorgende IG;3;20200801;20260801;20310801
+26102;Maatschappelijk verzorgende-IG plus;b0590;Verzorgende IG;3;20200801;20240801;20260801
+95530;Verzorgende-IG;b0590;Verzorgende IG;3;20110801;20160801;20210801
+23189;Dienstverlening;b0000;niet gespecificeerd naar beroep;;20150801;20240801;20280801
+25498;Helpende Zorg en Welzijn;b0224;Helpende Zorg en Welzijn;2;20150801;20240801;20280801
+25960;Helpende Zorg en Welzijn;b0224;Helpende Zorg en Welzijn;2;20240801;0;0
+26007;Servicemedewerker;b0224;Helpende Zorg en Welzijn;2;20170801;20240801;20250801
+25499;Medewerker facilitaire dienstverlening;b0403;Medewerker facilitaire dienstverlening;2;20150801;20240801;20280801
+25959;Medewerker facilitaire dienstverlening;b0403;Medewerker facilitaire dienstverlening;2;20240801;0;0
+25500;Medewerker sport en recreatie;b0807;Medewerker sport en recreatie;2;20150801;20240801;20280801
+25961;Medewerker sport en recreatie;b0807;Medewerker sport en recreatie;2;20240801;0;0

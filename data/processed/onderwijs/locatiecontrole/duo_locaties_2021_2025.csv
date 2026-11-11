@@ -1,0 +1,376 @@
+﻿Jaar;Instellingscode;Instelling;Onderwijslocatiecode;Locatiecode_meermaals_in_bron;Plaats;DUO_arbeidsmarktregio;Regio_in_bron_aanwezig;Aantal_hoofdinschrijvingen_bron;Plaats_in_handmatige_lijst;Bron_URL
+2021;08PG;ROC Friese Poort;101X899;nee;Emmeloord;;nee;1956;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;08PG;ROC Friese Poort;101X900;nee;Urk;;nee;261;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;08PG;ROC Friese Poort;102X173;nee;Sneek;;nee;353;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;08PG;ROC Friese Poort;102X174;nee;Sneek;;nee;2792;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;08PG;ROC Friese Poort;102X167;nee;Drachten;;nee;473;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;08PG;ROC Friese Poort;102X168;nee;Drachten;;nee;569;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;08PG;ROC Friese Poort;102X175;nee;Drachten;;nee;3171;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;08PG;ROC Friese Poort;102X166;nee;Dokkum;;nee;309;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;08PG;ROC Friese Poort;102X169;nee;Leeuwarden;;nee;1120;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;08PG;ROC Friese Poort;102X170;nee;Leeuwarden;;nee;743;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;08PG;ROC Friese Poort;102X171;nee;Leeuwarden;;nee;3553;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X572;ja;Best;;nee;<5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X573;ja;Rijswijk;;nee;13;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X574;ja;Amstelveen;;nee;12;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X576;nee;Barendrecht;;nee;59;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X578;nee;Enschede;;nee;21;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X597;ja;Heerhugowaard;;nee;26;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X599;ja;Houten;;nee;28;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X602;nee;Nijmegen;;nee;10;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X608;ja;Valkenburg;;nee;<5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X611;ja;Zwolle;;nee;<5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;101X120;ja;Rotterdam;;nee;10;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;102X378;ja;'s-Gravenhage;;nee;5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;102X382;nee;Utrecht;;nee;15;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;102X606;nee;Apeldoorn;;nee;<5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;102X659;nee;Haarlem;;nee;11;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;102X725;ja;Eindhoven;;nee;5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;106X795;nee;Enschede;;nee;<5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X572;ja;Best;;nee;81;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X573;ja;Rijswijk;;nee;101;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X574;ja;Amstelveen;;nee;<5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X597;ja;Heerhugowaard;;nee;96;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X598;ja;Groningen;;nee;<5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X599;ja;Houten;;nee;178;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X610;nee;Volendam;;nee;11;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X611;ja;Zwolle;;nee;149;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X615;nee;Alphen aan den Rijn;;nee;31;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X616;nee;Bunschoten-Spakenburg;;nee;28;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;101X120;ja;Rotterdam;;nee;51;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;102X705;ja;Groningen;;nee;31;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;102X725;ja;Eindhoven;;nee;59;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X572;ja;Best;;nee;35;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X573;ja;Rijswijk;;nee;71;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X574;ja;Amstelveen;;nee;105;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X577;nee;Breda;;nee;28;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X596;nee;Goes;;nee;19;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X597;ja;Heerhugowaard;;nee;115;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X598;ja;Groningen;;nee;7;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X599;ja;Houten;;nee;109;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X600;nee;Leeuwarden;;nee;11;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X604;nee;Roermond;;nee;<5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X608;ja;Valkenburg;;nee;9;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X609;nee;Velp;;nee;51;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X611;ja;Zwolle;;nee;107;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;100X940;nee;Dordrecht;;nee;9;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;101X120;ja;Rotterdam;;nee;128;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;101X245;nee;Almelo;;nee;32;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;102X378;ja;'s-Gravenhage;;nee;99;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;102X551;nee;Roermond;;nee;31;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;102X705;ja;Groningen;;nee;29;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;17WH;SVO;102X725;ja;Eindhoven;;nee;21;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25GV;Aeres (V) MBO;101X480;nee;Barneveld;;nee;1980;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25GV;Aeres (V) MBO;101X485;nee;Almere;;nee;354;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25GV;Aeres (V) MBO;101X487;nee;Ede;;nee;147;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25GV;Aeres (V) MBO;101X488;nee;Nijkerk;;nee;63;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25GV;Aeres (V) MBO;101X504;nee;Emmeloord;;nee;327;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25GV;Aeres (V) MBO;101X720;nee;Velp;;nee;234;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25GV;Aeres (V) MBO;101X750;nee;Dronten;;nee;290;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25GV;Aeres (V) MBO;101X096;nee;Sneek;;nee;64;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25GV;Aeres (V) MBO;101X095;nee;Leeuwarden;;nee;94;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25GV;Aeres (V) MBO;101X097;ja;Leeuwarden;;nee;946;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25GV;Aeres (V) MBO;101X097;ja;Leeuwarden;;nee;165;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25GV;Aeres (V) MBO;101X094;nee;Heerenveen;;nee;67;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25GV;Aeres (V) MBO;101X093;nee;Buitenpost;;nee;55;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25PX;ROC Nova College;100X526;ja;Beverwijk;;nee;2691;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25PX;ROC Nova College;100X527;ja;Haarlem;;nee;118;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25PX;ROC Nova College;100X529;nee;Haarlem;;nee;3794;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25PX;ROC Nova College;100X523;ja;Hoofddorp;;nee;2768;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25PX;ROC Nova College;100X527;ja;Haarlem;;nee;118;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25PX;ROC Nova College;100X531;nee;Hoofddorp;;nee;264;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25PX;ROC Nova College;100X532;nee;Haarlem;;nee;836;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25PX;ROC Nova College;100X523;ja;Hoofddorp;;nee;72;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25PX;ROC Nova College;100X526;ja;Beverwijk;;nee;53;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25PX;ROC Nova College;100X533;nee;Haarlem;;nee;217;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25PX;ROC Nova College;100X537;nee;Haarlem;;nee;27;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25PX;ROC Nova College;100X535;nee;Harlingen;;nee;237;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2021;25PX;ROC Nova College;100X536;nee;IJmuiden;;nee;313;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv
+2022;08PG;ROC Friese Poort              ;101X899;nee;Emmeloord;;nee;1874;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;08PG;ROC Friese Poort              ;101X900;nee;Urk;;nee;221;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;08PG;ROC Friese Poort              ;102X173;nee;Sneek;;nee;340;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;08PG;ROC Friese Poort              ;102X174;nee;Sneek;;nee;2924;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;08PG;ROC Friese Poort              ;102X167;nee;Drachten;;nee;423;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;08PG;ROC Friese Poort              ;102X168;nee;Drachten;;nee;612;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;08PG;ROC Friese Poort              ;102X175;nee;Drachten;;nee;2925;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;08PG;ROC Friese Poort              ;102X166;nee;Dokkum;;nee;285;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;08PG;ROC Friese Poort              ;102X169;nee;Leeuwarden;;nee;1041;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;08PG;ROC Friese Poort              ;102X170;nee;Leeuwarden;;nee;677;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;08PG;ROC Friese Poort              ;102X171;nee;Leeuwarden;;nee;3350;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X573;ja;Rijswijk;;nee;25;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X574;ja;Amstelveen;;nee;11;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X576;nee;Barendrecht;;nee;84;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X578;nee;Enschede;;nee;9;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X597;ja;Heerhugowaard;;nee;29;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X599;ja;Houten;;nee;44;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X602;nee;Nijmegen;;nee;9;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X611;ja;Zwolle;;nee;11;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;101X120;ja;Rotterdam;;nee;minder dan 5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;102X378;ja;'s-Gravenhage;;nee;8;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;102X382;nee;Utrecht;;nee;5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;102X606;nee;Apeldoorn;;nee;minder dan 5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;102X725;ja;Eindhoven;;nee;13;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;106X795;nee;Enschede;;nee;minder dan 5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;111X585;nee;'s-Gravenhage;;nee;31;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X572;ja;Best;;nee;10;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X573;ja;Rijswijk;;nee;84;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X574;ja;Amstelveen;;nee;minder dan 5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X597;ja;Heerhugowaard;;nee;79;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X599;ja;Houten;;nee;170;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X610;nee;Volendam;;nee;12;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X611;ja;Zwolle;;nee;145;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X615;nee;Alphen aan den Rijn;;nee;22;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X616;nee;Bunschoten-Spakenburg;;nee;18;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;101X120;ja;Rotterdam;;nee;62;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;102X705;ja;Groningen;;nee;34;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;102X725;ja;Eindhoven;;nee;110;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;108X486;nee;Bleiswijk;;nee;minder dan 5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X572;ja;Best;;nee;minder dan 5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X573;ja;Rijswijk;;nee;68;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X574;ja;Amstelveen;;nee;110;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X577;nee;Breda;;nee;40;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X596;nee;Goes;;nee;13;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X597;ja;Heerhugowaard;;nee;102;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X599;ja;Houten;;nee;147;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X600;nee;Leeuwarden;;nee;6;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X609;nee;Velp;;nee;57;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X611;ja;Zwolle;;nee;122;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;100X940;nee;Dordrecht;;nee;minder dan 5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;101X120;ja;Rotterdam;;nee;136;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;101X245;nee;Almelo;;nee;23;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;102X378;ja;'s-Gravenhage;;nee;117;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;102X551;nee;Roermond;;nee;32;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;102X705;ja;Groningen;;nee;62;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;102X725;ja;Eindhoven;;nee;66;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;108X484;nee;Amsterdam;;nee;16;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;111X314;nee;Maastricht;;nee;7;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;17WH;SVO                           ;113X138;nee;Maastricht;;nee;minder dan 5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25GV;Aeres (V) MBO                 ;101X480;nee;Barneveld;;nee;1868;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25GV;Aeres (V) MBO                 ;101X485;nee;Almere;;nee;333;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25GV;Aeres (V) MBO                 ;101X487;nee;Ede;;nee;153;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25GV;Aeres (V) MBO                 ;101X488;nee;Nijkerk;;nee;60;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25GV;Aeres (V) MBO                 ;101X504;nee;Emmeloord;;nee;299;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25GV;Aeres (V) MBO                 ;101X720;nee;Velp;;nee;223;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25GV;Aeres (V) MBO                 ;101X750;nee;Dronten;;nee;287;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25GV;Aeres (V) MBO                 ;101X096;nee;Sneek;;nee;53;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25GV;Aeres (V) MBO                 ;101X097;ja;Leeuwarden;;nee;918;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25GV;Aeres (V) MBO                 ;102X161;nee;Leeuwarden;;nee;98;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25GV;Aeres (V) MBO                 ;101X097;ja;Leeuwarden;;nee;135;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25GV;Aeres (V) MBO                 ;101X094;nee;Heerenveen;;nee;66;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25GV;Aeres (V) MBO                 ;101X093;nee;Buitenpost;;nee;66;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25GV;Aeres (V) MBO                 ;110X308;nee;Dronten;;nee;16;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25PX;ROC Nova College              ;100X526;ja;Beverwijk;;nee;2445;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25PX;ROC Nova College              ;100X527;ja;Haarlem;;nee;103;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25PX;ROC Nova College              ;100X529;nee;Haarlem;;nee;3900;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25PX;ROC Nova College              ;100X523;ja;Hoofddorp;;nee;2437;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25PX;ROC Nova College              ;100X527;ja;Haarlem;;nee;142;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25PX;ROC Nova College              ;110X422;nee;Hoofddorp;;nee;328;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25PX;ROC Nova College              ;100X531;nee;Hoofddorp;;nee;266;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25PX;ROC Nova College              ;100X532;nee;Haarlem;;nee;791;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25PX;ROC Nova College              ;100X523;ja;Hoofddorp;;nee;252;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25PX;ROC Nova College              ;100X526;ja;Beverwijk;;nee;142;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25PX;ROC Nova College              ;100X533;nee;Haarlem;;nee;185;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25PX;ROC Nova College              ;100X535;nee;Harlingen;;nee;231;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2022;25PX;ROC Nova College              ;100X536;nee;IJmuiden;;nee;322;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv
+2023;08PG;Firda;101X079;nee;Heerenveen;;nee;000001903;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;101X097;nee;Leeuwarden;;nee;000000199;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;101X899;nee;Emmeloord;;nee;000001787;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;101X900;nee;Urk;;nee;000000222;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;102X132;nee;Leeuwarden;;nee;000003865;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;102X162;nee;Leeuwarden;;nee;000000370;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;102X163;nee;Leeuwarden;;nee;000000068;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;102X164;nee;Heerenveen;;nee;000000919;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;102X165;nee;Heerenveen;;nee;000000109;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;102X166;nee;Dokkum;;nee;000000271;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;102X167;nee;Drachten;;nee;000000324;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;102X168;nee;Drachten;;nee;000000317;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;102X169;nee;Leeuwarden;;nee;000001081;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;102X170;nee;Leeuwarden;;nee;000000712;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;102X171;nee;Leeuwarden;;nee;000003189;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;102X173;nee;Sneek;;nee;000000479;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;102X174;nee;Sneek;;nee;000002550;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;102X175;nee;Drachten;;nee;000002803;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;08PG;Firda;113X665;nee;Drachten;;nee;000000305;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;100X573;nee;Rijswijk;;nee;000000151;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;100X574;nee;Amstelveen;;nee;000000090;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;100X576;nee;Barendrecht;;nee;000000058;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;100X577;nee;Breda;;nee;000000042;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;100X578;nee;Enschede;;nee;000000007;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;100X597;nee;Heerhugowaard;;nee;000000197;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;100X599;nee;Houten;;nee;000000374;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;100X600;nee;Leeuwarden;;nee;000000015;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;100X602;nee;Nijmegen;;nee;<5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;100X609;nee;Velp;;nee;000000037;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;100X610;nee;Volendam;;nee;000000009;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;100X611;nee;Zwolle;;nee;000000303;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;100X616;nee;Bunschoten-Spakenburg;;nee;000000015;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;101X120;nee;Rotterdam;;nee;000000188;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;101X245;nee;Almelo;;nee;000000030;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;102X378;nee;'s-Gravenhage;;nee;000000086;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;102X382;nee;Utrecht;;nee;000000008;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;102X551;nee;Roermond;;nee;000000026;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;102X606;nee;Apeldoorn;;nee;<5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;102X705;nee;Groningen;;nee;000000096;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;102X725;nee;Eindhoven;;nee;000000200;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;106X795;nee;Enschede;;nee;<5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;108X486;nee;Bleiswijk;;nee;000000032;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;111X585;nee;'s-Gravenhage;;nee;000000024;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;111X678;nee;'s-Gravenhage;;nee;000000012;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;112X832;nee;Schiphol;;nee;000000011;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;113X138;nee;Maastricht;;nee;000000007;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;113X738;nee;Amsterdam;;nee;000000012;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;113X950;nee;Sliedrecht;;nee;000000008;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;114X133;nee;Enschede;;nee;000000013;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;17WH;SVO;114X253;nee;Maastricht;;nee;<5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25GV;Aeres (V) MBO;101X093;nee;Buitenpost;;nee;000000069;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25GV;Aeres (V) MBO;101X094;nee;Heerenveen;;nee;000000064;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25GV;Aeres (V) MBO;101X096;nee;Sneek;;nee;000000048;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25GV;Aeres (V) MBO;101X097;nee;Leeuwarden;;nee;000001048;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25GV;Aeres (V) MBO;101X480;nee;Barneveld;;nee;000001799;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25GV;Aeres (V) MBO;101X485;nee;Almere;;nee;000000331;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25GV;Aeres (V) MBO;101X487;nee;Ede;;nee;000000134;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25GV;Aeres (V) MBO;101X488;nee;Nijkerk;;nee;000000059;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25GV;Aeres (V) MBO;101X504;nee;Emmeloord;;nee;000000301;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25GV;Aeres (V) MBO;101X720;nee;Velp;;nee;000000214;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25GV;Aeres (V) MBO;101X750;nee;Dronten;;nee;000000275;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25GV;Aeres (V) MBO;102X161;nee;Leeuwarden;;nee;000000110;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25GV;Aeres (V) MBO;110X308;nee;Dronten;;nee;000000027;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25PX;ROC Nova College;100X523;nee;Hoofddorp;;nee;000002745;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25PX;ROC Nova College;100X526;nee;Beverwijk;;nee;000002621;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25PX;ROC Nova College;100X527;nee;Haarlem;;nee;000000247;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25PX;ROC Nova College;100X529;nee;Haarlem;;nee;000003888;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25PX;ROC Nova College;100X531;nee;Hoofddorp;;nee;000000261;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25PX;ROC Nova College;100X532;nee;Haarlem;;nee;000000824;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25PX;ROC Nova College;100X533;nee;Haarlem;;nee;000000282;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25PX;ROC Nova College;100X535;nee;Harlingen;;nee;000000249;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25PX;ROC Nova College;100X536;nee;IJmuiden;;nee;000000357;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2023;25PX;ROC Nova College;110X422;nee;Hoofddorp;;nee;000000297;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv
+2024;08PG;Firda;101X079;nee;Heerenveen;Friesland;ja;1919;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;101X097;nee;Leeuwarden;Friesland;ja;173;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;101X899;nee;Emmeloord;Flevoland;ja;1712;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;101X900;nee;Urk;Flevoland;ja;202;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;102X132;nee;Leeuwarden;Friesland;ja;3463;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;102X162;nee;Leeuwarden;Friesland;ja;419;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;102X164;nee;Heerenveen;Friesland;ja;988;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;102X165;nee;Heerenveen;Friesland;ja;108;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;102X166;nee;Dokkum;Friesland;ja;245;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;102X167;nee;Drachten;Friesland;ja;265;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;102X169;nee;Leeuwarden;Friesland;ja;1082;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;102X170;nee;Leeuwarden;Friesland;ja;699;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;102X171;nee;Leeuwarden;Friesland;ja;2051;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;102X173;nee;Sneek;Friesland;ja;468;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;102X174;nee;Sneek;Friesland;ja;2432;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;102X175;nee;Drachten;Friesland;ja;2756;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;113X665;nee;Drachten;Friesland;ja;540;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;08PG;Firda;114X453;nee;Leeuwarden;Friesland;ja;1357;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;100X573;nee;Rijswijk;Haaglanden;ja;202;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;100X574;nee;Amstelveen;Groot Amsterdam;ja;61;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;100X576;nee;Barendrecht;Rijnmond;ja;61;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;100X577;nee;Breda;West-Brabant;ja;40;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;100X578;nee;Enschede;Twente;ja;< 5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;100X597;nee;Heerhugowaard;Noord-Holland Noord;ja;202;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;100X599;nee;Houten;Midden-Utrecht;ja;368;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;100X609;nee;Velp;Midden-Gelderland;ja;49;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;100X611;nee;Zwolle;Regio Zwolle;ja;275;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;100X616;nee;Bunschoten-Spakenburg;Amersfoort;ja;12;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;100X775;nee;Maastricht;Zuid-Limburg;ja;11;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;101X097;nee;Leeuwarden;Friesland;ja;14;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;101X120;nee;Rotterdam;Rijnmond;ja;204;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;102X378;nee;'s-Gravenhage;Haaglanden;ja;17;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;102X551;nee;Roermond;Midden-Limburg;ja;28;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;102X705;nee;Groningen;Groningen;ja;96;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;102X725;nee;Eindhoven;Zuidoost-Brabant;ja;191;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;108X486;nee;Bleiswijk;Zuid-Holland Centraal;ja;50;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;111X585;nee;'s-Gravenhage;Haaglanden;ja;12;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;111X678;nee;'s-Gravenhage;Haaglanden;ja;32;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;112X832;nee;Schiphol;Groot Amsterdam;ja;7;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;113X738;nee;Amsterdam;Groot Amsterdam;ja;10;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;114X133;nee;Enschede;Twente;ja;23;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;114X253;nee;Maastricht;Zuid-Limburg;ja;7;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;114X358;nee;Roosendaal;West-Brabant;ja;14;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;17WH;SVO;114X513;nee;Almelo;Twente;ja;28;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25GV;Aeres (V) MBO;101X093;nee;Buitenpost;Friesland;ja;98;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25GV;Aeres (V) MBO;101X094;nee;Heerenveen;Friesland;ja;67;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25GV;Aeres (V) MBO;101X096;nee;Sneek;Friesland;ja;51;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25GV;Aeres (V) MBO;101X097;nee;Leeuwarden;Friesland;ja;1187;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25GV;Aeres (V) MBO;101X480;nee;Barneveld;FoodValley;ja;1758;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25GV;Aeres (V) MBO;101X485;nee;Almere;Flevoland;ja;340;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25GV;Aeres (V) MBO;101X487;nee;Ede;FoodValley;ja;114;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25GV;Aeres (V) MBO;101X488;nee;Nijkerk;Amersfoort;ja;58;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25GV;Aeres (V) MBO;101X504;nee;Emmeloord;Flevoland;ja;299;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25GV;Aeres (V) MBO;101X720;nee;Velp;Midden-Gelderland;ja;196;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25GV;Aeres (V) MBO;101X750;nee;Dronten;Flevoland;ja;243;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25GV;Aeres (V) MBO;110X308;nee;Dronten;Flevoland;ja;41;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25PX;ROC Nova College;100X523;nee;Hoofddorp;Groot Amsterdam;ja;2751;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25PX;ROC Nova College;100X526;nee;Beverwijk;Zuid-Kennemerland en IJmond;ja;2536;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25PX;ROC Nova College;100X527;nee;Haarlem;Zuid-Kennemerland en IJmond;ja;250;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25PX;ROC Nova College;100X529;nee;Haarlem;Zuid-Kennemerland en IJmond;ja;3987;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25PX;ROC Nova College;100X531;nee;Hoofddorp;Groot Amsterdam;ja;249;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25PX;ROC Nova College;100X532;nee;Haarlem;Zuid-Kennemerland en IJmond;ja;819;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25PX;ROC Nova College;100X533;nee;Haarlem;Zuid-Kennemerland en IJmond;ja;289;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25PX;ROC Nova College;100X535;nee;Harlingen;Friesland;ja;253;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25PX;ROC Nova College;100X536;nee;IJmuiden;Zuid-Kennemerland en IJmond;ja;303;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25PX;ROC Nova College;110X422;nee;Hoofddorp;Groot Amsterdam;ja;260;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2024;25PX;ROC Nova College;114X382;nee;Amstelveen;Groot Amsterdam;ja;12;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv
+2025;08PG;Firda;onbekend;nee;onbekend;onbekend;ja;< 5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;101X079;nee;Heerenveen;Friesland;ja;1996;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;101X899;nee;Emmeloord;Flevoland;ja;1608;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;101X900;nee;Urk;Flevoland;ja;193;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;102X132;nee;Leeuwarden;Friesland;ja;4183;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;102X162;nee;Leeuwarden;Friesland;ja;408;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;102X164;nee;Heerenveen;Friesland;ja;1016;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;102X165;nee;Heerenveen;Friesland;ja;124;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;102X166;nee;Dokkum;Friesland;ja;284;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;102X167;nee;Drachten;Friesland;ja;265;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;102X169;nee;Leeuwarden;Friesland;ja;1055;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;102X170;nee;Leeuwarden;Friesland;ja;726;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;102X171;nee;Leeuwarden;Friesland;ja;1318;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;102X173;nee;Sneek;Friesland;ja;412;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;102X174;nee;Sneek;Friesland;ja;2384;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;102X175;nee;Drachten;Friesland;ja;2740;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;113X665;nee;Drachten;Friesland;ja;477;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;08PG;Firda;114X453;nee;Leeuwarden;Friesland;ja;1444;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;100X573;nee;Rijswijk;Haaglanden;ja;182;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;100X574;nee;Amstelveen;Groot Amsterdam;ja;48;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;100X576;nee;Barendrecht;Rijnmond;ja;91;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;100X577;nee;Breda;West-Brabant;ja;26;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;100X599;nee;Houten;Midden-Utrecht;ja;362;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;100X609;nee;Velp;Midden-Gelderland;ja;45;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;100X611;nee;Zwolle;Regio Zwolle;ja;260;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;100X616;nee;Bunschoten-Spakenburg;Amersfoort;ja;13;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;100X775;nee;Maastricht;Zuid-Limburg;ja;8;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;101X097;nee;Leeuwarden;Friesland;ja;10;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;101X120;nee;Rotterdam;Rijnmond;ja;210;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;102X551;nee;Roermond;Midden-Limburg;ja;29;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;102X705;nee;Groningen;Groningen;ja;89;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;102X725;nee;Eindhoven;Zuidoost-Brabant;ja;181;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;108X486;nee;Bleiswijk;Zuid-Holland Centraal;ja;38;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;111X585;nee;'s-Gravenhage;Haaglanden;ja;18;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;111X678;nee;'s-Gravenhage;Haaglanden;ja;21;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;114X133;nee;Enschede;Twente;ja;22;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;114X358;nee;Roosendaal;West-Brabant;ja;21;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;114X418;nee;Alkmaar;Noord-Holland Noord;ja;200;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;17WH;SVO;114X513;nee;Almelo;Twente;ja;22;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25GV;Aeres (V) MBO;101X093;nee;Buitenpost;Friesland;ja;79;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25GV;Aeres (V) MBO;101X094;nee;Heerenveen;Friesland;ja;47;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25GV;Aeres (V) MBO;101X096;nee;Sneek;Friesland;ja;54;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25GV;Aeres (V) MBO;101X097;nee;Leeuwarden;Friesland;ja;1171;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25GV;Aeres (V) MBO;101X480;nee;Barneveld;FoodValley;ja;1815;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25GV;Aeres (V) MBO;101X485;nee;Almere;Flevoland;ja;316;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25GV;Aeres (V) MBO;101X487;nee;Ede;FoodValley;ja;122;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25GV;Aeres (V) MBO;101X488;nee;Nijkerk;Amersfoort;ja;< 5;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25GV;Aeres (V) MBO;101X504;nee;Emmeloord;Flevoland;ja;293;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25GV;Aeres (V) MBO;101X720;nee;Velp;Midden-Gelderland;ja;195;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25GV;Aeres (V) MBO;101X750;nee;Dronten;Flevoland;ja;236;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25GV;Aeres (V) MBO;110X308;nee;Dronten;Flevoland;ja;43;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25PX;ROC Nova College;100X523;nee;Hoofddorp;Groot Amsterdam;ja;2692;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25PX;ROC Nova College;100X526;nee;Beverwijk;Zuid-Kennemerland en IJmond;ja;2453;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25PX;ROC Nova College;100X527;nee;Haarlem;Zuid-Kennemerland en IJmond;ja;256;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25PX;ROC Nova College;100X529;nee;Haarlem;Zuid-Kennemerland en IJmond;ja;4152;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25PX;ROC Nova College;100X531;nee;Hoofddorp;Groot Amsterdam;ja;281;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25PX;ROC Nova College;100X532;nee;Haarlem;Zuid-Kennemerland en IJmond;ja;885;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25PX;ROC Nova College;100X533;nee;Haarlem;Zuid-Kennemerland en IJmond;ja;290;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25PX;ROC Nova College;100X535;nee;Harlingen;Friesland;ja;265;ja;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25PX;ROC Nova College;100X536;nee;IJmuiden;Zuid-Kennemerland en IJmond;ja;253;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25PX;ROC Nova College;110X422;nee;Hoofddorp;Groot Amsterdam;ja;250;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv
+2025;25PX;ROC Nova College;114X467;nee;Amstelveen;Groot Amsterdam;ja;56;nee;https://duo.nl/open_onderwijsdata/images/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv

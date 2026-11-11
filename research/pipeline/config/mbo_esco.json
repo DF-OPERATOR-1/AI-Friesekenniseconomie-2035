@@ -1,0 +1,36 @@
+{
+  "version": "mbo-esco-3",
+  "model": "BAAI/bge-m3",
+  "weights": {
+    "tasks": 0.35,
+    "name": 0.26,
+    "description": 0.26,
+    "skills": 0.1,
+    "knowledge": 0.03
+  },
+  "thresholds": {
+    "direct": 0.82,
+    "related": 0.6,
+    "uncertain": 0.4
+  },
+  "competence_evidence_threshold": 0.65,
+  "minimum_role_evidence": 0.45,
+  "top_k": 25,
+  "rerank_weight": 0.25,
+  "batch_size": 32,
+  "chunk_tokens": 80,
+  "generic_weights": {
+    "transversal": 0.1,
+    "cross-sector": 0.3,
+    "sector-specific": 0.7,
+    "occupation-specific": 1.0,
+    "": 0.25
+  },
+  "name_semantic_weight": 0.5,
+  "retrieval_lexical_slots": 5,
+  "role_check": true,
+  "mapping_scores": {
+    "broadMatch": 0.6,
+    "closeMatch": 0.85
+  }
+}

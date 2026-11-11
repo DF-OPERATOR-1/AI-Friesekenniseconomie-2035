@@ -7,6 +7,9 @@ import agendaYellow from '../assets/icons/agenda-yellow.svg';
 import skillsBlue from '../assets/icons/skills-blue.svg';
 import skillsYellow from '../assets/icons/skills-yellow.svg';
 
+import workBlue from '../assets/icons/werk-blue.svg';
+import workYellow from '../assets/icons/werk-yellow.svg';
+
 import educationBlue from '../assets/icons/onderwijs-blue.svg';
 import educationYellow from '../assets/icons/onderwijs-yellow.svg';
 
@@ -16,6 +19,7 @@ const icons = {
   agenda: [agendaBlue, agendaYellow],
   skills: [skillsBlue, skillsYellow],
   onderwijs: [educationBlue, educationYellow],
+  werk: [workBlue, workYellow],
 };
 
 export function TopicIcon({ name }: { name: keyof typeof icons }) {

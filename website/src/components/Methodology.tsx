@@ -1,3 +1,4 @@
+import { EducationAccountability } from './EducationAccountability';
 import { References } from './References';
 import { TopicIcon } from './TopicIcon';
 import type { MouseEvent } from 'react';
@@ -82,7 +83,7 @@ export function Methodology() {
           <p>Hoe kan AI het werk en de vaardigheden binnen beroepen veranderen?</p>
         </article>
         <article className="methodology-research-card">
-          <TopicIcon name="agenda" />
+          <TopicIcon name="werk" />
           <h2>Werkgelegenheid en uitstroom</h2>
           <p>
             Hoeveel mensen werken in Fryslân en hoeveel professionals zullen naar
@@ -446,57 +447,60 @@ export function Methodology() {
       <section className="methodology-topic" id="methodologie-onderwijs-instroom">
         <h2>Onderwijs en instroom</h2>
         <p>
-          We gebruiken zes DUO-databestanden over studenten en afgestudeerden in het
-          mbo, hbo en wo.
-        </p>
-        <p>
-          Voor hbo en wo selecteren we instellingen die in de bron onder provincie
-          Friesland vallen. Voor mbo gebruiken we gegevens van Firda, Aeres, SVO en ROC
-          Nova College.
-        </p>
-        <p>
-          De mbo-cijfers omvatten ook onderwijslocaties buiten Fryslân. Afstuderen
-          betekent bovendien niet automatisch dat iemand in Fryslân gaat werken.
-        </p>
-        <p>
-          De onderwijsgegevens zijn gecontroleerd, maar nog niet gekoppeld aan
-          beroepsgroepen. Daarom kunnen we nog geen instroom per beroep berekenen.
+          We gebruiken zes bestanden van Dienst Uitvoering Onderwijs (DUO) over
+          studenten en afgestudeerden in mbo, hbo en wo. Ze geven zicht op het
+          onderwijsaanbod en mogelijke toekomstige instroom op de arbeidsmarkt.
         </p>
         <details className="methodology-disclosure" id="methodologie-onderwijs">
           <summary>Hoe zijn de onderwijsgegevens geselecteerd en verwerkt?</summary>
           <div className="methodology-disclosure-content">
-            <h3>Onderwijs en instroom</h3>
             <p>
-              We gebruiken zes bestanden van Dienst Uitvoering Onderwijs (DUO) over
-              studenten en afgestudeerden in mbo, hbo en wo. Ze geven zicht op het
-              onderwijsaanbod en mogelijke toekomstige instroom op de arbeidsmarkt.
-            </p>
-            <h4>Hoe maken we de selectie?</h4>
-            <p>
-              Voor hbo en wo selecteren we instellingen met provincie Friesland in de
-              bron. Voor mbo selecteren we Firda, Aeres, SVO en ROC Nova College:
-              instellingen met Friese onderwijslocaties. De mbo-aantallen betreffen de
-              hele instelling, dus ook locaties buiten Fryslân. Het zijn geen
-              uitsluitend Friese aantallen.
+              Voor hbo en wo selecteren we instellingen die in de bron onder de
+              provincie Fryslân vallen. Voor mbo selecteren we bij Aeres, SVO en ROC
+              Nova College alleen het door de gebruiker bevestigde opleidingsaanbod op
+              Friese locaties. De handmatige inventarisatie is vastgelegd op 9 november
+              2026 en via SBB-kwalificaties gekoppeld aan opleidingscodes per
+              schooljaar. Firda blijft volledig behouden, inclusief de locaties
+              Emmeloord en Urk buiten Fryslân.
             </p>
             <p>
-              We zetten jaar- en geslachtskolommen onder elkaar en controleren iedere
-              geselecteerde cel tegen de bron. De aantallen veranderen niet: we tellen
-              niet op en schatten niets bij. Afgeschermde aantallen, zoals ‘minder dan
-              5’, blijven herkenbaar en worden niet als nul behandeld.
+              Dezelfde selectie van instelling, opleidingscode en jaar geldt voor
+              studenten en afgestudeerden. We verdelen de behouden DUO-aantallen niet
+              over afzonderlijke onderwijslocaties, omdat de bron bij mbo-opleidingen
+              geen aantallen per opleiding en daadwerkelijke onderwijslocatie bevat. Een
+              behouden opleiding kan bij Aeres, SVO of Nova College ook buiten Fryslân
+              worden aangeboden. Houten, Ede en Haarlem in de kolom ‘Plaatsnaam
+              instelling’ zijn administratieve vestigingsplaatsen en vormen geen bewijs
+              dat de geselecteerde opleiding daar wordt gevolgd. Deze plaatsen zijn
+              daarom al handmatig uit de selectie gefilterd. De mbo-opleidingen die
+              onder ‘Opleidingen in Fryslân’ worden getoond, worden dus in Fryslân
+              aangeboden, maar kunnen ook buiten Fryslân worden gevolgd. Voor deze
+              handmatige inventarisatie is geen specifiek schooljaar bevestigd.
             </p>
             <p>
-              De onderwijsbestanden geven nog geen instroom per beroep: een gevalideerde
-              koppeling tussen opleidingen en beroepen ontbreekt. Een afgestudeerde is
+              De toepassing op de cijfers over 2021–2025 is daarom een selectie op basis
+              van het opleidingsaanbod en vormt geen bewijs van het historische aanbod
+              per onderwijslocatie. De uitkomsten voor mbo-opleidingen zijn daardoor
+              geen exacte telling van uitsluitend studenten of afgestudeerden op Friese
+              locaties. Afgeschermde aantallen, zoals ‘minder dan 5’, blijven herkenbaar
+              en worden niet als nul behandeld. In grafieken en bij totalen wordt een
+              bandbreedte gebruikt om een schatting te maken van het totale aantal
+              studenten en afgestudeerden.
+            </p>
+            <p>
+              De onderwijsbestanden geven geen gemeten instroom per beroep. De
+              opleidingskoppelingen geven mogelijke beroepsrichtingen aan, maar
+              voorspellen niet waar afgestudeerden gaan werken. Een afgestudeerde is
               bovendien niet automatisch een nieuwe werknemer in Fryslân.
             </p>
 
             <References topic="education" />
           </div>
         </details>
+        <EducationAccountability />
       </section>
       <section className="methodology-topic" id="methodologie-samenhang">
-        <h2>Samenhang richting 2035</h2>
+        <h2 id="methodologie-scenario">Samenhang richting 2035</h2>
         <p>
           Uiteindelijk brengen we de drie onderzoeksgebieden samen om mogelijke
           ontwikkelingen op de Friese arbeidsmarkt te verkennen.
@@ -505,27 +509,7 @@ export function Methodology() {
           De gecombineerde scenarioberekening is nog in ontwikkeling. Er zijn nog geen
           gevalideerde voorspellingen van personeelstekorten per beroep in 2035.
         </p>
-        <details className="methodology-disclosure" id="methodologie-scenario">
-          <summary>Hoe verkennen we de samenhang richting 2035?</summary>
-          <div className="methodology-disclosure-content">
-            <h3>Scenarioberekening richting 2035</h3>
-            <p>
-              Uiteindelijk willen we de drie onderzoeksgebieden samenbrengen: mogelijke
-              veranderingen in beroepsinhoud door AI, de ontwikkeling van
-              werkgelegenheid en demografie, en instroom vanuit het onderwijs.
-            </p>
-            <p>
-              De gecombineerde scenarioberekening is nog in ontwikkeling. Er is nog geen
-              gevalideerd model voor tekorten per beroep in 2035. De huidige AI-indices
-              zijn statische beroepsscores en kunnen niet rechtstreeks worden vertaald
-              naar toekomstige aantallen banen of benodigde werknemers.
-            </p>
-          </div>
-        </details>
       </section>
-      <p className="methodology-data-link">
-        <a href="#open-data">Bekijk Bronnen &amp; open data</a>
-      </p>
     </section>
   );
 }

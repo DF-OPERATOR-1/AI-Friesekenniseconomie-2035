@@ -29,6 +29,9 @@ export interface OccupationItem {
   code: string;
 }
 export interface SpecificOccupation {
+  source?: string;
+  source_version?: string;
+  language?: string;
   uri: string;
   name: string;
   description: string;
@@ -37,6 +40,14 @@ export interface SpecificOccupation {
   knowledge_areas?: OccupationItem[];
 }
 export interface OccupationProfile {
+  cbs_relevance?: {
+    note: string;
+    source_url: string;
+    source: string;
+    sheet: string;
+  } | null;
+  content_source?: string | null;
+  content_version?: string | null;
   map_exposure: number | null;
   isco_code: string;
   title: string;

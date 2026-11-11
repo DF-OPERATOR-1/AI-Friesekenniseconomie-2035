@@ -1,0 +1,188 @@
+{
+  "version": "mbo-esco-quality-1",
+  "candidate_k": 60,
+  "threshold": 0.56,
+  "uncertain_threshold": 0.38,
+  "reranker_weight": 0.08,
+  "weights": {
+    "name": 0.12,
+    "description": 0.23,
+    "tasks": 0.25,
+    "skills": 0.25,
+    "knowledge": 0.15
+  },
+  "activities": {
+    "installation": [
+      "monte",
+      "montage",
+      "install",
+      "bouwtekening",
+      "aansluiten",
+      "werkbladen",
+      "kasten"
+    ],
+    "food_service": [
+      "afwass",
+      "maaltijd",
+      "voedsel",
+      "bereiden van gerechten",
+      "keukengerei",
+      "bestek",
+      "potten",
+      "pannen",
+      "bakkerij",
+      "boulanger",
+      "gebak",
+      "deeg",
+      "brood"
+    ],
+    "logistics": [
+      "logistiek",
+      "distributie",
+      "voorraad",
+      "goederenstroom",
+      "magazijn",
+      "transportplann",
+      "opslag"
+    ],
+    "rigging": [
+      "takel",
+      "rigging",
+      "hijs",
+      "hefgereedschap",
+      "staalkabel"
+    ],
+    "veterinary": [
+      "dierenarts",
+      "veterinair",
+      "diergenees",
+      "dierenwelzijn",
+      "paraveter",
+      "dierenverpleeg"
+    ],
+    "clinical_veterinary": [
+      "paraveter",
+      "veterinair technicus",
+      "dierenverpleeg",
+      "assisteert de dierenarts",
+      "consulten en operaties",
+      "gebitsreiniging",
+      "laboratoriumwerk",
+      "rontgen"
+    ],
+    "reception": [
+      "receptie",
+      "reception",
+      "plannen afspraken",
+      "ontvangen klanten",
+      "administratieve ondersteuning"
+    ],
+    "civil_design": [
+      "civiele bouwkunde",
+      "civieltechn",
+      "ontwerp",
+      "bestektekening",
+      "aanbested",
+      "raming",
+      "werktekening",
+      "bouwtekening",
+      "bouwproject",
+      "technische tekeningen"
+    ],
+    "manual_construction": [
+      "handmatig",
+      "graafwerk",
+      "grondverzet",
+      "grondwerken",
+      "handgereedschap",
+      "bouwplaats opruimen",
+      "bouwterrein",
+      "constructieplaatsen",
+      "schoonvegen",
+      "voorbereiden van bouwplaatsen"
+    ],
+    "nursing": [
+      "verpleeg",
+      "verpleegtechn",
+      "zorgplan",
+      "verpleegplan",
+      "patientenzorg",
+      "zorginterventie"
+    ],
+    "human_clinical": [
+      "verpleeg",
+      "ziekenhuis",
+      "patienten",
+      "menselijke gezondheid",
+      "doktersassistent",
+      "geneeskundig"
+    ],
+    "office_admin": [
+      "gegevensinvoer",
+      "gegevensinvoerd",
+      "contactcenter",
+      "callcenter",
+      "audit",
+      "boekhoud",
+      "accountant"
+    ],
+    "roofing": [
+      "dakdek",
+      "dakbedekk",
+      "dakpann",
+      "leien"
+    ],
+    "printing": [
+      "drukwerk",
+      "drukpers",
+      "drukvorm",
+      "bedruk",
+      "zeefdruk",
+      "foliedruk",
+      "druktechniek",
+      "offsetdruk"
+    ]
+  },
+  "conflicts": [
+    [
+      "installation",
+      "food_service"
+    ],
+    [
+      "logistics",
+      "rigging"
+    ],
+    [
+      "logistics",
+      "office_admin"
+    ],
+    [
+      "veterinary",
+      "human_clinical"
+    ]
+  ],
+  "qualifications": {
+    "independent_medical": [
+      "gespecialiseerd dierenarts",
+      "algemeen dierenarts",
+      "chirurg",
+      "tandarts",
+      "anesthesist",
+      "medisch specialist",
+      "dierenarts",
+      "arts",
+      "psycholoog",
+      "verloskundige"
+    ],
+    "specialisation": [
+      "ambulanceverpleeg",
+      "gespecialiseerd verpleeg",
+      "verpleegkundig specialist"
+    ]
+  },
+  "strong_work": {
+    "min_score": 0.46,
+    "min_description": 0.72,
+    "min_work": 0.78
+  }
+}

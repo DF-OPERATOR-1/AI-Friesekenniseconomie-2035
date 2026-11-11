@@ -1,0 +1,90 @@
+{
+  "captured": "2026-11-09",
+  "input_file": "data/raw/onderwijs/handmatige_locatiecontrole/inventarisatie_2026-11-09.txt",
+  "input_sha256": "6130426944da65678d80598523028f6d60b8f68158d660e83602860d6bb8d071",
+  "sources": [
+    {
+      "url": "https://www.firda.nl/locaties",
+      "source": "Firda",
+      "captured": "2026-11-09",
+      "user_check_date": null,
+      "valid_schoolyear": null,
+      "origin": "Door gebruiker handmatig geïnventariseerd",
+      "license": "Niet vastgesteld; bronvermelding is geen licentievaststelling"
+    },
+    {
+      "url": "https://www.kiesmbo.nl/scholen/roc-nova-college/nova-scheepvaart-harlingen",
+      "source": "KiesMBO",
+      "captured": "2026-11-09",
+      "user_check_date": null,
+      "valid_schoolyear": null,
+      "origin": "Door gebruiker handmatig geïnventariseerd",
+      "license": "Niet vastgesteld; bronvermelding is geen licentievaststelling"
+    },
+    {
+      "url": "https://www.kiesmbo.nl/scholen/svo-vakopleider-food/jansoniusstraat-2a-leeuwarden",
+      "source": "KiesMBO",
+      "captured": "2026-11-09",
+      "user_check_date": null,
+      "valid_schoolyear": null,
+      "origin": "Door gebruiker handmatig geïnventariseerd",
+      "license": "Niet vastgesteld; bronvermelding is geen licentievaststelling"
+    },
+    {
+      "url": "https://www.kiesmbo.nl/scholen/aeres-mbo/aeres-mbo-leeuwarden",
+      "source": "KiesMBO",
+      "captured": "2026-11-09",
+      "user_check_date": null,
+      "valid_schoolyear": null,
+      "origin": "Door gebruiker handmatig geïnventariseerd",
+      "license": "Niet vastgesteld; bronvermelding is geen licentievaststelling"
+    },
+    {
+      "url": "https://www.kiesmbo.nl/scholen/aeres-mbo/aeres-mbo-heerenveen",
+      "source": "KiesMBO",
+      "captured": "2026-11-09",
+      "user_check_date": null,
+      "valid_schoolyear": null,
+      "origin": "Door gebruiker handmatig geïnventariseerd",
+      "license": "Niet vastgesteld; bronvermelding is geen licentievaststelling"
+    },
+    {
+      "url": "https://www.kiesmbo.nl/scholen/aeres-mbo/aeres-mbo-buitenpost",
+      "source": "KiesMBO",
+      "captured": "2026-11-09",
+      "user_check_date": null,
+      "valid_schoolyear": null,
+      "origin": "Door gebruiker handmatig geïnventariseerd",
+      "license": "Niet vastgesteld; bronvermelding is geen licentievaststelling"
+    },
+    {
+      "url": "https://www.kiesmbo.nl/scholen/aeres-mbo/aeres-mbo-sneek",
+      "source": "KiesMBO",
+      "captured": "2026-11-09",
+      "user_check_date": null,
+      "valid_schoolyear": null,
+      "origin": "Door gebruiker handmatig geïnventariseerd",
+      "license": "Niet vastgesteld; bronvermelding is geen licentievaststelling"
+    },
+    {
+      "url": "https://www.kiesmbo.nl/scholen/aeres-mbo/aeres-mbo-dronten",
+      "source": "KiesMBO",
+      "captured": "2026-11-09",
+      "user_check_date": null,
+      "valid_schoolyear": null,
+      "origin": "Door gebruiker handmatig geïnventariseerd",
+      "license": "Niet vastgesteld; bronvermelding is geen licentievaststelling"
+    }
+  ],
+  "duo_source_hashes": {
+    "data/raw/onderwijs/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2021.csv": "b3deea90ccad8f259179198d6b36b12245ba9f19ca1d9b4719d511215e506ac6",
+    "data/raw/onderwijs/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2022.csv": "19e8c2587dac776b09946687255a39c30be760cefcfc7e21eadc3127426aa9a8",
+    "data/raw/onderwijs/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2023.csv": "0b370758d1bdf40eaec0d9cde7ef3cfccc6d0978d0be38640db76beb54b8f773",
+    "data/raw/onderwijs/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2024.csv": "400b3e030affd72bdfbc7539bd7f4eadb5ce3b0eee13b6f0aa223773b00c9bcf",
+    "data/raw/onderwijs/02.-onderwijslocaties-mbo-met-inschrijvingen-en-geografische-gegevens-per-1-oktober-2025.csv": "24e89fb69ab4ae62a1d5c408a6117b1bf181d237f1690f5104a5cb91d812d474"
+  },
+  "offer_rows": 102,
+  "unique_location_parent_courses": 84,
+  "selection_policy": "Gebruiker bevestigt op 2026-11-09: voor Nova College, SVO en Aeres is aanbod op de genoemde Friese locaties de Friese selectie; overige opleidingen vallen erbuiten. Firda behoudt alle opleidingen. Dronten is buiten Fryslân. Codekoppelingen en historische geldigheid zijn nog niet bevestigd.",
+  "note": "Onderliggende vermeldingen zijn geen extra zelfstandig bevestigde opleidingen en geen gevalideerde CREBO-aliassen. Geen studentenaantallen verdeeld of bestaande filters gewijzigd."
+}

@@ -1,0 +1,52 @@
+{
+  "note": "Plaatsnaam instelling is het administratieve adres in de DUO-bron, geen opleidingslocatie. Houten, Ede en Haarlem blijven terecht behouden bij geselecteerd Fries aanbod. Geen exacte telling per Friese campus.",
+  "selection": "data/mappings/mbo_locaties/friese_opleidingscodes_per_jaar.csv",
+  "files": {
+    "studenten_mbo_friesland.csv": {
+      "original_rows": 9970,
+      "selected_rows": 6556,
+      "removed_rows": 3414,
+      "places_by_institution": {
+        "08PG": {
+          "LEEUWARDEN": 5536
+        },
+        "17WH": {
+          "HOUTEN": 54
+        },
+        "25GV": {
+          "EDE": 922
+        },
+        "25PX": {
+          "HAARLEM": 44
+        }
+      },
+      "all_rows_match_offer_policy": true,
+      "source_cells_unchanged": true,
+      "only_frisian_institution_addresses": false,
+      "sha256": "078b726b6cbaf600ea881e1944a76d539525703e6feba3078c86ecc45f63ce3b"
+    },
+    "afgestudeerden_mbo_friesland.csv": {
+      "original_rows": 14460,
+      "selected_rows": 9686,
+      "removed_rows": 4774,
+      "places_by_institution": {
+        "08PG": {
+          "LEEUWARDEN": 8190
+        },
+        "17WH": {
+          "HOUTEN": 74
+        },
+        "25GV": {
+          "EDE": 1274
+        },
+        "25PX": {
+          "HAARLEM": 148
+        }
+      },
+      "all_rows_match_offer_policy": true,
+      "source_cells_unchanged": true,
+      "only_frisian_institution_addresses": false,
+      "sha256": "9583932b0fcf80753d1ee7f737392294ef704a1b35aedbefab31679ba628d8a3"
+    }
+  }
+}

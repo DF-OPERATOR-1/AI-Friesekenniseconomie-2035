@@ -23,7 +23,7 @@ referentie = pd.read_excel(
     sheet_name='Appendix A',
 )
 groepen = pd.read_excel(
-    bronmap / 'codelijsten-isco-08.xls',
+    project / 'data/raw/cbs/codelijsten-isco-08-nl.xls',
     sheet_name='ISCO-08 unit group', dtype=str,
 ).rename(columns={
     'code ISCO-08 unitgroup': 'ISCO_08_code',

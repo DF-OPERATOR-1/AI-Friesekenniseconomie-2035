@@ -1,0 +1,335 @@
+{
+  "note": "Ontwikkelcontroles uit de bestaande ISCO-proef; gebruikt bij ontwikkeling, geen onafhankelijke ESCO-goldset, geen nauwkeurigheidsclaim.",
+  "summary": {
+    "A": {
+      "top1": 3,
+      "top5": 5,
+      "count": 11
+    },
+    "B": {
+      "top1": 5,
+      "top5": 7,
+      "count": 11
+    },
+    "C": {
+      "top1": 6,
+      "top5": 9,
+      "count": 11
+    },
+    "D": {
+      "top1": 6,
+      "top5": 9,
+      "count": 11
+    }
+  },
+  "checks": [
+    {
+      "code": "25208",
+      "expected_isco": [
+        "7322"
+      ],
+      "methods": {
+        "A": {
+          "top1": "5223",
+          "top1_matches": false,
+          "expected_in_top5": true
+        },
+        "B": {
+          "top1": "3122",
+          "top1_matches": false,
+          "expected_in_top5": false
+        },
+        "C": {
+          "top1": "7322",
+          "top1_matches": true,
+          "expected_in_top5": true
+        },
+        "D": {
+          "top1": "7322",
+          "top1_matches": true,
+          "expected_in_top5": true
+        }
+      }
+    },
+    {
+      "code": "25674",
+      "expected_isco": [
+        "8322"
+      ],
+      "methods": {
+        "A": {
+          "top1": "9332",
+          "top1_matches": false,
+          "expected_in_top5": true
+        },
+        "B": {
+          "top1": "8322",
+          "top1_matches": true,
+          "expected_in_top5": true
+        },
+        "C": {
+          "top1": "8322",
+          "top1_matches": true,
+          "expected_in_top5": true
+        },
+        "D": {
+          "top1": "8322",
+          "top1_matches": true,
+          "expected_in_top5": true
+        }
+      }
+    },
+    {
+      "code": "25033",
+      "expected_isco": [
+        "5151"
+      ],
+      "methods": {
+        "A": {
+          "top1": "1321",
+          "top1_matches": false,
+          "expected_in_top5": false
+        },
+        "B": {
+          "top1": "9112",
+          "top1_matches": false,
+          "expected_in_top5": true
+        },
+        "C": {
+          "top1": "9112",
+          "top1_matches": false,
+          "expected_in_top5": true
+        },
+        "D": {
+          "top1": "9112",
+          "top1_matches": false,
+          "expected_in_top5": true
+        }
+      }
+    },
+    {
+      "code": "25664",
+      "expected_isco": [
+        "3214"
+      ],
+      "methods": {
+        "A": {
+          "top1": "2261",
+          "top1_matches": false,
+          "expected_in_top5": false
+        },
+        "B": {
+          "top1": "2261",
+          "top1_matches": false,
+          "expected_in_top5": false
+        },
+        "C": {
+          "top1": "2261",
+          "top1_matches": false,
+          "expected_in_top5": false
+        },
+        "D": {
+          "top1": "2261",
+          "top1_matches": false,
+          "expected_in_top5": false
+        }
+      }
+    },
+    {
+      "code": "25665",
+      "expected_isco": [
+        "3214"
+      ],
+      "methods": {
+        "A": {
+          "top1": "2261",
+          "top1_matches": false,
+          "expected_in_top5": false
+        },
+        "B": {
+          "top1": "2261",
+          "top1_matches": false,
+          "expected_in_top5": false
+        },
+        "C": {
+          "top1": "2261",
+          "top1_matches": false,
+          "expected_in_top5": false
+        },
+        "D": {
+          "top1": "2261",
+          "top1_matches": false,
+          "expected_in_top5": false
+        }
+      }
+    },
+    {
+      "code": "25998",
+      "expected_isco": [
+        "2512"
+      ],
+      "methods": {
+        "A": {
+          "top1": "2514",
+          "top1_matches": false,
+          "expected_in_top5": false
+        },
+        "B": {
+          "top1": "2512",
+          "top1_matches": true,
+          "expected_in_top5": true
+        },
+        "C": {
+          "top1": "2514",
+          "top1_matches": false,
+          "expected_in_top5": true
+        },
+        "D": {
+          "top1": "2514",
+          "top1_matches": false,
+          "expected_in_top5": true
+        }
+      }
+    },
+    {
+      "code": "27050",
+      "expected_isco": [
+        "7121"
+      ],
+      "methods": {
+        "A": {
+          "top1": "7121",
+          "top1_matches": true,
+          "expected_in_top5": true
+        },
+        "B": {
+          "top1": "7121",
+          "top1_matches": true,
+          "expected_in_top5": true
+        },
+        "C": {
+          "top1": "7121",
+          "top1_matches": true,
+          "expected_in_top5": true
+        },
+        "D": {
+          "top1": "7121",
+          "top1_matches": true,
+          "expected_in_top5": true
+        }
+      }
+    },
+    {
+      "code": "27137",
+      "expected_isco": [
+        "7512"
+      ],
+      "methods": {
+        "A": {
+          "top1": "7512",
+          "top1_matches": true,
+          "expected_in_top5": true
+        },
+        "B": {
+          "top1": "8160",
+          "top1_matches": false,
+          "expected_in_top5": false
+        },
+        "C": {
+          "top1": "7512",
+          "top1_matches": true,
+          "expected_in_top5": true
+        },
+        "D": {
+          "top1": "7512",
+          "top1_matches": true,
+          "expected_in_top5": true
+        }
+      }
+    },
+    {
+      "code": "25614",
+      "expected_isco": [
+        "7512"
+      ],
+      "methods": {
+        "A": {
+          "top1": "3119",
+          "top1_matches": false,
+          "expected_in_top5": false
+        },
+        "B": {
+          "top1": "7512",
+          "top1_matches": true,
+          "expected_in_top5": true
+        },
+        "C": {
+          "top1": "7512",
+          "top1_matches": true,
+          "expected_in_top5": true
+        },
+        "D": {
+          "top1": "7512",
+          "top1_matches": true,
+          "expected_in_top5": true
+        }
+      }
+    },
+    {
+      "code": "25684",
+      "expected_isco": [
+        "7531"
+      ],
+      "methods": {
+        "A": {
+          "top1": "5241",
+          "top1_matches": false,
+          "expected_in_top5": false
+        },
+        "B": {
+          "top1": "2163",
+          "top1_matches": false,
+          "expected_in_top5": true
+        },
+        "C": {
+          "top1": "2163",
+          "top1_matches": false,
+          "expected_in_top5": true
+        },
+        "D": {
+          "top1": "2163",
+          "top1_matches": false,
+          "expected_in_top5": true
+        }
+      }
+    },
+    {
+      "code": "25687",
+      "expected_isco": [
+        "2163"
+      ],
+      "methods": {
+        "A": {
+          "top1": "2163",
+          "top1_matches": true,
+          "expected_in_top5": true
+        },
+        "B": {
+          "top1": "2163",
+          "top1_matches": true,
+          "expected_in_top5": true
+        },
+        "C": {
+          "top1": "2163",
+          "top1_matches": true,
+          "expected_in_top5": true
+        },
+        "D": {
+          "top1": "2163",
+          "top1_matches": true,
+          "expected_in_top5": true
+        }
+      }
+    }
+  ]
+}

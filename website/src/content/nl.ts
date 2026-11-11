@@ -3,6 +3,7 @@ export const navigation = [
   { href: '#home', label: 'Home' },
   { href: '#invloed-ai', label: 'Invloed van AI' },
   { href: '#beroepen', label: 'Beroepen' },
+  { href: '#opleidingen', label: 'Opleidingen in Fryslân' },
   { href: '#toekomst', label: 'Toekomst 2035' },
   { href: '#open-data', label: 'Bronnen & open data' },
   { href: '#methodologie', label: 'Methodologie' },

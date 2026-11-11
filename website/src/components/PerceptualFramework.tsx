@@ -75,11 +75,10 @@ export function PerceptualFramework({ home = false }: { home?: boolean }) {
             </tbody>
           </table>
         </div>
-        <p className="research-summary">
-          Bronnen: Felten et al. (2021, algemene AI; 2023, taalmodellen en
-          beeldgeneratie) en Pizzinelli et al. (2023, complementariteit). Bewerking:
-          DataFryslân. De complementariteitsscore is door DataFryslân zelf berekend aan
-          de hand van de methode van Pizzinelli et al. (2023).
+        <p className="research-summary source-caption">
+          <strong>Bron:</strong> Felten et al. (2021) en Pizzinelli et al. (2023). De
+          complementariteitsscores zijn door DataFryslân berekend volgens de methode van
+          Pizzinelli et al. (2023), op basis van O*NET 24.3 (2020).
         </p>
       </details>
     </section>

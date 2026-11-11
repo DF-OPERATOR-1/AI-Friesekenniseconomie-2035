@@ -1,0 +1,304 @@
+{
+  "method": "Brongebonden LLM-beoordeling door de huidige assistent, gekozen moeilijke gevallen; geen modelbenchmark",
+  "source_hashes": {
+    "data/raw/competentnl/mbo.csv": "f568f4b651ea221c82df51097cf2cbd958bb65d8e61e4b7eb576e4e4c6bf3bed",
+    "data/raw/competentnl/beroepen_isco.csv": "9f8e5dbb73e38f41d1e74e56c2b79e53de31beac58e64a179c020f3b1fe0fc59",
+    "data/raw/competentnl/beroepen_taken.csv": "c374b43982c4d281f7bd1946a99792053f6ea8f5719b48e28bbf484f036eabfe",
+    "data/mappings/opleiding_beroep.csv": "d792839ea67d53280231034aa902d0e7de2922db0ecb6174f394405b53fd3d54",
+    "data/raw/crebo/251126 mbo-opleidingskoppeltabel 2026-27 met wijzigingenblad.xlsx": "ad538563cacc8890c79a16cf9752a97350835bea634d06ac64ee754e64758d82",
+    "data/raw/crebo/20250107 mbo-opleidingskoppeltabel 2025-2026 met wijzigingenblad.xlsx": "47d3bcfca67abf2d2597278ef1a4790ddac806d7085c28e6c9178abbe8445543",
+    "data/mappings/isco2008_brc2014.csv": "d1cc97dcb84c9fd644bfc2bc43591caabd15a10ae9a26a62fba85cddc8d115d1"
+  },
+  "models": {
+    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1": "1427fd652930e4ba29e8149678df786c240d8825"
+  },
+  "reviews": {
+    "25033": {
+      "decision": "ondersteund voorstel",
+      "note": "De opleiding combineert zelf schoonmaken met het aansturen van een klein team op één locatie. Objectleider schoonmaak omvat juist die combinatie; een algemene bedrijfsdirectie is niet nodig.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/30697F786F",
+          "name": "Objectleider schoonmaak",
+          "isco": "5151",
+          "definition": "Is verantwoordelijk voor de schoonmaak (van een deel) van een gebouw, geeft leiding aan een groep schoonmakers en werkt soms mee. Voorbeelden van werkzaamheden: ziet erop toe dat de groep schoonmakers goed werk aflevert, veilig werkt en zorgvuldig met de schoonmaakapparatuur omgaat, assisteert (eventueel) bij het schoonmaken, maakt werkplanningen en behandelt klachten."
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "25208": {
+      "decision": "bestaande CBS-koppeling behouden",
+      "note": "De opleiding beschrijft het instellen van drukmachines en het produceren van drukwerk. De bestaande CBS-groepsnaam Drukkers (7322) blijft passend; een specifieke druktechniek of leidinggevende functie is niet noodzakelijk aangetoond.",
+      "selected": [],
+      "keep_baseline": true,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "25614": {
+      "decision": "ondersteund voorstel",
+      "note": "De opleiding betreft ambachtelijke bereiding van boulangerieproducten in een bakkerij. Broodbakker is een inhoudelijk aansluitend uitvoerend voorstel; bedrijfsleider of chef-kok is niet uit deze profieltekst af te leiden.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/B229FFDD26",
+          "name": "Broodbakker",
+          "isco": "7512",
+          "definition": "Maakt op ambachtelijke wijze brood en koopt de grondstoffen voor het brood in. Voorbeelden van werkzaamheden: koopt grondstoffen (bijvoorbeeld bloem, suikers en zuivelproducten) in, weegt grondstoffen af, mengt of kneedt grondstoffen met meng- en kneedmachines en in mengbakken, voegt de juiste hoeveelheid kleur- en smaakstoffen toe, weegt producten af en maakt de werkruimte en de machines schoon."
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "25664": {
+      "decision": "ondersteund voorstel",
+      "note": "De opleiding draait om het vervaardigen van kroon- en brugwerk in een laboratorium. De beroepsdefinitie van Tandtechnicus noemt bruggen en kronen. Onderwijs geven of wetenschappelijk onderzoek is niet de beschreven hoofdtaak.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/ABC9F91BE5",
+          "name": "Tandtechnicus",
+          "isco": "3214",
+          "definition": "Maakt en repareert middelen die het gebit corrigeren, ondersteunen of vervangen (bijvoorbeeld beugels, bruggen en kronen). Voorbeelden van werkzaamheden: bewerkt bijvoorbeeld kunststof, gips, hars en porselein, werkt prothesen en kronen af met slijp- en freesgereedschap, maakt porselein voor tanden en reinigt producten met desinfecterende middelen."
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "25665": {
+      "decision": "ondersteund voorstel",
+      "note": "Het profiel beschrijft het vervaardigen van gebitsprothesen. Tandtechnicus vervaardigt en repareert gebitsvoorzieningen. De herordeningskeuze universitair docent betreft een andere rol.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/ABC9F91BE5",
+          "name": "Tandtechnicus",
+          "isco": "3214",
+          "definition": "Maakt en repareert middelen die het gebit corrigeren, ondersteunen of vervangen (bijvoorbeeld beugels, bruggen en kronen). Voorbeelden van werkzaamheden: bewerkt bijvoorbeeld kunststof, gips, hars en porselein, werkt prothesen en kronen af met slijp- en freesgereedschap, maakt porselein voor tanden en reinigt producten met desinfecterende middelen."
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "25674": {
+      "decision": "ondersteund voorstel",
+      "note": "Opleiding en beroep beschrijven zelf passagiers vervoeren met een taxi en hen begeleiden. Een taxibedrijf leiden is een andere verantwoordelijkheid dan taxi rijden.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/D1A9CB37EC",
+          "name": "Taxichauffeur",
+          "isco": "8322",
+          "definition": "Bestuurt taxi's. Brengt mensen tegen betaling naar de plaats van bestemming. Voorbeelden van werkzaamheden: bestuurt personenauto's of (rolstoel)busjes, haalt klanten op, helpt passagiers met in- en uitstappen, helpt passagiers met hun bagage, informeert toeristen over bezienswaardigheden, handelt betalingen af en lost problemen met lastige klanten op."
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "25684": {
+      "decision": "ondersteund voorstel",
+      "note": "Het profiel beschrijft naaien en het maken/veranderen van kleding in een atelier, onder een leidinggevende. Het veranderatelierberoep beschrijft juist kleding aanpassen en naaien; verkoop of het leiden van een winkel sluit minder aan.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/4778DA7522",
+          "name": "Medewerker kledingreparatiebedrijf / veranderatelier",
+          "isco": "7531",
+          "definition": "Herstelt nieuwe en gebruikte kleding of verandert het model van kleding en brengt nieuwe accessoires aan. Werkt in een reparatiebedrijf of veranderatelier. Voorbeelden van werkzaamheden: leest werktekeningen of bepaalt de veranderingen terwijl de klant de kleding past, gebruikt spelden, krijt en een meetlint om veranderingen aan te geven, maakt kleding korter, neemt in of legt uit (bijvoorbeeld door stiksels en naden los te tornen, de stof op maat te knippen en deze delen weer aan elkaar te stikken), brengt ritsen en knopen aan, strijkt kreuken weg en perst plooien in."
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "25687": {
+      "decision": "ondersteund voorstel",
+      "note": "De opleiding beschrijft het ontwerpen van kleding, patronen en modecollecties. Modeontwerper ontwerpt kledingcollecties en modellen. Verkoopmanagement heeft een andere kerntaak.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/4EA8129E4C",
+          "name": "Modeontwerper",
+          "isco": "2163",
+          "definition": "Ontwerpt kledingcollecties voor kledingbedrijven of een select publiek (haute couture). Werkt in een confectiebedrijf, modeatelier of heeft een eigen studio. Voorbeelden van werkzaamheden: past bestaande modellen aan, maakt schetsen van nieuwe modellen en selecteert bijbehorende stoffen en accessoires (soms op aanwijzing van opdrachtgevers of de bedrijfsleiding), instrueert patroonmakers die het ontwerp gaan 'vertalen' in patronen, verzamelt informatie over (nieuwe) kledingstoffen en accessoires, beoordeelt de kwaliteit en gebruiksmogelijkheden van stoffen, volgt modetrends op de voet, bekijkt modebladen en bezoekt beurzen en modeshows."
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "25998": {
+      "decision": "ondersteund voorstel",
+      "note": "Beide bronbeschrijvingen gaan over het ontwikkelen en programmeren van software. De brede ISCO-niveauwaarschuwing is op zichzelf geen bewijs dat deze werkzaamheden niet bij het mbo-profiel aansluiten.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/F5EEF89849",
+          "name": "Software developer",
+          "isco": "2512",
+          "definition": "Programmeert software op toegepast niveau, daarbij is het aanspreken van bestaande software-componenten belangrijker dan het begrijpen van de technische details achter die software. Een software ontwikkelaar wordt ook wel programmeur, computerprogrammeur of applicatieontwikkelaar genoemd.  Voorbeelden van werkzaamheden: is verantwoordelijk voor de (door)ontwikkeling van verschillende digitale oplossingen waaronder: portals (bijvoorbeeld Sharepoint of Oracle PeopleSoft)"
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "27050": {
+      "decision": "ondersteund voorstel",
+      "note": "Het opleidingsprofiel beschrijft het dekken van daken met pannen/leien. Pannenlegger dekt schuine daken met dakpannen en valt in de passende dakdekkersgroep.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/39CAC03DFA",
+          "name": "Pannenlegger",
+          "isco": "7121",
+          "definition": "Bedekt schuine daken met dakpannen. Voorbeelden van werkzaamheden: hakt of zaagt dakpannen op maat en bevestigt die op het dak (op steile of windgevoelige plaatsen met panhaken, schroeven of cement), voert materiaal en handgereedschap aan, geeft materiaal en handgereedschap aan collega's aan en maakt metselspecie."
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "27137": {
+      "decision": "ondersteund voorstel",
+      "note": "Het opleidingsprofiel noemt bakkerijproducten en kneden, mengen, rijzen en bakken. Broodbakker verricht die productiehandelingen; industriële productiemedewerker of bedrijfsleider is niet noodzakelijk de beoogde rol.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/B229FFDD26",
+          "name": "Broodbakker",
+          "isco": "7512",
+          "definition": "Maakt op ambachtelijke wijze brood en koopt de grondstoffen voor het brood in. Voorbeelden van werkzaamheden: koopt grondstoffen (bijvoorbeeld bloem, suikers en zuivelproducten) in, weegt grondstoffen af, mengt of kneedt grondstoffen met meng- en kneedmachines en in mengbakken, voegt de juiste hoeveelheid kleur- en smaakstoffen toe, weegt producten af en maakt de werkruimte en de machines schoon."
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "27139": {
+      "decision": "meerdere mogelijke beroepen",
+      "note": "Catering, bijeenkomsten faciliteren en gebouwondersteuning passen bij praktische facilitaire beroepen. Facilitair medewerker en Bode dekken verschillende delen van het brede profiel. De tekst onderbouwt geen unieke keuze en geen beleidsfunctie.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/F5B8A3D23D",
+          "name": "Facilitair medewerker",
+          "isco": "9112",
+          "definition": "Verricht ondersteunende huishoudelijke werkzaamheden in een ziekenhuis, school of bedrijf. Voorbeelden van werkzaamheden: serveert ontbijt, lunch of avondeten, assisteert in de keuken, vervoert goederen en materialen, stoft, stofzuigt, dweilt, maakt toiletten en badkamers schoon, verzamelt vuil wasgoed, doet de was, bergt wasgoed op en voorziet kamers van schoon beddengoed."
+        },
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/EC3F1E361F",
+          "name": "Bode",
+          "isco": "9621",
+          "definition": "Voert facilitaire taken uit in dienst van een overheid. Voorbeelden van werkzaamheden: maakt vergaderruimten gereed, werkt bij interne recepties mee in de catering, verzorgt interne transporten, neemt bestelde goederen in ontvangst, zorgt dat de post bij de medewerkers terechtkomt, frankeert post, voert correspondentie, bereidt vergaderingen voor en ontvangt klanten en bezoekers."
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "27144": {
+      "decision": "ondersteund voorstel",
+      "note": "De opleiding richt zich op persoonlijke dagelijkse zorg en ondersteuning. Het specifieke IG-beroep beschrijft die verzorging. Dat iemand soms stagiairs begeleidt maakt praktijkopleider niet de hoofdrol.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/DCBA0274C1",
+          "name": "Verzorgende individuele gezondheidszorg (ig)",
+          "isco": "5321",
+          "definition": "Verzorgt en verpleegt hulpbehoevende mensen thuis of in een instelling. Denk aan ouderen, zieken, gehandicapten en (kraam)gezinnen. De nadruk ligt op lichamelijke zorg. Voorbeelden van werkzaamheden: stelt een zorgplan op, assisteert bij het eten, helpt bij het wassen, dient medicijnen toe, brengt een infuus in, geeft injecties, behandelt doorligplekken, begeleidt stagiairs en overlegt met verpleegkundigen, therapeuten en artsen."
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "25727": {
+      "decision": "meerdere mogelijke beroepen",
+      "note": "Het profiel combineert marktonderzoek en marketingactiviteiten met communicatie en teksten. Beide uitvoerende medewerkersberoepen zijn passend als kandidaten. Een marketingmanager wordt niet door de assistentiegerichte rolomschrijving onderbouwd.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/575247F7B8",
+          "name": "Marketingmedewerker",
+          "isco": "2431",
+          "definition": "Helpt de marketingmanager verkoop- en marketingplannen op te stellen en uit te voeren. Voorbeelden van werkzaamheden: verzamelt en analyseert gegevens en rapporten, maakt statistieken en bergt die geordend op, onderhoudt contacten met medewerkers van de afdelingen productie en verkoop, overlegt met bureaus voor reclame en marketing en begeleidt marktonderzoeksprojecten."
+        },
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/CD58CED5D4",
+          "name": "Communicatiemedewerker",
+          "isco": "2432",
+          "definition": "Voert communicatiewerkzaamheden uit. Voorbeelden van werkzaamheden: coördineert de uitgave van nieuwsbrieven, jaaroverzichten, voorlichtingsmateriaal en -campagnes, schrijft artikelen, adviseert medewerkers over communicatie, overlegt met externe partijen, vormgevers en fotografen, bewaakt de huisstijl, controleert drukproeven, actualiseert websites, neemt deel aan projecten en bereidt beurzen of andere evenementen voor."
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "25587": {
+      "decision": "kandidaatset uitbreiden",
+      "note": "De opleiding gaat over werktekenen, inkoop en productieplanning van houten bouwelementen. De best passende bronfunctie Werkvoorbereider bouw kwam niet in de huidige kandidaatset voor. Geen geforceerde keuze uit een ongeschikte set; verder gericht zoeken is nodig.",
+      "selected": [],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "25719": {
+      "decision": "ondersteund voorstel",
+      "note": "De opleiding beschrijft fotografische opnamen voorbereiden, maken en bewerken. Fotograaf sluit inhoudelijk aan; de assistentie-/zelfstandigheidsgraad vraagt nog beoordeling binnen deze brede beroepsgroep.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/F13F216028",
+          "name": "Fotograaf",
+          "isco": "3431",
+          "definition": "Maakt fotoreportages van gebeurtenissen, mensen, dieren of voorwerpen in opdracht van bedrijven, particulieren, uitgevers of kranten. Voorbeelden van werkzaamheden: werkt volgens richtlijnen van de opdrachtgever of geeft hieraan zelf invulling, ontwikkelt foto's, drukt foto's af of stuurt ze naar een fotolaboratorium, werft klanten, leest vakliteratuur, werkt fotoarchieven bij en verzorgt de administratie."
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen aparte LLM-API en geen onafhankelijke menselijke validatie"
+    },
+    "25542": {
+      "decision": "meerdere mogelijke beroepen",
+      "note": "SBB beschrijft dakbedekking, onderhoud en het organiseren van het werk van collega’s. Het CompetentNL-beroep Dakdekker omvat onder meer zinken en loden dakbedekking; Voorman / voorvrouw dakdekker combineert dakwerk met het aansturen van collega’s. Daarom zijn beide inhoudelijk aansluitende voorstellen. Dit is een aanvullende brongebonden assistentbeoordeling, geen modeluitkomst of officiële opleiding–ISCO-koppeling. De voormanfunctie is een doorgroeimogelijkheid: SBB noemt hiervoor aanvullende opleiding of cursussen; dit is geen aangetoonde directe instapfunctie.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/F23AB45F05",
+          "name": "Dakdekker",
+          "isco": "7121",
+          "definition": "Legt dakbedekking van bijvoorbeeld zink, lood, kunststof en bitumen op daken van huizen en kantoren. Voorbeelden van werkzaamheden: sloopt oude dakbedekking van het dak, brengt een isolatielaag aan op het dak, rolt de dakbedekking uit in banen, smelt met een brander de dakbedekking en zet het vast, maakt alle naden en randen waterdicht, legt dakgoten aan en legt regenwaterafvoeren aan."
+        },
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/0B13CBF85F",
+          "name": "Voorman / voorvrouw dakdekker",
+          "isco": "7121",
+          "definition": "Legt dakbedekking van bijvoorbeeld zink, lood, kunststof en bitumen op daken van huizen en kantoren. Geeft daarnaast leiding aan een groep collega's. Voorbeelden van werkzaamheden: sloopt oude dakbedekking van het dak, brengt een isolatielaag aan op het dak, rolt de dakbedekking uit in banen, smelt met een brander de dakbedekking en zet die vast, maakt alle naden en randen waterdicht, legt dakgoten aan, legt regenwaterafvoeren aan, verdeelt het werk, overlegt met de opdrachtgever, houdt een eenvoudige administratie bij en let op de kwaliteit van het werk van collega's."
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen onafhankelijke menselijke validatie",
+      "review_method": "Aanvullende brongebonden beoordeling op basis van SBB en CompetentNL; geen embeddingscore",
+      "qualification_id": "b0952",
+      "evidence": [
+        {
+          "title": "SBB, certificaatsupplement Allround dakdekker metaal (25542)",
+          "url": "https://www.s-bb.nl/media/jl3c3jmn/allround-dakdekker-metaal-25542-1617-nl-nov2016.pdf"
+        },
+        {
+          "title": "SBB-koppeltabellen: codes 25542 en 25869 bij kwalificatie b0952",
+          "file": "data/processed/mbo_opleidingen.json.gz"
+        }
+      ]
+    },
+    "25869": {
+      "decision": "meerdere mogelijke beroepen",
+      "note": "SBB beschrijft dakbedekking, onderhoud en het organiseren van het werk van collega’s. Het CompetentNL-beroep Dakdekker omvat onder meer zinken en loden dakbedekking; Voorman / voorvrouw dakdekker combineert dakwerk met het aansturen van collega’s. Daarom zijn beide inhoudelijk aansluitende voorstellen. Dit is een aanvullende brongebonden assistentbeoordeling, geen modeluitkomst of officiële opleiding–ISCO-koppeling. De voormanfunctie is een doorgroeimogelijkheid: SBB noemt hiervoor aanvullende opleiding of cursussen; dit is geen aangetoonde directe instapfunctie.",
+      "selected": [
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/F23AB45F05",
+          "name": "Dakdekker",
+          "isco": "7121",
+          "definition": "Legt dakbedekking van bijvoorbeeld zink, lood, kunststof en bitumen op daken van huizen en kantoren. Voorbeelden van werkzaamheden: sloopt oude dakbedekking van het dak, brengt een isolatielaag aan op het dak, rolt de dakbedekking uit in banen, smelt met een brander de dakbedekking en zet het vast, maakt alle naden en randen waterdicht, legt dakgoten aan en legt regenwaterafvoeren aan."
+        },
+        {
+          "uri": "https://linkeddata.competentnl.nl/id/uwv/occupation/0B13CBF85F",
+          "name": "Voorman / voorvrouw dakdekker",
+          "isco": "7121",
+          "definition": "Legt dakbedekking van bijvoorbeeld zink, lood, kunststof en bitumen op daken van huizen en kantoren. Geeft daarnaast leiding aan een groep collega's. Voorbeelden van werkzaamheden: sloopt oude dakbedekking van het dak, brengt een isolatielaag aan op het dak, rolt de dakbedekking uit in banen, smelt met een brander de dakbedekking en zet die vast, maakt alle naden en randen waterdicht, legt dakgoten aan, legt regenwaterafvoeren aan, verdeelt het werk, overlegt met de opdrachtgever, houdt een eenvoudige administratie bij en let op de kwaliteit van het werk van collega's."
+        }
+      ],
+      "keep_baseline": false,
+      "reviewer": "Assistent in deze sessie; geen onafhankelijke menselijke validatie",
+      "review_method": "Aanvullende brongebonden beoordeling op basis van SBB en CompetentNL; geen embeddingscore",
+      "qualification_id": "b0952",
+      "evidence": [
+        {
+          "title": "SBB, certificaatsupplement Allround dakdekker metaal (25542)",
+          "url": "https://www.s-bb.nl/media/jl3c3jmn/allround-dakdekker-metaal-25542-1617-nl-nov2016.pdf"
+        },
+        {
+          "title": "SBB-koppeltabellen: codes 25542 en 25869 bij kwalificatie b0952",
+          "file": "data/processed/mbo_opleidingen.json.gz"
+        }
+      ]
+    }
+  }
+}

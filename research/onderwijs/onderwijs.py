@@ -10,6 +10,7 @@ import io
 import json
 import re
 import subprocess
+import sys
 from pathlib import Path
 
 from openpyxl import Workbook, load_workbook
@@ -19,6 +20,8 @@ from openpyxl.styles import Font
 # %% 1. Inlezen
 ROOT = Path(__file__).resolve().parent
 PROJECT = ROOT.parents[1]
+sys.path.insert(0, str(PROJECT))
+from research.onderwijs.mbo_exportselectie import filter_table, verify_exports
 RAW = PROJECT / 'data/raw/onderwijs'
 OUT = PROJECT / 'data/processed/onderwijs'
 BASE = 'https://duo.nl/open_onderwijsdata/images/'
@@ -29,8 +32,10 @@ MBO_INSTELLINGEN = {
     '25PX': 'ROC Nova College',
 }
 MBO_TOELICHTING = (
-    'Selectie van Firda, Aeres, SVO en ROC Nova College, instellingen met '
-    'onderwijslocaties in Friesland. De aantallen per opleiding gelden voor '
+    'Firda behouden; Aeres, SVO en ROC Nova College beperkt tot het door de gebruiker '
+    'bevestigde Friese opleidingsaanbod via jaargebonden SBB-kwalificaties. '
+    'Plaatsnaam instelling is het administratieve bronadres, niet de leslocatie. '
+    'De huidige aanbodselectie bewijst geen historisch aanbod per onderwijslocatie. De aantallen per opleiding gelden voor '
     'de hele instelling en bevatten ook locaties buiten Friesland. '
     'Dit zijn geen uitsluitend Friese mbo studenten aantallen.'
 )
@@ -58,6 +63,9 @@ WERKBLADEN = [
 ]
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--download', action='store_true')
+parser.add_argument('--mbo-studenten-only', action='store_true')
+parser.add_argument('--mbo-only', action='store_true', help='Filter studenten en afgestudeerden mbo')
+parser.add_argument('--check', action='store_true', help='Valideer mbo zonder bestanden te wijzigen')
 args = parser.parse_args()
 RAW.mkdir(exist_ok=True)
 OUT.mkdir(exist_ok=True)
@@ -83,6 +91,109 @@ def lees_csv(pad):
         tekst = data.decode('cp1252')
     return list(csv.reader(io.StringIO(tekst, newline=''), delimiter=';'))
 
+
+def mbo_studenten(bron):
+    """Behoud broncellen, behalve jaargroepen met uitsluitend nul studenten."""
+    kop = bron[0]
+    metadata = ['Instellingscode', 'Instellingsnaam', 'Soort instelling',
+                'Plaatsnaam instelling', 'Leerweg', 'Niveau',
+                'Erkende opleiding code', 'Erkende opleiding naam',
+                'Sectorkamer naam', 'Hoofdgroep naam']
+    metingen = [f'{s}{y}' for y in range(2021, 2026) for s in ('MAN', 'VROUW')]
+    if kop != metadata + metingen or any(len(r) != len(kop) for r in bron[1:]):
+        raise ValueError('Onverwacht kolomschema of rijlengte mbo-studenten')
+    selectie = [r for r in bron[1:] if r[0] in MBO_INSTELLINGEN]
+    if {r[0] for r in selectie} != set(MBO_INSTELLINGEN):
+        raise ValueError('Niet alle vier mbo-instellingen aanwezig')
+    sleutels = [(r[0], r[6], r[4], r[5]) for r in selectie]
+    if len(sleutels) != len(set(sleutels)):
+        raise ValueError('Dubbele instelling/CREBO/leerweg/niveausleutel')
+    tabel = [metadata + ['Geslacht', 'Jaar', 'Aantal']]
+    verwijderd = 0
+    for r in selectie:
+        if not r[6].isdigit():
+            raise ValueError('Ongeldige opleidingscode')
+        for waarde in r[10:]:
+            if waarde not in ('', '<5') and not waarde.isdigit():
+                raise ValueError(f'Onbekende telwaarde: {waarde!r}')
+        for jaar in range(2021, 2026):
+            start = kop.index(f'MAN{jaar}')
+            waarden = r[start:start + 2]
+            # Verwijder uitsluitend bewezen lege groepen. Onbekend blijft behouden.
+            if all(v.isdigit() and int(v) == 0 for v in waarden):
+                verwijderd += 1
+                continue
+            blok = [r[:10] + [geslacht, str(jaar), waarde]
+                    for geslacht, waarde in zip(('man', 'vrouw'), waarden)]
+            if [rij[-1] for rij in blok] != waarden:
+                raise ValueError('Bronwaarden gewijzigd of verloren')
+            tabel.extend(blok)
+    print(f'MBO: {len(tabel)-1} uitvoerrijen; '
+          f'{verwijderd} instelling/opleiding/leerweg/niveau/jaar-combinaties '
+          'zonder studenten verwijderd. Onbekende aantallen blijven behouden.')
+    print(MBO_TOELICHTING)
+    return tabel
+
+
+def schrijf_mbo(tabel, naam='studenten_mbo_friesland'):
+    """Valideer volledige export voordat het bestaande bestand wordt vervangen."""
+    import tempfile
+    pad = OUT / f'{naam}.csv'
+    with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8-sig', newline='',
+                                     dir=OUT, suffix='.tmp', delete=False) as f:
+        tmp = Path(f.name)
+        csv.writer(f, delimiter=';').writerows(tabel)
+    try:
+        if lees_csv(tmp) != tabel:
+            raise ValueError('Mbo-export wijkt af bij teruglezen')
+        tmp.replace(pad)
+    finally:
+        tmp.unlink(missing_ok=True)
+
+
+def mbo_afgestudeerden(bron):
+    kop = bron[0]
+    metingen = [(i, m[1].lower(), m[2]) for i, k in enumerate(kop)
+                if (m := re.fullmatch(r'DIP(MAN|VROUW)(20\d{2})', k))]
+    if len(metingen) != 10 or any(len(r) != len(kop) for r in bron[1:]):
+        raise ValueError('Onverwacht schema mbo-afgestudeerden')
+    indices = {i for i, _, _ in metingen}
+    metadata = [i for i in range(len(kop)) if i not in indices]
+    return [[kop[i] for i in metadata] + ['Geslacht', 'Jaar', 'Aantal']] + [
+        [r[i] for i in metadata] + [geslacht, jaar, r[index]]
+        for r in bron[1:] if r[kop.index('Instellingscode')] in MBO_INSTELLINGEN
+        for index, geslacht, jaar in metingen]
+
+
+def selecteer_en_bewaar_mbo(naam, tabel, check=False):
+    geselecteerd = filter_table(tabel, PROJECT)
+    if check:
+        if lees_csv(OUT/f'{naam}.csv') != geselecteerd:
+            raise ValueError(f'Mbo-export niet actueel: {naam}; voer --mbo-only uit')
+    else:
+        archief = OUT/'instellingsselectie'
+        archief.mkdir(exist_ok=True)
+        with (archief/f'{naam}.csv').open('w', encoding='utf-8-sig', newline='') as f:
+            csv.writer(f, delimiter=';').writerows(tabel)
+        schrijf_mbo(geselecteerd, naam)
+    print(f'{naam}: {len(tabel)-1} → {len(geselecteerd)-1} rijen na aanbodselectie.')
+    return geselecteerd
+
+
+if args.mbo_studenten_only or args.mbo_only or args.check:
+    namen = ['studenten_mbo_friesland']
+    if args.mbo_only or args.check:
+        namen.append('afgestudeerden_mbo_friesland')
+    for naam in namen:
+        bron = lees_csv(RAW/BRONNEN[naam])
+        tabel = mbo_studenten(bron) if naam.startswith('studenten') else mbo_afgestudeerden(bron)
+        selecteer_en_bewaar_mbo(naam, tabel, args.check)
+    if not args.check and args.mbo_only:
+        verify_exports(PROJECT)
+    if not args.check:
+        from research.pipeline.imports.opleidingen import build_mbo_courses
+        build_mbo_courses(PROJECT, refresh=True)
+    raise SystemExit(0)
 
 print('Stap 1: oorspronkelijke bronkolommen en bronwaarden inlezen.')
 bronnen = {}
@@ -193,14 +304,21 @@ for naam, tabel in uitvoer.items():
         if hersteld != origineel:
             raise ValueError(f'Bronwaarden gewijzigd of verloren: {naam}')
 
+uitvoer['studenten_mbo_friesland'] = mbo_studenten(bronnen[BRONNEN['studenten_mbo_friesland']])
+for naam in ('studenten_mbo_friesland', 'afgestudeerden_mbo_friesland'):
+    uitvoer[naam] = selecteer_en_bewaar_mbo(naam, uitvoer[naam])
+
 # %% 5. Exporteren
 print('Stap 5: zes CSV-tabellen en Excel opslaan en teruglezen.')
 wb = Workbook()
 wb.remove(wb.active)
 for (naam, tabel), werkblad in zip(uitvoer.items(), WERKBLADEN):
     pad = OUT / f'{naam}.csv'
-    with pad.open('w', encoding='utf-8-sig', newline='') as f:
-        csv.writer(f, delimiter=';').writerows(tabel)
+    if '_mbo_' in naam:
+        schrijf_mbo(tabel, naam)
+    else:
+        with pad.open('w', encoding='utf-8-sig', newline='') as f:
+            csv.writer(f, delimiter=';').writerows(tabel)
     if lees_csv(pad) != tabel:
         raise ValueError(f'CSV wijkt af na teruglezen: {naam}')
     ws = wb.create_sheet(werkblad)
@@ -228,17 +346,19 @@ try:
             raise ValueError(f'Excel wijkt af na teruglezen: {naam}')
 finally:
     opgeslagen.close()
+verify_exports(PROJECT)
+from research.pipeline.imports.opleidingen import build_mbo_courses
+build_mbo_courses(PROJECT, refresh=True)
 # Leg alle bewaarde downloads vast, inclusief historische en referentiebronnen.
 manifest = [dict(url=BASE + pad.name, bestand=pad.name,
                  sha256=hashlib.sha256(pad.read_bytes()).hexdigest())
             for pad in sorted(RAW.glob('*.csv'))]
-(RAW / 'sources.json').write_text(json.dumps(manifest, indent=2) + '\n')
+# Bestaand bronmanifest en oorspronkelijke bronbestanden blijven ongewijzigd.
 print(
-    '  Gereed: zes tabellen met Geslacht, Jaar en Aantal; '
-    'bronwaarden behouden.'
+    '  Gereed: zes onderwijstabellen per geslacht en jaar; bronwaarden behouden.'
 )
 print(
-    '  Geen aantallen opgeteld, geschat, omgerekend of over locaties verdeeld.'
+    '  Geen aantallen opgeteld, geschat of over locaties verdeeld.'
 )
 print(f'  Uitvoermap: {OUT}')
 

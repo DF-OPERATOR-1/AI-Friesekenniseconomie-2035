@@ -1,0 +1,913 @@
+{
+  "baseline": {
+    "scope": "Expliciete ontwikkelparen; geen volledige of onafhankelijke validatieset",
+    "n": 10,
+    "tp": 2,
+    "fp": 6,
+    "fn": 9,
+    "unassessed_selected_pairs": 2,
+    "assessed_selected_pairs": 8,
+    "reference_lists_complete": false,
+    "precision_conditioned_on_judged_pairs": true,
+    "precision": 0.25,
+    "recall": 0.18181818181818182,
+    "f1": 0.2105263157894737,
+    "recall_at_10": 0.85,
+    "retrieval_recall_at_10": 0.75,
+    "candidate_pool_recall": 0.85,
+    "recall_at_10_definition": "Macro recall van positieve ISCO-codes binnen de eerste tien beroepskandidaten na rangschikking; geen deduplicatie vóór afkappen.",
+    "cases": [
+      {
+        "code": "25776",
+        "positive_hits": [],
+        "false_positive_hits": [
+          "3341",
+          "7215"
+        ],
+        "missing": [
+          "1324"
+        ],
+        "top10": [
+          "7215",
+          "3343",
+          "3341",
+          "3115",
+          "2411",
+          "3341",
+          "3341",
+          "8152",
+          "3435",
+          "1324"
+        ]
+      },
+      {
+        "code": "25956",
+        "positive_hits": [
+          "7115"
+        ],
+        "false_positive_hits": [
+          "9412"
+        ],
+        "missing": [],
+        "top10": [
+          "7115",
+          "9412",
+          "9412",
+          "8156",
+          "5120",
+          "7233",
+          "1324",
+          "8160",
+          "8211",
+          "4321"
+        ]
+      },
+      {
+        "code": "25731",
+        "positive_hits": [],
+        "false_positive_hits": [
+          "4226"
+        ],
+        "missing": [
+          "3240"
+        ],
+        "top10": [
+          "4226",
+          "2250",
+          "3240",
+          "2250",
+          "3256",
+          "2250",
+          "3255",
+          "9212",
+          "5164",
+          "5164"
+        ]
+      },
+      {
+        "code": "25871",
+        "positive_hits": [],
+        "false_positive_hits": [
+          "9312"
+        ],
+        "missing": [
+          "3112",
+          "4322"
+        ],
+        "top10": [
+          "9312",
+          "1323",
+          "3112",
+          "2146",
+          "2133",
+          "4323",
+          "3123",
+          "2422",
+          "2422",
+          "2142"
+        ]
+      },
+      {
+        "code": "27145",
+        "positive_hits": [],
+        "false_positive_hits": [
+          "5321"
+        ],
+        "missing": [
+          "3221"
+        ],
+        "top10": [
+          "2221",
+          "2221",
+          "5321",
+          "3258",
+          "3240",
+          "5321",
+          "2635",
+          "3255",
+          "2262",
+          "3256"
+        ]
+      },
+      {
+        "code": "25674",
+        "positive_hits": [
+          "8322"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "8322",
+          "4323",
+          "8344",
+          "8322",
+          "8331",
+          "8322",
+          "8332",
+          "8322",
+          "8332",
+          "8332"
+        ]
+      },
+      {
+        "code": "25208",
+        "positive_hits": [],
+        "false_positive_hits": [],
+        "missing": [
+          "7322"
+        ],
+        "top10": [
+          "7322",
+          "7322",
+          "7322",
+          "7322",
+          "7322",
+          "4321",
+          "8152",
+          "9333",
+          "8189",
+          "8131"
+        ]
+      },
+      {
+        "code": "25998",
+        "positive_hits": [],
+        "false_positive_hits": [],
+        "missing": [
+          "2512"
+        ],
+        "top10": [
+          "2514",
+          "2512",
+          "2514",
+          "2513",
+          "2512",
+          "2512",
+          "2512",
+          "2514",
+          "2519",
+          "2514"
+        ]
+      },
+      {
+        "code": "27050",
+        "positive_hits": [],
+        "false_positive_hits": [],
+        "missing": [
+          "7121"
+        ],
+        "top10": [
+          "7121",
+          "7314",
+          "7534",
+          "7215",
+          "8342",
+          "7122",
+          "7317",
+          "7122",
+          "7119",
+          "8113"
+        ]
+      },
+      {
+        "code": "25614",
+        "positive_hits": [],
+        "false_positive_hits": [],
+        "missing": [
+          "7512"
+        ],
+        "top10": [
+          "7512",
+          "9212",
+          "3434",
+          "8160",
+          "2145",
+          "7512",
+          "3434",
+          "7512",
+          "5131",
+          "3434"
+        ]
+      }
+    ]
+  },
+  "improved": {
+    "scope": "Expliciete ontwikkelparen; geen volledige of onafhankelijke validatieset",
+    "n": 10,
+    "tp": 10,
+    "fp": 0,
+    "fn": 1,
+    "unassessed_selected_pairs": 12,
+    "assessed_selected_pairs": 10,
+    "reference_lists_complete": false,
+    "precision_conditioned_on_judged_pairs": true,
+    "precision": 1.0,
+    "recall": 0.9090909090909091,
+    "f1": 0.9523809523809523,
+    "recall_at_10": 0.95,
+    "retrieval_recall_at_10": 0.95,
+    "candidate_pool_recall": 0.95,
+    "recall_at_10_definition": "Macro recall van positieve ISCO-codes binnen de eerste tien beroepskandidaten na rangschikking; geen deduplicatie vóór afkappen.",
+    "cases": [
+      {
+        "code": "25776",
+        "positive_hits": [
+          "1324"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "3343",
+          "1324",
+          "1324",
+          "2421",
+          "4323",
+          "4323",
+          "1324",
+          "1420",
+          "1324",
+          "1324"
+        ]
+      },
+      {
+        "code": "25956",
+        "positive_hits": [
+          "7115"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "7115",
+          "9412",
+          "8156",
+          "7126",
+          "7126",
+          "8211",
+          "7233",
+          "7212",
+          "8183",
+          "7536"
+        ]
+      },
+      {
+        "code": "25731",
+        "positive_hits": [
+          "3240"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "3240",
+          "5164",
+          "2250",
+          "3240",
+          "9212",
+          "5164",
+          "3255",
+          "5164",
+          "5419",
+          "5164"
+        ]
+      },
+      {
+        "code": "25871",
+        "positive_hits": [
+          "3112"
+        ],
+        "false_positive_hits": [],
+        "missing": [
+          "4322"
+        ],
+        "top10": [
+          "1323",
+          "3112",
+          "1323",
+          "1321",
+          "3123",
+          "9313",
+          "1324",
+          "3123",
+          "9312",
+          "1324"
+        ]
+      },
+      {
+        "code": "27145",
+        "positive_hits": [
+          "3221"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "2221",
+          "3221",
+          "3221",
+          "2635",
+          "3412",
+          "2262",
+          "2310",
+          "2635",
+          "2320",
+          "3240"
+        ]
+      },
+      {
+        "code": "25674",
+        "positive_hits": [
+          "8322"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "8322",
+          "4323",
+          "5112",
+          "5111",
+          "8331",
+          "4323",
+          "8332",
+          "8322",
+          "8322",
+          "8331"
+        ]
+      },
+      {
+        "code": "25208",
+        "positive_hits": [
+          "7322"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "7322",
+          "3122",
+          "7322",
+          "8131",
+          "7321",
+          "7322",
+          "3122",
+          "8189",
+          "3139",
+          "4321"
+        ]
+      },
+      {
+        "code": "25998",
+        "positive_hits": [
+          "2512"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "2514",
+          "2512",
+          "2512",
+          "2512",
+          "1330",
+          "2514",
+          "2513",
+          "2512",
+          "2514",
+          "2514"
+        ]
+      },
+      {
+        "code": "27050",
+        "positive_hits": [
+          "7121"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "7121",
+          "3123",
+          "7534",
+          "7111",
+          "8156",
+          "8113",
+          "7215",
+          "7119",
+          "9313",
+          "7122"
+        ]
+      },
+      {
+        "code": "25614",
+        "positive_hits": [
+          "7512"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "7512",
+          "3434",
+          "5223",
+          "3434",
+          "8160",
+          "5120",
+          "7512",
+          "7512",
+          "8160",
+          "3434"
+        ]
+      }
+    ]
+  },
+  "independent_validation": "Niet beschikbaar; de controles zijn gebruikt bij ontwikkeling. Geen algemene prestatieclaim.",
+  "independent_metrics": {
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "recall_at_10": null
+  },
+  "hybrid_before_reranking": {
+    "scope": "Expliciete ontwikkelparen; geen volledige of onafhankelijke validatieset",
+    "n": 10,
+    "tp": 6,
+    "fp": 0,
+    "fn": 5,
+    "unassessed_selected_pairs": 9,
+    "assessed_selected_pairs": 6,
+    "reference_lists_complete": false,
+    "precision_conditioned_on_judged_pairs": true,
+    "precision": 1.0,
+    "recall": 0.5454545454545454,
+    "f1": 0.7058823529411764,
+    "recall_at_10": 0.95,
+    "retrieval_recall_at_10": 0.95,
+    "candidate_pool_recall": 0.95,
+    "recall_at_10_definition": "Macro recall van positieve ISCO-codes binnen de eerste tien beroepskandidaten na rangschikking; geen deduplicatie vóór afkappen.",
+    "cases": [
+      {
+        "code": "25776",
+        "positive_hits": [
+          "1324"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "3343",
+          "1324",
+          "1324",
+          "1420",
+          "4323",
+          "1324",
+          "1324",
+          "2421",
+          "4323",
+          "1324"
+        ]
+      },
+      {
+        "code": "25956",
+        "positive_hits": [
+          "7115"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "7115",
+          "9412",
+          "7536",
+          "7115",
+          "8156",
+          "8211",
+          "3434",
+          "7126",
+          "7233",
+          "8156"
+        ]
+      },
+      {
+        "code": "25731",
+        "positive_hits": [
+          "3240"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "3240",
+          "5164",
+          "3240",
+          "2250",
+          "5164",
+          "5419",
+          "5164",
+          "5164",
+          "9212",
+          "5164"
+        ]
+      },
+      {
+        "code": "25871",
+        "positive_hits": [
+          "3112"
+        ],
+        "false_positive_hits": [],
+        "missing": [
+          "4322"
+        ],
+        "top10": [
+          "1323",
+          "3112",
+          "2142",
+          "2142",
+          "3112",
+          "1323",
+          "2142",
+          "3123",
+          "2142",
+          "1321"
+        ]
+      },
+      {
+        "code": "27145",
+        "positive_hits": [
+          "3221"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "3221",
+          "3221",
+          "2221",
+          "2635",
+          "2262",
+          "3412",
+          "2310",
+          "3256",
+          "2635",
+          "2269"
+        ]
+      },
+      {
+        "code": "25674",
+        "positive_hits": [],
+        "false_positive_hits": [],
+        "missing": [
+          "8322"
+        ],
+        "top10": [
+          "8322",
+          "4323",
+          "5111",
+          "5112",
+          "4323",
+          "8322",
+          "4221",
+          "8331",
+          "8331",
+          "8332"
+        ]
+      },
+      {
+        "code": "25208",
+        "positive_hits": [],
+        "false_positive_hits": [],
+        "missing": [
+          "7322"
+        ],
+        "top10": [
+          "3122",
+          "7322",
+          "7322",
+          "7321",
+          "7322",
+          "7322",
+          "8131",
+          "8143",
+          "7322",
+          "3122"
+        ]
+      },
+      {
+        "code": "25998",
+        "positive_hits": [
+          "2512"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "2514",
+          "2512",
+          "2512",
+          "2512",
+          "1330",
+          "2513",
+          "2512",
+          "2514",
+          "2514",
+          "1330"
+        ]
+      },
+      {
+        "code": "27050",
+        "positive_hits": [],
+        "false_positive_hits": [],
+        "missing": [
+          "7121"
+        ],
+        "top10": [
+          "7121",
+          "3123",
+          "7534",
+          "7215",
+          "7111",
+          "8156",
+          "7314",
+          "7317",
+          "8113",
+          "7122"
+        ]
+      },
+      {
+        "code": "25614",
+        "positive_hits": [],
+        "false_positive_hits": [],
+        "missing": [
+          "7512"
+        ],
+        "top10": [
+          "7512",
+          "3434",
+          "5223",
+          "8160",
+          "3434",
+          "3434",
+          "5120",
+          "7512",
+          "3119",
+          "8160"
+        ]
+      }
+    ]
+  },
+  "improved_esco_only": {
+    "scope": "Expliciete ontwikkelparen; geen volledige of onafhankelijke validatieset",
+    "n": 10,
+    "tp": 9,
+    "fp": 0,
+    "fn": 2,
+    "unassessed_selected_pairs": 12,
+    "assessed_selected_pairs": 9,
+    "reference_lists_complete": false,
+    "precision_conditioned_on_judged_pairs": true,
+    "precision": 1.0,
+    "recall": 0.8181818181818182,
+    "f1": 0.9,
+    "recall_at_10": 0.85,
+    "retrieval_recall_at_10": 0.85,
+    "candidate_pool_recall": 0.85,
+    "recall_at_10_definition": "Macro recall van positieve ISCO-codes binnen de eerste tien beroepskandidaten na rangschikking; geen deduplicatie vóór afkappen.",
+    "cases": [
+      {
+        "code": "25776",
+        "positive_hits": [
+          "1324"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "3343",
+          "1324",
+          "1324",
+          "2421",
+          "4323",
+          "4323",
+          "1324",
+          "1420",
+          "1324",
+          "1324"
+        ]
+      },
+      {
+        "code": "25956",
+        "positive_hits": [
+          "7115"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "7115",
+          "9412",
+          "8156",
+          "7126",
+          "7126",
+          "8211",
+          "7233",
+          "7212",
+          "8183",
+          "7536"
+        ]
+      },
+      {
+        "code": "25731",
+        "positive_hits": [
+          "3240"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "3240",
+          "5164",
+          "2250",
+          "3240",
+          "9212",
+          "5164",
+          "3255",
+          "5164",
+          "5419",
+          "5164"
+        ]
+      },
+      {
+        "code": "25871",
+        "positive_hits": [
+          "3112"
+        ],
+        "false_positive_hits": [],
+        "missing": [
+          "4322"
+        ],
+        "top10": [
+          "1323",
+          "3112",
+          "1323",
+          "1321",
+          "3123",
+          "9313",
+          "1324",
+          "3123",
+          "9312",
+          "1324"
+        ]
+      },
+      {
+        "code": "27145",
+        "positive_hits": [],
+        "false_positive_hits": [],
+        "missing": [
+          "3221"
+        ],
+        "top10": [
+          "2221",
+          "2635",
+          "3412",
+          "2262",
+          "2310",
+          "2635",
+          "2320",
+          "3240",
+          "2635",
+          "2635"
+        ]
+      },
+      {
+        "code": "25674",
+        "positive_hits": [
+          "8322"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "8322",
+          "4323",
+          "5112",
+          "5111",
+          "8331",
+          "4323",
+          "8332",
+          "8322",
+          "8322",
+          "8331"
+        ]
+      },
+      {
+        "code": "25208",
+        "positive_hits": [
+          "7322"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "7322",
+          "3122",
+          "7322",
+          "8131",
+          "7321",
+          "7322",
+          "3122",
+          "8189",
+          "3139",
+          "4321"
+        ]
+      },
+      {
+        "code": "25998",
+        "positive_hits": [
+          "2512"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "2514",
+          "2512",
+          "2512",
+          "2512",
+          "1330",
+          "2514",
+          "2513",
+          "2512",
+          "2514",
+          "2514"
+        ]
+      },
+      {
+        "code": "27050",
+        "positive_hits": [
+          "7121"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "7121",
+          "3123",
+          "7534",
+          "7111",
+          "8156",
+          "8113",
+          "7215",
+          "7119",
+          "9313",
+          "7122"
+        ]
+      },
+      {
+        "code": "25614",
+        "positive_hits": [
+          "7512"
+        ],
+        "false_positive_hits": [],
+        "missing": [],
+        "top10": [
+          "7512",
+          "3434",
+          "5223",
+          "3434",
+          "8160",
+          "5120",
+          "7512",
+          "7512",
+          "8160",
+          "3434"
+        ]
+      }
+    ]
+  },
+  "catalogue": {
+    "baseline_esco": 3039,
+    "improved_esco": 3039,
+    "additional_cnl": 7,
+    "note": "ISCO 3221 is alleen bereikbaar via de apart gemarkeerde CNL-route; deze recallwinst is mede catalogusuitbreiding."
+  }
+}

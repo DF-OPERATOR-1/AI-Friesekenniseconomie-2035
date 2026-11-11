@@ -1,0 +1,54 @@
+{
+  "source_file": "data/raw/cbs/codelijsten-isco-08.xls",
+  "source_sha256": "097c391ec39fe4f8d94ac1bfd5fc112129a90f0fa95e4cf3ef7b68a0e445f766",
+  "sheet": "ISCO-08 voorbeeldberoepen",
+  "column": "Voorbeeldberoepen_CBS",
+  "validated_on": "2026-11-06",
+  "exactly_matches_missing_content_codes": true,
+  "groups": [
+    {
+      "isco_code": "1113",
+      "name": "Traditionele dorpshoofden",
+      "excel_row": 9,
+      "cbs_note": "deze unit group beschouwt het CBS als niet relevant in de Nederlandse arbeidsmarkt"
+    },
+    {
+      "isco_code": "4414",
+      "name": "Openbare schrijvers",
+      "excel_row": 239,
+      "cbs_note": "deze unit group beschouwt het CBS als niet relevant in de Nederlandse arbeidsmarkt"
+    },
+    {
+      "isco_code": "6310",
+      "name": "Landbouwers, voor zelfvoorziening",
+      "excel_row": 297,
+      "cbs_note": "deze unit group beschouwt het CBS als niet relevant in de Nederlandse arbeidsmarkt"
+    },
+    {
+      "isco_code": "6320",
+      "name": "Veetelers, voor zelfvoorziening",
+      "excel_row": 298,
+      "cbs_note": "deze unit group beschouwt het CBS als niet relevant in de Nederlandse arbeidsmarkt"
+    },
+    {
+      "isco_code": "6330",
+      "name": "Agrariërs gemengd bedrijf, voor zelfvoorziening",
+      "excel_row": 299,
+      "cbs_note": "deze unit group beschouwt het CBS als niet relevant in de Nederlandse arbeidsmarkt"
+    },
+    {
+      "isco_code": "6340",
+      "name": "Vissers, jagers, vallenzetters en verzamelaars, voor zelfvoorziening",
+      "excel_row": 300,
+      "cbs_note": "deze unit group beschouwt het CBS als niet relevant in de Nederlandse arbeidsmarkt"
+    },
+    {
+      "isco_code": "9624",
+      "name": "Waterdragers en brandhoutverzamelaars",
+      "excel_row": 438,
+      "cbs_note": "deze unit group beschouwt het CBS als niet relevant in de Nederlandse arbeidsmarkt"
+    }
+  ],
+  "repository_copy_note": "Originele CBS-codelijst is nu de centrale bron; Nederlandse rekencodelijst staat in data/raw/cbs/codelijsten-isco-08-nl.xls; overige oude kopie staat in data/raw/cbs/archive/.",
+  "source_url": "https://www.cbs.nl/nl-nl/onze-diensten/methoden/classificaties/onderwijs-en-beroepen/beroepenclassificatie--isco-en-sbc--"
+}

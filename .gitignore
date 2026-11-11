@@ -51,3 +51,6 @@ data/schemas/profile.example.json
 docs/research_plan/
 docs/data_dictionary/
 docs/methodology/
+
+# Lokale ML-modelgewichten en herbruikbare embeddingcaches.
+data/processed/models/

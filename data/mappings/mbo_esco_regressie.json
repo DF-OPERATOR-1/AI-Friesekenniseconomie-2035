@@ -1,0 +1,111 @@
+{
+  "note": "Ontwikkelcontroles op ISCO-niveau, geen complete lijst van geldige beroepen. Positieve en negatieve paren zijn expliciet; overige voorspellingen zijn onbeoordeeld. Gebruikt voor ontwikkeling; geen onafhankelijke testset.",
+  "cases": [
+    {
+      "code": "25776",
+      "name": "Logistiek supervisor",
+      "positive_isco": [
+        "1324"
+      ],
+      "negative_isco": [
+        "7215",
+        "3341",
+        "2411"
+      ]
+    },
+    {
+      "code": "25956",
+      "name": "Allround keukenmonteur",
+      "positive_isco": [
+        "7115"
+      ],
+      "negative_isco": [
+        "9412",
+        "5120"
+      ]
+    },
+    {
+      "code": "25731",
+      "name": "Dierenartsassistent paraveterinair",
+      "positive_isco": [
+        "3240"
+      ],
+      "negative_isco": [
+        "4226",
+        "2250"
+      ]
+    },
+    {
+      "code": "25871",
+      "name": "Middenkaderfunctionaris GWW",
+      "positive_isco": [
+        "3112",
+        "4322"
+      ],
+      "negative_isco": [
+        "9312"
+      ]
+    },
+    {
+      "code": "27145",
+      "name": "Mbo-Verpleegkundige",
+      "positive_isco": [
+        "3221"
+      ],
+      "negative_isco": [
+        "5321",
+        "3240"
+      ]
+    },
+    {
+      "code": "25674",
+      "name": "Taxichauffeur",
+      "positive_isco": [
+        "8322"
+      ],
+      "negative_isco": [
+        "4323"
+      ]
+    },
+    {
+      "code": "25208",
+      "name": "Drukker",
+      "positive_isco": [
+        "7322"
+      ],
+      "negative_isco": [
+        "7536"
+      ]
+    },
+    {
+      "code": "25998",
+      "name": "Software developer",
+      "positive_isco": [
+        "2512"
+      ],
+      "negative_isco": [
+        "4226"
+      ]
+    },
+    {
+      "code": "27050",
+      "name": "Dakdekker",
+      "positive_isco": [
+        "7121"
+      ],
+      "negative_isco": [
+        "9412"
+      ]
+    },
+    {
+      "code": "25614",
+      "name": "Bakker",
+      "positive_isco": [
+        "7512"
+      ],
+      "negative_isco": [
+        "9412"
+      ]
+    }
+  ]
+}
