@@ -2,3 +2,6 @@
 # Geen oorspronkelijke bronbestanden, modeldownloads, torch of sentence-transformers nodig.
 numpy==2.5.1
 openpyxl==3.1.5
+
+# Excel- en Stata-downloads worden tijdens de atlasbuild aangemaakt.
+pandas==3.0.5
