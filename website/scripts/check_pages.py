@@ -28,6 +28,8 @@ assert all(r['code'] in mbo_codes and r['isco'] in isco_codes for r in matches['
 for row in json.loads((BUILD / 'data/atlas/catalogue.json').read_text()):
     if row['download']:
         assert (BUILD / row['download']).is_file(), 'Download ontbreekt'
+        for download in row.get('downloads', {}).values():
+            assert (BUILD / download).is_file(), 'Alternatief downloadformaat ontbreekt'
 print(f'Pages-controle geslaagd: routes, profieldata en publicatieregister; {len(removed)} niet-toegestane datakopieën verwijderd.')
 
 # Opleidings-/beroepskoppelingen uitsluitend voor websiteweergave.

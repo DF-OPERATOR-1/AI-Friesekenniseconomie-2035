@@ -454,44 +454,83 @@ export function Methodology() {
         <details className="methodology-disclosure" id="methodologie-onderwijs">
           <summary>Hoe zijn de onderwijsgegevens geselecteerd en verwerkt?</summary>
           <div className="methodology-disclosure-content">
+            <h3>Welke opleidingen zijn meegenomen?</h3>
             <p>
-              Voor hbo en wo selecteren we instellingen die in de bron onder de
-              provincie Fryslân vallen. Voor mbo selecteren we bij Aeres, SVO en ROC
-              Nova College alleen het door de gebruiker bevestigde opleidingsaanbod op
-              Friese locaties. De handmatige inventarisatie is vastgelegd op 9 november
-              2026 en via SBB-kwalificaties gekoppeld aan opleidingscodes per
-              schooljaar. Firda blijft volledig behouden, inclusief de locaties
-              Emmeloord en Urk buiten Fryslân.
+              We brengen het opleidingsaanbod in Fryslân in beeld. Voor hbo en wo
+              selecteren we de DUO-bronregels waarin de provincie als Friesland is
+              geregistreerd.
             </p>
             <p>
-              Dezelfde selectie van instelling, opleidingscode en jaar geldt voor
-              studenten en afgestudeerden. We verdelen de behouden DUO-aantallen niet
-              over afzonderlijke onderwijslocaties, omdat de bron bij mbo-opleidingen
-              geen aantallen per opleiding en daadwerkelijke onderwijslocatie bevat. Een
-              behouden opleiding kan bij Aeres, SVO of Nova College ook buiten Fryslân
-              worden aangeboden. Houten, Ede en Haarlem in de kolom ‘Plaatsnaam
-              instelling’ zijn administratieve vestigingsplaatsen en vormen geen bewijs
-              dat de geselecteerde opleiding daar wordt gevolgd. Deze plaatsen zijn
-              daarom al handmatig uit de selectie gefilterd. De mbo-opleidingen die
-              onder ‘Opleidingen in Fryslân’ worden getoond, worden dus in Fryslân
-              aangeboden, maar kunnen ook buiten Fryslân worden gevolgd. Voor deze
-              handmatige inventarisatie is geen specifiek schooljaar bevestigd.
+              Voor mbo zijn Firda, Aeres, SVO en ROC Nova College geselecteerd. Bij
+              Aeres, SVO en ROC Nova College is alleen het geïnventariseerde Friese
+              opleidingsaanbod meegenomen. Omdat de mbo-gegevens van DUO geen informatie
+              bevatten over de locatie waar een opleiding wordt gegeven, is aanvullend
+              handmatig onderzoek gedaan via KiesMBO. Daarbij is gekeken welke
+              opleidingen op Friese schoollocaties worden aangeboden. Zo is geprobeerd
+              een zo volledig mogelijk beeld te geven van het Friese mbo-aanbod.
+            </p>
+            <p>De handmatige inventarisatie omvat de volgende locaties:</p>
+            <ul>
+              <li>Aeres MBO Buitenpost</li>
+              <li>Aeres MBO Heerenveen</li>
+              <li>Aeres MBO Leeuwarden</li>
+              <li>Aeres MBO Sneek</li>
+              <li>Nova Scheepvaart Harlingen</li>
+              <li>SVO Leeuwarden</li>
+            </ul>
+            <p>
+              Firda is volledig meegenomen. Dit betekent dat ook de locaties Emmeloord
+              en Urk zijn opgenomen, hoewel deze buiten Fryslân liggen. Omdat DUO geen
+              gegevens per onderwijslocatie beschikbaar stelt, konden deze locaties niet
+              afzonderlijk uit de cijfers worden verwijderd.
+            </p>
+            <h3>Wat betekenen de aantallen?</h3>
+            <p>
+              De aantallen studenten en afgestudeerden zijn gebaseerd op de beschikbare
+              jaren in de DUO-bronbestanden. De beschikbare jaren kunnen per bestand
+              verschillen. Voor studenten en afgestudeerden zijn dezelfde
+              selectiecriteria voor onderwijsinstellingen en opleidingen gebruikt. Voor
+              mbo wordt de selectie via de SBB-kwalificaties aan de opleidingscodes per
+              schooljaar gekoppeld. De inventarisatie vormt geen bewijs dat een
+              opleiding in elk beschikbaar bronjaar op een Friese locatie werd
+              aangeboden.
             </p>
             <p>
-              De toepassing op de cijfers over 2021–2025 is daarom een selectie op basis
-              van het opleidingsaanbod en vormt geen bewijs van het historische aanbod
-              per onderwijslocatie. De uitkomsten voor mbo-opleidingen zijn daardoor
-              geen exacte telling van uitsluitend studenten of afgestudeerden op Friese
-              locaties. Afgeschermde aantallen, zoals ‘minder dan 5’, blijven herkenbaar
-              en worden niet als nul behandeld. In grafieken en bij totalen wordt een
-              bandbreedte gebruikt om een schatting te maken van het totale aantal
-              studenten en afgestudeerden.
+              De DUO-gegevens voor mbo laten niet zien hoeveel studenten een opleiding
+              op een specifieke schoollocatie volgen. Daardoor kunnen we niet precies
+              vaststellen hoeveel studenten of afgestudeerden hun opleiding in Fryslân
+              volgen.
             </p>
             <p>
-              De onderwijsbestanden geven geen gemeten instroom per beroep. De
-              opleidingskoppelingen geven mogelijke beroepsrichtingen aan, maar
-              voorspellen niet waar afgestudeerden gaan werken. Een afgestudeerde is
-              bovendien niet automatisch een nieuwe werknemer in Fryslân.
+              De cijfers geven dus een beeld van de studenten en afgestudeerden bij
+              onderwijsinstellingen en opleidingen die aan het Friese opleidingsaanbod
+              zijn gekoppeld. Dit betekent dat de aantallen ook studenten en
+              afgestudeerden van locaties buiten Fryslân kunnen bevatten.
+            </p>
+            <h3>Hoe zijn de cijfers geschat?</h3>
+            <p>
+              DUO schermt bij mbo, hbo en wo sommige aantallen studenten en
+              afgestudeerden af wanneer het om kleine groepen gaat. In de bestanden
+              staat dan ‘&lt;5’ (minder dan vijf). Daardoor zijn niet alle aantallen
+              exact bekend.
+            </p>
+            <p>
+              Bij mbo, hbo en wo betekent ‘&lt;5’ dat het aantal tussen 0 en 4 ligt. We
+              berekenen daarom een minimum en een maximum. Voor het minimum tellen we
+              alleen de bekende aantallen op. Voor het maximum tellen we daar 4 bij op
+              voor elke keer dat ‘&lt;5’ voorkomt. Grafieken en totalen tonen deze
+              bandbreedte. Als alle aantallen bekend zijn, tonen we het exacte totaal.
+            </p>
+            <h3>Wat zeggen de cijfers over werk in Fryslân?</h3>
+            <p>
+              De cijfers laten zien hoeveel studenten een opleiding volgen en hoeveel
+              studenten afstuderen. Ze geven niet aan hoeveel afgestudeerden
+              daadwerkelijk in Fryslân gaan werken.
+            </p>
+            <p>
+              De koppeling tussen opleidingen en beroepen laat zien voor welke beroepen
+              een opleiding relevant kan zijn. Dit betekent niet dat afgestudeerden
+              automatisch in dat beroep of in Fryslân aan het werk gaan.
             </p>
 
             <References topic="education" />

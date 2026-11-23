@@ -10,8 +10,15 @@ const source = await fs.readFile(
 const output = ts.transpileModule(source, {
   compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022 },
 }).outputText;
-const { selectMapRows, pointAppearance, mapExposureRows, interpretMapPoint } =
-  await import(`data:text/javascript;base64,${Buffer.from(output).toString('base64')}`);
+const {
+  selectMapRows,
+  pointAppearance,
+  mapExposureRows,
+  interpretMapPoint,
+  occupationSuggestions,
+} = await import(
+  `data:text/javascript;base64,${Buffer.from(output).toString('base64')}`
+);
 const rows = JSON.parse(
   await fs.readFile(
     new URL('../public/data/research/occupations.json', import.meta.url),
@@ -203,4 +210,76 @@ test('aantallen onderscheiden getoonde punten van ontbrekende zoekresultaten voo
       mapped.filter((r) => r.code.startsWith('2')).length,
     );
   }
+});
+
+test('specifieke beroepsnamen vinden hun beroepsgroep met behoud van kaartcontext', () => {
+  const sample = [
+    {
+      code: '1234',
+      occupation: 'Voorbeeldgroep',
+      occupation_names: ['Coördinator ICT-service'],
+      raw: 1,
+      complementarity: 0.5,
+    },
+  ];
+  const result = selectMapRows(sample, 'ict coordinator', '');
+  assert.deepEqual(
+    result.highlighted.map((row) => row.code),
+    ['1234'],
+  );
+  assert.deepEqual(result.visible, sample);
+  assert.equal(selectMapRows(sample, 'ict coordinator', '2').matches.length, 0);
+  assert.equal(selectMapRows(sample, 'onbekend', '').matches.length, 0);
+});
+
+test('alle specifieke namen uit de beroepenlijst zijn doorzoekbaar in de AI-kaart', async () => {
+  const profiles = JSON.parse(
+    await fs.readFile(new URL('../public/data/atlas/profiles.json', import.meta.url)),
+  );
+  for (const row of rows) {
+    const profile = profiles.find((profile) => profile.isco_code === row.code);
+    assert.deepEqual(row.occupation_names, profile.occupation_names);
+  }
+  const specific = rows.find((row) =>
+    row.occupation_names?.some(
+      (name) => !row.occupation.toLowerCase().includes(name.toLowerCase()),
+    ),
+  );
+  assert.ok(specific);
+  assert.ok(
+    selectMapRows(rows, specific.occupation_names[0], '').matchedCodes.has(
+      specific.code,
+    ),
+  );
+});
+
+test('beroepssuggesties tonen de specifieke naam en behouden de bijbehorende groep', () => {
+  const sample = [
+    {
+      code: '1234',
+      occupation: 'ICT-beroepen',
+      occupation_names: ['Coördinator ICT', 'Coördinator ICT', 'ICT-beheerder'],
+      raw: 1,
+      complementarity: 0.5,
+    },
+  ];
+  const suggestions = occupationSuggestions(
+    selectMapRows(sample, 'coordinator', '').matches,
+    'coordinator',
+  );
+  assert.equal(suggestions.length, 1);
+  assert.equal(suggestions[0].name, 'Coördinator ICT');
+  assert.equal(suggestions[0].row.code, '1234');
+  assert.equal(occupationSuggestions(sample, '').length, 0);
+  assert.equal(occupationSuggestions(sample, 'ict', 1).length, 1);
+  const byCode = occupationSuggestions(
+    selectMapRows(sample, '1234', '').matches,
+    '1234',
+  );
+  assert.equal(byCode[0].name, 'ICT-beroepen');
+  assert.equal(
+    occupationSuggestions(selectMapRows(sample, 'onbekend', '').matches, 'onbekend')
+      .length,
+    0,
+  );
 });

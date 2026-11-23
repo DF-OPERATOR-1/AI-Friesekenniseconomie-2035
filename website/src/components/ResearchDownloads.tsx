@@ -18,6 +18,7 @@ type Dataset = {
   license: string | null;
   limitations: string;
   download: string | null;
+  downloads?: Record<string, string>;
   rights_status: string;
   show_rights_status?: boolean;
 };
@@ -149,13 +150,25 @@ export function ResearchDownloads() {
                             {row.geography && <small>{row.geography}</small>}
                           </div>
                           {row.download ? (
-                            <a
-                              className="source-download"
-                              href={`${import.meta.env.BASE_URL}${row.download}`}
-                              download
-                            >
-                              CSV
-                            </a>
+                            <div className="source-download-formats">
+                              {Object.entries(
+                                row.downloads ?? { csv: row.download },
+                              ).map(([format, path]) => (
+                                <a
+                                  key={format}
+                                  className="source-download"
+                                  href={`${import.meta.env.BASE_URL}${path}`}
+                                  download
+                                  aria-label={`${row.name} downloaden als ${format === 'xlsx' ? 'Excel' : format === 'dta' ? 'Stata' : 'CSV'}`}
+                                >
+                                  {format === 'xlsx'
+                                    ? 'Excel'
+                                    : format === 'dta'
+                                      ? 'Stata'
+                                      : 'CSV'}
+                                </a>
+                              ))}
+                            </div>
                           ) : (
                             <span className="source-pending">Geen download</span>
                           )}

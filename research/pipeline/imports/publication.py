@@ -17,6 +17,11 @@ def allowed_data_files(data_dir, manifest):
             raise ValueError('Ongeldige publicatiebestandsnaam')
         if approved(review):
             allowed.add(f'research/{filename}')
+            if review.get('format_evidence') and filename.endswith('.csv'):
+                for extension in review.get('formats', []):
+                    if extension not in ('xlsx', 'dta'):
+                        raise ValueError('Ongeldig downloadformaat')
+                    allowed.add(f'research/{Path(filename).with_suffix("." + extension).name}')
     profile_path = Path(data_dir) / 'atlas/profiles.json'
     if approved(derived.get('atlas/occupations/{isco}.json', {})) and profile_path.is_file():
         for profile in json.loads(profile_path.read_text()):

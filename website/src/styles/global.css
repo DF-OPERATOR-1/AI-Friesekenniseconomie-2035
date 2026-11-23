@@ -6719,3 +6719,94 @@ body:has(.education-detail) .site-header {
   line-height: 1.5;
   box-shadow: none;
 }
+
+.map-search-field {
+  position: relative;
+  min-width: 0;
+}
+.map-search-suggestions {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: min(420px, calc(100vw - 48px));
+  max-width: calc(100vw - 48px);
+  z-index: 10;
+  background: var(--surface);
+  box-shadow: 0 6px 20px rgb(0 0 0 / 12%);
+  font-family: inherit;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  margin-block: 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.map-search-suggestions > p {
+  margin: 0 0 12px;
+}
+.map-search-suggestions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.map-search-suggestions :is(button, a) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.map-search-suggestions :is(button, a):hover,
+.map-search-suggestions button[aria-pressed='true'] {
+  background: var(--surface-alt);
+}
+.map-search-suggestions :is(button, a):focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: -2px;
+}
+.map-search-suggestions strong {
+  font-size: inherit;
+  font-weight: 500;
+}
+.map-search-suggestions span {
+  color: var(--muted);
+  font-size: inherit;
+}
+
+.ai-influence-page :is(button, select, option),
+.map-search-suggestions :is(button, a, strong, span) {
+  font-family: inherit;
+  font-style: normal;
+  letter-spacing: normal;
+}
+.ai-influence-page .research-controls :is(select, option) {
+  font-weight: 400;
+  line-height: 1.6;
+}
+.map-search-suggestions :is(button, a) {
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.exposure-occupation-label[data-search-match='true'] {
+  border-left: 3px solid var(--yellow);
+  padding-left: 8px;
+  background: color-mix(in srgb, var(--yellow) 15%, var(--surface));
+}
+
+.source-download-formats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}

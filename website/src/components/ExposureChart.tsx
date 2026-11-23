@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useId, useMemo, useRef, useState } from 'react';
 import {
   BarChart,
+  Cell,
   Bar,
   XAxis,
   YAxis,
@@ -10,7 +11,11 @@ import {
   ReferenceLine,
 } from 'recharts';
 import { locale } from '../content/nl';
-import { mapExposureVariants } from './perceptualSelection';
+import {
+  mapExposureVariants,
+  matchesOccupation,
+  occupationSuggestions,
+} from './perceptualSelection';
 const metrics = {
   exposure: {
     label: mapExposureVariants.raw.label,
@@ -35,7 +40,10 @@ const sortLabels: Record<SortOrder, string> = {
   ascending: 'Laag naar hoog',
   code: 'Beroepscode (oplopend)',
 };
-type Row = { code: string; occupation: string } & Record<Metric, number | null>;
+type Row = { code: string; occupation: string; occupation_names?: string[] } & Record<
+  Metric,
+  number | null
+>;
 const format = (value: number) =>
   new Intl.NumberFormat(locale, { maximumFractionDigits: 3 }).format(value);
 export function ExposureChart() {
@@ -43,12 +51,19 @@ export function ExposureChart() {
   const [error, setError] = useState(false);
   const [metric, setMetric] = useState<Metric>('exposure');
   const [query, setQuery] = useState('');
+  const [selectedCode, setSelectedCode] = useState('');
+  const [suggestionsOpen, setSuggestionsOpen] = useState(false);
+  const suggestionsId = useId();
+  const searchInput = useRef<HTMLInputElement>(null);
+  const chartScroll = useRef<HTMLDivElement>(null);
   const [sortOrder, setSortOrder] = useState<SortOrder>('descending');
   const [group, setGroup] = useState('');
   const [displayCount, setDisplayCount] = useState('15');
   const resetFilters = () => {
     setMetric('exposure');
     setQuery('');
+    setSelectedCode('');
+    setSuggestionsOpen(false);
     setGroup('');
     setSortOrder('descending');
     setDisplayCount('15');
@@ -72,15 +87,22 @@ export function ExposureChart() {
     return () => controller.abort();
   }, []);
   const filtered = useMemo(
-    () =>
-      (rows ?? []).filter(
-        (row) =>
-          (!group || row.code.startsWith(group)) &&
-          `${row.code} ${row.occupation}`
-            .toLocaleLowerCase(locale)
-            .includes(query.trim().toLocaleLowerCase(locale)),
-      ),
-    [rows, query, group],
+    () => (rows ?? []).filter((row) => !group || row.code.startsWith(group)),
+    [rows, group],
+  );
+  const searching = query.trim().length > 0;
+  const matchedCodes = new Set(
+    filtered
+      .filter((row) =>
+        selectedCode ? row.code === selectedCode : matchesOccupation(row, query),
+      )
+      .map((row) => row.code),
+  );
+  const suggestions = occupationSuggestions(
+    (rows ?? []).filter(
+      (row) => (!group || row.code.startsWith(group)) && matchesOccupation(row, query),
+    ),
+    query,
   );
   const sorted = [...filtered].sort((a, b) => {
     const av = a[metric],
@@ -95,7 +117,17 @@ export function ExposureChart() {
   });
   const available = sorted.filter((row) => row[metric] !== null);
   const chartRows =
-    displayCount === 'all' ? available : available.slice(0, Number(displayCount));
+    searching || displayCount === 'all'
+      ? available
+      : available.slice(0, Number(displayCount));
+  useEffect(() => {
+    const container = chartScroll.current;
+    const match = container?.querySelector<HTMLElement>('[data-search-match="true"]');
+    if (container && match && query.trim()) {
+      container.scrollTop +=
+        match.getBoundingClientRect().top - container.getBoundingClientRect().top - 90;
+    }
+  }, [query, selectedCode, metric, group, rows]);
   const labelWidth = 300;
   const rowHeight = 76;
   const chartRight = 48;
@@ -127,15 +159,88 @@ export function ExposureChart() {
             ))}
           </select>
         </label>
-        <label>
-          Zoek beroep of code
-          <input
-            type="search"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="Bijvoorbeeld verpleegkundige"
-          />
-        </label>
+        <div
+          className="map-search-field"
+          onBlur={(event) => {
+            if (!event.currentTarget.contains(event.relatedTarget))
+              setSuggestionsOpen(false);
+          }}
+          onKeyDown={(event) => {
+            if (event.key === 'Escape') {
+              searchInput.current?.focus();
+              setSuggestionsOpen(false);
+            }
+          }}
+        >
+          <label>
+            Zoek beroep of code
+            <input
+              ref={searchInput}
+              type="search"
+              value={query}
+              aria-expanded={Boolean(query.trim()) && suggestionsOpen}
+              aria-controls={
+                query.trim() && suggestionsOpen ? suggestionsId : undefined
+              }
+              onFocus={() => setSuggestionsOpen(true)}
+              onKeyDown={(event) => {
+                if (event.key === 'ArrowDown' && query.trim()) {
+                  setSuggestionsOpen(true);
+                  const first = document
+                    .getElementById(suggestionsId)
+                    ?.querySelector<HTMLElement>('button');
+                  if (first) {
+                    event.preventDefault();
+                    first.focus();
+                  }
+                }
+              }}
+              onChange={(event) => {
+                setQuery(event.target.value);
+                setSelectedCode('');
+                setSuggestionsOpen(true);
+              }}
+              placeholder="Bijvoorbeeld verpleegkundige"
+            />
+          </label>
+          {query.trim() && suggestionsOpen && (
+            <div
+              id={suggestionsId}
+              className="map-search-suggestions"
+              aria-label="Beroepssuggesties"
+            >
+              {!suggestions.length && (
+                <p role="status">
+                  Geen beroepen gevonden. Probeer een andere naam of code.
+                </p>
+              )}
+              <ul>
+                {suggestions.map(({ row, name }) => (
+                  <li key={`${row.code}-${name}`}>
+                    <button
+                      type="button"
+                      aria-pressed={selectedCode === row.code}
+                      onClick={() => {
+                        setQuery(name);
+                        setSelectedCode(row.code);
+                        searchInput.current?.focus();
+                        setSuggestionsOpen(false);
+                      }}
+                    >
+                      <strong>{name}</strong>
+                      <span>
+                        Beroepsgroep: {row.occupation} ({row.code})
+                        {row[metric] === null
+                          ? '. Geen score beschikbaar voor deze AI-variant.'
+                          : ''}
+                      </span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
         <label>
           ISCO-hoofdgroep
           <select value={group} onChange={(event) => setGroup(event.target.value)}>
@@ -199,13 +304,28 @@ export function ExposureChart() {
         <>
           <p className="research-summary" role="status">
             {chartRows.length} van {available.length} beroepen zichtbaar.{' '}
-            {filtered.length - available.length} zoekresultaten zonder volledige
-            gegevens.
+            {searching && (
+              <>
+                {available.filter((row) => matchedCodes.has(row.code)).length}{' '}
+                zoekresultaten geel gemarkeerd. Tijdens het zoeken worden alle beroepen
+                binnen de hoofdgroep getoond.{' '}
+              </>
+            )}
+            {searching && !filtered.some((row) => matchedCodes.has(row.code)) && (
+              <>Geen overeenkomende beroepen. </>
+            )}
+            {
+              filtered.filter(
+                (row) =>
+                  row[metric] === null && (!searching || matchedCodes.has(row.code)),
+              ).length
+            }{' '}
+            {searching ? 'zoekresultaten' : 'beroepen'} zonder beschikbare score.
           </p>
           {chartRows.length ? (
             <figure aria-label={`${info.label} per ISCO-08-beroepsgroep`}>
               <div
-                key={`${metric}-${group}-${query}-${sortOrder}-${displayCount}`}
+                ref={chartScroll}
                 className="occupation-chart-scroll exposure-named-chart"
                 role="region"
                 aria-label="Scrollbare grafiek met beroepsnamen, codes en scores"
@@ -293,7 +413,12 @@ export function ExposureChart() {
                                   width={labelWidth - 38}
                                   height={rowHeight}
                                 >
-                                  <div className="exposure-occupation-label">
+                                  <div
+                                    className="exposure-occupation-label"
+                                    data-search-match={
+                                      searching && matchedCodes.has(payload.value)
+                                    }
+                                  >
                                     <a href={`#beroep/${payload.value}`}>
                                       <strong>{payload.value}</strong>
                                       <span>{occupation?.occupation}</span>
@@ -327,7 +452,18 @@ export function ExposureChart() {
                           radius={[0, 4, 4, 0]}
                           barSize={23}
                           isAnimationActive={false}
-                        />
+                        >
+                          {chartRows.map((row) => (
+                            <Cell
+                              key={row.code}
+                              fill={
+                                searching && matchedCodes.has(row.code)
+                                  ? 'var(--yellow)'
+                                  : 'var(--chart-bar)'
+                              }
+                            />
+                          ))}
+                        </Bar>
                       </BarChart>
                     </ResponsiveContainer>
                   </div>

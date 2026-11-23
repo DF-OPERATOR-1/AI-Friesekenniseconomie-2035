@@ -4,47 +4,92 @@
     "ISCO08_AIOE.csv": {
       "approved": true,
       "license": null,
-      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download.",
+      "formats": [
+        "xlsx",
+        "dta"
+      ],
+      "format_evidence": "Expliciete gebruikersinstructie: Excel- en Stata-downloads toevoegen naast de bestaande CSV-downloads."
     },
     "ISCO08_C_AIOE.csv": {
       "approved": true,
       "license": null,
-      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download.",
+      "formats": [
+        "xlsx",
+        "dta"
+      ],
+      "format_evidence": "Expliciete gebruikersinstructie: Excel- en Stata-downloads toevoegen naast de bestaande CSV-downloads."
     },
     "ISCO08_Complementary.csv": {
       "approved": true,
       "license": null,
-      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download.",
+      "formats": [
+        "xlsx",
+        "dta"
+      ],
+      "format_evidence": "Expliciete gebruikersinstructie: Excel- en Stata-downloads toevoegen naast de bestaande CSV-downloads."
     },
     "afgestudeerden_hbo_friesland.csv": {
       "approved": true,
       "license": null,
-      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download.",
+      "formats": [
+        "xlsx",
+        "dta"
+      ],
+      "format_evidence": "Expliciete gebruikersinstructie: Excel- en Stata-downloads toevoegen naast de bestaande CSV-downloads."
     },
     "afgestudeerden_mbo_friesland.csv": {
       "approved": true,
       "license": null,
-      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download.",
+      "formats": [
+        "xlsx",
+        "dta"
+      ],
+      "format_evidence": "Expliciete gebruikersinstructie: Excel- en Stata-downloads toevoegen naast de bestaande CSV-downloads."
     },
     "afgestudeerden_wo_friesland.csv": {
       "approved": true,
       "license": null,
-      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download.",
+      "formats": [
+        "xlsx",
+        "dta"
+      ],
+      "format_evidence": "Expliciete gebruikersinstructie: Excel- en Stata-downloads toevoegen naast de bestaande CSV-downloads."
     },
     "studenten_hbo_friesland.csv": {
       "approved": true,
       "license": null,
-      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download.",
+      "formats": [
+        "xlsx",
+        "dta"
+      ],
+      "format_evidence": "Expliciete gebruikersinstructie: Excel- en Stata-downloads toevoegen naast de bestaande CSV-downloads."
     },
     "studenten_mbo_friesland.csv": {
       "approved": true,
       "license": null,
-      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download.",
+      "formats": [
+        "xlsx",
+        "dta"
+      ],
+      "format_evidence": "Expliciete gebruikersinstructie: Excel- en Stata-downloads toevoegen naast de bestaande CSV-downloads."
     },
     "studenten_wo_friesland.csv": {
       "approved": true,
       "license": null,
-      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download."
+      "evidence": "Expliciete gebruikersinstructie: downloadlinks voor bestaande CSV’s in de repository toestaan; geen UWV-download.",
+      "formats": [
+        "xlsx",
+        "dta"
+      ],
+      "format_evidence": "Expliciete gebruikersinstructie: Excel- en Stata-downloads toevoegen naast de bestaande CSV-downloads."
     }
   },
   "derived_data": {

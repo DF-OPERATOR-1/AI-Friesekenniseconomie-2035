@@ -91,6 +91,9 @@ def build(refresh_sources=False):
     (TARGET / 'occupations').mkdir(exist_ok=True)
     for isco, entries in members.items():
         (TARGET / 'occupations' / f'{isco}.json').write_text(json.dumps(entries, ensure_ascii=False) + '\n')
+    for row in data['rows']:
+        row['occupation_names'] = content.get(row['code'], {}).get('occupation_names', [])
+    source.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
     score_rows = {r['code']: r for r in data['rows']}
     for isco, details in content.items():
         if isco not in score_rows:
@@ -214,6 +217,11 @@ def build(refresh_sources=False):
         rights_status='Bronvermelding en herkenbare bewerking volgens ESCO-gebruiksvoorwaarden',
         limitations=esco['metadata']['adaptation'] + ' Geen afzonderlijke ESCO-takenlijst; geen studenteninstroom.',
         citation=SERVICE_ATTRIBUTION + ' ESCO v1.2.1, Nederlands. Selectie en groepering: DataFryslân.'))
+    from .download_formats import export_formats
+    for entry in catalogue:
+        review = manifest.get(entry['file'], {})
+        if entry.get('download') and review.get('format_evidence'):
+            entry['downloads'] = {'csv': entry['download'], **export_formats(ROOT / 'website/public' / entry['download'])}
     (TARGET/'catalogue.json').write_text(json.dumps(catalogue, ensure_ascii=False, indent=2)+'\n')
     from .publication import prune_public_data
     prune_public_data(ROOT / 'website/public/data', json.loads((ROOT / 'data/published/publication_manifest.json').read_text()))

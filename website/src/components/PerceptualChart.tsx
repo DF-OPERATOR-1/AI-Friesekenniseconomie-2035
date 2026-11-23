@@ -5,6 +5,7 @@ import { locale } from '../content/nl';
 import {
   pointAppearance,
   selectMapRows,
+  occupationSuggestions,
   mapExposureRows,
   mapExposureVariants,
   interpretMapPoint,
@@ -13,6 +14,7 @@ import type { MapExposureVariant } from './perceptualSelection';
 type Row = {
   code: string;
   occupation: string;
+  occupation_names?: string[];
   raw: number | null;
   language: number | null;
   image: number | null;
@@ -38,6 +40,9 @@ export function PerceptualChart({
   const renderExplanation = (content: ReactNode) =>
     explanationTarget ? createPortal(content, explanationTarget) : content;
   const variantId = useId();
+  const suggestionsId = useId();
+  const searchInput = useRef<HTMLInputElement>(null);
+  const [suggestionsOpen, setSuggestionsOpen] = useState(false);
   const [sourceRows, setRows] = useState<Row[] | null>(null);
   const [variant, setVariant] = useState<MapExposureVariant>('raw');
   const [error, setError] = useState(false);
@@ -122,6 +127,7 @@ export function PerceptualChart({
     searching,
     tableRows,
   } = selectMapRows(rows, query, group, selected);
+  const suggestions = occupationSuggestions(filtered, query);
   const missingCount = filtered.length - highlighted.length;
   const active = visible.find(
     (row) => row.code === (compact ? selected : (hovered ?? selected)),
@@ -256,18 +262,95 @@ export function PerceptualChart({
         </div>
         {!compact && (
           <>
-            <label>
-              Zoek beroep of code
-              <input
-                type="search"
-                placeholder="Bijvoorbeeld verpleegkundige"
-                value={query}
-                onChange={(event) => {
-                  setQuery(event.target.value);
-                  setHovered(null);
-                }}
-              />
-            </label>
+            <div
+              className="map-search-field"
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget))
+                  setSuggestionsOpen(false);
+              }}
+              onKeyDown={(event) => {
+                if (event.key === 'Escape') {
+                  searchInput.current?.focus();
+                  setSuggestionsOpen(false);
+                }
+              }}
+            >
+              <label>
+                Zoek beroep of code
+                <input
+                  ref={searchInput}
+                  type="search"
+                  aria-expanded={searching && suggestionsOpen}
+                  aria-controls={
+                    searching && suggestionsOpen ? suggestionsId : undefined
+                  }
+                  onFocus={() => setSuggestionsOpen(true)}
+                  onKeyDown={(event) => {
+                    if (event.key === 'ArrowDown' && searching) {
+                      setSuggestionsOpen(true);
+                      const first = document
+                        .getElementById(suggestionsId)
+                        ?.querySelector<HTMLElement>('button, a');
+                      if (first) {
+                        event.preventDefault();
+                        first.focus();
+                      }
+                    }
+                  }}
+                  placeholder="Bijvoorbeeld verpleegkundige"
+                  value={query}
+                  onChange={(event) => {
+                    setSuggestionsOpen(true);
+                    setQuery(event.target.value);
+                    setHovered(null);
+                  }}
+                />
+              </label>
+              {searching && suggestionsOpen && (
+                <div
+                  id={suggestionsId}
+                  className="map-search-suggestions"
+                  aria-label="Beroepssuggesties"
+                >
+                  {!suggestions.length && (
+                    <p role="status">
+                      Geen beroepen gevonden. Probeer een andere naam of code.
+                    </p>
+                  )}
+                  <ul>
+                    {suggestions.map(({ row, name }) => (
+                      <li key={`${row.code}-${name}`}>
+                        {row.raw !== null && row.complementarity !== null ? (
+                          <button
+                            type="button"
+                            aria-pressed={selected === row.code}
+                            onClick={() => {
+                              searchInput.current?.focus();
+                              setSuggestionsOpen(false);
+                              setSelected(row.code);
+                              setHovered(null);
+                            }}
+                          >
+                            <strong>{name}</strong>
+                            <span>
+                              Beroepsgroep: {row.occupation} ({row.code})
+                            </span>
+                          </button>
+                        ) : (
+                          <a href={`#beroep/${row.code}`}>
+                            <strong>{name}</strong>
+                            <span>
+                              Beroepsgroep: {row.occupation} ({row.code}). Een of beide
+                              AI-scores ontbreken; bekijk het beroepsprofiel.
+                            </span>
+                          </a>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
             <label>
               Beroepshoofdgroep
               <select

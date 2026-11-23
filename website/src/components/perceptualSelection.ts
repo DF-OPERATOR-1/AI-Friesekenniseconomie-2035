@@ -23,9 +23,45 @@ export const mapExposureVariants = {
 } as const;
 export type MapExposureVariant = keyof typeof mapExposureVariants;
 
+export function matchesOccupation(
+  row: { code: string; occupation: string; occupation_names?: string[] },
+  query: string,
+) {
+  const normalize = (value: string) =>
+    value
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLocaleLowerCase('nl-NL')
+      .replace(/[-–—]/g, ' ');
+  const words = normalize(query).trim().split(/\s+/).filter(Boolean);
+  const haystack = normalize(
+    `${row.code} ${row.occupation} ${(row.occupation_names ?? []).join(' ')}`,
+  );
+  return words.every((word) => haystack.includes(word));
+}
+
+export function occupationSuggestions<
+  T extends {
+    code: string;
+    occupation: string;
+    occupation_names?: string[];
+  },
+>(rows: T[], query: string, limit = 8) {
+  if (!query.trim()) return [];
+  return rows
+    .flatMap((row) => {
+      const names = [...new Set(row.occupation_names ?? [])].filter((name) =>
+        matchesOccupation({ code: '', occupation: name }, query),
+      );
+      return (names.length ? names : [row.occupation]).map((name) => ({ row, name }));
+    })
+    .slice(0, limit);
+}
+
 type MapRow = {
   code: string;
   occupation: string;
+  occupation_names?: string[];
   raw: number | null;
   complementarity: number | null;
 };
@@ -46,9 +82,7 @@ export function selectMapRows<T extends MapRow>(
 ) {
   const term = query.trim().toLocaleLowerCase('nl-NL');
   const context = rows.filter((row) => !group || row.code.startsWith(group));
-  const matches = context.filter((row) =>
-    `${row.code} ${row.occupation}`.toLocaleLowerCase('nl-NL').includes(term),
-  );
+  const matches = context.filter((row) => matchesOccupation(row, query));
   const visible = context.filter(
     (row): row is T & { raw: number; complementarity: number } =>
       row.raw !== null && row.complementarity !== null,

@@ -96,7 +96,7 @@ test('technische details, formule en volledige bronvermeldingen blijven ingeklap
     '52 menselijke vermogens',
     'Job Zones',
     'IMF-referentiewaarden',
-    'Afgeschermde aantallen',
+    'tussen 0 en 4',
   ])
     assert.ok(html.includes(text));
   assert.match(html, /doi.org/);
@@ -343,4 +343,16 @@ test('alle beroeps- en opleidingsbronnen delen dezelfde velden en volgorde van B
   assert.match(occupationHtml, />Downloadlink<\/a>/);
   assert.match(occupationHtml, /aria-label="Data aanvragen bij CompetentNL"/);
   assert.match(occupationHtml, /aria-label="Data aanvragen bij Europese Commissie"/);
+});
+
+test('onderwijsmethodologie beschrijft afscherming voor alle niveaus zonder vaste bronjaren', () => {
+  const education = html
+    .split('id="methodologie-onderwijs"')[1]
+    .split('id="opleiding-beroep-verantwoording"')[0];
+  assert.match(education, /DUO schermt bij mbo, hbo en wo/);
+  assert.match(education, /tussen 0 en 4/);
+  assert.match(education, /De beschikbare jaren kunnen per bestand/);
+  assert.doesNotMatch(education.split('<aside')[0], /2020–2024|2021–2025/);
+  assert.match(education, /exacte totaal/);
+  assert.match(education, /geen bewijs/);
 });
