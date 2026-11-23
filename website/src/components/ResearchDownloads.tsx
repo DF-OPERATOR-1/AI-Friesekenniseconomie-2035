@@ -139,7 +139,7 @@ export function ResearchDownloads() {
                     const publication = scientificSource(row.file);
                     return (
                       <article className="source-row" key={row.file}>
-                        <div className="source-summary">
+                        <div className="source-summary source-summary-downloads">
                           <div>
                             <h3>
                               {row.name.charAt(0).toLocaleUpperCase('nl-NL') +
@@ -147,7 +147,9 @@ export function ResearchDownloads() {
                             </h3>
                             {row.classification.startsWith('BRC') &&
                               row.description && <p>{row.description}</p>}
-                            {row.geography && <small>{row.geography}</small>}
+                            {row.geography && (
+                              <p className="source-geography">{row.geography}</p>
+                            )}
                           </div>
                           {row.download ? (
                             <div className="source-download-formats">

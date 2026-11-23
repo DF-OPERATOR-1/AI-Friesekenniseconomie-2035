@@ -177,7 +177,7 @@ def build(refresh_sources=False):
                               description=('Studentenaantallen per opleiding en onderwijsinstelling' if file.startswith('studenten_') else 'Afgestudeerden per opleiding en onderwijsinstelling') if edu else 'Bestaande AI-beroepsscores; geen regionale arbeidsmarktmeting',
                               organization='DUO' if edu else 'DataFryslân; Felten et al. / Pizzinelli et al.',
                               version=entry['sha256'], publication_year=None,
-                              geography='Bevestigd Fries opleidingsaanbod; Firda inclusief Emmeloord en Urk. Aantallen per opleiding en onderwijsinstelling.' if mbo else 'Onderwijsinstellingen in Fryslân' if edu else 'Internationale beroepsscores; geen regionale weging',
+                              geography='Firda, Aeres MBO, SVO en ROC Nova College in Fryslân, inclusief de Firda-locaties in Emmeloord en Urk.' if mbo else 'Onderwijsinstellingen in Fryslân' if edu else 'Internationale beroepsscores; geen regionale weging',
                               classification='DUO opleidingscode' if edu else 'ISCO-08 via SOC',
                               license=review.get('license'), download=f'data/research/{file}' if approved else None,
                               limitations=MBO_SELECTION_NOTE if mbo else '' if edu else 'Ongewogen koppeling van beroepsgroepen. De complementariteitsscore is door DataFryslân zelf berekend aan de hand van de methode van Pizzinelli et al. (2023). Geen regionale arbeidsmarktmeting.',

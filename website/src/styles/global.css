@@ -6806,7 +6806,35 @@ body:has(.education-detail) .site-header {
 
 .source-download-formats {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
   gap: 8px;
   align-items: center;
+}
+
+.sources-page .source-summary {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+}
+.sources-page .source-summary > div:first-child {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+.sources-page .source-download-formats {
+  justify-content: flex-start;
+  margin-left: auto;
+}
+.sources-page .source-summary > :is(a, .source-pending) {
+  align-self: center;
+  max-width: none;
+  text-align: center;
+}
+.source-summary .source-geography {
+  margin: 8px 0 0;
+  font-size: 0.68rem;
+  color: var(--muted);
+  line-height: 1.6;
+  overflow-wrap: break-word;
 }
